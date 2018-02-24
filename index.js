@@ -553,7 +553,7 @@ voiceChannel
    dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-   }}})}})
+   })}})
 
 bot.on('message', message => {
   if (message.content.startsWith('!sp2m1')) {
