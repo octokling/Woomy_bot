@@ -379,13 +379,15 @@ bot.on("channelsCreate", role =>{
         }
     })
 bot.on("message", message =>{
-    if (message.content.startsWith(`!musiqueh`)) { 
+   if (message.content.startsWith(`!sp2mh`)) {
      try {
         var emb = new Discord.RichEmbed()
             .setFooter(`© Splatbotoont est tous droits réservés et Créé par Ps Liquidateur de Kids`, bot.user.avatarURL)
             .setColor("730000")
-            .setTitle("Titre des musiques")
-            .setDescription(`voici toute les titre de musique splatoon 2:  \n\n !musique 1 : Deluge Dirge (Salmon Run) \n\n !musique 2 : Ever Further – Grizzco Industries (Salmon Run) \n\n !musique 3 : Tidal Rush (DJ Octavio feat. Callie vs Marie) \n\n !musique 4 : Jelfonzo’s Shop \n\n !musique 5 : Lobby \n\n !musique 6 : Acid Hues (Off the Hook) – Splatfest Battle Theme \n\n !musique 7 : Muck Warfare (Off The Hook) – Splatfest Battle Thème \n\n !musique 8 : Splatoon 2 Remix ► Inkoming (CG5's Trap / Future Bass Remix) (Hors Service) \n\n !musique 9 : Beat of Inkopolis Square (with SFX) \n\n !musique 10 : Octo Canyon – Turquoise October (Singleplayer) \n\n !musique 11 : Octo Eight-Step – Turquoise October (Singleplayer) \n\n !musique 12 : Undertow (Testfire Version) \n\n !musique 13 : Shooting Starfish - Turquoise October (Singleplayer) \n\n!musique 14 : Tutorial \n\n!musique 15 : News Broadcast (Off the Hook) \n\n!musique 16 :Match Introduction\n\n!musique 17 : Now or Never! (Testfire Version)\n\n!musique 18 : Remix splatoon 1\n\n!musique 19 : Online Lobby (Ika Jamaica 2)\n\n!musique 20 : Rip Entry (Testfire Version)\n\n!musique 21 : Rip Entry (Wet Floor)\n\n!musique 22 : Sheldon's Shop \n\n!musique 23 : Spicy Calamari Inkantation\n\n!musique 24 : Beat of Inkopolis Square (with SFX).La suite sur !musiqueh2`)
+            .setTitle("Titre des musiques")         
+       .setDescription(`voici toute les titre de musique splatoon 2:  \n\n !sp2m1 : Inkoming! (Testfire Version) \n\n !sp2m2 :Color Pulse (Off the Hook)\n\n !sp2m3 : Ebb & Flow (Off the Hook)\n\n !sp2m4 : Fest Zest (Off the Hook) \n\n !sp2m5 : Endolphin Surge (Wet Floor)\n\n !sp2m6 : Don't Slip! (Wet Floor) – Splatfest Battle Theme \n\n !sp2m7 : Undertow (Wet Floor)\n\n !sp2m8 : Rip Entry (Wet Floor)\n\n !sp2m9 : Acid Hues (Off the Hook) - Splatfest Battle Theme \n\n !sp2m10 : Muck Warfare (Off the Hook) - Splatfest Battle Theme\n\n !!sp2m11 : Bomb Rush Blush (DJ Octavio. feat Callie)\n\n !sp2m12 : Tidal Rush (DJ Octavio feat. Callie vs Marie)\n\n !sp2m13 : Spicy Calamari Inkantation (Squid Sisters)\n\n !sp2m14 : Fresh Start (Squid Sisters) \n\n!sp2m15 : Low Tide (Singleplayer Introduction) \n\n!sp2m16 : Octo Eight-Step - Turquoise October (Singleplayer)\n\n !sp2m17 : The Girl from Inkopolis - Turquoise October (Singleplayer) \n\n !sp2m18 : Buoyant Boogie - Turquoise October (Singleplayer)\n\n !sp2m19 : Buoyant Boogie - Shooting Starfish - Turquoise October (Singleplayer)\n\n !sp2m20 : Octarmaments - Turquoise October (Singleplayer)n\n !sp2m21 : Octo Canyon - Turquoise October (Singleplayer) \n\n !sp2m22 : Happy Little Workers - Grizzco Industries (Salmon Run)\n\n !sp2m23 : Deluge Dirge (Salmon Run)\n\n !sp2m24 : Fishing Frenzy - ω-3 (Salmon Run)`)
+.setDescription(`!sp2m25 : Ever Further - Grizzco Industries (Salmon Run) \n\n !sp2m26 : Now or Never! [Dernière minute]\n\n !sp2m27 : Now or Never! (Splatfest Version)\n\n !sp2m28 : Now or Never! (Testfire Version)\n\n !sp2m29 : Inkoming! (Wet Floor)\n\n !sp2m30 : Undertow (Testfire Version)\n\n !sp2m31 : Rip Entry (Testfire Version)\n\n !sp2m32 : Tutorial\n\n !sp2m33 : Tutorial (Testfire Version) \n\n !sp2m34 : News Broadcast (Off the Hook) \n\n !!sp2m35 : Match Introduction\n\n !sp2m36 : Ink another day (Wet Floor) - [Match perdu]\n\n !sp2m37 : Turf Master (Wet Floor) - [Match gagner]\n\n !sp2m38 : Lobby \n\n !sp2m39 : Online Lobby (Ika Jamaica 2) \n\n !sp2m40 :Sheldon's Shop\n\n !sp2m41 : Flow's Shop\n\n !sp2m42 : Bisk's Shop\n\n !sp2m43 : Jelfonzo's Shop\n\n !sp2m44 : Beat of Inkopolis Square (with SFX)n\n !sp2m45 : Seafom Shanty (Bottom Feeders) [Short Promo Ver.]  \n\n !sp2m46 : Shipwreckin' (Bottom Feeders) [Patch 2.0]\n\n !sp2m47 : Fins & Fiddles (Bottom Feeders) [Patch 2.0]\n\n !sp2m48 : Seafoam Shanty (Bottom Feeders) [Patch 2.0]`)
+        .setDescription(`!sp2m49 : Broken Coral (Ink Theory) [Patch 2.0] \n\n !sp2m50 :Riptide Rupture (Ink Theory) [Patch 2.0]`)
         message.channel.send(emb)
         } catch(err) {
             message.channel.send("Une erreur c'est produite , veuilliez en parlez à Liquideur de kids . Merci")
@@ -548,117 +550,13 @@ voiceChannel
 .then(function (connection) {
   connection.playFile('./Splatoon-Inkling Girl SFX.mp3')
     message.channel.sendMessage(`La musique voice girl est lancée`)
-})}})
-
-
-bot.on("message", message => {
-
-if (message.content === "!musique 1") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 1.mp3')
-    message.channel.sendMessage(`La musique 1 est lancée`)
-})}})
-
-bot.on("message", message => {
-
-if (message.content === "!musique 2") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 2.mp3')
-    message.channel.sendMessage(`La musique 2 est lancée`)
-})}})
-
-bot.on("message", message => {
-
-if (message.content === "!musique 3") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 3.mp3')
-    message.channel.sendMessage(`La musique 3 est lancée`)
-})}})
-
-bot.on("message", message => {
-
-if (message.content === "!musique 4") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 4.mp3')
-    message.channel.sendMessage(`La musique 4 est lancée`)
-})}})
-
-bot.on("message", message => {
-
-if (message.content === "!musique 5") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 5.mp3')
-   message.channel.sendMessage(`La musique 5 est lancée`)
-})}})
-
-bot.on("message", message => {
-
-if (message.content === "!musique 6") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 6.mp3')
-  message.channel.sendMessage(`La musique 6 est lancée`)
-})}})
-
-bot.on("message", message => {
-
-if (message.content === "!musique 7") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 7.mp3')
-    message.channel.sendMessage(`La musique 7 est lancée`)
-})}})
-
+   dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+   }})}})
 
 bot.on('message', message => {
-  if (message.content.startsWith('!musique 8')) {
+  if (message.content.startsWith('!sp2m1')) {
     console.log('Got a song request!');
     const voiceChannel = message.member.voiceChannel;
     if (!voiceChannel) {
@@ -666,575 +564,843 @@ bot.on('message', message => {
     }
     voiceChannel.join()
       .then(connection => {
-        const stream = yt('https://www.youtube.com/watch?v=Bxr7dUTgsUs', { filter: 'audioonly' });
-        const dispatcher = connection.playStream(stream);
+ connection.playFile('./musique 1.mp3')
         dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        });
+        } });
       });
   }
 });
-
-bot.on("message", message => {
-
-if (message.content === "!musique 9") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 9.mp3')
-    message.channel.sendMessage(`La musique 9 est lancée`)
-})}})
-
-bot.on("message", message => {
-
-if (message.content === "!musique 10") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 10.mp3')
-   message.channel.sendMessage(`La musique 10 est lancée`)
-})}})
-
-bot.on("message", message => {
-
-if (message.content === "!musique 11") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 11.mp3')
-    message.channel.sendMessage(`La musique 11 est lancée`)
-})}})
-
-bot.on("message", message => {
-
-if (message.content === "!musique 12") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 12.mp3')
-    message.channel.sendMessage(`La musique 12 est lancée`)
-})}})
-
-bot.on("message", message => {
-
-if (message.content === "!musique 13") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 13.mp3')
-    message.channel.sendMessage(`La musique 13 est lancée`)
-})}})
-
-bot.on("message", message => {
-
-if (message.content === "!musique 14") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 14.mp3')
-    message.channel.sendMessage(`La musique 14 est lancée`)
-})}})
-
-bot.on("message", message => {
-
-if (message.content === "!musique 15") {
-
-
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 15.mp3')
-    message.channel.sendMessage(`La musique 15 est lancée`)
-})}})
-
-
-bot.on("message", message => {
-
-if (message.content === "!musique 16") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 16.wav')
-    message.channel.sendMessage(`La musique 16 est lancée`)
-})}})
-
-bot.on("message", message => {
-
-if (message.content === "!musique 17") {
-
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 17.mp3')
-    message.channel.sendMessage(`La musique 17 est lancée`)
-})}})
-bot.on("message", message => {
-
-if (message.content === "!musique 18") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 18.mp3')
-    message.channel.sendMessage(`La musique 18 est lancée`)
-})}})
-bot.on("message", message => {
-
-if (message.content === "!musique 19") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 19.mp3')
-    message.channel.sendMessage(`La musique 19 est lancée`)
-})}})
-bot.on("message", message => {
-
-if (message.content === "!musique 20") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 20.mp3')
-    message.channel.sendMessage(`La musique 20 est lancée`)
-})}})
-bot.on("message", message => {
-
-if (message.content === "!musique 21") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 21.mp3')
-    message.channel.sendMessage(`La musique 21 est lancée`)
-})}})
-bot.on("message", message => {
-
-if (message.content === "!musique 22") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 22.mp3')
-    message.channel.sendMessage(`La musique 22 est lancée`)
-})}})
-bot.on("message", message => {
-
-if (message.content === "!musique 23") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 23.mp3')
-    message.channel.sendMessage(`La musique 23 est lancée`)
-})}})
-bot.on("message", message => {
-
-if (message.content === "!musique 24") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 24.mp3')
-    message.channel.sendMessage(`La musique 24 est lancée`)
-})}})
-bot.on("message", message => {
-
-if (message.content === "!musique 25") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 25.mp3')
-    message.channel.sendMessage(`La musique 25 est lancée`)
-})}})
-bot.on("message", message => {
-
-if (message.content === "!musique 26") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 26.mp3')
-    message.channel.sendMessage(`La musique 26 est lancée`)
-})}})
-bot.on("message", message => {
-
-if (message.content === "!musique 27") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 27.mp3')
-    message.channel.sendMessage(`La musique 27 est lancée`)
-})}})
-bot.on("message", message => {
-
-if (message.content === "!musique 28") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 28.mp3')
-    message.channel.sendMessage(`La musique 28 est lancée`)
-})}})
-bot.on("message", message => {
-
-if (message.content === "!musique 29") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join(378851818626613248)
-.then(function (connection) {
-  connection.playFile('./musique 29.mp3')
-    message.channel.sendMessage(`La musique 29 est lancée`)
-})}})
-bot.on("message", message => {
-
-if (message.content === "!musique 30") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 30.mp3')
-    message.channel.sendMessage(`La musique 30 est lancée`)
-})}})
-
-bot.on("message", message => {
-
-if (message.content === "!musique 31") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 31.mp3')
-    message.channel.sendMessage(`La musique 31 est lancée`)
-})}})
-bot.on("message", message => {
-
-if (message.content === "!musique 32") {
-
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 32.mp3')
-    message.channel.sendMessage(`La musique 32 est lancée`)
-})}})
-
-bot.on("message", message => {
-
-if (message.content === "!musique 33") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 33.mp3')
-    message.channel.sendMessage(`La musique 33 est lancée`)
-})}})
-
-bot.on("message", message => {
-
-if (message.content === "!musique 34") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 34.mp3')
-    message.channel.sendMessage(`La musique 34 est lancée`)
-})}})
-
-bot.on("message", message => {
-
-if (message.content === "!musique 35") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 35.mp3')
-    message.channel.sendMessage(`La musique 35 est lancée`)
-})}})
-
-bot.on("message", message => {
-
-if (message.content === "!musique 36") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 36.mp3')
-    message.channel.sendMessage(`La musique 36 est lancée`)
-})}})
-
-bot.on("message", message => {
-
-if (message.content === "!musique 37") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 37.mp3')
-    message.channel.sendMessage(`La musique 37 est lancée`)
-})}})
-
-bot.on("message", message => {
-
-if (message.content === "!musique 38") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 38.mp3')
-    message.channel.sendMessage(`La musique 38 est lancée`)
-})}})
-
-bot.on("message", message => {
-
-if (message.content === "!musique 39") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 39.mp3')
-    message.channel.sendMessage(`La musique 39 est lancée`)
-})}})
-
-bot.on("message", message => {
-
-if (message.content === "!musique 40") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 40.mp3')
-    message.channel.sendMessage(`La musique 40 est lancée`)
-})}})
-
-bot.on("message", message => {
-
-if (message.content === "!musique 41") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 41.mp3')
-    message.channel.sendMessage(`La musique 41 est lancée`)
-})}})
-
-bot.on("message", message => {
-
-if (message.content === "!musique 42") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 42.mp3')
-    message.channel.sendMessage(`La musique 42 est lancée`)
-})}})
-
-bot.on("message", message => {
-
-if (message.content === "!musique 43") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 43.mp3')
-    message.channel.sendMessage(`La musique 43 est lancée`)
-})}})
-
-bot.on("message", message => {
-
-if (message.content === "!musique 44") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 44.mp3')
-    message.channel.sendMessage(`La musique 44 est lancée`)
-})}})
-
-
-bot.on("message", message => {
-
-if (message.content === "!musique 45") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 45.mp3')
-    message.channel.sendMessage(`La musique 45 est lancée`)
-})}})
-
-
-bot.on("message", message => {
-
-if (message.content === "!musique 46") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./musique 46.mp3')
-    message.channel.sendMessage(`La musique 46 est lancée`)
-})}})
-bot.login(process.env.TOKEN)
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m2')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 2.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m3')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 3.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m4')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 4.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m5')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 5.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});bot.on('message', message => {
+  if (message.content.startsWith('!sp2m6')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 6.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});bot.on('message', message => {
+  if (message.content.startsWith('!sp2m7')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 7.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});bot.on('message', message => {
+  if (message.content.startsWith('!sp2m8')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 8.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});bot.on('message', message => {
+  if (message.content.startsWith('!sp2m19')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 9.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m10')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 10.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m11')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 11.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m12')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 12.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m13')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 13.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m14')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 14.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m15')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 15.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m16')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 16.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m17')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 17.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ 
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m118')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 18.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m19')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 19.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m20')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 20.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m21')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 21.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m22')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 22.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m23')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 23.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m24')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 24.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m25')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 25.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m26')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 26.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m27')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 27.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m28')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 28.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m29')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 29.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m30')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 30.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m31')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 31.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m32')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 32.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m33')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 33.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m34')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 34.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m35')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 35.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m36')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 36.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m37')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 37.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m38')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 38.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m39')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 39.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m40')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 40.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ 
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m41')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 41.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m42')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 42.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ 
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m43')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 43.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m44')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 44.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m45')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 45.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m46')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 46.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m47')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 47.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m48')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 48.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m49')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 49.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
+ bot.on('message', message => {
+  if (message.content.startsWith('!sp2m50')) {
+    console.log('Got a song request!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 50.mp3')
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+        } });
+      });
+  }
+});
