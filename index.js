@@ -501,10 +501,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+         })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m2')) {
     console.log('Got a song request!');
@@ -518,10 +515,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+      })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m3')) {
     console.log('Got a song request!');
@@ -535,10 +529,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+      })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m4')) {
     console.log('Got a song request!');
@@ -552,10 +543,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+         })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m5')) {
     console.log('Got a song request!');
@@ -569,10 +557,8 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});bot.on('message', message => {
+     })})}})
+bot.on('message', message => {
   if (message.content.startsWith('!sp2m6')) {
     console.log('Got a song request!');
     const voiceChannel = message.member.voiceChannel;
@@ -585,10 +571,8 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});bot.on('message', message => {
+        })})}})
+bot.on('message', message => {
   if (message.content.startsWith('!sp2m7')) {
     console.log('Got a song request!');
     const voiceChannel = message.member.voiceChannel;
@@ -601,10 +585,8 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});bot.on('message', message => {
+        })})}})
+bot.on('message', message => {
   if (message.content.startsWith('!sp2m8')) {
     console.log('Got a song request!');
     const voiceChannel = message.member.voiceChannel;
@@ -617,10 +599,8 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});bot.on('message', message => {
+         })})}})
+bot.on('message', message => {
   if (message.content.startsWith('!sp2m19')) {
     console.log('Got a song request!');
     const voiceChannel = message.member.voiceChannel;
@@ -633,10 +613,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+         })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m10')) {
     console.log('Got a song request!');
@@ -650,10 +627,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+        })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m11')) {
     console.log('Got a song request!');
@@ -667,10 +641,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+        })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m12')) {
     console.log('Got a song request!');
@@ -684,10 +655,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+         })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m13')) {
     console.log('Got a song request!');
@@ -701,10 +669,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+         })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m14')) {
     console.log('Got a song request!');
@@ -718,10 +683,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+        })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m15')) {
     console.log('Got a song request!');
@@ -735,10 +697,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+        })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m16')) {
     console.log('Got a song request!');
@@ -752,10 +711,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+       })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m17')) {
     console.log('Got a song request!');
@@ -769,11 +725,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
- 
+        })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m118')) {
     console.log('Got a song request!');
@@ -787,10 +739,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+         })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m19')) {
     console.log('Got a song request!');
@@ -804,10 +753,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+        })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m20')) {
     console.log('Got a song request!');
@@ -821,10 +767,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+      })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m21')) {
     console.log('Got a song request!');
@@ -838,10 +781,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+        })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m22')) {
     console.log('Got a song request!');
@@ -855,10 +795,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+       })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m23')) {
     console.log('Got a song request!');
@@ -872,10 +809,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+      })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m24')) {
     console.log('Got a song request!');
@@ -889,10 +823,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+      })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m25')) {
     console.log('Got a song request!');
@@ -906,10 +837,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+      })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m26')) {
     console.log('Got a song request!');
@@ -923,10 +851,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+         })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m27')) {
     console.log('Got a song request!');
@@ -940,10 +865,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+        })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m28')) {
     console.log('Got a song request!');
@@ -957,10 +879,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+      })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m29')) {
     console.log('Got a song request!');
@@ -974,10 +893,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+      })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m30')) {
     console.log('Got a song request!');
@@ -991,10 +907,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+       })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m31')) {
     console.log('Got a song request!');
@@ -1008,10 +921,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+         })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m32')) {
     console.log('Got a song request!');
@@ -1025,10 +935,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+        })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m33')) {
     console.log('Got a song request!');
@@ -1042,10 +949,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+         })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m34')) {
     console.log('Got a song request!');
@@ -1059,10 +963,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+        })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m35')) {
     console.log('Got a song request!');
@@ -1076,10 +977,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+        })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m36')) {
     console.log('Got a song request!');
@@ -1093,10 +991,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+       })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m37')) {
     console.log('Got a song request!');
@@ -1110,10 +1005,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+      })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m38')) {
     console.log('Got a song request!');
@@ -1127,10 +1019,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+        })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m39')) {
     console.log('Got a song request!');
@@ -1144,10 +1033,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+       })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m40')) {
     console.log('Got a song request!');
@@ -1161,10 +1047,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+       })})}})
  
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m41')) {
@@ -1179,10 +1062,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+        })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m42')) {
     console.log('Got a song request!');
@@ -1196,10 +1076,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+         })})}})
  
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m43')) {
@@ -1214,10 +1091,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+ })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m44')) {
     console.log('Got a song request!');
@@ -1231,10 +1105,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+       })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m45')) {
     console.log('Got a song request!');
@@ -1248,10 +1119,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+       })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m46')) {
     console.log('Got a song request!');
@@ -1265,10 +1133,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+     })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m47')) {
     console.log('Got a song request!');
@@ -1282,10 +1147,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+        })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m48')) {
     console.log('Got a song request!');
@@ -1299,10 +1161,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+         })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m49')) {
     console.log('Got a song request!');
@@ -1316,10 +1175,7 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+        })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m50')) {
     console.log('Got a song request!');
@@ -1333,7 +1189,4 @@ bot.on('message', message => {
         dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-        } });
-      });
-  }
-});
+        })})}})
