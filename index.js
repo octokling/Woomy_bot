@@ -1190,3 +1190,4 @@ bot.on('message', message => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
         })})}})
+bot.login(process.env.BOT_TOKEN);
