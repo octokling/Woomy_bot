@@ -237,7 +237,33 @@ bot.on("ready", function () {
                      
         }
     }, 999999);
- bot.user.setUsername("Nintentoont™ :squid:")
+ 
+    setInterval(function() {
+        let rndNumber = Math.floor(Math.random() * 36) + 1;
+        switch (rndNumber) {
+            case 1:
+                bot.user.setUsername("Splatbotoont™")
+                break;
+            case 2:
+                bot.user.setUsername("Nintentoont™")
+                break;
+            case 3:
+                bot.user.setUsername("Nintentoont™ (bêta)")
+                break;
+            case 4:
+                bot.user.setUsername("Nintentoont™ (fr)")
+                break;
+           case 5:
+                bot.user.setUsername("Splatbotoont™ (fr)")
+                break;
+          case 5:
+                bot.user.setUsername("Splatbotoont™ (bêta)")
+                break;
+                     
+        }
+    }, 999999);
+ 
+ bot.user.setUsername("Nintentoont™")
 .then(user => console.log(`j'ai choisis mon avatar`))
 prefix = "!"
 
