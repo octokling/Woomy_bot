@@ -671,7 +671,7 @@ bot.on('message', message => {
           voiceChannel.leave();
          })})}})
 bot.on('message', message => {
-  if (message.content.startsWith('!sp2m19')) {
+  if (message.content.startsWith('!sp2m9')) {
     console.log('Got a song request!');
     const voiceChannel = message.member.voiceChannel;
     if (!voiceChannel) {
