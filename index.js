@@ -237,6 +237,7 @@ bot.on("ready", function () {
                      
         }
     }, 999999);
+ bot.user.setUsername("Nintentoont™ :squid:")
 .then(user => console.log(`j'ai choisis mon avatar`))
 prefix = "!"
 
