@@ -1178,7 +1178,6 @@ bot.on('message', message => {
        })})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m46')) {
-    console.log('Got a song request!');
     const voiceChannel = message.member.voiceChannel;
     if (!voiceChannel) {
       return message.reply('Soyez dans un channel je vous rejoint ;)');
@@ -1186,13 +1185,9 @@ bot.on('message', message => {
     voiceChannel.join()
       .then(connection => {
  connection.playFile('./musique 46.mp3')
-        dispatcher.on('end', () => {
-         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
-          voiceChannel.leave();
-     })})}})
+})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m47')) {
-    console.log('Got a song request!');
     const voiceChannel = message.member.voiceChannel;
     if (!voiceChannel) {
       return message.reply('Soyez dans un channel je vous rejoint ;)');
@@ -1200,13 +1195,9 @@ bot.on('message', message => {
     voiceChannel.join()
       .then(connection => {
  connection.playFile('./musique 47.mp3')
-        dispatcher.on('end', () => {
-         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
-          voiceChannel.leave();
-        })})}})
+        })}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m48')) {
-    console.log('Got a song request!');
     const voiceChannel = message.member.voiceChannel;
     if (!voiceChannel) {
       return message.reply('Soyez dans un channel je vous rejoint ;)');
@@ -1214,13 +1205,9 @@ bot.on('message', message => {
     voiceChannel.join()
       .then(connection => {
  connection.playFile('./musique 48.mp3')
-        dispatcher.on('end', () => {
-         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
-          voiceChannel.leave();
-         })})}})
+})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m49')) {
-    console.log('Got a song request!');
     const voiceChannel = message.member.voiceChannel;
     if (!voiceChannel) {
       return message.reply('Soyez dans un channel je vous rejoint ;)');
@@ -1228,13 +1215,9 @@ bot.on('message', message => {
     voiceChannel.join()
       .then(connection => {
  connection.playFile('./musique 49.mp3')
-        dispatcher.on('end', () => {
-         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
-          voiceChannel.leave();
-        })})}})
+})}})
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m50')) {
-    console.log('Got a song request!');
     const voiceChannel = message.member.voiceChannel;
     if (!voiceChannel) {
       return message.reply('Soyez dans un channel je vous rejoint ;)');
@@ -1242,8 +1225,5 @@ bot.on('message', message => {
     voiceChannel.join()
       .then(connection => {
  connection.playFile('./musique 50.mp3')
-        dispatcher.on('end', () => {
-         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
-          voiceChannel.leave();
-        })})}})
+        })}})
 bot.login(process.env.TOKEN)
