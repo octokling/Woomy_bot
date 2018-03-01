@@ -237,25 +237,6 @@ bot.on("ready", function () {
                      
         }
     }, 999999);
- setInterval(function() {
-        let rndNumber = Math.floor(Math.random() * 4) + 1;
-        switch (rndNumber) {
-            case 1:
-                bot.user.setUsername("Nintentoont™(bêta fr)")
-                break;
-            case 2:
-                bot.user.setUsername("Nintentoont™(fr)")
-                break;
-            case 3:
-                bot.user.setUsername("Frenchtentoont")
-                break;
-            case 4:
-                bot.user.setUsername("Nintentoont™")
-                break;
-        }
-    }, 999999);
-
-
 .then(user => console.log(`j'ai choisis mon avatar`))
 prefix = "!"
 
