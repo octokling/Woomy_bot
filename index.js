@@ -117,6 +117,9 @@ bot.on("ready", function () {
           case 34:
                 bot.user.setGame("être toujour en bêta|!commande");
                 break;
+          case 34:
+                bot.user.setGame("M'Apprendre l'anglais|!commande");
+                break;
         }
     }, 999999);
   
@@ -234,7 +237,24 @@ bot.on("ready", function () {
                      
         }
     }, 999999);
-bot.user.setUsername("Nintentoont™")
+ setInterval(function() {
+        let rndNumber = Math.floor(Math.random() * 4) + 1;
+        switch (rndNumber) {
+            case 1:
+                bot.user.setUsername("Nintentoont™(bêta fr)")
+                break;
+            case 2:
+                bot.user.setUsername("Nintentoont™(fr)")
+                break;
+            case 3:
+                bot.user.setUsername("Frenchtentoont")
+                break;
+            case 4:
+                bot.user.setUsername("Nintentoont™")
+                break;
+        }
+    }, 999999);
+
 
 .then(user => console.log(`j'ai choisis mon avatar`))
 prefix = "!"
@@ -307,7 +327,7 @@ bot.on("guildMemberAdd", async member => {
         var emb = new Discord.RichEmbed()
         .setColor("730000")
         .setTitle("woomycation")
-        .setDescription(`Un rôle vien d'être créé sur ${role.guild.name}`)
+        .setDescription(`Un rôle viens d'être créé sur ${role.guild.name}`)
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Ps Liquidateur de Kids`, bot.user.avatarURL)
         role.guild.channels.find("name", 'woomycation').send(emb)
         } catch(err) {
@@ -324,7 +344,7 @@ bot.on("guildMemberAdd", async member => {
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Ps Liquidateur de Kids`, bot.user.avatarURL)
     role.guild.channels.find("name", 'woomycation').send(emb)
         } catch(err) {
-            role.guild.owner.send("Veuillez créer le salon `woomy`, comme ça tout le monde sera au courant des roles détruits !!")
+            role.guild.owner.send("Veuillez créer le salon `woomycation`, comme ça tout le monde sera au courant des roles détruits !!")
         }
     })
 
@@ -333,11 +353,11 @@ bot.on("channelsDelete", role =>{
         var emb = new Discord.RichEmbed()
         .setColor("730000")
         .setTitle("woomycation")
-        .setDescription(`Un nouveau channel vient d'être créer`)
+        .setDescription(`Un nouveau channel vient d'être supprimer`)
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Ps Liquidateur de Kids`, bot.user.avatarURL)
     role.guild.channels.find("name", 'woomycation').send(emb)
         } catch(err) {
-            role.guild.owner.send("Veuillez créer le salon `woomy`, comme ça tout le monde sera au courant des roles détruits !!")
+            role.guild.owner.send("Veuillez créer le salon `woomycation`, comme ça tout le monde sera au courant des roles détruits !!")
         }
     })
 
@@ -350,7 +370,7 @@ bot.on("channelsCreate", role =>{
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Ps Liquidateur de Kids`, bot.user.avatarURL)
     role.guild.channels.find("name", 'woomycation').send(emb)
         } catch(err) {
-            role.guild.owner.send("Veuillez créer le salon `woomy`, comme ça tout le monde sera au courant des roles détruits !!")
+            role.guild.owner.send("Veuillez créer le salon `woomycation`, comme ça tout le monde sera au courant des roles détruits !!")
         }
     })
 
