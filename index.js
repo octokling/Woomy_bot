@@ -259,6 +259,12 @@ bot.on("ready", function () {
           case 5:
                 bot.user.setUsername("Splatbotoont™ (bêta)")
                 break;
+          case 6:
+                bot.user.setUsername("Splatbotoont™ (0.5.3)")
+                break;
+          case 5:
+                bot.user.setUsername("Nintentoont™ (0.5.3)")
+                break;
                      
         }
     }, 999999);
