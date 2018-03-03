@@ -475,8 +475,7 @@ bot.on('message', message => {
  bot.user.setStatus('dnd')
 var commande = [`woomy , je vais de changer de disponibilité , patienter quelque minute ${message.author}. la disponibilité sera ne pas déranger`,`squidy, ok changement de disponibilité, patienter quelque minute ${message.author}. La disponibilité sera ne pas déranger`,`nyges, je vais changer de disponibilité, patienter ${message.author}.La disponibilité sera ne pas déranger`];
      message.channel.send(`${(commande[Math.floor(Math.random() * commande.length)])}`)
-    message.guild.channels.server("name", 'Woomywiich').find("name", 'woomycation').send("Je suis actuellement indisponible merci de ne pas m'utiliser merci")
- .catch(console.error);
+    .catch(console.error);
 }
 })
 bot.on('message', message => {
@@ -508,8 +507,8 @@ bot.on('message', message => {
 if (message.content.startsWith(prefix + "commande")) { 
 var help_embed = new Discord.RichEmbed()
 .setColor('#01FE7F')
-.addField("Commande de Splatbotoon", "-!online/inactif/nepasdéranger: changer la disponibilité du bot \n -!jeu : modifier le jeux du bot\n -!level : votre niveaux (a découvrir) \n -!tonserveur : tu veut splatbotoont sur ton serveur alors fait vite cette commande\n-!ping : la commande la plus connu pour rien\n -!monavatar pour voir son avatar en plus gros\n-!questionnaire : remplir le questionnaire de splatbotoont")
-.addField("Commande musique de Splatbotoont", "-!musique de 1 à 46: connecte toi sur le chat vocal ou il sera connecter et splatbotoont te chantera la musique choisis\n -!woomy : pareil que sur !musique sauf que c'est une musique débile \n -!voiceboy/voicegirl pour entendre toute les voix enrengistrer splatoon 1 bientôt de splatoon 2\n-!musiqueh affiche toute les titre de musique (seulement jusqu'a 25 en ce moment).")
+.addField("Commande de Splatbotoon", "-!online/nepasdéranger: changer la disponibilité du bot \n -!jeu : modifier le jeux du bot\n -!level : votre niveaux (a découvrir) \n -!tonserveur : tu veut splatbotoont sur ton serveur alors fait vite cette commande\n-!ping : la commande la plus connu pour rien\n -!monavatar pour voir son avatar en plus gros\n-!questionnaire : remplir le questionnaire de splatbotoont")
+.addField("Commande musique de Splatbotoont", "-!sp2m(nombre de 1 à 50): connecte toi sur le chat vocal ou il sera connecter et splatbotoont te chantera la musique choisis\n-!sp2mhh affiche toute les titre de musique.")
 .addField("Logs", "Avant de voir les logs disponible de splatbotoont : \n créez un serveur nommée 'woomycation' \n dans les role selectionner que splatbotoont et mettre au moin envoyer des message, créez une invitation (pour prochainement hors grosse mise à jour)et gerer les message. après c'est tout\n passon au logs\n-1er : Je vous signale si il y a quelqu'un qui arrive sur votre serveur.\n-2ème : je vous signale si quelqu'un part de votre serveur.\n-3ème : je vous signale si quelqu'un à créez un nouveau émote (émoji).\n-4ème : je vous signale si quelqu'un a effacer un émote\n-5ème : je vous signale si quelqu'un à créez un role.\n-6ème : je vous signale si quelqu'un à supprimer un role")
 .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids.`, bot.user.avatarURL)
 message.channel.sendMessage(`${message.author.tag} je vous envoie mes commande`)
@@ -519,7 +518,7 @@ message.author.send(help_embed)
  }})
 bot.on('message', message => {
    if (message.content.startsWith('!tonserveur')) {
-     var commande = [`merci ${message.author} de vouloir de moi sur ton serveur https://discordapp.com/api/oauth2/authorize?client_id=395896767142690817&scope=bot&permissions=2146958591`,`merci beaucoup ${message.author} de me vouloir https://discordapp.com/api/oauth2/authorize?client_id=395896767142690817&scope=bot&permissions=2146958591`,`Serieux ${message.author} tu me veut ? alors je t'aime https://discordapp.com/api/oauth2/authorize?client_id=395896767142690817&scope=bot&permissions=2146958591`];
+     var commande = [`merci ${message.author} de vouloir de moi sur ton serveur https://discordapp.com/oauth2/authorize?client_id=417229018132119562&scope=bot&permissions=2146958591`,`merci beaucoup ${message.author} de me vouloir https://discordapp.com/oauth2/authorize?client_id=417229018132119562&scope=bot&permissions=2146958591`];
    message.author.send(`${(commande[Math.floor(Math.random() * commande.length)])}`)
      message.author.send(`Pour s'avoir les commande faite !commande`)
 }
