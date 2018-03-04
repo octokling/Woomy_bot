@@ -239,7 +239,7 @@ bot.on("ready", function () {
     }, 999999);
  
     setInterval(function() {
-        let rndNumber = Math.floor(Math.random() * 36) + 1;
+        let rndNumber = Math.floor(Math.random() * 5) + 1;
         switch (rndNumber) {
             case 1:
                 bot.user.setUsername("Splatbotoont™")
@@ -260,10 +260,10 @@ bot.on("ready", function () {
                 bot.user.setUsername("Splatbotoont™ (bêta)")
                 break;
           case 6:
-                bot.user.setUsername("Splatbotoont™ (0.5.3)")
+                bot.user.setUsername("Splatbotoont™ (0.5.4)")
                 break;
           case 5:
-                bot.user.setUsername("Nintentoont™ (0.5.3)")
+                bot.user.setUsername("Nintentoont™ (0.5.4)")
                 break;
                      
         }
