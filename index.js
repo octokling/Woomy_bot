@@ -554,21 +554,6 @@ var commande = ["Regarde, c'est du random","C'est magique t'as vu ?","Wouah","Sa
 }
 
 })
-
-bot.on('message', message => {
-  if (message.content.startsWith('!testm')) {
-    console.log('Got a song request!');
-    const voiceChannel = message.member.voiceChannel;
-    if (!voiceChannel) {
-      return message.reply('Soyez dans un channel je vous rejoint ;)');
-    }
-    voiceChannel.join()
-      .then(connection => {
-        const stream = yt('https://www.youtube.com/watch?v=Bxr7dUTgsUs', { filter: 'audioonly' });
-        const dispatcher = connection.playStream(stream);
-        dispatcher.on('end', () => {
-          voiceChannel.leave();
-         })})}})
 bot.on('message', message => {
   if (message.content.startsWith('!sp2m1')) {
     console.log('Got a song request!');
