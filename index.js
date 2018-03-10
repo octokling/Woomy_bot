@@ -267,7 +267,7 @@ bot.on("ready", function () {
                 break;
                      
         }
-    }, 999999);
+    }, 99999999);
  
  bot.user.setUsername("Nintentoont™")
 .then(user => console.log(`j'ai choisis mon avatar`))
