@@ -451,7 +451,19 @@ bot.on("message", message =>{
             message.channel.send("Une erreur c'est produite , veuilliez en parlez à Liquideur de kids . Merci")
         }}
     })
-
+bot.on("message", message =>{
+   if (message.content.startsWith(`!eshopmh`)) {
+     try {
+        var emb = new Discord.RichEmbed()
+            .setFooter(`© Splatbotoont est tous droits réservés et Créé par Ps Liquidateur de Kids`, bot.user.avatarURL)
+            .setColor("730000")
+            .setTitle("Titre des musiques")         
+       .setDescription(` !eshopm1 : Juin 2011 (3DS) \n\n !eshopm2 : Novembre 2012 \n\n !eshopm3 : Septembre 2013 \n\n !eshop4 : Decembre 2013 \n\n !eshopm5 : Janvier 2014 \n\n !eshopm6 : Avril 2014 \n\n !eshopm7 : Juillet 2014 \n\n !eshopm8 : Janvier 2015 \n\n !eshopm9 : Juin 2015 \n\n !eshom10 : Septembre 2015 \n\n !eshopm11 : Decembre 2015 \n\n !eshopm12 : Janvier 2016  \n\n !eshopm13 : Mai 2016`)
+        message.author.send(emb)
+        } catch(err) {
+            message.channel.send("Une erreur c'est produite , veuilliez en parlez à Liquideur de kids . Merci")
+        }}
+    })
 bot.on(("guildMemberRemove"), (member)=> {
     try {
     member.guild.channels.find("name", 'woomycation').send(`:sob: "${member.user.tag}" est parti(e):sob:`);
@@ -508,7 +520,7 @@ if (message.content.startsWith(prefix + "commande")) {
 var help_embed = new Discord.RichEmbed()
 .setColor('#01FE7F')
 .addField("Commande de Splatbotoon", "-!online/nepasdéranger: changer la disponibilité du bot \n -!jeu : modifier le jeux du bot\n -!level : votre niveaux (a découvrir) \n -!tonserveur : tu veut splatbotoont sur ton serveur alors fait vite cette commande\n-!ping : la commande la plus connu pour rien\n -!monavatar pour voir son avatar en plus gros\n-!questionnaire : remplir le questionnaire de splatbotoont")
-.addField("Commande musique de Splatbotoont", "-!sp2m(nombre de 1 à 51): connecte toi sur le chat vocal ou il sera connecter et splatbotoont te chantera la musique choisis\n-!sp2mhh affiche toute les titre de musique.")
+.addField("Commande musique de Splatbotoont", "-!eshopmh : toutes les dates des musique Nintendo Eshop \n\n -!eshopm(nombre de 1 à 13) : connecte toi sur le chat vocal ou il sera connecter et splatbotoont te chantera la musique choisis\n\n-!sp2m(nombre de 1 à 51) : connecte toi sur le chat vocal ou il sera connecter et splatbotoont te chantera la musique choisis\n-!sp2mhh affiche toute les titre de musique.")
 .addField("Logs", "Avant de voir les logs disponible de splatbotoont : \n créez un serveur nommée 'woomycation' \n dans les role selectionner que splatbotoont et mettre au moin envoyer des message, créez une invitation (pour prochainement hors grosse mise à jour)et gerer les message. après c'est tout\n passon au logs\n-1er : Je vous signale si il y a quelqu'un qui arrive sur votre serveur.\n-2ème : je vous signale si quelqu'un part de votre serveur.\n-3ème : je vous signale si quelqu'un à créez un nouveau émote (émoji).\n-4ème : je vous signale si quelqu'un a effacer un émote\n-5ème : je vous signale si quelqu'un à créez un role.\n-6ème : je vous signale si quelqu'un à supprimer un role")
 .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids.`, bot.user.avatarURL)
 message.channel.sendMessage(`${message.author.tag} je vous envoie mes commande`)
@@ -1248,5 +1260,135 @@ bot.on('message', message => {
     voiceChannel.join()
       .then(connection => {
  connection.playFile('./musique 51.mp3')
+        })}})
+ bot.on('message', message => {
+  if (message.content.startsWith('!eshopm1')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./eshop 1.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!eshopm2')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./eshop 2.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!eshopm3')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./eshop 3.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!eshopm4')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./eshop 4.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!eshopm5')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./eshop 5.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!eshopm6')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./eshop 6.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!eshopm7')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./eshop 7.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!eshopm8')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./eshop 8.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!eshopm9')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./eshop 9.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!eshopm10')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./eshop 10.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!eshopm11')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./eshop 11.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!eshopm12')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./eshop 12.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!eshopm13')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./eshop 13.mp3')
         })}})
 bot.login(process.env.TOKEN)
