@@ -451,6 +451,86 @@ bot.on("message", message =>{
             message.channel.send("Une erreur c'est produite , veuilliez en parlez à Liquideur de kids . Merci")
         }}
     })
+bot.on("message", async message => {
+  if(message.author.bot) return;
+  if(message.channel.type === "dm") return;
+
+  let prefix = botconfig.prefix;
+  let messageArray = message.content.split(" ");
+  let cmd = messageArray[0];
+  let args = messageArray.slice(1);
+
+ if(cmd == `!kick`){
+
+    let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+    if(!kUser) return message.channel.send("Impossible de trouver l'utilisateur !");
+    let kReason = args.join(" ").slice(22);
+    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Vous n'avez pas la permission pour kick !");
+    if(kUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Vous ne pouvez pas kick cette utilisateur !");
+
+    let kickEmbed = new Discord.RichEmbed()
+    .setDescription("Oh ! qulqu'un c'est fait kicker !")
+    .setColor("#e56b00")
+    .addField("La personne kicker", `${kUser} avec ID ${kUser.id}`)
+    .addField("Kicker par", `<@${message.author.id}> avec ID ${message.author.id}`)
+    .addField("La raison", kReason)
+    .addField("A quel heure ?", message.createdAt);
+
+    //message.guild.member(kUser).sendMessage("Vous avez était kick du discord de **MinithMc** ! Pour :", kReason);
+
+    let logchannel = message.guild.channels.find(`name`, `Woomycation`);
+    if(!logchannel) return message.guild.channel.send("Erreur, merci de contacter Liquideur de kids !");
+
+    message.delete().catch(O_o=>{});
+
+    message.guild.member(kUser).kick(kReason);
+    logchannel.send(kickEmbed);
+
+
+    return;
+
+  }
+
+if(cmd === `!ban`){
+    let bUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+    if(!bUser) return message.channel.send("Impossible de trouver l'utilisateur !");
+    let bReason = args.join(" ").slice(22);
+    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Vous n'avez pas la permission pour ban !");
+    if(bUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Vous ne pouvez pas ban cette utilisateur !");
+
+    let banEmbed = new Discord.RichEmbed()
+    .setDescription("Oh! quelqu'un c'est fait kicker banni")
+    .setColor("#bc0000")
+    .addField("La personne banni", `${bUser} pour ID ${bUser.id}`)
+    .addField("Banni par", `<@${message.author.id}> pour ID ${message.author.id}`)
+    .addField("La raison", bReason)
+    .addField("A quel heure ?", message.createdAt);
+
+    message.guild.member(bUser).send("Vous avez était ban d'un serveur discord nommée ${server} ! Pour :", bReason);
+
+    let logchannel = message.guild.channels.find(`name`, `Woomycation`);
+    if(!logchannel) return message.guild.channel.send("Erreur, merci de contacter Liquideur de kids !");
+
+    message.delete().catch(O_o=>{});
+
+    message.guild.member(bUser).ban(bReason);
+    logchannel.send(banEmbed);
+
+
+    return;
+  }
+
+ if(cmd == `!clear`){
+    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Vous n'avez pas la permission pour supprimer les message !");
+    if(!args[0]) return message.channel.send("Vous devez préciser combien de message je dois supprimer !");
+    message.channel.bulkDelete(args[0]).then(() => {
+      message.channel.send(`Clear de ${args[0]} messages.`).then(msg => msg.delete(5000));
+  })
+
+  return;
+  }
+
+ 
 bot.on("message", message =>{
    if (message.content.startsWith(`!eshopmh`)) {
      try {
@@ -520,7 +600,7 @@ if (message.content.startsWith(prefix + "commande")) {
 var help_embed = new Discord.RichEmbed()
 .setColor('#01FE7F')
 .addField("Commande de Splatbotoon", "-!online/nepasdéranger: changer la disponibilité du bot \n -!jeu : modifier le jeux du bot\n -!level : votre niveaux (a découvrir) \n -!tonserveur : tu veut splatbotoont sur ton serveur alors fait vite cette commande\n-!ping : la commande la plus connu pour rien\n -!monavatar pour voir son avatar en plus gros\n-!questionnaire : remplir le questionnaire de splatbotoont")
-.addField("Commande musique de Splatbotoont", "-!eshopmh : toutes les dates des musique Nintendo Eshop \n\n -!eshopm(nombre de 1 à 13) : connecte toi sur le chat vocal ou il sera connecter et splatbotoont te chantera la musique choisis\n\n-!sp2m(nombre de 1 à 51) : connecte toi sur le chat vocal ou il sera connecter et splatbotoont te chantera la musique choisis\n-!sp2mhh affiche toute les titre de musique.")
+.addField("Commande musique de Splatbotoont", "-!clear(nombre de message a supprimer) : Pour ceux qui ont les permission __GéRER LES MESSAGE__ peuvent supprimer les message\n\n -!ban @mention (La raison du ban) : pour ceux qui sont __MODéRATEUR__ peuvent bannir les personnes \n\n -!kick @mention (La raison du kick) : pour ceux qui sont __MODéRATEUR__ peuvent expluser les gens-!eshopmh : toutes les dates des musique Nintendo Eshop \n\n -!eshopm(nombre de 1 à 13) : connecte toi sur le chat vocal ou il sera connecter et splatbotoont te chantera la musique choisis\n\n-!sp2m(nombre de 1 à 51) : connecte toi sur le chat vocal ou il sera connecter et splatbotoont te chantera la musique choisis\n-!sp2mh affiche toute les titre de musique.")
 .addField("Logs", "Avant de voir les logs disponible de splatbotoont : \n créez un serveur nommée 'woomycation' \n dans les role selectionner que splatbotoont et mettre au moin envoyer des message, créez une invitation (pour prochainement hors grosse mise à jour)et gerer les message. après c'est tout\n passon au logs\n-1er : Je vous signale si il y a quelqu'un qui arrive sur votre serveur.\n-2ème : je vous signale si quelqu'un part de votre serveur.\n-3ème : je vous signale si quelqu'un à créez un nouveau émote (émoji).\n-4ème : je vous signale si quelqu'un a effacer un émote\n-5ème : je vous signale si quelqu'un à créez un role.\n-6ème : je vous signale si quelqu'un à supprimer un role")
 .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids.`, bot.user.avatarURL)
 message.channel.sendMessage(`${message.author.tag} je vous envoie mes commande`)
