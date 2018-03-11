@@ -529,7 +529,7 @@ if(cmd === `!ban`){
 
   return;
   }
-
+});
  
 bot.on("message", message =>{
    if (message.content.startsWith(`!eshopmh`)) {
