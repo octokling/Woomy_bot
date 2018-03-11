@@ -291,36 +291,6 @@ servercount = client.guilds.size;
     })
     
 
-let points = JSON.parse(fs.readFileSync('./points.json', 'utf8'));
-
-bot.on("message", message => {
-if(!message.content.startsWith(prefix)) return;
-if(message.author.bot) return;
-if(!points[message.author.id]) points[message.author.id] = {experience: 0, level: 0};
-let userData = points[message.author.id];
-userData.points++;
-let curLevel = Math.floor(0.1 * Math.sqrt(userData.points));
-if(curLevel > userData.level) {
-// Level up!
-userData.level = curLevel;
-var commande = [`tient tien ${message.author} et passer niveaux**${curLevel}**!`,`${message.author} vient de passer niveaux **${curLevel}**!`,`BRAVO tu passe au niveau **${curLevel}**! et la tu doit être happy non ?`];
-
-message.channel.send(`${(commande[Math.floor(Math.random() * commande.length)])}`);
-}
-if(message.content.startsWith(prefix + "level")) {
-message.reply(`tu est actuellement niveau ${userData.level}, avec ${userData.points} d'expérience(s).`);
-}
-fs.writeFile('./points.json', JSON.stringify(points), (err) => {if(err) console.error(err)});
-});
-
-
-
-
-
-bot.on('message', function (message) {
-    Play.parse(message);
-    Youtube.parse(message);
-});
 
 bot.on("guildMemberAdd", async member => {
     try {
@@ -475,7 +445,7 @@ bot.on("message", async message => {
     .addField("La raison", kReason)
     .addField("A quel heure ?", message.createdAt);
 
-    //message.guild.member(kUser).sendMessage("Vous avez était kick du discord de **MinithMc** ! Pour :", kReason);
+    message.guild.member(kUser).sendMessage("Vous avez était kick du discord de ${server} ! Pour :", kReason);
 
     let logchannel = message.guild.channels.find(`name`, `Woomycation`);
     if(!logchannel) return message.guild.channel.send("Erreur, merci de contacter Liquideur de kids !");
@@ -511,7 +481,7 @@ if(cmd === `!ban`){
     if(!logchannel) return message.guild.channel.send("Erreur, merci de contacter Liquideur de kids !");
 
     message.delete().catch(O_o=>{});
-
+    message.guild.member(bUser).sendMessage("Vous avez était kick du discord de ${servers} ! Pour :", bReason);
     message.guild.member(bUser).ban(bReason);
     logchannel.send(banEmbed);
 
