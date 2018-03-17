@@ -590,109 +590,32 @@ bot.on('message', message => {
 
 }
 })
-function trad(message, fr, en){
-    if(!typeof message === "number") iddiscord = message.guild.id
-    lang = read('lang' + iddiscord)
-    if(!lang) return fr
-    if(lang === 'en'){
-        return en
-    }else{
-        return fr
-    }
-}
+bot.on("message", async message => {
+  if(message.author.bot) return;
+  if(message.channel.type === "dm") return;
 
-bot.on('message', message => {
-    if(message.author.bot) return;
-    if(message.channel.type === 'dm') return;
-    iddiscord = message.guild.id;
-    
-   
-       if (message.content.startsWith('!timevote')) {
-    
-        del(message);            
-        comm = "timevote"
-        var perm = "timevoteperm" + iddiscord;
-        var permis = haveperm(message, args, perm, comm)
-            if(permis === 'perm') return
-                if(permis === "yes"){
+  let sender = message.author;
+  let messageArray = message.content.split(" ");
+  let cmd = messageArray[0];
+  let args = messageArray.slice(1);
 
-                    let time = args[0];
-                    if(!time) return message.reply(trad(message, "tu dois me spécifier une durée !", "you must specify me a duration !"));
-                    let temps = "";
-                    let duree = "";
-                    let tim = "";
-                    if(time.endsWith("m")) {
-                        tim = time.replace("m", "");
-                        if(tim > 1) duree = "minutes";
-                        else duree ="minute";
-                        temps = time.replace("m", "")*60000;
-                    } else {
-                        if(time.endsWith("h")) {
-                            tim = time.replace("h", "");
-                            if(tim > 1) duree = trad(message, "heures", "hours");
-                            else duree = trad(message, "heure", "hour");
-                            temps = time.replace("h", "")*60000*60;
-                            
-                        } else {
-                            if(time.endsWith("d")) {
-                                tim = time.replace("d", "");
-                                if(tim > 1) duree = trad(message, "jours", "days");
-                                else duree = trad(message, "jour", "day");
-                                temps = time.replace("d", "")*60000*60*24;
-                            } else {
-                                return message.channel.send(trad(message, "Durée incorrecte", "Incorrect duration"));
-                            }}};
-                   let textvote = ""
-                            
-                            if(args[2]) textvote = textvote + ":one: " + args[2] + "\n"
-                            if(args[3]) textvote = textvote + ":two: " + args[3] + "\n"
-                            if(args[4]) textvote = textvote + ":three: " + args[4] + "\n"
-                            if(args[5]) textvote = textvote + ":four: " + args[5] + "\n"
-                            if(args[6]) textvote = textvote + ":five: " + args[6] + "\n"
-                            if(args[7]) textvote = textvote + ":six: " + args[7] + "\n"
-                            if(args[8]) textvote = textvote + ":seven: " + args[8] + "\n"
-                            if(args[9]) textvote = textvote + ":eight: " + args[9] + "\n"
-                            if(args[10]) textvote = textvote + ":nine: " + args[10] + "\n"
-                            
-                            if(textvote == "" | textvote == " ") return message.reply(trad(message, `ta commande est incomplète.`, `your command is incomplete.`));
-                            delete embed;
-                            
-                            
-                            const embed = new Discord.RichEmbed()
-                            .setColor(0x32c0da)
-                            .setTitle("Vote")
-                            .setThumbnail(message.guild.iconURL)
-                            .setDescription(args[1])
-                            .addField(trad(message, "Choix :", "Choices :"), textvote)
-                            .addField(":arrow_lower_right:", trad(message, "_Ajoutez une réaction pour voter !_", "_Add a reaction to vote !_"))
-                            .setTimestamp()
-                            .setFooter(trad(message, `Ce vote dure ${tim} ${duree}`, `This vote ended in ${tim} ${duree}`));
-                            message.channel.send({embed}).then(function(){
-                                var msg = message.channel.lastMessage
-                                if(args[2]) msg.react("1⃣")/**1*/.then(function(){
-                                    if(args[3]) msg.react("2⃣")/**2*/.then(function(){
-                                        if(args[4]) msg.react("3⃣")/**3*/.then(function(){
-                                            if(args[5]) msg.react("4⃣")/**4*/.then(function(){
-                                                if(args[6]) msg.react("5⃣")/**5*/.then(function(){
-                                                    if(args[7]) msg.react("6⃣")/**6*/.then(function(){
-                                                        if(args[8]) msg.react("7⃣")/**7*/.then(function(){
-                                                            if(args[9]) msg.react("8⃣")/**8*/.then(function(){
-                                                                if(args[10]) msg.react("9⃣")/**9*/})})})})})})})})
-                                                                
-                                                                setTimeout(function() {
-                                                                    messa = ""
-                                                                    msg.reactions.forEach(function(reaction){
-                                                                        messa = messa + `${reaction.emoji} :** ${reaction.count-1} **\n`
-                                                                    })
-                                                                    message.channel.send(trad(message, `**Le vote est terminé !\nLes résultats sont :\n${messa}**`, `Vote ended !\nResults are :\n${messa}`))
-                                                                }, temps);
-                                                            })
-                                                            log(1,trad(message, `Vote à durée limitée créé (${args[0]})`, `Time limited vote created (${args[0]})`), trad(message, `Par ${message.author}`, `By ${message.author}`) , args[1], message);
-                                                            
-                                                        }else{
-                                                            message.reply(trad(message, `tu n'as pas les permissions nécéssaires.`, `you don't have necessary permissions.`));
-                                                        }return
-}
+ 
+if(cmd === `!sondage`){
+    let sondage = args.join(" ");
+    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Vous n'avez pas la permission de faire des sondages !");
+    let sondageEmbed = new Discord.MessageEmbed()
+    .setDescription("**Sondage** \n\n🔷 " + sondage + " \n\n ***sondage fait le :*** " + message.createdAt)
+    .setColor("#FFFFFF");
+
+    message.delete().catch(O_o=>{});
+
+    return message.channel.send(sondageEmbed).then(function (message) {
+        message.react("👍")
+        message.react("👎")
+        }).catch(function() {
+      });
+
+  }
 bot.on("message", message => {
 
 if (message.content === "test") {
