@@ -545,12 +545,12 @@ if(message.content.startsWith(prefix + 'sondage')){
   if(!sd7) sd7 = "";
         message.channel.sendMessage("**:scroll: SONDAGE :scroll: \n"+sd7+"\n\n"+sd1+"\n"+sd2+"\n"+sd3+"\n"+sd4+"\n"+sd5+"\n"+sd6+"\n[@here]**")
         .then(function (message) {
-          if(sd1) sd1 = message.react("403619398121947136");
-          if(sd2) sd2 = message.react("403619398759481354");
-          if(sd3) sd3 = message.react("403619399422050305");
-          if(sd4) sd4 = message.react("403618947490119686");
-          if(sd5) sd5 = message.react("403618947431137302");
-          if(sd6) sd6 = message.react("403618947548577805");
+          if(sd1) sd1 = message.react(":one:403619398121947136");
+          if(sd2) sd2 = message.react(":two:403619398759481354");
+          if(sd3) sd3 = message.react(":three:403619399422050305");
+          if(sd4) sd4 = message.react(":four:403618947490119686");
+          if(sd5) sd5 = message.react(":five:403618947431137302");
+          if(sd6) sd6 = message.react(":six:403618947548577805");
     			});
       }
 });
