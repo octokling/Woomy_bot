@@ -500,32 +500,60 @@ if(cmd === `!ban`){
   }
 });
  
-bot.on("message", async message => {
-  if(message.author.bot) return;
-  if(message.channel.type === "dm") return;
+bot.on('message', message => {
+if(message.content.startsWith(prefix + 'hsondage')){
+  message.channel.sendMessage(" ",{
+    embed: {
 
-  let sender = message.author;
-  let messageArray = message.content.split(" ");
-  let cmd = messageArray[0];
-  let args = messageArray.slice(1);
+      color: 0xa1ceff,
+      author:  message.author.name,
 
- 
-if(cmd === `!sondage`){
-    let sondage = args.join(" ");
-    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Vous n'avez pas la permission de faire des sondages !");
-    let sondageEmbed = new Discord.MessageEmbed()
-    .setDescription("**Sondage** \n\n🔷 " + sondage + " \n\n ***sondage fait le :*** " + message.createdAt)
-    .setColor("#FFFFFF");
-
-
-
-    return message.channel.send(sondageEmbed).then(function (message) {
-        message.react("👍")
-        message.react("👎")
-        }).catch(function() {
-      });
-
+                title: 'Utilisation du Sondage',
+                description: 'Vous devez faire : \n\n n!sondage -[**TEXTE**] -[**CHOIX1**] -[**CHOIX2**] -[**CHOIX3**] -[**CHOIX4**] -[**CHOIX5**]-[**CHOIX6**]',
+    }})}
+});
+ bot.on('message', message => {
+if(message.content.startsWith(prefix + 'sondage')){
+  message.delete()
+  let myrole = message.guild.member(bot.user).hasPermission("KICK_MEMBERS");
+  let yourole = message.guild.member(message.author).hasPermission("KICK_MEMBERS");
+  if(!myrole){
+      return message.channel.send("*「vous n'avez pas la permissions pour faire cela」*");
   }
+  if(!yourole){
+      return message.channel.send("*「vous n'avez pas la permissions pour faire cela」*");
+  }
+  var sd1 = message.content.split("-").slice(2)[0];
+  var sd2 = message.content.split("-").slice(3)[0];
+  var sd3 = message.content.split("-").slice(4)[0];
+  var sd4 = message.content.split("-").slice(5)[0];
+  var sd5 = message.content.split("-").slice(6)[0];
+  var sd6 = message.content.split("-").slice(7)[0];
+  var sd7 = message.content.split("-").slice(1)[0];
+  if(sd1) sd1 = "<:FlecheBleu:403619398121947136> "+ sd1;
+  if(sd2) sd2 = "<:FlecheRouge:403619398759481354> " +sd2;
+  if(sd3) sd3 = "<:FlecheVert:403619399422050305> " +sd3;
+  if(sd4) sd4 = "<:InFlecheBleu:403618947490119686> "+sd4;
+  if(sd5) sd5 = "<:InFlecheRouge:403618947431137302> "+sd5;
+  if(sd6) sd6 = "<:InFlecheVert:403618947548577805> "+sd6;
+  if(!sd1) sd1 = "";
+  if(!sd2) sd2 = "";
+  if(!sd3) sd3 = "";
+  if(!sd4) sd4 = "";
+  if(!sd5) sd5 = "";
+  if(!sd6) sd6 = "";
+  if(!sd7) sd7 = "";
+        message.channel.sendMessage("**:scroll: SONDAGE :scroll: \n"+sd7+"\n\n"+sd1+"\n"+sd2+"\n"+sd3+"\n"+sd4+"\n"+sd5+"\n"+sd6+"\n[@here]**")
+        .then(function (message) {
+          if(sd1) sd1 = message.react("403619398121947136");
+          if(sd2) sd2 = message.react("403619398759481354");
+          if(sd3) sd3 = message.react("403619399422050305");
+          if(sd4) sd4 = message.react("403618947490119686");
+          if(sd5) sd5 = message.react("403618947431137302");
+          if(sd6) sd6 = message.react("403618947548577805");
+    			});
+      }
+});
 bot.on("message", message =>{
    if (message.content.startsWith(`!eshopmh`)) {
      try {
