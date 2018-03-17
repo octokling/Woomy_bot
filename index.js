@@ -607,7 +607,7 @@ bot.on('message', message => {
     iddiscord = message.guild.id;
     
    
-       if (message.content.startsWith('!questionnaire')) {
+       if (message.content.startsWith('!vote')) {
     
         del(message);            
         comm = "timevote"
