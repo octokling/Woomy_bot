@@ -120,7 +120,7 @@ bot.on("ready", function () {
           case 35:
                 bot.user.setGame("M'Apprendre l'anglais|!commande");
                 break;
-        }
+        
           case 36:
                 var Guilds = bot.guilds.size
                 bot.user.setGame("!commande|"+ Guilds +" Serveurs!");
