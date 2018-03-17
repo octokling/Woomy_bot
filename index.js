@@ -500,6 +500,32 @@ if(cmd === `!ban`){
   }
 });
  
+bot.on("message", async message => {
+  if(message.author.bot) return;
+  if(message.channel.type === "dm") return;
+
+  let sender = message.author;
+  let messageArray = message.content.split(" ");
+  let cmd = messageArray[0];
+  let args = messageArray.slice(1);
+
+ 
+if(cmd === `!sondage`){
+    let sondage = args.join(" ");
+    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Vous n'avez pas la permission de faire des sondages !");
+    let sondageEmbed = new Discord.MessageEmbed()
+    .setDescription("**Sondage** \n\n🔷 " + sondage + " \n\n ***sondage fait le :*** " + message.createdAt)
+    .setColor("#FFFFFF");
+
+
+
+    return message.channel.send(sondageEmbed).then(function (message) {
+        message.react("👍")
+        message.react("👎")
+        }).catch(function() {
+      });
+
+  }
 bot.on("message", message =>{
    if (message.content.startsWith(`!eshopmh`)) {
      try {
