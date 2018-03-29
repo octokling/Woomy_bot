@@ -277,7 +277,6 @@ bot.on("ready", function () {
  
  bot.user.setUsername("Nintentoont™")
 .then(user => console.log(`j'ai choisis mon avatar`))
-const prefix = "!"
 
 prefix = "!"
 
@@ -318,7 +317,7 @@ const level = JSON.parse(fs.readFileSync("./points.json", "utf8"))
 client.on("message", (message) => {
     // Securiter
     if (message.author.bot) { return }
-    
+    const prefix = "!"
 
     if (!message.content.startsWith(prefix)) {
         // Si c'est un nouveau
