@@ -296,7 +296,7 @@ servercount = client.guilds.size;
       }).catch(console.error)
     })
     
-const level = JSON.parse(fs.readFileSync("./level.json", "utf8"))
+const level = JSON.parse(fs.readFileSync("./points.json", "utf8"))
 
 client.on("message", (message) => {
     // Securiter
@@ -340,7 +340,7 @@ client.on("message", (message) => {
         }
 
         // Ecrire les donner
-        fs.writeFile("./level.json", JSON.stringify(level, 4, 4))
+        fs.writeFile("./points.json", JSON.stringify(level, 4, 4))
     } else {
         if (message.content.startsWith(prefix + "rank")) {
             if (!level[message.author.id]) {
