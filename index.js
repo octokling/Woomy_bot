@@ -367,7 +367,7 @@ client.on("message", (message) => {
                     .addField("Niveau : ", " 0 ", true)
                     .addField("Expérience : ", " 0", true)
 
-                message.channel.send({embed})
+                message.channel.send(embed)
             } else {
                 let userData = level[message.author.id]
                 const embed = new Discord.RichEmbed()
@@ -376,7 +376,7 @@ client.on("message", (message) => {
                     .addField("Niveau : ", userData.level, true)
                     .addField("Expérience : ", userData.points + " / " + donner[userData.level][1], true)
 
-                message.channel.send({embed})
+                message.channel.send(embed)
             }
         }
 
@@ -388,9 +388,9 @@ client.on("message", (message) => {
                 embed.addField("Niveau " + donner[a][0], "Sur " + donner[a][1] + ", le rank de " + donner[a][2])
             }
 
-            message.channel.send({embed})
+            message.channel.send(embed)
         }
-
+       
         if (message.content.startsWith("!lvlhelp")) {
             const embed = new Discord.RichEmbed()
                 .setColor(0xff0000)
@@ -398,7 +398,7 @@ client.on("message", (message) => {
                 "/infolvl : Pour avoir des info sur les niveau a passer", false)
                 .addField("Info : ", "Tu gagne environs 1-5 exp par message", false)
 
-            message.channel.send({embed})
+            message.channel.send(embed)
         }
     }
 })
