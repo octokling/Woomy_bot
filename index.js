@@ -296,6 +296,96 @@ servercount = client.guilds.size;
       }).catch(console.error)
     })
     
+const level = JSON.parse(fs.readFileSync("./level.json", "utf8"))
+
+client.on("message", (message) => {
+    // Securiter
+    if (message.author.bot) { return }
+    
+
+    if (!message.content.startsWith(prefix)) {
+        // Si c'est un nouveau
+        if (!level[message.author.id]) {
+            level[message.author.id] = {
+                pseudo : message.author.username,
+                points : 0,
+                level : 0
+            }
+        }
+
+        let userData = level[message.author.id]
+
+        // Ajout des point
+        let points = Math.floor(Math.random() * (5 - 1) + 1)
+        userData.points += points
+
+        // Mise a niveau
+        for (let n = 0; n < donner.length; n++) {
+            if (userData.level < donner[n][0] && userData.points >= donner[n][1]) {
+                userData.level = donner[n][0]
+                userData.points = 0
+                
+                // Donner les role convenue
+                for (let i = 0; i < donner.length; i++) {
+                    message.member.removeRole(donner[i][3])
+                }
+                message.member.addRole(donner[n][3])
+                    .catch(console.error)
+
+                // prevenir
+                message.reply("Bravo, vous êtes montez de niveau ! \nVous êtes maintenant niveau " + userData.level + " !" +
+                    "\n" + "Vous faites maintenant parti de " + donner[n][2])
+                
+            }
+        }
+
+        // Ecrire les donner
+        fs.writeFile("./level.json", JSON.stringify(level, 4, 4))
+    } else {
+        if (message.content.startsWith(prefix + "rank")) {
+            if (!level[message.author.id]) {
+                let userData = level[message.author.id]
+                const embed = new Discord.RichEmbed()
+                    .setAuthor(message.author.username, message.author.avatarURL)
+                    .setColor(0x0000ff)
+                    .addField("Niveau : ", " 0 ", true)
+                    .addField("Expérience : ", " 0", true)
+
+                message.channel.send({embed})
+            } else {
+                let userData = level[message.author.id]
+                const embed = new Discord.RichEmbed()
+                    .setAuthor(message.author.username, message.author.avatarURL)
+                    .setColor(0x0000ff)
+                    .addField("Niveau : ", userData.level, true)
+                    .addField("Expérience : ", userData.points + " / " + donner[userData.level][1], true)
+
+                message.channel.send({embed})
+            }
+        }
+
+        if (message.content.startsWith(prefix + "lvlinfo")) {
+            const embed = new Discord.RichEmbed()
+                .setColor(0x00ff00)
+                .setTitle("Les Niveau !")
+            for (let a = 0; a < donner.length; a++) {
+                embed.addField("Niveau " + donner[a][0], "Sur " + donner[a][1] + ", le rank de " + donner[a][2])
+            }
+
+            message.channel.send({embed})
+        }
+
+        if (message.content.startsWith(prefix + "lvlhelp")) {
+            const embed = new Discord.RichEmbed()
+                .setColor(0xff0000)
+                .addField("Commands : ", "/rank : Pour savoir son niveau et son experience" + "\n" + 
+                "/infolvl : Pour avoir des info sur les niveau a passer", false)
+                .addField("Info : ", "Tu gagne environs 1-5 exp par message", false)
+
+            message.channel.send({embed})
+        }
+    }
+})
 
 
 bot.on("guildMemberAdd", async member => {
@@ -632,8 +722,8 @@ bot.on('message', message => {
 if (message.content.startsWith(prefix + "commande")) { 
 var help_embed = new Discord.RichEmbed()
 .setColor('#01FE7F')
-.addField("Commande de Splatbotoon", "-!sondage : Pour créez un sondage \n\n-!hsondage : pour s'avoir les commande du sondage \n\n-!online/nepasdéranger: changer la disponibilité du bot \n -!jeu : modifier le jeux du bot\n -!level : votre niveaux (a découvrir) \n -!tonserveur : tu veut splatbotoont sur ton serveur alors fait vite cette commande\n-!ping : la commande la plus connu pour rien\n -!monavatar pour voir son avatar en plus gros\n-!questionnaire : remplir le questionnaire de splatbotoont")
-.addField("Commande musique de Splatbotoont", "-!clear(nombre de message a supprimer) : Pour ceux qui ont les permission __GéRER LES MESSAGE__ peuvent supprimer les message\n\n -!ban @mention (La raison du ban) : pour ceux qui sont __MODéRATEUR__ peuvent bannir les personnes \n\n -!kick @mention (La raison du kick) : pour ceux qui sont __MODéRATEUR__ peuvent expluser les gens-!eshopmh : toutes les dates des musique Nintendo Eshop \n\n -!eshopm(nombre de 1 à 13) : connecte toi sur le chat vocal ou il sera connecter et splatbotoont te chantera la musique choisis\n\n-!sp2m(nombre de 1 à 51) : connecte toi sur le chat vocal ou il sera connecter et splatbotoont te chantera la musique choisis\n-!sp2mh affiche toute les titre de musique.")
+.addField("Commande de Splatbotoon", "-!lvlhelp : pour s'avoir toute les commande sur les niveau-!clear(nombre de message a supprimer) : Pour ceux qui ont les permission __GéRER LES MESSAGE__ peuvent supprimer les message\n\n -!ban @mention (La raison du ban) : pour ceux qui sont __MODéRATEUR__ peuvent bannir les personnes \n\n -!kick @mention (La raison du kick) : pour ceux qui sont __MODéRATEUR__ peuvent expluser les gens \n\n-!sondage : Pour créez un sondage \n\n-!hsondage : pour s'avoir les commande du sondage \n\n-!online/nepasdéranger: changer la disponibilité du bot \n -!jeu : modifier le jeux du bot\n -!level : votre niveaux (a découvrir) \n -!tonserveur : tu veut splatbotoont sur ton serveur alors fait vite cette commande\n-!ping : la commande la plus connu pour rien\n -!monavatar pour voir son avatar en plus gros\n-!questionnaire : remplir le questionnaire de splatbotoont")
+.addField("Commande musique de Splatbotoont", "-!eshopmh : toutes les dates des musique Nintendo Eshop \n\n -!eshopm(nombre de 1 à 13) : connecte toi sur le chat vocal ou il sera connecter et splatbotoont te chantera la musique choisis\n\n-!sp2m(nombre de 1 à 51) : connecte toi sur le chat vocal ou il sera connecter et splatbotoont te chantera la musique choisis\n-!sp2mh affiche toute les titre de musique.")
 .addField("Logs", "Avant de voir les logs disponible de splatbotoont : \n créez un serveur nommée 'woomycation' \n dans les role selectionner que splatbotoont et mettre au moin envoyer des message, créez une invitation (pour prochainement hors grosse mise à jour)et gerer les message. après c'est tout\n passon au logs\n-1er : Je vous signale si il y a quelqu'un qui arrive sur votre serveur.\n-2ème : je vous signale si quelqu'un part de votre serveur.\n-3ème : je vous signale si quelqu'un à créez un nouveau émote (émoji).\n-4ème : je vous signale si quelqu'un a effacer un émote\n-5ème : je vous signale si quelqu'un à créez un role.\n-6ème : je vous signale si quelqu'un à supprimer un role")
 .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids.`, bot.user.avatarURL)
 message.channel.sendMessage(`${message.author.tag} je vous envoie mes commande`)
