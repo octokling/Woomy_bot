@@ -277,7 +277,7 @@ bot.on("ready", function () {
  
  bot.user.setUsername("Nintentoont™")
 .then(user => console.log(`j'ai choisis mon avatar`))
-prefix = "!"
+const prefix = "!"
 
 
 
