@@ -277,6 +277,7 @@ bot.on("ready", function () {
  
  bot.user.setUsername("Nintentoont™")
 .then(user => console.log(`j'ai choisis mon avatar`))
+const prefix = "!"
 
 prefix = "!"
 
@@ -294,13 +295,29 @@ servercount = client.guilds.size;
         return channel.send('Bienvenue sur le serveur ' + member.displayName + '! Merci de respecter les regle ')
       }).catch(console.error)
     })
-    
+    var donner = new Array()
+donner.push([1, 1, "Inkling niv 1", "426338371325919242"])
+donner.push([2, 500, "Inkling niv 2", "426338336458670081"])
+donner.push([3, 1000, "Inkling niv 3", "426336001464467457"])
+donner.push([4, 1500, "Inkling niv 4", "426338261192015883"])
+donner.push([5, 2000, "Inkling niv 5", "426338191763832833"])
+donner.push([6, 2500, "Octaling niv 6", "426336001271660544"])
+donner.push([7, 3500, "Octaling niv 7", "426336001271529473"])
+donner.push([8, 4500, "Octaling niv 8", "426335996888612864"])
+donner.push([9, 5500, "Octaling niv 9", "426335996867510274"])
+donner.push([10, 6500, "Octaling niv 10", "426335992996167681"])
+donner.push([11, 7500, "Poulpe niv 11", "426335992081809408"])
+donner.push([12, 9000, "Poulpe niv 11", "426335991796727819"])
+donner.push([13, 10500, "Poulpe niv 12", "426335987267010561"])
+donner.push([14, 12000, "Poulpe niv 13", "426335985702535170"])
+donner.push([15, 14000, "Poulpe niv 15", "426335983160655874"])
+donner.push([16, 20000, "Octave niv 16", "426335970405646338"])
+
 const level = JSON.parse(fs.readFileSync("./points.json", "utf8"))
 
 client.on("message", (message) => {
     // Securiter
     if (message.author.bot) { return }
-const prefix = "!"
     
 
     if (!message.content.startsWith(prefix)) {
