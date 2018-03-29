@@ -279,7 +279,7 @@ bot.on("ready", function () {
 .then(user => console.log(`j'ai choisis mon avatar`))
 const prefix = "!"
 
-
+prefix = "!"
 
 
 
