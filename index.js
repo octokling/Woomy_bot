@@ -358,7 +358,7 @@ client.on("message", (message) => {
         // Ecrire les donner
         fs.writeFile("./points.json", JSON.stringify(level, 4, 4))
     } else {
-        if (message.content.startsWith(prefix + "rank")) {
+        if (message.content.startsWith("!rank")) {
             if (!level[message.author.id]) {
                 let userData = level[message.author.id]
                 const embed = new Discord.RichEmbed()
@@ -380,7 +380,7 @@ client.on("message", (message) => {
             }
         }
 
-        if (message.content.startsWith(prefix + "lvlinfo")) {
+        if (message.content.startsWith("!lvlinfo")) {
             const embed = new Discord.RichEmbed()
                 .setColor(0x00ff00)
                 .setTitle("Les Niveau !")
@@ -391,7 +391,7 @@ client.on("message", (message) => {
             message.channel.send({embed})
         }
 
-        if (message.content.startsWith(prefix + "lvlhelp")) {
+        if (message.content.startsWith("!lvlhelp")) {
             const embed = new Discord.RichEmbed()
                 .setColor(0xff0000)
                 .addField("Commands : ", "/rank : Pour savoir son niveau et son experience" + "\n" + 
