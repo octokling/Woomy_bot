@@ -5,7 +5,7 @@ const client = new Discord.Client()
 const content = new Discord.Client()
 const fs = require("fs");
 const ffmpeg = require ('ffmpeg')
-
+const config = require('./config.json');
 require("opusscript");
 search = require('youtube-search');
 
