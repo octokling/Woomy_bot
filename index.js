@@ -5,8 +5,6 @@ var http = require('http');
 const content = new Discord.Client()
 const fs = require("fs");
 const ffmpeg = require ('ffmpeg')
-const Play = require('./play.js');
-const Youtube = require('./youtube');
 const yt = require('ytdl-core');
 con = console.log,
 
