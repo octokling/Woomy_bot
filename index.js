@@ -315,7 +315,7 @@ exports.run = (client, message, params) => {
 		message.channel.find("name", 'info-stage').send(embedTurf);
 		
 		
-	if (message.content === "test") {
+	if (message.content === "!matchclassique") {
 	 message.channel.sendMessage(embedTurf)
 
 }
