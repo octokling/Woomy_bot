@@ -313,15 +313,17 @@ exports.run = (client, message, params) => {
 			.addField("Les maps prochaines:", nextTurfMap1 + ", " + nextTurfMap2)
 			.setFooter("`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL");
 		message.channel.find("name", 'info-stage').send(embedTurf);
-		
-		
-	if (message.content === "!matchclassique") {
-	 message.channel.sendMessage(embedTurf)
+	
+		bot.on('message', message => {
+   if (message.content.startsWith('!info_classique')) {
+    
+    message.channel.send(embedTurf)
 
-}
-
+  }
+});
 
 	});
+	
 		
 	// display time that the maps switch
 	request('https://splatoon2.ink/data/schedules.json', function (error, response, body) {
