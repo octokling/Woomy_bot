@@ -313,6 +313,14 @@ exports.run = (client, message, params) => {
 			.addField("Les maps prochaines:", nextTurfMap1 + ", " + nextTurfMap2)
 			.setFooter("`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL");
 		message.channel.find("name", 'info-stage').send(embedTurf);
+		
+		
+	if (message.content === "test") {
+	 message.channel.sendMessage(embedTurf)
+
+}
+
+
 	});
 		
 	// display time that the maps switch
