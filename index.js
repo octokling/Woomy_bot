@@ -479,7 +479,7 @@ bot.on("message", message =>{
             .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
             .setColor("730000")
             .setTitle("Titre des musiques")
-        .setDescription(`!sp2m36 : Ink another day (Wet Floor) - [Match perdu]\n\n !sp2m37 : Turf Master (Wet Floor) - [Match gagner]\n\n !sp2m38 : Lobby \n\n !sp2m39 : Online Lobby (Ika Jamaica 2) \n\n !sp2m40 :Sheldon's Shop\n\n !sp2m41 : Flow's Shop\n\n !sp2m42 : Bisk's Shop\n\n !sp2m43 : Jelfonzo's Shop\n\n !sp2m44 : Beat of Inkopolis Square (with SFX)\n\n !sp2m45 : Seafom Shanty (Bottom Feeders) [Short Promo Ver.]  \n\n !sp2m46 : Shipwreckin' (Bottom Feeders) [Patch 2.0]\n\n !sp2m47 : Fins & Fiddles (Bottom Feeders) [Patch 2.0]\n\n !sp2m48 : Seafoam Shanty (Bottom Feeders) [Patch 2.0]\n\n!sp2m49 : Broken Coral (Ink Theory) [Patch 2.0] \n\n !sp2m50 :Riptide Rupture (Ink Theory) [Patch 2.0] \n\n !sp2m51 : Octo Expansion Trailer`)
+        .setDescription(`!sp2m36 : Ink another day (Wet Floor) - [Match perdu]\n\n !sp2m37 : Turf Master (Wet Floor) - [Match gagner]\n\n !sp2m38 : Lobby \n\n !sp2m39 : Online Lobby (Ika Jamaica 2) \n\n !sp2m40 :Sheldon's Shop\n\n !sp2m41 : Flow's Shop\n\n !sp2m42 : Bisk's Shop\n\n !sp2m43 : Jelfonzo's Shop\n\n !sp2m44 : Beat of Inkopolis Square (with SFX)\n\n !sp2m45 : Seafom Shanty (Bottom Feeders) [Short Promo Ver.]  \n\n !sp2m46 : Shipwreckin' (Bottom Feeders) [Patch 2.0]\n\n !sp2m47 : Fins & Fiddles (Bottom Feeders) [Patch 2.0]\n\n !sp2m48 : Seafoam Shanty (Bottom Feeders) [Patch 2.0]\n\n!sp2m49 : Broken Coral (Ink Theory) [Patch 2.0] \n\n !sp2m50 :Riptide Rupture (Ink Theory) [Patch 2.0] \n\n !sp2m51 : Octo Expansion Trailer \n\n !sp2m52 : Chip Damage [Chirpy Chips - ABXY] \n\n !sp2m53 : Battery Full [Chirpy Chips - ABXY]`)
          message.author.send(emb)
         } catch(err) {
             message.channel.send("Une erreur c'est produite , veuilliez en parlez à Liquideur de kids . Merci")
@@ -1415,6 +1415,26 @@ bot.on('message', message => {
     voiceChannel.join()
       .then(connection => {
  connection.playFile('./musique 51.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!sp2m52')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 52.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!sp2m53')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./musique 53.mp3')
         })}})
  bot.on('message', message => {
   if (message.content.startsWith('!eshopm1')) {
