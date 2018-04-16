@@ -14,111 +14,110 @@ bot.on("ready", function () {
         let randomNumber = Math.floor(Math.random() * 36) + 1;
         switch (randomNumber) {
             case 1:
-                bot.user.setGame("Casipoulpe|!commande");
+                bot.user.setGame("!commande|u Casipoulpe");
                 break;
             case 2:
-                bot.user.setGame("Splatoon 2|!commande");
+                bot.user.setGame("!commande|Splatoon 2");
                 break;
             case 3:
-                bot.user.setGame("Essayer d'apprendre le inkling|!commande");
+                bot.user.setGame("!commande|Essayer d'apprendre le inkling");
                 break;
             case 4:
-                bot.user.setGame("Dire adieu à Splatoon 1|!commande");
+                bot.user.setGame("!commande|Dire adieu à Splatoon 1");
                 break;
             case 5:
-                bot.user.setGame("Casser le jeux Splatoon 1|!commande");
+                bot.user.setGame("!commande|Casser le jeux Splatoon 1");
                 break;
             case 6:
-                bot.user.setGame("Splatoon 2 is better Splatoon 1|!commande");
+                bot.user.setGame("!commande|Splatoon 2 is better Splatoon 1");
                 break;
             case 7:
-                bot.user.setGame("Source FilmMaker Splatoon|!commande");
+                bot.user.setGame("!commande|Source FilmMaker Splatoon");
                 break;
             case 8:
-                bot.user.setGame("Essayer de faire un un squid bag|!commande");
+                bot.user.setGame("!commande|Essayer de faire un un squid bag");
                 break;
             case 9:
-                bot.user.setGame("écouter du Sparta REMIX|!commande");
+                bot.user.setGame("!commande|écouter du Sparta REMIX");
                 break;
             case 10:
-                bot.user.setGame("I love Splatoon|!commande");
+                bot.user.setGame("!commande|I love Splatoon");
                 break;
             case 11:
-                bot.user.setGame("Manger des Hambursalmon|!commande");
+                bot.user.setGame("!commande|Manger des Hambursalmon");
                 break;
             case 12:
-                bot.user.setGame("A faire des squid party|!commande");
+                bot.user.setGame("!commande|A faire des squid party");
                 break;
             case 13:
-                bot.user.setGame("Faire soit des octosaucice ou des salmonpané ?|!commande");
+                bot.user.setGame("!commande|Faire soit des octosaucice ou des salmonpané ?");
                 break;
             case 14:
-                bot.user.setGame("Ajouter des amis|!commande");
+                bot.user.setGame("!commande|Ajouter des ami");
                 break;
             case 15:
-                bot.user.setGame("La mode cool au mode histoire|!commande");
+                bot.user.setGame("!commande|La mode cool au mode histoire");
                 break;
             case 16:
-                bot.user.setGame("Découvrir les secret de splatoon|!commande");
+                bot.user.setGame("!commande|Découvrir les secret de splatoon");
                 break;
             case 17:
-                bot.user.setGame("Essayer de liquider Oly|!commande");
+                bot.user.setGame("!commande|Essayer de liquider Oly");
                 break;
             case 18:
-                bot.user.setGame("Ne pas ce faire Splatted par -Ruby- ou ∞SK∆M|!commande");
+                bot.user.setGame("!commande|Ne pas ce faire Splatted par les octarien);
                 break;
             case 19:
-                bot.user.setGame("Dominer le monde des Inkling|!commande");
+                bot.user.setGame("!commande|Dominer le monde des Inkling");
                 break;
             case 20:
-                bot.user.setGame("Faire un prank à Octave|!commande");
+                bot.user.setGame("!commande|Faire un prank à Octave");
                 break;
             case 21:
-                bot.user.setGame("The winner is splatbotoont|!commande");
+                bot.user.setGame("!commande|The winner is splatbotoont");
                 break;
             case 22:
-                bot.user.setGame("Liquideur de kids est indétronable!|!commande");
+                bot.user.setGame("!commande|Liquideur de kids est indétronable!");
                 break;
             case 23:
-                bot.user.setGame("Entraîner des gens|!commande");
+                bot.user.setGame("!commande|Entraîner des gens");
                 break;
           case 24:
-                bot.user.setGame("Pourquoi les inkling ne volent pas ?|!commande");
+                bot.user.setGame("!commande|Pourquoi les inkling ne volent pas ?");
                 break;
           case 25:
-                bot.user.setGame("Marcher sur les toyaux de l'entrainement|!commande");
+                bot.user.setGame("!commande|Pouvoir dire un truc à mon frère qui est une extension");
                 break;
           case 26:
-                bot.user.setGame("Splatoon so good|!commande");
+                bot.user.setGame("!commande|Splatoon so good");
                 break;
           case 27:
-                bot.user.setGame("Délirer dans la musique 43|!commande");
+                bot.user.setGame("!commande|Délirer dans la musique 43");
                 break;
           case 28:
-                bot.user.setGame("J'aime les squid|!commande");
+                bot.user.setGame("!commande|J'aime les squid");
                 break;
           case 29:
-                bot.user.setGame("Je squide , tu squides , il squide , nous squidons , vous squidez , ils squident|!commande");
+                bot.user.setGame("!commande|Je squide , tu squides , il squide , nous squidons , vous squidez , ils squident");
                 break;
           case 30:
-                bot.user.setGame("Je squidbage , tu squidbages , il squidbage , nous squidbagons , vous squidbagez , ils squidbagent|!commande");
+                bot.user.setGame("!commande|Je squidbage , tu squidbages , il squidbage , nous squidbagons , vous squidbagez , ils squidbagent");
                 break;
           case 31:
-                bot.user.setGame("Apprendre la technique d'Evil ou elle de Liquideur de kids|!commande");
+                bot.user.setGame("!commande|Apprendre la technique d'Evil ou elle de Liquideur de kids");
                 break;
           case 32:
-                bot.user.setGame("m'Améliorer de plus en plus|!commande");
+                bot.user.setGame("!commande|m'Améliorer de plus en plus");
                 break;
           case 33:
-                bot.user.setGame("Faire !questionnaire|!commande");
+                bot.user.setGame("!commande|Faire !questionnaire");
                 break;
           case 34:
-                bot.user.setGame("être toujour en bêta|!commande");
+                bot.user.setGame("!commande|être toujour en bêta");
                 break;
           case 35:
-                bot.user.setGame("M'Apprendre l'anglais|!commande");
+                bot.user.setGame("!commande|M'Apprendre l'anglais");
                 break;
-        
           case 36:
                 var Guilds = bot.guilds.size
                 bot.user.setGame("!commande|"+ Guilds +" Serveurs!");
@@ -264,10 +263,10 @@ bot.on("ready", function () {
                 bot.user.setUsername("Splatbotoont™ (bêta)")
                 break;
           case 7:
-                bot.user.setUsername("Splatbotoont™ (0.5.8)")
+                bot.user.setUsername("Splatbotoont™ (0.6.1)")
                 break;
           case 8:
-                bot.user.setUsername("Nintentoont™ (0.5.8)")
+                bot.user.setUsername("Nintentoont™ (0.6.1)")
                 break;
                      
         }
@@ -344,18 +343,6 @@ exports.run = (client, message, params) => {
 	});
 };
 
-exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: ['reg', 'turf'],
-  permLevel: 0
-};
-
-exports.help = {
-  name: 'regular',
-  description: 'Affiche les maps de guerre de Turf actuelles et suivantes.',
-  usage: 'regular'
-};
 bot.on("guildMemberAdd", async member => {
     try {
     let rol = member.guild.roles.find("name", "Les Inkling")
@@ -545,7 +532,7 @@ if(cmd === `!ban`){
     if(!logchannel) return message.guild.channel.send("Erreur, merci de contacter Liquideur de kids !");
 
     message.delete().catch(O_o=>{});
-    message.guild.member(bUser).sendMessage("Vous avez était kick du discord de ${servers} ! Pour :", bReason);
+    message.guild.member(bUser).sendMessage(`Vous avez était kick du discord de ${servers} ! Pour :`, bReason);
     message.guild.member(bUser).ban(bReason);
     logchannel.send(banEmbed);
 
@@ -594,12 +581,12 @@ if(message.content.startsWith(prefix + 'sondage')){
   var sd5 = message.content.split("-").slice(6)[0];
   var sd6 = message.content.split("-").slice(7)[0];
   var sd7 = message.content.split("-").slice(1)[0];
-  if(sd1) sd1 = "<:one:403619398121947136> "+ sd1;
-  if(sd2) sd2 = "<:two:403619398759481354> " +sd2;
-  if(sd3) sd3 = "<:three:403619399422050305> " +sd3;
-  if(sd4) sd4 = "<:four:403618947490119686> "+sd4;
-  if(sd5) sd5 = "<:five:403618947431137302> "+sd5;
-  if(sd6) sd6 = "<:six:403618947548577805> "+sd6;
+  if(sd1) sd1 = "<:one:> "+ sd1;
+  if(sd2) sd2 = "<:two:> " +sd2;
+  if(sd3) sd3 = "<:three:> " +sd3;
+  if(sd4) sd4 = "<:four:> "+sd4;
+  if(sd5) sd5 = "<:five:> "+sd5;
+  if(sd6) sd6 = "<:six:> "+sd6;
   if(!sd1) sd1 = "";
   if(!sd2) sd2 = "";
   if(!sd3) sd3 = "";
@@ -607,7 +594,7 @@ if(message.content.startsWith(prefix + 'sondage')){
   if(!sd5) sd5 = "";
   if(!sd6) sd6 = "";
   if(!sd7) sd7 = "";
-        message.channel.sendMessage("**:scroll: SONDAGE :scroll: \n"+sd7+"\n\n"+sd1+"\n"+sd2+"\n"+sd3+"\n"+sd4+"\n"+sd5+"\n"+sd6+"\n[@here]**")
+        message.channel.sendMessage("**:scroll: SONDAGE :scroll: \n"+sd7+"\n\n"+sd1+"\n"+sd2+"\n"+sd3+"\n"+sd4+"\n"+sd5+"\n"+sd6+"\n[@everyone]**")
         .then(function (message) {
           if(sd1) sd1 = message.react(":one:");
           if(sd2) sd2 = message.react(":two:");
@@ -690,7 +677,7 @@ bot.on('message', message => {
 if (message.content.startsWith(prefix + "commande")) { 
 var help_embed = new Discord.RichEmbed()
 .setColor('#01FE7F')
-.addField("Commande de Splatbotoon", "-!lvlhelp : pour s'avoir toute les commande sur les niveau-!clear(nombre de message a supprimer) : Pour ceux qui ont les permission __GéRER LES MESSAGE__ peuvent supprimer les message\n\n -!ban @mention (La raison du ban) : pour ceux qui sont __MODéRATEUR__ peuvent bannir les personnes \n\n -!kick @mention (La raison du kick) : pour ceux qui sont __MODéRATEUR__ peuvent expluser les gens \n\n-!sondage : Pour créez un sondage \n\n-!hsondage : pour s'avoir les commande du sondage \n\n-!online/nepasdéranger: changer la disponibilité du bot \n -!jeu : modifier le jeux du bot\n -!level : votre niveaux (a découvrir) \n -!tonserveur : tu veut splatbotoont sur ton serveur alors fait vite cette commande\n-!ping : la commande la plus connu pour rien\n -!monavatar pour voir son avatar en plus gros\n-!questionnaire : remplir le questionnaire de splatbotoont")
+.addField("Commande de Splatbotoon", "-!clear(nombre de message a supprimer) : Pour ceux qui ont les permission __GéRER LES MESSAGE__ peuvent supprimer les message\n\n -!ban @mention (La raison du ban) : pour ceux qui sont __MODéRATEUR__ peuvent bannir les personnes \n\n -!kick @mention (La raison du kick) : pour ceux qui sont __MODéRATEUR__ peuvent expluser les gens \n\n-!sondage : Pour créez un sondage \n\n-!hsondage : pour s'avoir les commande du sondage \n\n-!online/nepasdéranger: changer la disponibilité du bot \n -!jeu : modifier le jeux du bot\n -!tonserveur : tu veut splatbotoont sur ton serveur alors fait vite cette commande\n-!ping : la commande la plus connu pour rien\n -!monavatar pour voir son avatar en plus gros\n-!questionnaire : remplir le questionnaire de splatbotoont")
 .addField("Commande musique de Splatbotoont", "-!eshopmh : toutes les dates des musique Nintendo Eshop \n\n -!eshopm(nombre de 1 à 13) : connecte toi sur le chat vocal ou il sera connecter et splatbotoont te chantera la musique choisis\n\n-!sp2m(nombre de 1 à 51) : connecte toi sur le chat vocal ou il sera connecter et splatbotoont te chantera la musique choisis\n-!sp2mh affiche toute les titre de musique.")
 .addField("Logs", "Avant de voir les logs disponible de splatbotoont : \n créez un serveur nommée 'woomycation' \n dans les role selectionner que splatbotoont et mettre au moin envoyer des message, créez une invitation (pour prochainement hors grosse mise à jour)et gerer les message. après c'est tout\n passon au logs\n-1er : Je vous signale si il y a quelqu'un qui arrive sur votre serveur.\n-2ème : je vous signale si quelqu'un part de votre serveur.\n-3ème : je vous signale si quelqu'un à créez un nouveau émote (émoji).\n-4ème : je vous signale si quelqu'un a effacer un émote\n-5ème : je vous signale si quelqu'un à créez un role.\n-6ème : je vous signale si quelqu'un à supprimer un role")
 .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids.`, bot.user.avatarURL)
