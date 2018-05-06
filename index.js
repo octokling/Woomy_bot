@@ -11,120 +11,124 @@ con = console.log,
 bot.on("ready", function () {
  
   setInterval(function() {
-        let randomNumber = Math.floor(Math.random() * 36) + 1;
+        let randomNumber = Math.floor(Math.random() * 37) + 1;
         switch (randomNumber) {
             case 1:
-                bot.user.setGame("!commande|u Casipoulpe");
+                bot.user.setGame("!commande|Casipoulpe");
                 break;
             case 2:
                 bot.user.setGame("!commande|Splatoon 2");
                 break;
             case 3:
-                bot.user.setGame("!commande|Essayer d'apprendre le inkling");
+                bot.user.setGame("!commande|Essayer d'apprendre à se servir des armes");
                 break;
             case 4:
-                bot.user.setGame("!commande|Dire adieu à Splatoon 1");
+                bot.user.setGame("!commande|Splatfest");
                 break;
             case 5:
-                bot.user.setGame("!commande|Casser le jeux Splatoon 1");
+                bot.user.setGame("!commande|Splatoon 2 it's great");
                 break;
             case 6:
                 bot.user.setGame("!commande|Splatoon 2 is better Splatoon 1");
                 break;
             case 7:
-                bot.user.setGame("!commande|Source FilmMaker Splatoon");
+                bot.user.setGame("!commande|Le rouleau");
                 break;
             case 8:
-                bot.user.setGame("!commande|Essayer de faire un un squid bag");
+                bot.user.setGame("!commande|Liquidateur");
                 break;
             case 9:
-                bot.user.setGame("!commande|écouter du Sparta REMIX");
+                bot.user.setGame("!commande|Splatted by the Octokling");
                 break;
             case 10:
                 bot.user.setGame("!commande|I love Splatoon");
                 break;
             case 11:
-                bot.user.setGame("!commande|Manger des Hambursalmon");
+                bot.user.setGame("!commande|Badigeonneur");
                 break;
             case 12:
-                bot.user.setGame("!commande|A faire des squid party");
+                bot.user.setGame("!commande|Chic");
                 break;
             case 13:
-                bot.user.setGame("!commande|Faire soit des octosaucice ou des salmonpané ?");
+                bot.user.setGame("!commande|Ayo it's here");
                 break;
             case 14:
-                bot.user.setGame("!commande|Ajouter des ami");
+                bot.user.setGame("!commande|Oly it's not here °_°");
                 break;
             case 15:
-                bot.user.setGame("!commande|La mode cool au mode histoire");
+                bot.user.setGame("!commande|Octo Canyon");
                 break;
             case 16:
-                bot.user.setGame("!commande|Découvrir les secret de splatoon");
+                bot.user.setGame("!commande|Ink Cannon");
                 break;
             case 17:
-                bot.user.setGame("!commande|Essayer de liquider Oly");
+                bot.user.setGame("!commande|Sardinium");
                 break;
             case 18:
-                bot.user.setGame("!commande|Ne pas ce faire Splatted par les octarien);
+                bot.user.setGame("!commande|Parchemin);
                 break;
             case 19:
-                bot.user.setGame("!commande|Dominer le monde des Inkling");
+                bot.user.setGame("!commande|Inkling");
                 break;
             case 20:
-                bot.user.setGame("!commande|Faire un prank à Octave");
+                bot.user.setGame("!commande|DJ Octave");
                 break;
             case 21:
-                bot.user.setGame("!commande|The winner is splatbotoont");
+                bot.user.setGame("!commande|The winner is Number 4");
                 break;
             case 22:
-                bot.user.setGame("!commande|Liquideur de kids est indétronable!");
+                bot.user.setGame("!commande|Splatoon it's stupid or illuminati ?");
                 break;
             case 23:
-                bot.user.setGame("!commande|Entraîner des gens");
+                bot.user.setGame("!commande|!questionnaire");
                 break;
           case 24:
-                bot.user.setGame("!commande|Pourquoi les inkling ne volent pas ?");
+                bot.user.setGame("!commande|why the inklings is not fly?");
                 break;
           case 25:
-                bot.user.setGame("!commande|Pouvoir dire un truc à mon frère qui est une extension");
+                bot.user.setGame("!commande|Splatension");
                 break;
           case 26:
                 bot.user.setGame("!commande|Splatoon so good");
                 break;
           case 27:
-                bot.user.setGame("!commande|Délirer dans la musique 43");
+                bot.user.setGame("!commande|Match Macking !");
                 break;
           case 28:
-                bot.user.setGame("!commande|J'aime les squid");
+                bot.user.setGame("!commande|J'aime les squid . WOOOOOOOOMYYYYYYYYYYY");
                 break;
           case 29:
-                bot.user.setGame("!commande|Je squide , tu squides , il squide , nous squidons , vous squidez , ils squident");
+                bot.user.setGame("!commande|Octo Expansion !");
                 break;
           case 30:
-                bot.user.setGame("!commande|Je squidbage , tu squidbages , il squidbage , nous squidbagons , vous squidbagez , ils squidbagent");
+                bot.user.setGame("!commande|Number 9 ?");
                 break;
           case 31:
-                bot.user.setGame("!commande|Apprendre la technique d'Evil ou elle de Liquideur de kids");
+                bot.user.setGame("!commande|Evilsquid or Octoboy ?");
                 break;
           case 32:
-                bot.user.setGame("!commande|m'Améliorer de plus en plus");
+                bot.user.setGame("!commande|N-zap 83 , 85 or 89 ?");
                 break;
           case 33:
-                bot.user.setGame("!commande|Faire !questionnaire");
+                bot.user.setGame("!commande");
                 break;
           case 34:
-                bot.user.setGame("!commande|être toujour en bêta");
+                bot.user.setGame("!commande|Nothing");
                 break;
           case 35:
-                bot.user.setGame("!commande|M'Apprendre l'anglais");
+                bot.user.setGame("!commande|I'm great in English");
                 break;
           case 36:
                 var Guilds = bot.guilds.size
                 bot.user.setGame("!commande|"+ Guilds +" Serveurs!");
                 break;
+	  case 37:
+                var Guilds = bot.guilds.size
+                bot.user.setGame("!commande|WebSite ?");
+                break;
         }
    
-    }, 999999);
+    }, 9999999);
   
    setInterval(function() {
         let rndNumber = Math.floor(Math.random() * 36) + 1;
@@ -239,34 +243,34 @@ bot.on("ready", function () {
                 break;
                      
         }
-    }, 999999);
+    }, 9999999);
  
     setInterval(function() {
         let rndNumber = Math.floor(Math.random() * 8) + 1;
         switch (rndNumber) {
-            case 1:
+          case 1:
                 bot.user.setUsername("Splatbotoont™")
                 break;
-            case 2:
+          case 2:
                 bot.user.setUsername("Nintentoont™")
                 break;
-            case 3:
+          case 3:
                 bot.user.setUsername("Nintentoont™ (bêta)")
                 break;
-            case 4:
-                bot.user.setUsername("Nintentoont™ (fr)")
+          case 4:
+                bot.user.setUsername("Nintentoont™ (fr/en)")
                 break;
-           case 5:
-                bot.user.setUsername("Splatbotoont™ (fr)")
+          case 5:
+                bot.user.setUsername("Splatbotoont™ (fr/en)")
                 break;
           case 6:
                 bot.user.setUsername("Splatbotoont™ (bêta)")
                 break;
           case 7:
-                bot.user.setUsername("Splatbotoont™ (0.6.1)")
+                bot.user.setUsername("Splatbotoont™ (0.6.8)")
                 break;
           case 8:
-                bot.user.setUsername("Nintentoont™ (0.6.1)")
+                bot.user.setUsername("Nintentoont™ (0.6.8)")
                 break;
                      
         }
@@ -288,7 +292,7 @@ servercount = client.guilds.size;
 
     bot.on('guildMemberAdd', member => {
       member.createDM().then(channel => {
-        return channel.send('Bienvenue sur le serveur ' + member.displayName + '! Merci de respecter les regle ')
+        return channel.send('Bienvenue sur le serveur ' + member.displayName + '! Merci de respecter les regles choisis par le(s) fondateur /n/n Welcome on the serveur. ' + member.displayName + '! Thank of respect the rules choose by founder(s) . ')
       }).catch(console.error)
     })
 
@@ -306,11 +310,11 @@ exports.run = (client, message, params) => {
 			
 		const embedTurf = new Discord.RichEmbed()
 			.setTitle("Les Maps du Match Classique")
-			.setColor(13751592)
+			.setColor("2EFE2E")
 			.setThumbnail("https://github.com/KunoichiZ/off-the-hook-bot/blob/master/images/turf%20war.png?raw=true")
 			.addField("Maps:", nowTurfMap1 + ", " + nowTurfMap2)
 			.addField("Les maps prochaines:", nextTurfMap1 + ", " + nextTurfMap2)
-			.setFooter("`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL");
+			.setFooter("© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids, bot.user.avatarURL");
 		message.channel.find("name", 'info-stage').send(embedTurf);
 	
 		bot.on('message', message => {
@@ -353,59 +357,99 @@ bot.on("guildMemberAdd", async member => {
             .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
     member.guild.channels.find("name", 'woomycation').send(emb);
     member.addRole(rol)
-}catch(err) {
-    member.guild.owner.send("Veuillez Créer le salon `woomycation` et le rôle `Les inkling` pour que tout le monde sache l'arrivée du nouveau woomy !!")
+}
+    });
+bot.on("guildMemberAdd", async member => {
+    try {
+    let rol = member.guild.roles.find("name", "Les Inkling")
+    var emb = new Discord.RichEmbed()
+            .setColor("730000")
+            .setTitle("woomycation")
+            .setDescription(`:squid:${member.user.tag} is arrived:squid:`)
+            .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
+    member.guild.channels.find("name", 'woomycation-en').send(emb);
+    member.addRole(rol)
 }
     });
  bot.on("roleCreate", role =>{
         try {
         var emb = new Discord.RichEmbed()
-        .setColor("730000")
+        .setColor("FF0000")
         .setTitle("woomycation")
-        .setDescription(`Un rôle viens d'être créé sur ${role.guild.name}`)
+        .setDescription(`Un rôle viens d'être créé par ${role.user.tag}. /n/n nommé : ${role.name}`)
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
         role.guild.channels.find("name", 'woomycation').send(emb)
-        } catch(err) {
-            role.guild.owner.send("Veuillez créer le salon `woomycation`, comme ça tout le monde sera au courant des roles créés !!")
         }
     });
-
+bot.on("roleCreate", role =>{
+        try {
+        var emb = new Discord.RichEmbed()
+        .setColor("FF0000")
+        .setTitle("woomycation")
+        .setDescription(`One role have just been create by ${role.user.tag}. nommed : ${role.name}`)
+        .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
+        role.guild.channels.find("name", 'woomycation-en').send(emb)
+        }
+    });
  bot.on("roleDelete", role =>{
         try {
         var emb = new Discord.RichEmbed()
         .setColor("730000")
         .setTitle("woomycation")
-        .setDescription(`Le rôle ${role.name} viens d'être supprimé sur ${role.guild.name}`)
+        .setDescription(`Le rôle ${role.name} viens d'être supprimé sur ${role.guild.name}. Par : ${role.user.tag}`)
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
     role.guild.channels.find("name", 'woomycation').send(emb)
-        } catch(err) {
-            role.guild.owner.send("Veuillez créer le salon `woomycation`, comme ça tout le monde sera au courant des roles détruits !!")
         }
     })
-
-bot.on("channelsDelete", role =>{
+bot.on("roleDelete", role =>{
         try {
         var emb = new Discord.RichEmbed()
         .setColor("730000")
         .setTitle("woomycation")
-        .setDescription(`Un nouveau channel vient d'être supprimer`)
+        .setDescription(`the role : ${role.name} have just been remove on ${role.guild.name}. by : ${role.user.tag}`)
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
-    role.guild.channels.find("name", 'woomycation').send(emb)
-        } catch(err) {
-            role.guild.owner.send("Veuillez créer le salon `woomycation`, comme ça tout le monde sera au courant des roles détruits !!")
+    role.guild.channels.find("name", 'woomycation-en').send(emb)
         }
     })
 
-bot.on("channelsCreate", role =>{
+bot.on("channelsDelete", channels=>{
         try {
         var emb = new Discord.RichEmbed()
         .setColor("730000")
         .setTitle("woomycation")
-        .setDescription(`Un channel vient d'être supprimé`)
+        .setDescription(`Un nouveau channel vient d'être supprimer sur ${channels.guild.name}. Par : ${channels.user.tag} `)
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
     role.guild.channels.find("name", 'woomycation').send(emb)
-        } catch(err) {
-            role.guild.owner.send("Veuillez créer le salon `woomycation`, comme ça tout le monde sera au courant des roles détruits !!")
+        }
+    })
+bot.on("channelsDelete", channels =>{
+        try {
+        var emb = new Discord.RichEmbed()
+        .setColor("730000")
+        .setTitle("woomycation")
+        .setDescription(`One channel have just been remove on ${channels.guild.name}. by : ${channels.user.tag} `)
+        .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
+    role.guild.channels.find("name", 'woomycation-en').send(emb)
+        }
+    })
+bot.on("channelsCreate", channels =>{
+        try {
+        var emb = new Discord.RichEmbed()
+        .setColor("730000")
+        .setTitle("woomycation")
+        .setDescription(`Un channel vient d'être supprimé sur ${channels.guild.name}. Par : ${channels.user.tag} `)
+        .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
+    role.guild.channels.find("name", 'woomycation').send(emb)
+        }
+    })
+bot.on("channelsCreate", channels =>{
+        try {
+        var emb = new Discord.RichEmbed()
+        .setColor("730000")
+        .setTitle("woomycation")
+        .setDescription(`One channel have just been remove on ${channels.guild.name}. by : ${channels.user.tag} `)
+        .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
+    role.guild.channels.find("name", 'woomycation-en').send(emb)
         }
     })
 
@@ -415,10 +459,18 @@ bot.on("channelsCreate", role =>{
             .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
             .setColor("730000")
             .setTitle("woomycation")
-            .setDescription(`L'image ${emoji.name}.png viens d'être importé pour un émoji sur ${emoji.guild.name} , woomy qu'il est joli`)
+            .setDescription(`L'image ${emoji.name} :${emoji.name}: viens d'être importé pour un émoji sur ${emoji.guild.name}. Par : ${emoji.user.tag}`)
         emoji.guild.channels.find("name", 'woomycation').send(emb)
-        } catch(err) {
-            emoji.guild.owner.send("Veuillez créer le salon `woomycation`, comme ça tout le monde sera au courant des emojis créés !!")
+        }
+    })
+ bot.on("emojiCreate", emoji =>{
+        try {
+        var emb = new Discord.RichEmbed()
+            .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
+            .setColor("730000")
+            .setTitle("woomycation")
+            .setDescription(`The emoji ${emoji.name} :${emoji.name}: have just been import for an emoji on ${emoji.guild.name}. by : ${emoji.user.tag}`)
+        emoji.guild.channels.find("name", 'woomycation-en').send(emb)
         }
     })
  bot.on("emojiDelete", emoji =>{
@@ -427,10 +479,18 @@ bot.on("channelsCreate", role =>{
             .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
             .setColor("730000")
             .setTitle("woomycation")
-            .setDescription(`L'emoji ${emoji.name} viens d'être supprimé sur ${emoji.guild.name} woomy je le trouver joli moi`)
+            .setDescription(`L'emoji ${emoji.name} :${emoji.name}: viens d'être supprimé sur ${emoji.guild.name}. Par : ${emoji.user.tag}`)
         emoji.guild.channels.find("name", 'woomycation').send(emb)
-        } catch(err) {
-            emoji.guild.owner.send("Veuillez créer le salon `woomycation`, comme ça tout le monde sera au courant des emojis créés !!")
+        }
+    })
+ bot.on("emojiDelete", emoji =>{
+        try {
+        var emb = new Discord.RichEmbed()
+            .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
+            .setColor("730000")
+            .setTitle("woomycation")
+            .setDescription(`The emoji ${emoji.name} :${emoji.name}: have just been remove on ${emoji.guild.name}. by : ${emoji.user.tag}`)
+        emoji.guild.channels.find("name", 'woomycation-en').send(emb)
         }
     })
 bot.on("message", message =>{
@@ -441,6 +501,19 @@ bot.on("message", message =>{
             .setColor("730000")
             .setTitle("Titre des musiques")         
        .setDescription(`voici toute les titre de musique splatoon 2:  \n\n !sp2m1 : Inkoming! (Testfire Version) \n\n !sp2m2 :Color Pulse (Off the Hook)\n\n !sp2m3 : Ebb & Flow (Off the Hook)\n\n !sp2m4 : Fest Zest (Off the Hook) \n\n !sp2m5 : Endolphin Surge (Wet Floor)\n\n !sp2m6 : Don't Slip! (Wet Floor) – Splatfest Battle Theme \n\n !sp2m7 : Undertow (Wet Floor)\n\n !sp2m8 : Rip Entry (Wet Floor)\n\n !sp2m9 : Acid Hues (Off the Hook) - Splatfest Battle Theme \n\n !sp2m10 : Muck Warfare (Off the Hook) - Splatfest Battle Theme\n\n !!sp2m11 : Bomb Rush Blush (DJ Octavio. feat Callie)\n\n !sp2m12 : Tidal Rush (DJ Octavio feat. Callie vs Marie)\n\n !sp2m13 : Spicy Calamari Inkantation (Squid Sisters)\n\n !sp2m14 : Fresh Start (Squid Sisters) \n\n!sp2m15 : Low Tide (Singleplayer Introduction) \n\n!sp2m16 : Octo Eight-Step - Turquoise October (Singleplayer)\n\n !sp2m17 : The Girl from Inkopolis - Turquoise October (Singleplayer) \n\n `)
+         message.author.send(emb)
+        } catch(err) {
+            message.channel.send("Une erreur c'est produite , veuilliez en parlez à Liquideur de kids . Merci")
+        }}
+    })
+bot.on("message", message =>{
+   if (message.content.startsWith(`!sp2mh_en`)) {
+     try {
+        var emb = new Discord.RichEmbed()
+            .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
+            .setColor("730000")
+            .setTitle("The Title music")         
+       .setDescription(`here are all the title splatoon music :  \n\n !sp2m1 : Inkoming! (Testfire Version) \n\n !sp2m2 :Color Pulse (Off the Hook)\n\n !sp2m3 : Ebb & Flow (Off the Hook)\n\n !sp2m4 : Fest Zest (Off the Hook) \n\n !sp2m5 : Endolphin Surge (Wet Floor)\n\n !sp2m6 : Don't Slip! (Wet Floor) – Splatfest Battle Theme \n\n !sp2m7 : Undertow (Wet Floor)\n\n !sp2m8 : Rip Entry (Wet Floor)\n\n !sp2m9 : Acid Hues (Off the Hook) - Splatfest Battle Theme \n\n !sp2m10 : Muck Warfare (Off the Hook) - Splatfest Battle Theme\n\n !!sp2m11 : Bomb Rush Blush (DJ Octavio. feat Callie)\n\n !sp2m12 : Tidal Rush (DJ Octavio feat. Callie vs Marie)\n\n !sp2m13 : Spicy Calamari Inkantation (Squid Sisters)\n\n !sp2m14 : Fresh Start (Squid Sisters) \n\n!sp2m15 : Low Tide (Singleplayer Introduction) \n\n!sp2m16 : Octo Eight-Step - Turquoise October (Singleplayer)\n\n !sp2m17 : The Girl from Inkopolis - Turquoise October (Singleplayer) \n\n `)
          message.author.send(emb)
         } catch(err) {
             message.channel.send("Une erreur c'est produite , veuilliez en parlez à Liquideur de kids . Merci")
@@ -460,12 +533,38 @@ bot.on("message", message =>{
         }}
     })
 bot.on("message", message =>{
+   if (message.content.startsWith(`!sp2mh_en`)) {
+     try {
+        var emb = new Discord.RichEmbed()
+            .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
+            .setColor("730000")
+            .setTitle("The Title music")
+.setDescription(`!sp2m18 : Buoyant Boogie - Turquoise October (Singleplayer)\n\n !sp2m19 : Buoyant Boogie - Shooting Starfish - Turquoise October (Singleplayer)\n\n !sp2m20 : Octarmaments - Turquoise October (Singleplayer)n\n !sp2m21 : Octo Canyon - Turquoise October (Singleplayer) \n\n !sp2m22 : Happy Little Workers - Grizzco Industries (Salmon Run)\n\n !sp2m23 : Deluge Dirge (Salmon Run)\n\n !sp2m24 : Fishing Frenzy - ω-3 (Salmon Run)!sp2m25 : Ever Further - Grizzco Industries (Salmon Run) \n\n !sp2m26 : Now or Never! [Dernière minute]\n\n !sp2m27 : Now or Never! (Splatfest Version)\n\n !sp2m28 : Now or Never! (Testfire Version)\n\n !sp2m29 : Inkoming! (Wet Floor)\n\n !sp2m30 : Undertow (Testfire Version)\n\n !sp2m31 : Rip Entry (Testfire Version)\n\n !sp2m32 : Tutorial\n\n !sp2m33 : Tutorial (Testfire Version) \n\n !sp2m34 : News Broadcast (Off the Hook) \n\n !!sp2m35 : Match Introduction\n\n `)
+         message.author.send(emb)
+        } catch(err) {
+            message.channel.send("Une erreur c'est produite , veuilliez en parlez à Liquideur de kids . Merci")
+        }}
+    })
+bot.on("message", message =>{
    if (message.content.startsWith(`!sp2mh`)) {
      try {
         var emb = new Discord.RichEmbed()
             .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
             .setColor("730000")
             .setTitle("Titre des musiques")
+        .setDescription(`!sp2m36 : Ink another day (Wet Floor) - [Match perdu]\n\n !sp2m37 : Turf Master (Wet Floor) - [Match gagner]\n\n !sp2m38 : Lobby \n\n !sp2m39 : Online Lobby (Ika Jamaica 2) \n\n !sp2m40 :Sheldon's Shop\n\n !sp2m41 : Flow's Shop\n\n !sp2m42 : Bisk's Shop\n\n !sp2m43 : Jelfonzo's Shop\n\n !sp2m44 : Beat of Inkopolis Square (with SFX)\n\n !sp2m45 : Seafom Shanty (Bottom Feeders) [Short Promo Ver.]  \n\n !sp2m46 : Shipwreckin' (Bottom Feeders) [Patch 2.0]\n\n !sp2m47 : Fins & Fiddles (Bottom Feeders) [Patch 2.0]\n\n !sp2m48 : Seafoam Shanty (Bottom Feeders) [Patch 2.0]\n\n!sp2m49 : Broken Coral (Ink Theory) [Patch 2.0] \n\n !sp2m50 :Riptide Rupture (Ink Theory) [Patch 2.0] \n\n !sp2m51 : Octo Expansion Trailer \n\n !sp2m52 : Chip Damage [Chirpy Chips - ABXY] \n\n !sp2m53 : Battery Full [Chirpy Chips - ABXY]`)
+         message.author.send(emb)
+        } catch(err) {
+            message.channel.send("Une erreur c'est produite , veuilliez en parlez à Liquideur de kids . Merci")
+        }}
+    })
+bot.on("message", message =>{
+   if (message.content.startsWith(`!sp2mh_en`)) {
+     try {
+        var emb = new Discord.RichEmbed()
+            .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
+            .setColor("730000")
+            .setTitle("The Title music")
         .setDescription(`!sp2m36 : Ink another day (Wet Floor) - [Match perdu]\n\n !sp2m37 : Turf Master (Wet Floor) - [Match gagner]\n\n !sp2m38 : Lobby \n\n !sp2m39 : Online Lobby (Ika Jamaica 2) \n\n !sp2m40 :Sheldon's Shop\n\n !sp2m41 : Flow's Shop\n\n !sp2m42 : Bisk's Shop\n\n !sp2m43 : Jelfonzo's Shop\n\n !sp2m44 : Beat of Inkopolis Square (with SFX)\n\n !sp2m45 : Seafom Shanty (Bottom Feeders) [Short Promo Ver.]  \n\n !sp2m46 : Shipwreckin' (Bottom Feeders) [Patch 2.0]\n\n !sp2m47 : Fins & Fiddles (Bottom Feeders) [Patch 2.0]\n\n !sp2m48 : Seafoam Shanty (Bottom Feeders) [Patch 2.0]\n\n!sp2m49 : Broken Coral (Ink Theory) [Patch 2.0] \n\n !sp2m50 :Riptide Rupture (Ink Theory) [Patch 2.0] \n\n !sp2m51 : Octo Expansion Trailer \n\n !sp2m52 : Chip Damage [Chirpy Chips - ABXY] \n\n !sp2m53 : Battery Full [Chirpy Chips - ABXY]`)
          message.author.send(emb)
         } catch(err) {
@@ -485,8 +584,8 @@ bot.on("message", async message => {
     let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!kUser) return message.channel.send("Impossible de trouver l'utilisateur !");
     let kReason = args.join(" ").slice(22);
-    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Vous n'avez pas la permission pour kick !");
-    if(kUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Vous ne pouvez pas kick cette utilisateur !");
+    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Vous n'avez pas la permission pour kick ! /n/n you have not parmission for kick !");
+    if(kUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Vous ne pouvez pas kick cette utilisateur ! /n/n You can not kick this user");
 
     let kickEmbed = new Discord.RichEmbed()
     .setDescription("Oh ! qulqu'un c'est fait kicker !")
@@ -515,8 +614,8 @@ if(cmd === `!ban`){
     let bUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!bUser) return message.channel.send("Impossible de trouver l'utilisateur !");
     let bReason = args.join(" ").slice(22);
-    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Vous n'avez pas la permission pour ban !");
-    if(bUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Vous ne pouvez pas ban cette utilisateur !");
+    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Vous n'avez pas la permission pour ban !/n/n you have not parmission for kick !");
+    if(bUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Vous ne pouvez pas ban cette utilisateur !/n/n You can not ban this user");
 
     let banEmbed = new Discord.RichEmbed()
     .setDescription("Oh! quelqu'un c'est fait kicker banni")
@@ -541,8 +640,8 @@ if(cmd === `!ban`){
   }
 
  if(cmd == `!clear`){
-    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Vous n'avez pas la permission pour supprimer les message !");
-    if(!args[0]) return message.channel.send("Vous devez préciser combien de message je dois supprimer !");
+    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Vous n'avez pas la permission pour supprimer les message !/n/n You have not permission for remove send");
+    if(!args[0]) return message.channel.send("Vous devez préciser combien de message je dois supprimer !/n/n You must specify how many messages I must delete! ");
     message.channel.bulkDelete(args[0]).then(() => {
       message.channel.send(`Clear de ${args[0]} messages.`).then(msg => msg.delete(5000));
   })
@@ -563,6 +662,18 @@ if(message.content.startsWith(prefix + 'hsondage')){
                 description: 'Vous devez faire : \n\n !sondage -[**TEXTE**] -[**CHOIX1**] -[**CHOIX2**] -[**CHOIX3**] -[**CHOIX4**] -[**CHOIX5**]-[**CHOIX6**]',
     }})}
 });
+bot.on('message', message => {
+if(message.content.startsWith(prefix + 'hsondage_en')){
+  message.channel.sendMessage(" ",{
+    embed: {
+
+      color: 0xa1ceff,
+      author:  message.author.name,
+
+                title: 'Using the Survey',
+                description: 'You must do : \n\n !sondage_en -[**TEXTE**] -[**CHOIX1**] -[**CHOIX2**] -[**CHOIX3**] -[**CHOIX4**] -[**CHOIX5**]-[**CHOIX6**]',
+    }})}
+});
  bot.on('message', message => {
 if(message.content.startsWith(prefix + 'sondage')){
   message.delete()
@@ -574,13 +685,13 @@ if(message.content.startsWith(prefix + 'sondage')){
   if(!yourole){
       return message.channel.send("*「vous n'avez pas la permissions pour faire cela」*");
   }
-  var sd1 = message.content.split("-").slice(2)[0];
-  var sd2 = message.content.split("-").slice(3)[0];
-  var sd3 = message.content.split("-").slice(4)[0];
-  var sd4 = message.content.split("-").slice(5)[0];
-  var sd5 = message.content.split("-").slice(6)[0];
-  var sd6 = message.content.split("-").slice(7)[0];
-  var sd7 = message.content.split("-").slice(1)[0];
+  var sd1 = message.content.split("!1").slice(2)[0];
+  var sd2 = message.content.split("!2").slice(3)[0];
+  var sd3 = message.content.split("!3").slice(4)[0];
+  var sd4 = message.content.split("!4").slice(5)[0];
+  var sd5 = message.content.split("!5").slice(6)[0];
+  var sd6 = message.content.split("!6").slice(7)[0];
+  var sd7 = message.content.split("!7").slice(1)[0];
   if(sd1) sd1 = "<:one:> "+ sd1;
   if(sd2) sd2 = "<:two:> " +sd2;
   if(sd3) sd3 = "<:three:> " +sd3;
@@ -594,7 +705,7 @@ if(message.content.startsWith(prefix + 'sondage')){
   if(!sd5) sd5 = "";
   if(!sd6) sd6 = "";
   if(!sd7) sd7 = "";
-        message.channel.sendMessage("**:scroll: SONDAGE :scroll: \n"+sd7+"\n\n"+sd1+"\n"+sd2+"\n"+sd3+"\n"+sd4+"\n"+sd5+"\n"+sd6+"\n[@everyone]**")
+        message.channel.sendMessage("**:scroll: SONDAGE :scroll: "+sd7+"\n"+sd1+"\n"+sd2+"\n"+sd3+"\n"+sd4+"\n"+sd5+"\n"+sd6+"\n[@everyone]**")
         .then(function (message) {
           if(sd1) sd1 = message.react(":one:");
           if(sd2) sd2 = message.react(":two:");
@@ -619,7 +730,7 @@ bot.on("message", message =>{
        .setDescription(` !eshopm1 : Juin 2011 (3DS) \n\n !eshopm2 : Novembre 2012 \n\n !eshopm3 : Septembre 2013 \n\n !eshop4 : Decembre 2013 \n\n !eshopm5 : Janvier 2014 \n\n !eshopm6 : Avril 2014 \n\n !eshopm7 : Juillet 2014 \n\n !eshopm8 : Janvier 2015 \n\n !eshopm9 : Juin 2015 \n\n !eshom10 : Septembre 2015 \n\n !eshopm11 : Decembre 2015 \n\n !eshopm12 : Janvier 2016  \n\n !eshopm13 : Mai 2016`)
         message.author.send(emb)
         } catch(err) {
-            message.channel.send("Une erreur c'est produite , veuilliez en parlez à Liquideur de kids . Merci")
+            message.channel.send("Une erreur c'est produite , veuillez en parlez à Liquideur de kids . Merci")
         }}
     })
 bot.on(("guildMemberRemove"), (member)=> {
