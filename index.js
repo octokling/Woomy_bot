@@ -65,7 +65,7 @@ bot.on("ready", function () {
                 bot.user.setGame("!commande|Sardinium");
                 break;
             case 18:
-                bot.user.setGame("!commande|Parchemin);
+                bot.user.setGame("!commande|Parchemin");
                 break;
             case 19:
                 bot.user.setGame("!commande|Inkling");
