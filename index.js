@@ -348,7 +348,7 @@ exports.run = (client, message, params) => {
 };
 
 bot.on("guildMemberAdd", async member => {
-    try {
+
     let rol = member.guild.roles.find("name", "Les Inkling")
     var emb = new Discord.RichEmbed()
             .setColor("730000")
@@ -357,10 +357,10 @@ bot.on("guildMemberAdd", async member => {
             .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
     member.guild.channels.find("name", 'woomycation').send(emb);
     member.addRole(rol)
-}
+
     });
 bot.on("guildMemberAdd", async member => {
-    try {
+
     let rol = member.guild.roles.find("name", "Les Inkling")
     var emb = new Discord.RichEmbed()
             .setColor("730000")
@@ -369,129 +369,129 @@ bot.on("guildMemberAdd", async member => {
             .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
     member.guild.channels.find("name", 'woomycation-en').send(emb);
     member.addRole(rol)
-}
+
     });
  bot.on("roleCreate", role =>{
-        try {
+
         var emb = new Discord.RichEmbed()
         .setColor("FF0000")
         .setTitle("woomycation")
         .setDescription(`Un rôle viens d'être créé par ${role.user.tag}. /n/n nommé : ${role.name}`)
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
         role.guild.channels.find("name", 'woomycation').send(emb)
-        }
+        
     });
 bot.on("roleCreate", role =>{
-        try {
+
         var emb = new Discord.RichEmbed()
         .setColor("FF0000")
         .setTitle("woomycation")
         .setDescription(`One role have just been create by ${role.user.tag}. nommed : ${role.name}`)
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
         role.guild.channels.find("name", 'woomycation-en').send(emb)
-        }
+        
     });
  bot.on("roleDelete", role =>{
-        try {
+
         var emb = new Discord.RichEmbed()
         .setColor("730000")
         .setTitle("woomycation")
         .setDescription(`Le rôle ${role.name} viens d'être supprimé sur ${role.guild.name}. Par : ${role.user.tag}`)
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
     role.guild.channels.find("name", 'woomycation').send(emb)
-        }
+        
     })
 bot.on("roleDelete", role =>{
-        try {
+
         var emb = new Discord.RichEmbed()
         .setColor("730000")
         .setTitle("woomycation")
         .setDescription(`the role : ${role.name} have just been remove on ${role.guild.name}. by : ${role.user.tag}`)
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
     role.guild.channels.find("name", 'woomycation-en').send(emb)
-        }
+        
     })
 
 bot.on("channelsDelete", channels=>{
-        try {
+
         var emb = new Discord.RichEmbed()
         .setColor("730000")
         .setTitle("woomycation")
         .setDescription(`Un nouveau channel vient d'être supprimer sur ${channels.guild.name}. Par : ${channels.user.tag} `)
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
     role.guild.channels.find("name", 'woomycation').send(emb)
-        }
+        
     })
 bot.on("channelsDelete", channels =>{
-        try {
+
         var emb = new Discord.RichEmbed()
         .setColor("730000")
         .setTitle("woomycation")
         .setDescription(`One channel have just been remove on ${channels.guild.name}. by : ${channels.user.tag} `)
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
     role.guild.channels.find("name", 'woomycation-en').send(emb)
-        }
+        
     })
 bot.on("channelsCreate", channels =>{
-        try {
+
         var emb = new Discord.RichEmbed()
         .setColor("730000")
         .setTitle("woomycation")
         .setDescription(`Un channel vient d'être supprimé sur ${channels.guild.name}. Par : ${channels.user.tag} `)
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
     role.guild.channels.find("name", 'woomycation').send(emb)
-        }
+        
     })
 bot.on("channelsCreate", channels =>{
-        try {
+
         var emb = new Discord.RichEmbed()
         .setColor("730000")
         .setTitle("woomycation")
         .setDescription(`One channel have just been remove on ${channels.guild.name}. by : ${channels.user.tag} `)
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
     role.guild.channels.find("name", 'woomycation-en').send(emb)
-        }
+        
     })
 
  bot.on("emojiCreate", emoji =>{
-        try {
+
         var emb = new Discord.RichEmbed()
             .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
             .setColor("730000")
             .setTitle("woomycation")
             .setDescription(`L'image ${emoji.name} :${emoji.name}: viens d'être importé pour un émoji sur ${emoji.guild.name}. Par : ${emoji.user.tag}`)
         emoji.guild.channels.find("name", 'woomycation').send(emb)
-        }
+        
     })
  bot.on("emojiCreate", emoji =>{
-        try {
+
         var emb = new Discord.RichEmbed()
             .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
             .setColor("730000")
             .setTitle("woomycation")
             .setDescription(`The emoji ${emoji.name} :${emoji.name}: have just been import for an emoji on ${emoji.guild.name}. by : ${emoji.user.tag}`)
         emoji.guild.channels.find("name", 'woomycation-en').send(emb)
-        }
+        
     })
  bot.on("emojiDelete", emoji =>{
-        try {
+
         var emb = new Discord.RichEmbed()
             .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
             .setColor("730000")
             .setTitle("woomycation")
             .setDescription(`L'emoji ${emoji.name} :${emoji.name}: viens d'être supprimé sur ${emoji.guild.name}. Par : ${emoji.user.tag}`)
         emoji.guild.channels.find("name", 'woomycation').send(emb)
-        }
+        
     })
  bot.on("emojiDelete", emoji =>{
-        try {
+
         var emb = new Discord.RichEmbed()
             .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
             .setColor("730000")
             .setTitle("woomycation")
             .setDescription(`The emoji ${emoji.name} :${emoji.name}: have just been remove on ${emoji.guild.name}. by : ${emoji.user.tag}`)
         emoji.guild.channels.find("name", 'woomycation-en').send(emb)
-        }
+        
     })
 bot.on("message", message =>{
    if (message.content.startsWith(`!sp2mh`)) {
