@@ -494,7 +494,7 @@ bot.on("channelsCreate", channels =>{
         
     })
 bot.on("message", message =>{
-   if (message.content.startsWith(`!sp2mh`)) {
+   if (message.content.startsWith(`!sp2maide`)) {
      try {
         var emb = new Discord.RichEmbed()
             .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
@@ -507,7 +507,7 @@ bot.on("message", message =>{
         }}
     })
 bot.on("message", message =>{
-   if (message.content.startsWith(`!sp2mh_en`)) {
+   if (message.content.startsWith(`!sp2mhelp`)) {
      try {
         var emb = new Discord.RichEmbed()
             .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
@@ -520,7 +520,7 @@ bot.on("message", message =>{
         }}
     })
 bot.on("message", message =>{
-   if (message.content.startsWith(`!sp2mh`)) {
+   if (message.content.startsWith(`!sp2maide`)) {
      try {
         var emb = new Discord.RichEmbed()
             .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
@@ -533,7 +533,7 @@ bot.on("message", message =>{
         }}
     })
 bot.on("message", message =>{
-   if (message.content.startsWith(`!sp2mh_en`)) {
+   if (message.content.startsWith(`!sp2mhelp`)) {
      try {
         var emb = new Discord.RichEmbed()
             .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
@@ -562,7 +562,7 @@ message.guild.member(User).send(emb);
 }
   })
 bot.on("message", message =>{
-   if (message.content.startsWith(`!sp2mh`)) {
+   if (message.content.startsWith(`!sp2maide`)) {
      try {
         var emb = new Discord.RichEmbed()
             .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
@@ -575,7 +575,7 @@ bot.on("message", message =>{
         }}
     })
 bot.on("message", message =>{
-   if (message.content.startsWith(`!sp2mh_en`)) {
+   if (message.content.startsWith(`!sp2mhelp`)) {
      try {
         var emb = new Discord.RichEmbed()
             .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
@@ -667,7 +667,7 @@ if(cmd === `!ban`){
 });
  
 bot.on('message', message => {
-if(message.content.startsWith(prefix + 'hsondage')){
+if(message.content.startsWith(prefix + 'aidesondage')){
   message.channel.sendMessage(" ",{
     embed: {
 
@@ -679,7 +679,7 @@ if(message.content.startsWith(prefix + 'hsondage')){
     }})}
 });
 bot.on('message', message => {
-if(message.content.startsWith(prefix + 'hsondage_en')){
+if(message.content.startsWith(prefix + 'helpsondage')){
   message.channel.sendMessage(" ",{
     embed: {
 
@@ -757,14 +757,6 @@ bot.on(("guildMemberRemove"), (member)=> {
         }
         })
 
-bot.on('message', message => {
-   if (message.content.startsWith(`!jeu`)) {
-  bot.user.setGame(`${message}|!commande`)
-var commande = [`woomy , je vais de changer de jeux, patienter quelque minute ${message.author}`,`squidy, ok changement de jeux, patienter quelque minute ${message.author}`,`nyges, je vais changer de jeux, patienter ${message.author}`];
-     message.channel.send(`${(commande[Math.floor(Math.random() * commande.length)])}`)
- .catch(console.error);
-}
-})
 
 
 bot.on('message', message => {
@@ -804,8 +796,8 @@ bot.on('message', message => {
 if (message.content.startsWith(prefix + "commande")) { 
 var help_embed = new Discord.RichEmbed()
 .setColor('#01FE7F')
-.addField("Commande de Splatbotoon", "-!clear(nombre de message a supprimer) : Pour ceux qui ont les permission __GéRER LES MESSAGE__ peuvent supprimer les message\n\n -!ban @mention (La raison du ban) : pour ceux qui sont __MODéRATEUR__ peuvent bannir les personnes \n\n -!kick @mention (La raison du kick) : pour ceux qui sont __MODéRATEUR__ peuvent expluser les gens \n\n-!sondage : Pour créez un sondage \n\n-!hsondage : pour s'avoir les commande du sondage \n\n-!online/nepasdéranger: changer la disponibilité du bot \n -!jeu : modifier le jeux du bot\n -!tonserveur : tu veut splatbotoont sur ton serveur alors fait vite cette commande\n-!ping : la commande la plus connu pour rien\n -!monavatar pour voir son avatar en plus gros\n-!questionnaire : remplir le questionnaire de splatbotoont")
-.addField("Commande musique de Splatbotoont", "-!eshopmh : toutes les dates des musique Nintendo Eshop \n\n -!eshopm(nombre de 1 à 13) : connecte toi sur le chat vocal ou il sera connecter et splatbotoont te chantera la musique choisis\n\n-!sp2m(nombre de 1 à 51) : connecte toi sur le chat vocal ou il sera connecter et splatbotoont te chantera la musique choisis\n-!sp2mh affiche toute les titre de musique.")
+.addField("Commande de Splatbotoon", "-!contact @mention (message) : envoyer un message à la personne que vous souhaiter \n\n-!clear(nombre de message a supprimer) : Pour ceux qui ont les permission __GéRER LES MESSAGE__ peuvent supprimer les message\n\n -!ban @mention (La raison du ban) : pour ceux qui sont __MODéRATEUR__ peuvent bannir les personnes \n\n -!kick @mention (La raison du kick) : pour ceux qui sont __MODéRATEUR__ peuvent expluser les gens \n\n-!sondage : Pour créez un sondage \n\n-!hsondage : pour s'avoir les commande du sondage \n\n\n -!tonserveur : tu veut splatbotoont sur ton serveur alors fait vite cette commande\n\n-!ping : la commande la plus connu pour rien\n\n -!monavatar pour voir son avatar en plus gros\n\n-!questionnaire : remplir le questionnaire de splatbotoont")
+.addField("Commande musique de Splatbotoont", "-!eshopmh : toutes les dates des musique Nintendo Eshop \n\n -!eshopm(nombre de 1 à 13) : connecte toi sur le chat vocal ou il sera connecter et splatbotoont te chantera la musique choisis\n\n-!sp2m(nombre de 1 à 51) : connecte toi sur le chat vocal ou il sera connecter et splatbotoont te chantera la musique choisis\n\n-!sp2maide affiche toute les titre de musique.\n\n-!sp2mhelp affiche toute les titre de musique (liste en anglais).")
 .addField("Logs", "Avant de voir les logs disponible de splatbotoont : \n créez un serveur nommée 'woomycation' \n dans les role selectionner que splatbotoont et mettre au moin envoyer des message, créez une invitation (pour prochainement hors grosse mise à jour)et gerer les message. après c'est tout\n passon au logs\n-1er : Je vous signale si il y a quelqu'un qui arrive sur votre serveur.\n-2ème : je vous signale si quelqu'un part de votre serveur.\n-3ème : je vous signale si quelqu'un à créez un nouveau émote (émoji).\n-4ème : je vous signale si quelqu'un a effacer un émote\n-5ème : je vous signale si quelqu'un à créez un role.\n-6ème : je vous signale si quelqu'un à supprimer un role")
 .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids.`, bot.user.avatarURL)
 message.channel.sendMessage(`${message.author.tag} je vous envoie mes commande`)
