@@ -376,7 +376,7 @@ bot.on("guildMemberAdd", async member => {
         var emb = new Discord.RichEmbed()
         .setColor("FF0000")
         .setTitle("woomycation")
-        .setDescription(`Un rôle viens d'être créé par ${role.user.tag}. /n/n nommé : ${role.name}`)
+        .setDescription(`Un rôle viens d'être ,nommé : ${role.name}`)
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
         role.guild.channels.find("name", 'woomycation').send(emb)
         
@@ -386,7 +386,7 @@ bot.on("roleCreate", role =>{
         var emb = new Discord.RichEmbed()
         .setColor("FF0000")
         .setTitle("woomycation")
-        .setDescription(`One role have just been create by ${role.user.tag}. nommed : ${role.name}`)
+        .setDescription(`One role have just been create, nommed : ${role.name}`)
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
         role.guild.channels.find("name", 'woomycation-en').send(emb)
         
