@@ -419,7 +419,7 @@ bot.on("channelsDelete", channels=>{
         .setTitle("woomycation")
         .setDescription(`Un nouveau channel vient d'être supprimer sur ${channels.guild.name}.`)
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
-    role.guild.channels.find("name", 'woomycation').send(emb)
+    channels.guild.channels.find("name", 'woomycation').send(emb)
         
     })
 bot.on("channelsDelete", channels =>{
@@ -429,7 +429,7 @@ bot.on("channelsDelete", channels =>{
         .setTitle("woomycation")
         .setDescription(`One channel have just been remove on ${channels.guild.name}.`)
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
-    role.guild.channels.find("name", 'woomycation-en').send(emb)
+    channels.guild.channels.find("name", 'woomycation-en').send(emb)
         
     })
 bot.on("channelsCreate", channels =>{
@@ -439,7 +439,7 @@ bot.on("channelsCreate", channels =>{
         .setTitle("woomycation")
         .setDescription(`Un channel vient d'être supprimé sur ${channels.guild.name}.`)
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
-    role.guild.channels.find("name", 'woomycation').send(emb)
+    channels.guild.channels.find("name", 'woomycation').send(emb)
         
     })
 bot.on("channelsCreate", channels =>{
@@ -449,7 +449,7 @@ bot.on("channelsCreate", channels =>{
         .setTitle("woomycation")
         .setDescription(`One channel have just been remove on ${channels.guild.name}.`)
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
-    role.guild.channels.find("name", 'woomycation-en').send(emb)
+    channels.guild.channels.find("name", 'woomycation-en').send(emb)
         
     })
 
@@ -470,7 +470,7 @@ bot.on("channelsCreate", channels =>{
             .setColor("730000")
             .setTitle("woomycation")
             .setDescription(`The emoji ${emoji.name} :${emoji.name}: have just been import for an emoji on ${emoji.guild.name}.`)
-        emoji.guild.channels.find("name", 'woomycation-en').send(emb)
+    emoji.guild.channels.find("name", 'woomycation-en').send(emb)
         
     })
  bot.on("emojiDelete", emoji =>{
