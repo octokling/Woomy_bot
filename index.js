@@ -548,7 +548,7 @@ bot.on("message", message =>{
 bot.on("message", message =>{
  
   if (message.content.startsWith(`!contact`)) {
- 
+ try{
  let User = message.guild.member(message.mentions.users.first() || message.guild.members.get);
 if(!User) return message.channel.send("Impossible de trouver l'utilisateur !");
 var emb = new Discord.RichEmbed()
@@ -559,6 +559,9 @@ var emb = new Discord.RichEmbed()
 .setTitle("Message :")
 .setDescription(`Message : ${message} .`)
 message.guild.member(User).send(emb);
+ }catch(err) {
+            message.channel.send("Une erreur c'est produite lors de l'envoie du message, veuilliez en parlez à Liquideur de kids . Merci")
+        }
 }
   })
 bot.on("message", message =>{
