@@ -348,7 +348,7 @@ exports.run = (client, message, params) => {
 };
 
 bot.on("guildMemberAdd", async member => {
-
+try {
     let rol = member.guild.roles.find("name", "Les Inkling")
     var emb = new Discord.RichEmbed()
             .setColor("730000")
@@ -357,7 +357,9 @@ bot.on("guildMemberAdd", async member => {
             .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
     member.guild.channels.find("name", 'woomycation').send(emb);
     member.addRole(rol)
-
+}catch(err){
+	member.channel.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
+await message.react('👎');
     });
 bot.on("guildMemberAdd", async member => {
 
