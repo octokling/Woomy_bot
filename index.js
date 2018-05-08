@@ -384,7 +384,7 @@ try{
         .setDescription(`Un rôle viens d'être ,nommé : ${role.name}`)
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
         role.guild.channels.find("name", 'woomycation').send(emb)
-        catch(err){
+}catch(err){
 	member.channel.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
 await message.react('👎');
 }
