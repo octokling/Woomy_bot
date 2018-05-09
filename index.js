@@ -589,17 +589,16 @@ bot.on("message", message =>{
     })
 bot.on("message", message =>{
  
-  if (message.content.startsWith(`!contact`)) {
+  if (message.content.startsWith(`!contact ${message}`)) {
  try{
  let User = message.guild.member(message.mentions.users.first() || message.guild.members.get);
-if(!User){ return message.channel.send("Impossible de trouver l'utilisateur !");
-	  message.message.react("👎");}
+if(!User) return message.channel.send("Impossible de trouver l'utilisateur !");
 var emb = new Discord.RichEmbed()
  
 .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
   
 .setColor("730000")
-.setTitle("Message :")
+.setTitle("Quelqu'un vous as envoyez un message !:")
 .setDescription(`Message de ${message.author.tag} : ${message} .`)
 message.guild.member(User).send(emb);
  }catch(err) {
