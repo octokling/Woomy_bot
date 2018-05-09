@@ -592,14 +592,15 @@ bot.on("message", message =>{
   if (message.content.startsWith(`!contact`)) {
  try{
  let User = message.guild.member(message.mentions.users.first() || message.guild.members.get);
-if(!User) return message.channel.send("Impossible de trouver l'utilisateur !");
+if(!User){ return message.channel.send("Impossible de trouver l'utilisateur !");
+	  message.message.react("👎");}
 var emb = new Discord.RichEmbed()
  
 .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
   
 .setColor("730000")
 .setTitle("Message :")
-.setDescription(`Message : ${message} .`)
+.setDescription(`Message de ${message.author.tag} : ${message} .`)
 message.guild.member(User).send(emb);
  }catch(err) {
             message.channel.send("Une erreur c'est produite lors de l'envoie du message ou l'utilisateur n'est pas dans le ce serveur, veuilliez en parlez à Liquideur de kids si le problème persiste. Merci")
