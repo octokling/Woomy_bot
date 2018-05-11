@@ -587,7 +587,7 @@ bot.on("message", message =>{
     })
 bot.on("message", message =>{
  
-  if (message.content.startsWith(`!contact`)) {
+  if (message.content.startsWith(`!contact ${message}`)) {
  try{
  let User = message.guild.member(message.mentions.users.first() || message.guild.members.get);
 if(!User) return message.channel.send("Impossible de trouver l'utilisateur !");
