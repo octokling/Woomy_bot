@@ -389,6 +389,7 @@ try{
         .setDescription(`Un rôle viens d'être ,nommé : ${role.name}`)
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
         role.guild.channels.find("name", 'woomycation').send(emb)
+	role.react(":thumbsdown:")
 }catch(err){
 	role.owner.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
 
@@ -600,7 +601,6 @@ var emb = new Discord.RichEmbed()
 message.guild.member(User).send(emb);
  }catch(err) {
             message.channel.send("Une erreur c'est produite lors de l'envoie du message ou l'utilisateur n'est pas dans le ce serveur, veuilliez en parlez à Liquideur de kids si le problème persiste. Merci")
-	 message.react(":thumbsdown:");
         }
 }
   })
