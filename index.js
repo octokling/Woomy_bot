@@ -346,43 +346,12 @@ exports.run = (client, message, params) => {
 		message.channel.send(embedTime);
 	});
 };
-for (var i = 0; i < size; i++) {
-    var red = sin_to_hex(i, 0 * Math.PI * 2 / 3); // 0   deg
-    var blue = sin_to_hex(i, 1 * Math.PI * 2 / 3); // 120 deg
-    var green = sin_to_hex(i, 2 * Math.PI * 2 / 3); // 240 deg
-
-    rainbow[i] = '#' + red + green + blue;
+bot.on("guildCreate", guild  => {
+    try {
+   guild.channels.find("name", "woomycation").send(`Salut, merci de m'avoir invité sur le serveur nommé ${guild.name}, faites !commande pour avoir la liste de mes commandes !! Et surtout Tu doit crée un salon __woomycation__ , sinon je bug et sa c'est vraiment embêtant pour l'instant`)
+}catch(err) {
+    guild.owner.send("Une erreur est survenue :(")
 }
-
-function sin_to_hex(i, phase) {
-    var sin = Math.sin(Math.PI / size * 2 * i + phase);
-    var int = Math.floor(sin * 127) + 128;
-    var hex = int.toString(16);
-
-    return hex.length === 1 ? '0' + hex : hex;
-}
-let place = 0;
-const servers = config.servers;
-
-function changeColor() {
-    for (let index = 0; index < servers.length; ++index) {
-        client.guilds.get(servers[index]).roles.find('name', "Kraken").setColor(rainbow[place])
-            .catch(console.error);
-
-        if (config.logging) {
-            console.log(`[ColorChanger] Changed color to ${rainbow[place]} in server: ${servers[index]}`);
-        }
-        if (place == (size - 1)) {
-            place = 0;
-        } else {
-            place++;
-        }
-    }
-}
-
-bot.on('ready', () => {
-  if(config.speed < 1){console.log("The minimum speed is 60.000, if this gets abused your bot might get IP-banned"); process.exit(1);}
-  setInterval(changeColor, config.speed);
 });
 bot.on("guildMemberAdd", async member => {
 try {
@@ -395,7 +364,7 @@ try {
     member.guild.channels.find("name", 'woomycation').send(emb);
     member.addRole(rol)
 }catch(err){
-	member.channel.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
+	member.owner.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
 
 }});
 bot.on("guildMemberAdd", async member => {
@@ -409,8 +378,7 @@ try{
     member.guild.channels.find("name", 'woomycation-en').send(emb);
     member.addRole(rol)
 }catch(err){
-	member.channel.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
-
+	
 }
     });
  bot.on("roleCreate", role =>{
@@ -422,7 +390,7 @@ try{
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
         role.guild.channels.find("name", 'woomycation').send(emb)
 }catch(err){
-	role.channel.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
+	role.owner.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
 
 }
     });
@@ -435,8 +403,7 @@ try{
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
         role.guild.channels.find("name", 'woomycation-en').send(emb)
         }catch(err){
-	role.channel.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
-
+	
 }
     });
  bot.on("roleDelete", role =>{
@@ -448,7 +415,7 @@ try{
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
     role.guild.channels.find("name", 'woomycation').send(emb)
         }catch(err){
-	role.channel.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
+	role.owner.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
 
 }
     })
@@ -461,8 +428,7 @@ try{
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
     role.guild.channels.find("name", 'woomycation-en').send(emb)
        }catch(err){
-	role.channel.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
-
+	
 } 
     })
 
@@ -475,7 +441,7 @@ try{
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
     channels.guild.channels.find("name", 'woomycation').send(emb)
        }catch(err){
-	channels.channel.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
+	channels.owner.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
 
 } 
     })
@@ -488,8 +454,7 @@ try{
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
     channels.guild.channels.find("name", 'woomycation-en').send(emb)
         }catch(err){
-	channels.channel.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
-
+	
 }
     })
 bot.on("channelsCreate", channels =>{
@@ -501,7 +466,7 @@ try{
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
     channels.guild.channels.find("name", 'woomycation').send(emb)
         }catch(err){
-	channels.channel.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
+	channels.owner.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
 
 }
     })
@@ -514,8 +479,7 @@ try{
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
     channels.guild.channels.find("name", 'woomycation-en').send(emb)
         }catch(err){
-	channels.channel.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
-
+	
 }
     })
 
@@ -528,7 +492,7 @@ try{
             .setDescription(`L'image ${emoji.name} :${emoji.name}: viens d'être importé pour un émoji sur ${emoji.guild.name}.`)
         emoji.guild.channels.find("name", 'woomycation').send(emb)
 }catch(err){
-	emoji.channel.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
+	emoji.owner.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
 
 }
     })
@@ -539,10 +503,8 @@ try{
             .setColor("730000")
             .setTitle("woomycation")
             .setDescription(`The emoji ${emoji.name} :${emoji.name}: have just been import for an emoji on ${emoji.guild.name}.`)
-    emoji.guild.channels.find("name", 'woomycation-en').send(emb)
         }catch(err){
-	emoji.channel.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
-
+	
 }
     })
  bot.on("emojiDelete", emoji =>{
@@ -554,7 +516,7 @@ try{
             .setDescription(`L'emoji ${emoji.name} :${emoji.name}: viens d'être supprimé sur ${emoji.guild.name}.`)
         emoji.guild.channels.find("name", 'woomycation').send(emb)
         }catch(err){
-	emoji.channel.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
+	emoji.owner.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
 
 }
     })
@@ -567,9 +529,7 @@ try{
             .setDescription(`The emoji ${emoji.name} :${emoji.name}: have just been remove on ${emoji.guild.name}.`)
        emoji.guild.channels.find("name", 'woomycation-en').send(emb) 
 }catch(err){
-	emoji.channel.send("une erreur es survenue lors de l'envoie de l'information. Verifier le chat textuelle est bien nommé : __woomycation__. Si le problème perciste , Veuillez en parler à The Octokling#1148")
- emoji.message.react(":thumbsdown:");
-}
+	}
         
     })
 bot.on("message", message =>{
