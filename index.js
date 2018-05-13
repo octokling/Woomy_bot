@@ -292,7 +292,7 @@ servercount = client.guilds.size;
 
     bot.on('guildMemberAdd', member => {
       member.createDM().then(channel => {
-        return channel.send('Bienvenue sur le serveur ' + member.displayName + '! Merci de respecter les regles choisis par le(s) fondateur /n/n Welcome on the serveur. ' + member.displayName + '! Thank of respect the rules choose by founder(s) . ')
+        return channel.send('Bienvenue sur le serveur ' + member.displayName + '! Merci de respecter les regles choisis par le(s) fondateur \n\n Welcome on the serveur. ' + member.displayName + '! Thank of respect the rules choose by founder(s) . ')
       }).catch(console.error)
     })
 
