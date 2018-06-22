@@ -295,6 +295,69 @@ servercount = client.guilds.size;
         return channel.send('Bienvenue sur le serveur ' + member.displayName + '! Merci de respecter les regles choisis par le(s) fondateur \n\n Welcome on the serveur. ' + member.displayName + '! Thank of respect the rules choose by founder(s) . ')
       }).catch(console.error)
     })
+var lien_xp = process.env.XP_JSON || process.argv[2] ; 
+
+
+client.on('message', message =>{
+	if(message.content.startsWith('!splatlvl')){
+        function randomInt(high) {
+		    return Math.floor(Math.random() * high);
+	    }
+        var avatar = message.author.avatarURL;
+         request.get(lien_xp, 'GET', function(err, reponse){
+                        if(err){
+                            return console.log(err)
+                        }
+                        response = reponse.body;
+                        let points = JSON.parse(response);
+                        if (!points[message.author.id]) points[message.author.id] = {
+                            points: 0,
+                            level: 1
+                        };
+                        let userData = points[message.author.id];
+                        userData.points = randomInt(25) + points[message.author.id].points;
+                        
+                        let curLevel = Math.floor(0.01 * userData.points);
+                        if (curLevel > userData.level) {
+                            // Level up!
+                            userData.level = curLevel;
+                            message.channel.send('Nouveau Level : ' + userData.level);
+                            
+                        }
+                        message.channel.send({
+                            embed : {
+                                title : 'Gestion des niveaux',
+                                color : 0x6600FF,
+                                fields:[{
+                                    name : '_ _',
+                                    value : '_ _'
+                                },{
+                                    name : 'Pseudo',
+                                    value : message.author.username
+                                },{
+                                    name : 'EXP',
+                                    value : '[' + userData.points + ']()',
+                                    inline : true
+                                },{
+                                    name : 'Level',
+                                    value : '[' + userData.level + ']()',
+                                    inline : true
+                                },{
+                                    name : '_ _',
+                                    value : '_ _'
+                                }],
+                                thumbnail:{
+                                    url : avatar
+                                }
+                            }
+                        })
+                        request({ url: lien_xp, method: 'PUT', json: points, function(err, response){    
+                            resultat = response.body;
+                            console.log(resultat)
+                        }})
+         });
+    }
+});
 
 
 const request = require('request')
