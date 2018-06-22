@@ -631,39 +631,39 @@ bot.on("message", message =>{
         }}
     })
 
-bot.on("messsage",message =>{
+bot.on("messsage", message => {
 	if (message.content.startsWith(`!Avec`)) {
 try{
 	let role = message.guild.roles.find("name", "Avec pulpe")
 	message.channel.send("Le role 'Avec pulpe' vous avez été éffacer . ")
-	message.removeRole(role)
+	message.author.removeRole(role)
 	}catch(err) {
 		message.channel.send("Le role 'Avec pulpe' vous avez été attribués .")
 			let rol = message.guild.roles.find("name", "Avec pulpe")
-			message.addRole(rol)
+			message.author.addRole(rol)
 	}}})
-bot.on("messsage",message =>{
-	if (message.content.startsWith(`!Sans`)) {
+bot.on("messsage", message => {
+    if (message.content.startsWith(`!Sans`)) {
 try{
-	let role = message.guild.roles.find("name", "Sans pulpe")
-	message.channel.send("Le role 'Sans pulpe' vous avez été éffacer . ")
-	message.removeRole(role)
-	}catch(err) {
-		message.channel.send("Le role 'Sans pulpe' vous avez été attribués .")
-			let rol = message.guild.roles.find("name", "Sans pulpe")
-			message.addRole(rol)
-	}}})
-	bot.on("messsage",message =>{
+    let role = message.guild.roles.find("name", "Sans pulpe")
+    message.channel.send("Le role 'Sans pulpe' vous avez été éffacer . ")
+    message.author.removeRole(role)
+    }catch(err) {
+        message.channel.send("Le role 'Sans pulpe' vous avez été attribués .")
+            let rol = message.guild.roles.find("name", "Sans pulpe")
+            message.author.addRole(rol)
+    }}})
+	bot.on("messsage", message => {
 	if (message.content.startsWith(`!accepter`)) {
 try{
-	let role = message.guild.roles.find("name", "Membre")
 	message.channel.send("Vous avez accepter !")
-	message.removeRole(role)
+	let role = message.guild.roles.find("name", "Membre")
+	message.author.removeRole(role)
 	}catch(err) {
 		message.channel.send("Une erreur c'est produite! veuillez à en parler à The Octokling#1148")
 			
 	}}})
-		bot.on("messsage",message =>{	
+		bot.on("messsage", message => {	
 			if (message.content.startsWith(`!refuser`)) {
 			 let messageArray = message.content.split(" ");
 			  let args = messageArray.slice(1);
