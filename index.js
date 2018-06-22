@@ -632,7 +632,7 @@ bot.on("message", message =>{
     })
 
 bot.on("messsage",message =>{
-	if (message.content.startsWith(`!sp2mhelp`)) {
+	if (message.content.startsWith(`!Avec`)) {
 try{
 	let role = message.guild.roles.find("name", "Avec pulpe")
 	message.channel.send("Le role 'Avec pulpe' vous avez été éffacer . ")
@@ -643,7 +643,7 @@ try{
 			message.addRole(rol)
 	}}})
 bot.on("messsage",message =>{
-	if (message.content.startsWith(`!sp2mhelp`)) {
+	if (message.content.startsWith(`!Sans`)) {
 try{
 	let role = message.guild.roles.find("name", "Sans pulpe")
 	message.channel.send("Le role 'Sans pulpe' vous avez été éffacer . ")
@@ -653,8 +653,27 @@ try{
 			let rol = message.guild.roles.find("name", "Sans pulpe")
 			message.addRole(rol)
 	}}})
-	
-	
+	bot.on("messsage",message =>{
+	if (message.content.startsWith(`!accepter`)) {
+try{
+	let role = message.guild.roles.find("name", "Membre")
+	message.channel.send("Vous avez accepter !")
+	message.removeRole(role)
+	}catch(err) {
+		message.channel.send("Une erreur c'est produite! veuillez à en parler à The Octokling#1148")
+			
+	}}})
+		bot.on("messsage",message =>{	
+			if (message.content.startsWith(`!refuser`)) {
+			 let messageArray = message.content.split(" ");
+			  let args = messageArray.slice(1);
+try{
+	message.channel.send("Vous avez refuser !")
+	let kUser = message.guild.member(message.author.users.first() || message.guild.members.get(args[0]));
+	}catch(err) {
+		message.channel.send("Une erreur c'est produite! veuillez à en parler à The Octokling#1148")
+			
+	}}})
 bot.on("message", async message => {
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
