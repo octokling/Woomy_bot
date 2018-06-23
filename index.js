@@ -636,18 +636,18 @@ bot.on("messsage", message => {
 try{
 	let role = message.guild.roles.find("name", "Avec pulpe")
 	message.channel.send("Le role 'Avec pulpe' vous avez été éffacer . ")
-	message.author.removeRole(role)
+	message.member.removeRole(role)
 	}catch(err) {
 		message.channel.send("Le role 'Avec pulpe' vous avez été attribués .")
 			let rol = message.guild.roles.find("name", "Avec pulpe")
-			message.author.addRole(rol)
+			message.member.addRole(rol)
 	}}})
 bot.on("messsage", message => {
     if (message.content.startsWith(`!Sans`)) {
 try{
     let role = message.guild.roles.find("name", "Sans pulpe")
     message.channel.send("Le role 'Sans pulpe' vous avez été éffacer . ")
-    message.author.removeRole(role)
+    message.member.removeRole(role)
     }catch(err) {
         message.channel.send("Le role 'Sans pulpe' vous avez été attribués .")
             let rol = message.guild.roles.find("name", "Sans pulpe")
@@ -658,7 +658,7 @@ try{
 try{
 	message.channel.send("Vous avez accepter !")
 	let role = message.guild.roles.find("name", "Membre")
-	message.author.removeRole(role)
+	message.member.removeRole(role)
 	}catch(err) {
 		message.channel.send("Une erreur c'est produite! veuillez à en parler à The Octokling#1148")
 			
