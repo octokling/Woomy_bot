@@ -657,8 +657,10 @@ try{
 	if (message.content.startsWith(`!accepter`)) {
 try{
 	message.channel.send("Vous avez accepter !")
-	let role = message.guild.roles.find("name", "Membre")
+	let role = message.guild.roles.find("name", "Au condition ...")
+	let rol = message.guild.roles.find("name", "Membre")
 	message.member.removeRole(role)
+	message.member.addRole(rol)
 	}catch(err) {
 		message.channel.send("Une erreur c'est produite! veuillez à en parler à The Octokling#1148")
 			
