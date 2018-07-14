@@ -631,28 +631,7 @@ bot.on("message", message =>{
         }}
     })
 
-bot.on("messsage", message => {
-	if (message.content.startsWith(`!Avec`)) {
-try{
-	let role = message.guild.roles.find("name", "Avec pulpe")
-	message.channel.send("Le role 'Avec pulpe' vous avez été éffacer . ")
-	message.member.removeRole(role)
-	}catch(err) {
-		message.channel.send("Le role 'Avec pulpe' vous avez été attribués .")
-			let rol = message.guild.roles.find("name", "Avec pulpe")
-			message.member.addRole(rol)
-	}}})
-bot.on("messsage", message => {
-    if (message.content.startsWith(`!Sans`)) {
-try{
-    let role = message.guild.roles.find("name", "Sans pulpe")
-    message.channel.send("Le role 'Sans pulpe' vous avez été éffacer . ")
-    message.member.removeRole(role)
-    }catch(err) {
-        message.channel.send("Le role 'Sans pulpe' vous avez été attribués .")
-            let rol = message.guild.roles.find("name", "Sans pulpe")
-            message.author.addRole(rol)
-    }}})
+
 	bot.on("messsage", message => {
 	if (message.content.startsWith(`!accepter`)) {
 try{
@@ -1761,4 +1740,396 @@ bot.on('message', message => {
       .then(connection => {
  connection.playFile('./eshop 13.mp3')
         })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo1')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo1.wav')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo1')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo1.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo2')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo2.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo3')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo3.wav')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo4')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo4.wav')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo5')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo5.wav')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo6')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo6.wav')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo7')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo7.wav')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo8')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo8.wav')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo9')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo9.wav')
+	    
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo10')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo10.wav')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo11')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo11.wav')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo12')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo12.wav')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo13')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo13.wav')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo14')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo14.wav')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo15')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo15.wav')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo16')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo16.wav')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo17')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo17.wav')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo18')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo18.wav')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo19')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo19.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo20')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo20.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo21')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo21.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo22')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo22.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo23')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo23.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo24')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo24.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo25')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo25.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo26')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo26.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo27')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo27.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo28')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo28.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo29')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo29.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo30')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo30.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo31')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo31.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo32')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo32.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo33')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo33.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo34')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo34.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo35')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo35.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo36')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo36.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo37')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo37.mp3')
+        })}})
+bot.on('message', message => {
+  if (message.content.startsWith('!octo38')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+ connection.playFile('./octo38.mp3')
+        })}})
+
 bot.login(process.env.TOKEN)
