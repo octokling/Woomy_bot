@@ -549,7 +549,7 @@ try{
         } catch(err) {
             message.channel.send("Une erreur c'est produite , veuilliez en parlez à Liquideur de kids . Merci")
         }}
-    })
+
 
    if (message.content.startsWith(`!sp2maide`)) {
      try {
@@ -562,7 +562,7 @@ try{
         } catch(err) {
             message.channel.send("Une erreur c'est produite , veuilliez en parlez à Liquideur de kids . Merci")
         }}
-    })
+
 
    if (message.content.startsWith(`!sp2mhelp`)) {
      try {
@@ -575,7 +575,7 @@ try{
         } catch(err) {
             message.channel.send("Une erreur c'est produite , veuilliez en parlez à Liquideur de kids . Merci")
         }}
-    })
+
 
 
   if (message.content.startsWith(`!contact ${message}`)) {
@@ -594,7 +594,7 @@ message.guild.member(User).send(emb);
             message.channel.send("Une erreur c'est produite lors de l'envoie du message ou l'utilisateur n'est pas dans le ce serveur, veuilliez en parlez à Liquideur de kids si le problème persiste. Merci")
         }
 }
-  })
+
 
    if (message.content.startsWith(`!sp2maide`)) {
      try {
@@ -607,7 +607,7 @@ message.guild.member(User).send(emb);
         } catch(err) {
             message.channel.send("Une erreur c'est produite , veuilliez en parlez à Liquideur de kids . Merci")
         }}
-    })
+
 
    if (message.content.startsWith(`!sp2mhelp`)) {
      try {
@@ -620,10 +620,10 @@ message.guild.member(User).send(emb);
         } catch(err) {
             message.channel.send("Une erreur c'est produite , veuilliez en parlez à Liquideur de kids . Merci")
         }}
-    })
 
 
-	
+
+
 	if (message.content.startsWith(`!accepter`)) {
 try{
 	message.channel.send("Vous avez accepter !")
@@ -634,7 +634,7 @@ try{
 	}catch(err) {
 		message.channel.send("Une erreur c'est produite! veuillez à en parler à The Octokling#1148")
 
-	}}})
+	}}
 
 			if (message.content.startsWith(`!refuser`)) {
 			 let messageArray = message.content.split(" ");
@@ -645,7 +645,7 @@ try{
 	}catch(err) {
 		message.channel.send("Une erreur c'est produite! veuillez à en parler à The Octokling#1148")
 
-	}}})
+	}}
 
 
 
@@ -718,7 +718,7 @@ if(cmd === `!ban`){
 
   return;
   }
-});
+
 
 
 if(message.content.startsWith(prefix + 'aidesondage')){
@@ -731,7 +731,7 @@ if(message.content.startsWith(prefix + 'aidesondage')){
                 title: 'Utilisation du Sondage',
                 description: 'Vous devez faire : \n\n !sondage -[**TEXTE**] -[**CHOIX1**] -[**CHOIX2**] -[**CHOIX3**] -[**CHOIX4**] -[**CHOIX5**]-[**CHOIX6**]',
     }})}
-});
+
 if(message.content.startsWith(prefix + 'helpsondage')){
   message.channel.sendMessage(" ",{
     embed: {
@@ -742,7 +742,7 @@ if(message.content.startsWith(prefix + 'helpsondage')){
                 title: 'Using the Survey',
                 description: 'You must do : \n\n !sondage_en -[**TEXTE**] -[**CHOIX1**] -[**CHOIX2**] -[**CHOIX3**] -[**CHOIX4**] -[**CHOIX5**]-[**CHOIX6**]',
     }})}
-});
+
 
 if(message.content.startsWith(prefix + 'sondage')){
   message.delete()
@@ -784,7 +784,7 @@ if(message.content.startsWith(prefix + 'sondage')){
           if(sd6) sd6 = message.react(":six:");
     			});
       }
-});
+
 
 
 
@@ -801,14 +801,14 @@ if(message.content.startsWith(prefix + 'sondage')){
         } catch(err) {
             message.channel.send("Une erreur c'est produite , veuillez en parlez à Liquideur de kids . Merci")
         }}
-    })
+
 
     try {
     member.guild.channels.find("name", 'woomycation').send(`:sob: "${member.user.tag}" est parti(e):sob:`);
         } catch(err) {
             member.guild.owner.send("Veuillez créer le salon `woomycation`, comme ça tout le monde sera au courant des personnes qui partent !!")
         }
-        })
+
 
 
 
@@ -819,7 +819,7 @@ var commande = [`woomy , je vais de changer de disponibilité , patienter quelqu
      message.channel.send(`${(commande[Math.floor(Math.random() * commande.length)])}`)
     .catch(console.error);
 }
-})
+
 
    if (message.content.startsWith(`!online`)) {
  bot.user.setStatus('Online')
@@ -827,14 +827,14 @@ var commande = [`woomy , je vais de changer de disponibilité , patienter quelqu
      message.channel.send(`${(commande[Math.floor(Math.random() * commande.length)])}`)
  .catch(console.error);
 }
-})
+
 
    if (message.content.startsWith('!monavatar')) {
 
     message.channel.send(`${message.author.avatarURL}`)
 
   }
-});
+
 
 
    if (message.content.startsWith('!information')) {
@@ -842,7 +842,7 @@ var commande = [`woomy , je vais de changer de disponibilité , patienter quelqu
     message.channel.send(`je suis dans ${bot.guilds.size} serveur`)
 
   }
-});
+
 
 
 if (message.content.startsWith(prefix + "commande")) {
@@ -856,20 +856,20 @@ message.channel.sendMessage(`${message.author.tag} je vous envoie mes commande`)
 message.author.send(help_embed)
 
 
- }})
+ }
 
    if (message.content.startsWith('!tonserveur')) {
      var commande = [`merci ${message.author} de vouloir de moi sur ton serveur https://discordapp.com/oauth2/authorize?client_id=417229018132119562&scope=bot&permissions=2146958591`,`merci beaucoup ${message.author} de me vouloir https://discordapp.com/oauth2/authorize?client_id=417229018132119562&scope=bot&permissions=2146958591`];
    message.author.send(`${(commande[Math.floor(Math.random() * commande.length)])}`)
      message.author.send(`Pour s'avoir les commande faite !commande`)
 }
-})
+
 
    if (message.content.startsWith('!questionnaire')) {
    message.author.send(`Merci , par contre veuiller le remplir correctement https://goo.gl/forms/wh901u7Hnqzs6n603`)
 
 }
-})
+
 
 
 
