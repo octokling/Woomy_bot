@@ -528,27 +528,14 @@ try{
 
     })
     client.on("message", msg => {
-      if (msg.channel.type === dm) return;
-      //variables
+
       var prefix = "!";
-      if(message.author.bot) return;
-      if(message.channel.type === "dm") return;
 
       let messageArray = message.content.split(" ");
       let cmd = messageArray[0];
       let args = messageArray.slice(1);
 
-   if (message.content.startsWith(`!sp2mhelp`)) {
-     try {
-        var emb = new Discord.RichEmbed()
-            .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
-            .setColor("730000")
-            .setTitle("The Title music")
-       .setDescription(`here are all the title splatoon music :  \n\n !sp2m1 : Inkoming! (Testfire Version) \n\n !sp2m2 :Color Pulse (Off the Hook)\n\n !sp2m3 : Ebb & Flow (Off the Hook)\n\n !sp2m4 : Fest Zest (Off the Hook) \n\n !sp2m5 : Endolphin Surge (Wet Floor)\n\n !sp2m6 : Don't Slip! (Wet Floor) – Splatfest Battle Theme \n\n !sp2m7 : Undertow (Wet Floor)\n\n !sp2m8 : Rip Entry (Wet Floor)\n\n !sp2m9 : Acid Hues (Off the Hook) - Splatfest Battle Theme \n\n !sp2m10 : Muck Warfare (Off the Hook) - Splatfest Battle Theme\n\n !!sp2m11 : Bomb Rush Blush (DJ Octavio. feat Callie)\n\n !sp2m12 : Tidal Rush (DJ Octavio feat. Callie vs Marie)\n\n !sp2m13 : Spicy Calamari Inkantation (Squid Sisters)\n\n !sp2m14 : Fresh Start (Squid Sisters) \n\n!sp2m15 : Low Tide (Singleplayer Introduction) \n\n!sp2m16 : Octo Eight-Step - Turquoise October (Singleplayer)\n\n !sp2m17 : The Girl from Inkopolis - Turquoise October (Singleplayer) \n\n `)
-         message.author.send(emb)
-        } catch(err) {
-            message.channel.send("Une erreur c'est produite , veuilliez en parlez à Liquideur de kids . Merci")
-        }}
+
 
 
    if (message.content.startsWith(`!sp2maide`)) {
@@ -562,21 +549,6 @@ try{
         } catch(err) {
             message.channel.send("Une erreur c'est produite , veuilliez en parlez à Liquideur de kids . Merci")
         }}
-
-
-   if (message.content.startsWith(`!sp2mhelp`)) {
-     try {
-        var emb = new Discord.RichEmbed()
-            .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
-            .setColor("730000")
-            .setTitle("The Title music")
-.setDescription(`!sp2m18 : Buoyant Boogie - Turquoise October (Singleplayer)\n\n !sp2m19 : Buoyant Boogie - Shooting Starfish - Turquoise October (Singleplayer)\n\n !sp2m20 : Octarmaments - Turquoise October (Singleplayer)n\n !sp2m21 : Octo Canyon - Turquoise October (Singleplayer) \n\n !sp2m22 : Happy Little Workers - Grizzco Industries (Salmon Run)\n\n !sp2m23 : Deluge Dirge (Salmon Run)\n\n !sp2m24 : Fishing Frenzy - ω-3 (Salmon Run)!sp2m25 : Ever Further - Grizzco Industries (Salmon Run) \n\n !sp2m26 : Now or Never! [Dernière minute]\n\n !sp2m27 : Now or Never! (Splatfest Version)\n\n !sp2m28 : Now or Never! (Testfire Version)\n\n !sp2m29 : Inkoming! (Wet Floor)\n\n !sp2m30 : Undertow (Testfire Version)\n\n !sp2m31 : Rip Entry (Testfire Version)\n\n !sp2m32 : Tutorial\n\n !sp2m33 : Tutorial (Testfire Version) \n\n !sp2m34 : News Broadcast (Off the Hook) \n\n !!sp2m35 : Match Introduction\n\n `)
-         message.author.send(emb)
-        } catch(err) {
-            message.channel.send("Une erreur c'est produite , veuilliez en parlez à Liquideur de kids . Merci")
-        }}
-
-
 
   if (message.content.startsWith(`!contact ${message}`)) {
  try{
@@ -620,34 +592,6 @@ message.guild.member(User).send(emb);
         } catch(err) {
             message.channel.send("Une erreur c'est produite , veuilliez en parlez à Liquideur de kids . Merci")
         }}
-
-
-
-
-	if (message.content.startsWith(`!accepter`)) {
-try{
-	message.channel.send("Vous avez accepter !")
-	let role = message.guild.roles.find("name", "Au condition ...")
-	let rol = message.guild.roles.find("name", "Membre")
-	message.member.removeRole(role)
-	message.member.addRole(rol)
-	}catch(err) {
-		message.channel.send("Une erreur c'est produite! veuillez à en parler à The Octokling#1148")
-
-	}}
-
-			if (message.content.startsWith(`!refuser`)) {
-			 let messageArray = message.content.split(" ");
-			  let args = messageArray.slice(1);
-try{
-	message.channel.send("Vous avez refuser !")
-	let kUser = message.guild.member(message.author.users.first() || message.guild.members.get(args[0]));
-	}catch(err) {
-		message.channel.send("Une erreur c'est produite! veuillez à en parler à The Octokling#1148")
-
-	}}
-
-
 
  if(cmd == `!kick`){
 
@@ -803,38 +747,6 @@ if(message.content.startsWith(prefix + 'sondage')){
         }}
 
 
-    try {
-    member.guild.channels.find("name", 'woomycation').send(`:sob: "${member.user.tag}" est parti(e):sob:`);
-        } catch(err) {
-            member.guild.owner.send("Veuillez créer le salon `woomycation`, comme ça tout le monde sera au courant des personnes qui partent !!")
-        }
-
-
-
-
-
-   if (message.content.startsWith(`!nepasdéranger`)) {
- bot.user.setStatus('dnd')
-var commande = [`woomy , je vais de changer de disponibilité , patienter quelque minute ${message.author}. la disponibilité sera ne pas déranger`,`squidy, ok changement de disponibilité, patienter quelque minute ${message.author}. La disponibilité sera ne pas déranger`,`nyges, je vais changer de disponibilité, patienter ${message.author}.La disponibilité sera ne pas déranger`];
-     message.channel.send(`${(commande[Math.floor(Math.random() * commande.length)])}`)
-    .catch(console.error);
-}
-
-
-   if (message.content.startsWith(`!online`)) {
- bot.user.setStatus('Online')
-var commande = [`woomy , je vais de changer de disponibilité , patienter quelque minute ${message.author}. la disponibilité sera en ligne`,`squidy, ok changement de disponibilité, patienter quelque minute ${message.author}. La disponibilité sera en ligne`,`nyges, je vais changer de disponibilité, patienter ${message.author}.La disponibilité sera en ligne`];
-     message.channel.send(`${(commande[Math.floor(Math.random() * commande.length)])}`)
- .catch(console.error);
-}
-
-
-   if (message.content.startsWith('!monavatar')) {
-
-    message.channel.send(`${message.author.avatarURL}`)
-
-  }
-
 
 
    if (message.content.startsWith('!information')) {
@@ -865,7 +777,6 @@ message.author.send(help_embed)
 }
 
 
-   if (message.content.startsWith('!questionnaire')) {
    message.author.send(`Merci , par contre veuiller le remplir correctement https://goo.gl/forms/wh901u7Hnqzs6n603`)
 
 }
@@ -882,7 +793,9 @@ var commande = ["Regarde, c'est du random","C'est magique t'as vu ?","Wouah","Sa
 }
 
 })
-})
+
+
+});
 bot.on('message', message => {
   if (message.content.startsWith('!sp2m1')) {
     console.log('Got a song request!');
