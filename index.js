@@ -6,7 +6,7 @@ const content = new Discord.Client()
 const fs = require("fs");
 const ffmpeg = require ('ffmpeg')
 const yt = require('ytdl-core');
-con = console.log,
+con = console.log;
 
 bot.on("ready", function () {
 
