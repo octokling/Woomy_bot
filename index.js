@@ -746,17 +746,6 @@ if(message.content.startsWith(prefix + 'sondage')){
             message.channel.send("Une erreur c'est produite , veuillez en parlez à Liquideur de kids . Merci")
         }}
 
-
-
-
-   if (message.content.startsWith('!information')) {
-
-    message.channel.send(`je suis dans ${bot.guilds.size} serveur`)
-
-  }
-
-
-
 if (message.content.startsWith(prefix + "commande")) {
 var help_embed = new Discord.RichEmbed()
 .setColor('#01FE7F')
@@ -786,7 +775,7 @@ var commande = ["Regarde, c'est du random","C'est magique t'as vu ?","Wouah","Sa
 
 })
 
-
+}
 });
 bot.on('message', message => {
   if (message.content.startsWith('!sp2m1')) {
