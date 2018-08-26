@@ -9,7 +9,7 @@ const yt = require('ytdl-core');
 con = console.log,
 
 bot.on("ready", function () {
- 
+
   setInterval(function() {
         let randomNumber = Math.floor(Math.random() * 37) + 1;
         switch (randomNumber) {
@@ -127,9 +127,9 @@ bot.on("ready", function () {
                 bot.user.setGame("!commande|WebSite ?");
                 break;
         }
-   
+
     }, 9999999);
-  
+
    setInterval(function() {
         let rndNumber = Math.floor(Math.random() * 36) + 1;
         switch (rndNumber) {
@@ -241,10 +241,10 @@ bot.on("ready", function () {
           case 36:
                 bot.user.setAvatar("./avatar 36.jpg");
                 break;
-                     
+
         }
     }, 9999999);
- 
+
     setInterval(function() {
         let rndNumber = Math.floor(Math.random() * 8) + 1;
         switch (rndNumber) {
@@ -272,10 +272,10 @@ bot.on("ready", function () {
           case 8:
                 bot.user.setUsername("Nintentoont™ (0.6.8.4)")
                 break;
-                     
+
         }
     }, 999999);
- 
+
  bot.user.setUsername("Nintentoont™")
 .then(user => console.log(`j'ai choisis mon avatar`))
 
@@ -308,7 +308,7 @@ exports.run = (client, message, params) => {
 		var nowTurfMap2 = body.regular[0].stage_b.name;
 		var nextTurfMap1 = body.regular[1].stage_a.name;
 		var nextTurfMap2 = body.regular[1].stage_b.name;
-			
+
 		const embedTurf = new Discord.RichEmbed()
 			.setTitle("Les Maps du Match Classique")
 			.setColor("2EFE2E")
@@ -317,28 +317,28 @@ exports.run = (client, message, params) => {
 			.addField("Les maps prochaines:", nextTurfMap1 + ", " + nextTurfMap2)
 			.setFooter("© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids, bot.user.avatarURL");
 		message.channel.find("name", 'info-stage').send(embedTurf);
-	
+
 		bot.on('message', message => {
    if (message.content.startsWith('!info_classique')) {
-    
+
     message.channel.send(embedTurf)
 
   }
 });
 
 	});
-	
-		
+
+
 	// display time that the maps switch
 	request('https://splatoon2.ink/data/schedules.json', function (error, response, body) {
 		body = JSON.parse(body);
-		
+
 		var cet   = body.regular[0].end_time
            var ncet  = cet.toString()
                ,   ncet  = ncet+"000"
                ,   ncet  = Number(ncet)
                ,   nceti = new Date(ncet+000).toISOString();
-			
+
 		const embedTime = new Discord.RichEmbed()
 			.setTitle("Les stage on changé:")
 			.setColor(10197915)
@@ -378,7 +378,7 @@ try{
     member.guild.channels.find("name", 'woomycation-en').send(emb);
     member.addRole(rol)
 }catch(err){
-	
+
 }
     });
  bot.on("roleCreate", role =>{
@@ -391,7 +391,7 @@ try{
         role.guild.channels.find("name", 'woomycation').send(emb)
 	role.react(":thumbsdown:")
 }catch(err){
-	
+
 }
     });
 bot.on("roleCreate", role =>{
@@ -403,7 +403,7 @@ try{
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
         role.guild.channels.find("name", 'woomycation-en').send(emb)
         }catch(err){
-	
+
 }
     });
  bot.on("roleDelete", role =>{
@@ -427,8 +427,8 @@ try{
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
     role.guild.channels.find("name", 'woomycation-en').send(emb)
        }catch(err){
-	
-} 
+
+}
     })
 
 bot.on("channelsDelete", channels=>{
@@ -440,8 +440,8 @@ try{
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
     channels.guild.channels.find("name", 'woomycation').send(emb)
        }catch(err){
-	
-} 
+
+}
     })
 bot.on("channelsDelete", channels =>{
 try{
@@ -452,7 +452,7 @@ try{
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
     channels.guild.channels.find("name", 'woomycation-en').send(emb)
         }catch(err){
-	
+
 }
     })
 bot.on("channelsCreate", channels =>{
@@ -464,7 +464,7 @@ try{
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
     channels.guild.channels.find("name", 'woomycation').send(emb)
         }catch(err){
-	
+
 }
     })
 bot.on("channelsCreate", channels =>{
@@ -476,7 +476,7 @@ try{
         .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
     channels.guild.channels.find("name", 'woomycation-en').send(emb)
         }catch(err){
-	
+
 }
     })
 
@@ -489,7 +489,7 @@ try{
             .setDescription(`L'image ${emoji.name} :${emoji.name}: viens d'être importé pour un émoji sur ${emoji.guild.name}.`)
         emoji.guild.channels.find("name", 'woomycation').send(emb)
 }catch(err){
-	
+
 }
     })
  bot.on("emojiCreate", emoji =>{
@@ -500,7 +500,7 @@ try{
             .setTitle("woomycation")
             .setDescription(`The emoji ${emoji.name} :${emoji.name}: have just been import for an emoji on ${emoji.guild.name}.`)
         }catch(err){
-	
+
 }
     })
  bot.on("emojiDelete", emoji =>{
@@ -512,7 +512,7 @@ try{
             .setDescription(`L'emoji ${emoji.name} :${emoji.name}: viens d'être supprimé sur ${emoji.guild.name}.`)
         emoji.guild.channels.find("name", 'woomycation').send(emb)
         }catch(err){
-	
+
 }
     })
  bot.on("emojiDelete", emoji =>{
@@ -522,38 +522,35 @@ try{
             .setColor("730000")
             .setTitle("woomycation")
             .setDescription(`The emoji ${emoji.name} :${emoji.name}: have just been remove on ${emoji.guild.name}.`)
-       emoji.guild.channels.find("name", 'woomycation-en').send(emb) 
+       emoji.guild.channels.find("name", 'woomycation-en').send(emb)
 }catch(err){
 	}
-        
+
     })
-bot.on("message", message =>{
-   if (message.content.startsWith(`!sp2maide`)) {
-     try {
-        var emb = new Discord.RichEmbed()
-            .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
-            .setColor("730000")
-            .setTitle("Titre des musiques")         
-       .setDescription(`voici toute les titre de musique splatoon 2:  \n\n !sp2m1 : Inkoming! (Testfire Version) \n\n !sp2m2 :Color Pulse (Off the Hook)\n\n !sp2m3 : Ebb & Flow (Off the Hook)\n\n !sp2m4 : Fest Zest (Off the Hook) \n\n !sp2m5 : Endolphin Surge (Wet Floor)\n\n !sp2m6 : Don't Slip! (Wet Floor) – Splatfest Battle Theme \n\n !sp2m7 : Undertow (Wet Floor)\n\n !sp2m8 : Rip Entry (Wet Floor)\n\n !sp2m9 : Acid Hues (Off the Hook) - Splatfest Battle Theme \n\n !sp2m10 : Muck Warfare (Off the Hook) - Splatfest Battle Theme\n\n !!sp2m11 : Bomb Rush Blush (DJ Octavio. feat Callie)\n\n !sp2m12 : Tidal Rush (DJ Octavio feat. Callie vs Marie)\n\n !sp2m13 : Spicy Calamari Inkantation (Squid Sisters)\n\n !sp2m14 : Fresh Start (Squid Sisters) \n\n!sp2m15 : Low Tide (Singleplayer Introduction) \n\n!sp2m16 : Octo Eight-Step - Turquoise October (Singleplayer)\n\n !sp2m17 : The Girl from Inkopolis - Turquoise October (Singleplayer) \n\n `)
-         message.author.send(emb)
-        } catch(err) {
-            message.channel.send("Une erreur c'est produite , veuilliez en parlez à Liquideur de kids . Merci")
-        }}
-    })
-bot.on("message", message =>{
+    client.on("message", msg => {
+      if (msg.channel.type === dm) return;
+      //variables
+      var prefix = "!";
+      if(message.author.bot) return;
+      if(message.channel.type === "dm") return;
+
+      let messageArray = message.content.split(" ");
+      let cmd = messageArray[0];
+      let args = messageArray.slice(1);
+
    if (message.content.startsWith(`!sp2mhelp`)) {
      try {
         var emb = new Discord.RichEmbed()
             .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
             .setColor("730000")
-            .setTitle("The Title music")         
+            .setTitle("The Title music")
        .setDescription(`here are all the title splatoon music :  \n\n !sp2m1 : Inkoming! (Testfire Version) \n\n !sp2m2 :Color Pulse (Off the Hook)\n\n !sp2m3 : Ebb & Flow (Off the Hook)\n\n !sp2m4 : Fest Zest (Off the Hook) \n\n !sp2m5 : Endolphin Surge (Wet Floor)\n\n !sp2m6 : Don't Slip! (Wet Floor) – Splatfest Battle Theme \n\n !sp2m7 : Undertow (Wet Floor)\n\n !sp2m8 : Rip Entry (Wet Floor)\n\n !sp2m9 : Acid Hues (Off the Hook) - Splatfest Battle Theme \n\n !sp2m10 : Muck Warfare (Off the Hook) - Splatfest Battle Theme\n\n !!sp2m11 : Bomb Rush Blush (DJ Octavio. feat Callie)\n\n !sp2m12 : Tidal Rush (DJ Octavio feat. Callie vs Marie)\n\n !sp2m13 : Spicy Calamari Inkantation (Squid Sisters)\n\n !sp2m14 : Fresh Start (Squid Sisters) \n\n!sp2m15 : Low Tide (Singleplayer Introduction) \n\n!sp2m16 : Octo Eight-Step - Turquoise October (Singleplayer)\n\n !sp2m17 : The Girl from Inkopolis - Turquoise October (Singleplayer) \n\n `)
          message.author.send(emb)
         } catch(err) {
             message.channel.send("Une erreur c'est produite , veuilliez en parlez à Liquideur de kids . Merci")
         }}
     })
-bot.on("message", message =>{
+
    if (message.content.startsWith(`!sp2maide`)) {
      try {
         var emb = new Discord.RichEmbed()
@@ -566,7 +563,7 @@ bot.on("message", message =>{
             message.channel.send("Une erreur c'est produite , veuilliez en parlez à Liquideur de kids . Merci")
         }}
     })
-bot.on("message", message =>{
+
    if (message.content.startsWith(`!sp2mhelp`)) {
      try {
         var emb = new Discord.RichEmbed()
@@ -579,16 +576,16 @@ bot.on("message", message =>{
             message.channel.send("Une erreur c'est produite , veuilliez en parlez à Liquideur de kids . Merci")
         }}
     })
-bot.on("message", message =>{
- 
+
+
   if (message.content.startsWith(`!contact ${message}`)) {
  try{
  let User = message.guild.member(message.mentions.users.first() || message.guild.members.get);
 if(!User) return message.channel.send("Impossible de trouver l'utilisateur !");
 var emb = new Discord.RichEmbed()
- 
+
 .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
-  
+
 .setColor("730000")
 .setTitle("Quelqu'un vous as envoyez un message !:")
 .setDescription(`Message de ${message.author.tag} : ${message} .`)
@@ -598,7 +595,7 @@ message.guild.member(User).send(emb);
         }
 }
   })
-bot.on("message", message =>{
+
    if (message.content.startsWith(`!sp2maide`)) {
      try {
         var emb = new Discord.RichEmbed()
@@ -611,7 +608,7 @@ bot.on("message", message =>{
             message.channel.send("Une erreur c'est produite , veuilliez en parlez à Liquideur de kids . Merci")
         }}
     })
-bot.on("message", message =>{
+
    if (message.content.startsWith(`!sp2mhelp`)) {
      try {
         var emb = new Discord.RichEmbed()
@@ -626,7 +623,7 @@ bot.on("message", message =>{
     })
 
 
-	bot.on("messsage", message => {
+	
 	if (message.content.startsWith(`!accepter`)) {
 try{
 	message.channel.send("Vous avez accepter !")
@@ -636,9 +633,9 @@ try{
 	message.member.addRole(rol)
 	}catch(err) {
 		message.channel.send("Une erreur c'est produite! veuillez à en parler à The Octokling#1148")
-			
+
 	}}})
-		bot.on("messsage", message => {	
+
 			if (message.content.startsWith(`!refuser`)) {
 			 let messageArray = message.content.split(" ");
 			  let args = messageArray.slice(1);
@@ -647,15 +644,10 @@ try{
 	let kUser = message.guild.member(message.author.users.first() || message.guild.members.get(args[0]));
 	}catch(err) {
 		message.channel.send("Une erreur c'est produite! veuillez à en parler à The Octokling#1148")
-			
-	}}})
-bot.on("message", async message => {
-  if(message.author.bot) return;
-  if(message.channel.type === "dm") return;
 
-  let messageArray = message.content.split(" ");
-  let cmd = messageArray[0];
-  let args = messageArray.slice(1);
+	}}})
+
+
 
  if(cmd == `!kick`){
 
@@ -727,8 +719,8 @@ if(cmd === `!ban`){
   return;
   }
 });
- 
-bot.on('message', message => {
+
+
 if(message.content.startsWith(prefix + 'aidesondage')){
   message.channel.sendMessage(" ",{
     embed: {
@@ -740,7 +732,6 @@ if(message.content.startsWith(prefix + 'aidesondage')){
                 description: 'Vous devez faire : \n\n !sondage -[**TEXTE**] -[**CHOIX1**] -[**CHOIX2**] -[**CHOIX3**] -[**CHOIX4**] -[**CHOIX5**]-[**CHOIX6**]',
     }})}
 });
-bot.on('message', message => {
 if(message.content.startsWith(prefix + 'helpsondage')){
   message.channel.sendMessage(" ",{
     embed: {
@@ -752,7 +743,7 @@ if(message.content.startsWith(prefix + 'helpsondage')){
                 description: 'You must do : \n\n !sondage_en -[**TEXTE**] -[**CHOIX1**] -[**CHOIX2**] -[**CHOIX3**] -[**CHOIX4**] -[**CHOIX5**]-[**CHOIX6**]',
     }})}
 });
- bot.on('message', message => {
+
 if(message.content.startsWith(prefix + 'sondage')){
   message.delete()
   let myrole = message.guild.member(bot.user).hasPermission("KICK_MEMBERS");
@@ -798,20 +789,20 @@ if(message.content.startsWith(prefix + 'sondage')){
 
 
 
-bot.on("message", message =>{
+
    if (message.content.startsWith(`!eshopmh`)) {
      try {
         var emb = new Discord.RichEmbed()
             .setFooter(`© Splatbotoont est tous droits réservés et Créé par Liquidateur de Kids`, bot.user.avatarURL)
             .setColor("730000")
-            .setTitle("Dates des musiques")         
+            .setTitle("Dates des musiques")
        .setDescription(` !eshopm1 : Juin 2011 (3DS) \n\n !eshopm2 : Novembre 2012 \n\n !eshopm3 : Septembre 2013 \n\n !eshop4 : Decembre 2013 \n\n !eshopm5 : Janvier 2014 \n\n !eshopm6 : Avril 2014 \n\n !eshopm7 : Juillet 2014 \n\n !eshopm8 : Janvier 2015 \n\n !eshopm9 : Juin 2015 \n\n !eshom10 : Septembre 2015 \n\n !eshopm11 : Decembre 2015 \n\n !eshopm12 : Janvier 2016  \n\n !eshopm13 : Mai 2016`)
         message.author.send(emb)
         } catch(err) {
             message.channel.send("Une erreur c'est produite , veuillez en parlez à Liquideur de kids . Merci")
         }}
     })
-bot.on(("guildMemberRemove"), (member)=> {
+
     try {
     member.guild.channels.find("name", 'woomycation').send(`:sob: "${member.user.tag}" est parti(e):sob:`);
         } catch(err) {
@@ -821,7 +812,7 @@ bot.on(("guildMemberRemove"), (member)=> {
 
 
 
-bot.on('message', message => {
+
    if (message.content.startsWith(`!nepasdéranger`)) {
  bot.user.setStatus('dnd')
 var commande = [`woomy , je vais de changer de disponibilité , patienter quelque minute ${message.author}. la disponibilité sera ne pas déranger`,`squidy, ok changement de disponibilité, patienter quelque minute ${message.author}. La disponibilité sera ne pas déranger`,`nyges, je vais changer de disponibilité, patienter ${message.author}.La disponibilité sera ne pas déranger`];
@@ -829,7 +820,7 @@ var commande = [`woomy , je vais de changer de disponibilité , patienter quelqu
     .catch(console.error);
 }
 })
-bot.on('message', message => {
+
    if (message.content.startsWith(`!online`)) {
  bot.user.setStatus('Online')
 var commande = [`woomy , je vais de changer de disponibilité , patienter quelque minute ${message.author}. la disponibilité sera en ligne`,`squidy, ok changement de disponibilité, patienter quelque minute ${message.author}. La disponibilité sera en ligne`,`nyges, je vais changer de disponibilité, patienter ${message.author}.La disponibilité sera en ligne`];
@@ -838,24 +829,23 @@ var commande = [`woomy , je vais de changer de disponibilité , patienter quelqu
 }
 })
 
-bot.on('message', message => {
    if (message.content.startsWith('!monavatar')) {
-    
+
     message.channel.send(`${message.author.avatarURL}`)
 
   }
 });
 
-bot.on('message', message => {
+
    if (message.content.startsWith('!information')) {
-    
+
     message.channel.send(`je suis dans ${bot.guilds.size} serveur`)
 
   }
 });
 
-bot.on('message', message => {
-if (message.content.startsWith(prefix + "commande")) { 
+
+if (message.content.startsWith(prefix + "commande")) {
 var help_embed = new Discord.RichEmbed()
 .setColor('#01FE7F')
 .addField("Commande de Splatbotoon", "-!contact @mention (message) : envoyer un message à la personne que vous souhaiter \n\n-!clear(nombre de message a supprimer) : Pour ceux qui ont les permission __GéRER LES MESSAGE__ peuvent supprimer les message\n\n -!ban @mention (La raison du ban) : pour ceux qui sont __MODéRATEUR__ peuvent bannir les personnes \n\n -!kick @mention (La raison du kick) : pour ceux qui sont __MODéRATEUR__ peuvent expluser les gens \n\n-!sondage : Pour créez un sondage \n\n-!hsondage : pour s'avoir les commande du sondage \n\n\n -!tonserveur : tu veut splatbotoont sur ton serveur alors fait vite cette commande\n\n-!ping : la commande la plus connu pour rien\n\n -!monavatar pour voir son avatar en plus gros\n\n-!questionnaire : remplir le questionnaire de splatbotoont")
@@ -865,23 +855,23 @@ var help_embed = new Discord.RichEmbed()
 message.channel.sendMessage(`${message.author.tag} je vous envoie mes commande`)
 message.author.send(help_embed)
 
-  
+
  }})
-bot.on('message', message => {
+
    if (message.content.startsWith('!tonserveur')) {
      var commande = [`merci ${message.author} de vouloir de moi sur ton serveur https://discordapp.com/oauth2/authorize?client_id=417229018132119562&scope=bot&permissions=2146958591`,`merci beaucoup ${message.author} de me vouloir https://discordapp.com/oauth2/authorize?client_id=417229018132119562&scope=bot&permissions=2146958591`];
    message.author.send(`${(commande[Math.floor(Math.random() * commande.length)])}`)
      message.author.send(`Pour s'avoir les commande faite !commande`)
 }
 })
-bot.on('message', message => {
+
    if (message.content.startsWith('!questionnaire')) {
    message.author.send(`Merci , par contre veuiller le remplir correctement https://goo.gl/forms/wh901u7Hnqzs6n603`)
 
 }
 })
 
-bot.on("message", message => {
+
 
 if (message.content === "test") {
 
@@ -891,6 +881,7 @@ var commande = ["Regarde, c'est du random","C'est magique t'as vu ?","Wouah","Sa
 
 }
 
+})
 })
 bot.on('message', message => {
   if (message.content.startsWith('!sp2m1')) {
@@ -1452,7 +1443,7 @@ bot.on('message', message => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
        })})}})
- 
+
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m41')) {
     console.log('Got a song request!');
@@ -1481,7 +1472,7 @@ bot.on('message', message => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
          })})}})
- 
+
  bot.on('message', message => {
   if (message.content.startsWith('!sp2m43')) {
     console.log('Got a song request!');
@@ -1833,7 +1824,7 @@ bot.on('message', message => {
     voiceChannel.join()
       .then(connection => {
  connection.playFile('./octo9.wav')
-	    
+
         })}})
 bot.on('message', message => {
   if (message.content.startsWith('!octo10')) {
