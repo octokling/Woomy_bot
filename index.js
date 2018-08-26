@@ -776,14 +776,6 @@ message.author.send(help_embed)
      message.author.send(`Pour s'avoir les commande faite !commande`)
 }
 
-
-   message.author.send(`Merci , par contre veuiller le remplir correctement https://goo.gl/forms/wh901u7Hnqzs6n603`)
-
-}
-
-
-
-
 if (message.content === "test") {
 
 var commande = ["Regarde, c'est du random","C'est magique t'as vu ?","Wouah","Sa faisait longtemps que je chercher cette commande"];
