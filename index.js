@@ -14,117 +14,117 @@ bot.on("ready", function () {
         let randomNumber = Math.floor(Math.random() * 37) + 1;
         switch (randomNumber) {
             case 1:
-                bot.user.setGame("!commande|Casipoulpe");
+                bot.user.setGame("!commandes|Casipoulpe");
                 break;
             case 2:
-                bot.user.setGame("!commande|Splatoon 2");
+                bot.user.setGame("!commandes|Splatoon 2");
                 break;
             case 3:
-                bot.user.setGame("!commande|Essayer d'apprendre à se servir des armes");
+                bot.user.setGame("!commandes|Essayer d'apprendre à se servir des armes");
                 break;
             case 4:
-                bot.user.setGame("!commande|Splatfest");
+                bot.user.setGame("!commandes|Splatfest");
                 break;
             case 5:
-                bot.user.setGame("!commande|Splatoon 2 it's great");
+                bot.user.setGame("!commandes|Splatoon 2 it's great");
                 break;
             case 6:
                 bot.user.setGame("!commande|Splatoon 2 is better Splatoon 1");
                 break;
             case 7:
-                bot.user.setGame("!commande|Le rouleau");
+                bot.user.setGame("!commandes|Le rouleau");
                 break;
             case 8:
-                bot.user.setGame("!commande|Liquidateur");
+                bot.user.setGame("!commandes|Liquidateur");
                 break;
             case 9:
-                bot.user.setGame("!commande|Splatted by the Octokling");
+                bot.user.setGame("!commandes|Splatted by the Octokling");
                 break;
             case 10:
-                bot.user.setGame("!commande|I love Splatoon");
+                bot.user.setGame("!commandes|I love Splatoon");
                 break;
             case 11:
-                bot.user.setGame("!commande|Badigeonneur");
+                bot.user.setGame("!commandes|Badigeonneur");
                 break;
             case 12:
-                bot.user.setGame("!commande|Chic");
+                bot.user.setGame("!commandes|Chic");
                 break;
             case 13:
-                bot.user.setGame("!commande|Ayo it's here");
+                bot.user.setGame("!commandes|Ayo it's here");
                 break;
             case 14:
                 bot.user.setGame("!commande|Oly it's not here °_°");
                 break;
             case 15:
-                bot.user.setGame("!commande|Octo Canyon");
+                bot.user.setGame("!commandes|Octo Canyon");
                 break;
             case 16:
-                bot.user.setGame("!commande|Ink Cannon");
+                bot.user.setGame("!commandes|Ink Cannon");
                 break;
             case 17:
-                bot.user.setGame("!commande|Sardinium");
+                bot.user.setGame("!commandes|Sardinium");
                 break;
             case 18:
-                bot.user.setGame("!commande|Parchemin");
+                bot.user.setGame("!commandes|Parchemin");
                 break;
             case 19:
-                bot.user.setGame("!commande|Inkling");
+                bot.user.setGame("!commandes|Inkling");
                 break;
             case 20:
-                bot.user.setGame("!commande|DJ Octave");
+                bot.user.setGame("!commandes|DJ Octave");
                 break;
             case 21:
-                bot.user.setGame("!commande|The winner is Number 4");
+                bot.user.setGame("!commandes|The winner is Number 4");
                 break;
             case 22:
-                bot.user.setGame("!commande|Splatoon it's stupid or illuminati ?");
+                bot.user.setGame("!commandes|Splatoon it's stupid or illuminati ?");
                 break;
             case 23:
-                bot.user.setGame("!commande|!questionnaire");
+                bot.user.setGame("!commandes|!questionnaire");
                 break;
           case 24:
-                bot.user.setGame("!commande|why the inklings is not fly?");
+                bot.user.setGame("!commandes|why the inklings is not fly?");
                 break;
           case 25:
-                bot.user.setGame("!commande|Splatension");
+                bot.user.setGame("!commandes|Splatension");
                 break;
           case 26:
-                bot.user.setGame("!commande|Splatoon so good");
+                bot.user.setGame("!commandes|Splatoon so good");
                 break;
           case 27:
-                bot.user.setGame("!commande|Match Macking !");
+                bot.user.setGame("!commandes|Match Macking !");
                 break;
           case 28:
-                bot.user.setGame("!commande|J'aime les squid . WOOOOOOOOMYYYYYYYYYYY");
+                bot.user.setGame("!commandes|J'aime les squid . WOOOOOOOOMYYYYYYYYYYY");
                 break;
           case 29:
-                bot.user.setGame("!commande|Octo Expansion !");
+                bot.user.setGame("!commandes|Octo Expansion !");
                 break;
           case 30:
-                bot.user.setGame("!commande|Number 9 ?");
+                bot.user.setGame("!commandes|Number 9 ?");
                 break;
           case 31:
-                bot.user.setGame("!commande|Evilsquid or Octoboy ?");
+                bot.user.setGame("!commandes|Evilsquid or Octoboy ?");
                 break;
           case 32:
-                bot.user.setGame("!commande|N-zap 83 , 85 or 89 ?");
+                bot.user.setGame("!commandes|N-zap 83 , 85 or 89 ?");
                 break;
           case 33:
-                bot.user.setGame("!commande");
+                bot.user.setGame("!commandes");
                 break;
           case 34:
-                bot.user.setGame("!commande|Nothing");
+                bot.user.setGame("!commandes|Nothing");
                 break;
           case 35:
-                bot.user.setGame("!commande|I'm great in English");
+                bot.user.setGame("!commandes|I'm great in English");
                 break;
           case 36:
                 var Guilds = bot.guilds.size
-                bot.user.setGame("!commande|"+ Guilds +" Serveurs!");
+                bot.user.setGame("!commandes|"+ Guilds +" Serveurs!");
                 break;
 	  case 37:
                 var Guilds = bot.guilds.size
-                bot.user.setGame("!commande|WebSite ?");
+                bot.user.setGame("!commandes|WebSite ?");
                 break;
         }
 
