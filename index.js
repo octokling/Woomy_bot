@@ -356,17 +356,15 @@ bot.on('message', message => {
 
     var embed = new Discord.RichEmbed()
     .setTitle("Vous avez demander de l'aide !")
-    .addField("commandes :")
-    .addField("!serveur")
-    .addField("Faite cette commande dans les serveur pour que vous voyez les Information du ce serveur")
-    .addField("!chat")
-    .addField("Cette commande sert à parler avec d'autre gens de d'autre serveur !")
+    .addField("commandes :", "Voici toutes les commandes que vous pouvez faire :")
+    .addField("!serveur", "Faite cette commande dans les serveur pour que vous voyez les Information du ce serveur")
+    .addField("!chat", "Cette commande sert à parler avec d'autre gens de d'autre serveur !")
     .addField("!contact")
-    .addField("Vous disirez parler à quelqu'un ? alors faite !contact @utilisateur -Votre message (n'oublier pas le - avant le message !) ")
+    .addField("!contact", "Vous disirez parler à quelqu'un ? alors faite !contact @utilisateur -Votre message (n'oublier pas le - avant le message !) ")
     .setFooter("D'autres commandes sera ajouté par la suite")
     .setColor("0x0000FF")
     message.author.send(embed)
-    message.channel.sendMessage("Je vous envoie les commandes ")
+    message.reply("Je vous envoie les commandes ")
  
   }
 })
