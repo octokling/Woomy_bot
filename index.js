@@ -373,7 +373,7 @@ if(cmd === `${prefix}kick`){
     .addField("à", message.createdAt)
     .addField("La raison", kReason);
 
-    let kickChannel = message.guild.channels.find(`name`, "incidents");
+    let kickChannel = message.guild.channels.find(`name`, "woomycation");
     if(!kickChannel) return message.channel.send("Je ne trouve pas le chat 'woomycation'");
 
     message.guild.member(kUser).kick(kReason);
