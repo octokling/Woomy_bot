@@ -409,7 +409,7 @@ if(cmd === `${prefix}ban`){
     .setColor(couleur)
     .addField("L'utilisateur banni :", `${bUser} Son id est : ${bUser.id}`)
     .addField("Par :", `<@${message.author.id}> Son id est : ${message.author.id}`)
-    .addField("Pans", message.channel)
+    .addField("Dans", message.channel)
     .addField("à", message.createdAt)
     .addField("La raison", bReason);
 
