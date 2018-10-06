@@ -6,6 +6,7 @@ const content = new Discord.Client()
 const fs = require("fs");
 const ffmpeg = require ('ffmpeg')
 const yt = require('ytdl-core');
+var splatoon = require('splatoon2.ink-node-api-client');
 con = console.log,
 
 bot.on("ready", function () {
@@ -295,7 +296,12 @@ User.send(emb)
         }
 }
   })
-
+bot.on("message", message => {
+if(message.content === prefix + "stage") {
+	var currentStages = client.getCurrentStages()
+	message.channel.send(currentStages)
+	
+}})
 
 
 bot.on("message", message => {
