@@ -318,12 +318,7 @@ client.on("message", (message) => {
   }
 });
 
-bot.on("message", message => {
-if(message.content === prefix + "stage") {
-	var currentStages = client.getCurrentStages()
-	message.channel.send(currentStages)
-	
-}})
+
 
 
 bot.on("message", message => {
