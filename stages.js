@@ -21,7 +21,7 @@ exports.run = (client, message, args) => {
     console.log("Got an error: ", e);
   });
 };
-
+prefix = "!" ;
 function main(message, args, data) {
   // Get the needed styles for each stage embed.
   const stageStyles = {
