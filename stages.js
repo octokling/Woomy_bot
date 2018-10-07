@@ -106,7 +106,7 @@ function sendModeStageEmbed(message, args, data, mode) {
   stageStyle.setAuthor(mode[0].game_mode.name+ " Stages - " + mode[0].rule.name, "https://splatoon2.ink/assets/img/" + modeImgUrl);
   stageStyle.setDescription(mode[0].stage_a.name);
   stageStyle.setImage("https://splatoon2.ink/assets/img/splatnet/"+stageImgUrl);
-  message.author.send(stageStyle);
+  message.author.find("name", "stages").send(stageStyle);
 
   // Create and send up the properties of stage_b embed.
   stageImgUrl = mode[0].stage_b.image.substring(14);
@@ -114,7 +114,7 @@ function sendModeStageEmbed(message, args, data, mode) {
   stageStyle.setAuthor(mode[0].game_mode.name+ " Stages - " + mode[0].rule.name, "https://splatoon2.ink/assets/img/" + modeImgUrl);
   stageStyle.setDescription(mode[0].stage_b.name);
   stageStyle.setImage("https://splatoon2.ink/assets/img/splatnet/"+stageImgUrl);
-  message.author.send(stageStyle);
+  message.author.fond("name", "stages").send(stageStyle);
 }
  
   }
