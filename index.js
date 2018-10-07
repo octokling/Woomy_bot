@@ -256,7 +256,12 @@ prefix = "!"
 
 memberCount = client.users.size;
 servercount = client.guilds.size;
-
+	
+let responseObject = {
+  "weapon": "./weapon.js",
+  "stages": "./stages.js",
+  "profile": "./profile.js"
+};
 
 
     console.log("Je suis connecté");});
@@ -296,6 +301,24 @@ User.send(emb)
         }
 }
   })
+client.on("message", (message) => {
+  // Exit and stop if prefix is not there.
+  if (!message.content.startsWith(config.prefix)) return;
+  // Exit if the message was written by another bot.
+  if (message.author.bot) return;
+  // Take away the prefix.
+  let args = message.content.substring(config.prefix.length);
+  // Get arguments in command.
+  args = args.split(/ +/g);
+  // Get corresponding file to run from responseObject.
+  let command = responseObject[args[0]];
+  // If the command corresponds with a file, run the file.
+  if(command) {
+    let commandFile = require(command);
+    commandFile.run(client, message, args);
+  }
+});
+
 bot.on("message", message => {
 if(message.content === prefix + "stage") {
 	var currentStages = client.getCurrentStages()
