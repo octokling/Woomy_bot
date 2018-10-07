@@ -302,7 +302,7 @@ User.send(emb)
   })
 client.on("message", (message) => {
   // Exit and stop if prefix is not there.
-  if (!message.content.startsWith(config.prefix)) return;
+  if (!message.content.startsWith(prefix + "stages")) return;
   // Exit if the message was written by another bot.
   if (message.author.bot) return;
   // Take away the prefix.
