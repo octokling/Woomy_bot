@@ -6,7 +6,6 @@ const content = new Discord.Client()
 const fs = require("fs");
 const ffmpeg = require ('ffmpeg')
 const yt = require('ytdl-core');
-const config = require('./config.json');
 con = console.log,
 
 bot.on("ready", function () {
@@ -257,12 +256,6 @@ prefix = "!"
 memberCount = client.users.size;
 servercount = client.guilds.size;
 	
-let responseObject = {
-  "weapon": "./weapon.js",
-  "stages": "./stages.js"
-};
-
-
     console.log("Je suis connecté");});
 
     bot.on('guildMemberAdd', member => {
