@@ -260,7 +260,6 @@ servercount = client.guilds.size;
 let responseObject = {
   "weapon": "./weapon.js",
   "stages": "./stages.js",
-  "profile": "./profile.js"
 };
 
 
