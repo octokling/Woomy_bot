@@ -7,6 +7,7 @@ const fs = require("fs");
 const ffmpeg = require ('ffmpeg')
 const yt = require('ytdl-core');
 var splatoon = require('splatoon2.ink-node-api-client');
+const config = require('./config.json');
 con = console.log,
 
 bot.on("ready", function () {
