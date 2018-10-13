@@ -152,10 +152,10 @@ bot.on("ready", function () {
                 bot.user.setAvatar("./avatar 6.png");
                 break;
             case 7:
-                bot.user.setAvatar("./avatar 7.png");
+                bot.user.setAvatar("./avatar 7.jpg");
                 break;
             case 8:
-                bot.user.setAvatar("./avatar 8.png");
+                bot.user.setAvatar("./avatar 8.jpg");
                 break;
             case 9:
                 bot.user.setAvatar("./avatar 9.jpg");
@@ -164,22 +164,22 @@ bot.on("ready", function () {
                 bot.user.setAvatar("./avatar 10.jpg");
                 break;
             case 11:
-                bot.user.setAvatar("./avatar 11.jpg");
+                bot.user.setAvatar("./avatar 11.png");
                 break;
             case 12:
-                bot.user.setAvatar("./avatar 12.jpg");
+                bot.user.setAvatar("./avatar 12.png");
                 break;
             case 13:
                 bot.user.setAvatar("./avatar 13.jpg");
                 break;
             case 14:
-                bot.user.setAvatar("./avatar 14.png");
+                bot.user.setAvatar("./avatar 14.jpg");
                 break;
             case 15:
                 bot.user.setAvatar("./avatar 15.jpg");
                 break;
             case 16:
-                bot.user.setAvatar("./avatar 16.jpg");
+                bot.user.setAvatar("./avatar 16.png");
                 break;
             case 17:
                 bot.user.setAvatar("./avatar 17.jpg");
@@ -191,16 +191,16 @@ bot.on("ready", function () {
                 bot.user.setAvatar("./avatar 19.png");
                 break;
             case 20:
-                bot.user.setAvatar("./avatar 20.png");
+                bot.user.setAvatar("./avatar 20.jpg");
                 break;
             case 21:
                 bot.user.setAvatar("./avatar 21.png");
                 break;
             case 22:
-                bot.user.setAvatar("./avatar 22.png");
+                bot.user.setAvatar("./avatar 22.jpg");
                 break;
             case 23:
-                bot.user.setAvatar("./avatar 23.png");
+                bot.user.setAvatar("./avatar 23.jpg");
                 break;
             case 24:
                 bot.user.setAvatar("./avatar 24.png");
@@ -209,19 +209,19 @@ bot.on("ready", function () {
                 bot.user.setAvatar("./avatar 25.png");
                 break;
             case 26:
-                bot.user.setAvatar("./avatar 26.png");
+                bot.user.setAvatar("./avatar 26.jpg");
                 break;
             case 27:
-                bot.user.setAvatar("./avatar 27.png");
+                bot.user.setAvatar("./avatar 27.jpg");
                 break;
             case 28:
-                bot.user.setAvatar("./avatar 28.png");
+                bot.user.setAvatar("./avatar 28.jpg");
                 break;
             case 29:
-                bot.user.setAvatar("./avatar 29.png");
+                bot.user.setAvatar("./avatar 29.jpg");
                 break;
             case 30:
-                bot.user.setAvatar("./avatar 30.png");
+                bot.user.setAvatar("./avatar 30.jpg");
                 break;
             case 31:
                 bot.user.setAvatar("./avatar.jpg");
