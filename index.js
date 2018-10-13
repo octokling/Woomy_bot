@@ -253,7 +253,7 @@ bot.on("ready", function () {
 prefix = "!"
 
 
-
+})
 memberCount = client.users.size;
 servercount = client.guilds.size;
 	
