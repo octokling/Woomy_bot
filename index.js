@@ -137,52 +137,52 @@ bot.on("ready", function () {
                 bot.user.setAvatar("./avatar 1.jpg");
                 break;
             case 2:
-                bot.user.setAvatar("./avatar 10.jpg");
-                break;
-            case 3:
-                bot.user.setAvatar("./avatar 11.jpg");
-                break;
-            case 4:
-                bot.user.setAvatar("./avatar 12.jpg");
-                break;
-            case 5:
-                bot.user.setAvatar("./avatar 13.png");
-                break;
-            case 6:
-                bot.user.setAvatar("./avatar 14.png");
-                break;
-            case 7:
-                bot.user.setAvatar("./avatar 15.png");
-                break;
-            case 8:
-                bot.user.setAvatar("./avatar 16.png");
-                break;
-            case 9:
-                bot.user.setAvatar("./avatar 17.jpg");
-                break;
-            case 10:
                 bot.user.setAvatar("./avatar 2.jpg");
                 break;
-            case 11:
-                bot.user.setAvatar("./avatar 3.jpg");
+            case 3:
+                bot.user.setAvatar("./avatar 3.png");
                 break;
-            case 12:
-                bot.user.setAvatar("./avatar 4.jpg");
+            case 4:
+                bot.user.setAvatar("./avatar 4.png");
                 break;
-            case 13:
-                bot.user.setAvatar("./avatar 5.jpg");
+            case 5:
+                bot.user.setAvatar("./avatar 5.png");
                 break;
-            case 14:
+            case 6:
                 bot.user.setAvatar("./avatar 6.png");
                 break;
+            case 7:
+                bot.user.setAvatar("./avatar 7.png");
+                break;
+            case 8:
+                bot.user.setAvatar("./avatar 8.png");
+                break;
+            case 9:
+                bot.user.setAvatar("./avatar 9.jpg");
+                break;
+            case 10:
+                bot.user.setAvatar("./avatar 10.jpg");
+                break;
+            case 11:
+                bot.user.setAvatar("./avatar 11.jpg");
+                break;
+            case 12:
+                bot.user.setAvatar("./avatar 12.jpg");
+                break;
+            case 13:
+                bot.user.setAvatar("./avatar 13.jpg");
+                break;
+            case 14:
+                bot.user.setAvatar("./avatar 14.png");
+                break;
             case 15:
-                bot.user.setAvatar("./avatar 7.jpg");
+                bot.user.setAvatar("./avatar 15.jpg");
                 break;
             case 16:
-                bot.user.setAvatar("./avatar 8.jpg");
+                bot.user.setAvatar("./avatar 16.jpg");
                 break;
             case 17:
-                bot.user.setAvatar("./avatar 9.jpg");
+                bot.user.setAvatar("./avatar 17.jpg");
                 break;
             case 18:
                 bot.user.setAvatar("./avatar 18.png");
@@ -223,30 +223,31 @@ bot.on("ready", function () {
             case 30:
                 bot.user.setAvatar("./avatar 30.png");
                 break;
-             case 31:
-                bot.user.setAvatar("./avatar 31.png");
+            case 31:
+                bot.user.setAvatar("./avatar.jpg");
                 break;
-             case 32:
-                bot.user.setAvatar("./avatar 32.png");
-                break;
-             case 33:
-                bot.user.setAvatar("./avatar 33.png");
-                break;
-            case 34:
-                bot.user.setAvatar("./avatar 34.png");
-                break;
-          case 35:
-                bot.user.setAvatar("./avatar 35.jpg");
-                break;
-          case 36:
-                bot.user.setAvatar("./avatar 36.jpg");
-                break;
-
         }
     }, 999999);
 
+/*setInterval(function() {
+        let rndNumber = Math.floor(Math.random() * 36) + 1;
+        switch (rndNumber) {
+            case 1:
+                bot.user.setAvatar("./halloween3.jpg");
+                break;
+            case 2:
+                bot.user.setAvatar("./halloween2.jpg");
+                break;
+            case 3:
+                bot.user.setAvatar("./halloween1.jpg");
+                break;
+            case 4:
+                bot.user.setAvatar("./halloween.jpg");
+                break;
+        }
+    }, 9999999);*/
+ bot.user.setUsername("Nintentoont™")
 
- bot.user.setUsername("Nintentoont™(bêta)")
 .then(user => console.log(`j'ai choisis mon avatar`))
 
 prefix = "!"
@@ -256,7 +257,7 @@ prefix = "!"
 memberCount = client.users.size;
 servercount = client.guilds.size;
 	
-    console.log("Je suis connecté");});
+    console.log("Je suis connecté");
 
     bot.on('guildMemberAdd', member => {
       member.createDM().then(channel => {
