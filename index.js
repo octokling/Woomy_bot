@@ -444,7 +444,7 @@ bot.on('message', message => {
   if(message.content === prefix + "info") {
     let messageArray = message.content.split(" ");
  let args = messageArray.slice(1);
-       const iUser = await message.guild.member(message.mentions.members.first());
+       const iUser = message.guild.member(message.mentions.members.first());
     if(!iUser) return message.channel.send("Je n'est pas trouver l'utilisateur !");
 
     var embed = new Discord.RichEmbed()
