@@ -445,7 +445,6 @@ bot.on('message', message => {
 try{
       let iUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!iUser) return message.channel.send("Je n'est pas trouver l'utilisateur !");
-    let kReason = args.join(" ").slice(22);
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Tu est pas mon roi !"); 
 
     var embed = new Discord.RichEmbed()
