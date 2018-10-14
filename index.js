@@ -442,7 +442,7 @@ try{
 
 bot.on('message', message => {
   if (cmd === `${prefix}info`)
-       let iUser = message.guild.member(message.mentions.members.first());
+       const iUser = message.guild.member(message.mentions.members.first());
     if(!iUser) return message.channel.send("Je n'est pas trouver l'utilisateur !");
 
     var embed = new Discord.RichEmbed()
