@@ -457,7 +457,7 @@ bot.on('message', message => {
     .addField("Le rôle le plus élever qu'il as : ", iUser.highestRole.name, true)
     .setColor("0x0000FF")
     message.channel.send(embed)
-  }}
+  }})
   
 
 
