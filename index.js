@@ -345,7 +345,23 @@ bot.on("message", async message => {
 if(cmd === `${prefix}kick`){
 
     //!kick @daeshan askin for it
+  if (cmd === `${prefix}info`){
+       const iUser = message.guild.member(message.mentions.members.first());
+    if(!iUser) return message.channel.send("Je n'est pas trouver l'utilisateur !");
 
+    var embed = new Discord.RichEmbed()
+
+    .setTitle("Information de "+ iUser.user.username +" sur le serveur " + message.guild.name)
+   .setThumbnail(`${iUser.user.avatarURL}`) 
+   .addField("Nickname", iUser.displayName, true)
+    .addField("Son id : ", iUser.id, true)
+   .addField("Son statut :", iUser.presence.status, true)
+   .addField("Utilisateur créé le :", message.iUser.createdAt)
+    .addField("As rejoin le serveur le : ", message.iUser.joinedAt)
+    .addField("Le rôle le plus élever qu'il as : ", iUser.highestRole.name, true)
+    .setColor("0x0000FF")
+    message.channel.send(embed)
+  }
     let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!kUser) return message.channel.send("Je n'est pas trouver l'utilisateur !");
     let kReason = args.join(" ").slice(22);
@@ -440,24 +456,9 @@ try{
   }
 })
 
-bot.on('message', message => {
-  if (cmd === `${prefix}info`){
-       const iUser = message.guild.member(message.mentions.members.first());
-    if(!iUser) return message.channel.send("Je n'est pas trouver l'utilisateur !");
 
-    var embed = new Discord.RichEmbed()
 
-    .setTitle("Information de "+ iUser.user.username +" sur le serveur " + message.guild.name)
-   .setThumbnail(`${iUser.user.avatarURL}`) 
-   .addField("Nickname", iUser.displayName, true)
-    .addField("Son id : ", iUser.id, true)
-   .addField("Son statut :", iUser.presence.status, true)
-   .addField("Utilisateur créé le :", message.iUser.createdAt)
-    .addField("As rejoin le serveur le : ", message.iUser.joinedAt)
-    .addField("Le rôle le plus élever qu'il as : ", iUser.highestRole.name, true)
-    .setColor("0x0000FF")
-    message.channel.send(embed)
-  }})
+
   
 
 
