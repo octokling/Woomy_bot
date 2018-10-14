@@ -509,22 +509,4 @@ bot.on('message', message => {
   }
 })
 
-let coinsAmt = Math.floor(Math.random() * 1) + 1;
-let baseAmt = Math.floor(Math.random() * 1) + 1;
-console.log(`${coinsAmt} ; ${baseAmt}`)
-if (coinsAmt === baseAmt){
-  coins[message.author.id] = {
-    coins: coins[message.author.id].coins + coinsAmt
-
-
-  };
-  fs.writeFile("./coins.json", JSON.stringify(coins),(err) => {
-if (err) console.log(err)
-  });
-  let coinEmbed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-  .setcolor("#0000FF")
-  .addField("Pièce", `:moneybag:Vous avez : ${coinsAmt} pièces d'ajoutées:moneybag:`);
-message.channel.send(coinEmbed).then(msg => {msg.delete(5000)});
-}
 bot.login(process.env.TOKEN)
