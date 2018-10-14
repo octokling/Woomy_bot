@@ -346,19 +346,35 @@ bot.on("message", async message => {
 	  if (message.content.startsWith(prefix + 'info')){
            let iUser = message.mentions.members.first();
      if (!message.mentions) return message.channel.send("Je n'ai pas trouvé l'utilisateur !");
+     if(iUser){
     var embed = new Discord.RichEmbed()
 
-    .setTitle("Information de "+ iUser.username +" sur le serveur " + message.guild.name)
+    .setTitle("Information de "+ iUser.displayName +" sur le serveur " + message.guild.name)
    .setThumbnail(iUser.user.avatarURL) 
-   .addField("Pseudo", iUser.displayName, true)
+   .addField("Pseudo : ", iUser.displayName, true)
     .addField("Son id : ", iUser.id, true)
-   .addField("Son statut :", iUser.presence.status, true)
-   .addField("Utilisateur créé le :", message.member.createdAt)
-    .addField("As rejoin le serveur le : ", message.member.joinedAt)
+   .addField("Son statut : ", iUser.presence.status, true)
+   .addField("Il joue à : ", `${iUser.user.presence.game ? `${iUser.user.presence.game.name}` : "Il ne joue pas."}`)
+   .addField("Utilisateur créé le :", dateFormat(iUser.user.createdAt, 'dd/mm/yyyy') + " à " + dateFormat(iUser.user.createdAt, 'H:MM'))
+    .addField("As rejoin le serveur le : ", dateFormat(iUser.joinedAt, 'dd/mm/yyyy') + " à " + dateFormat(iUser.joinedAt, 'H:MM'))
     .addField("Le rôle le plus élevé qu'il as : ", iUser.highestRole.name, true)
     .setColor("0x0000FF")
     message.channel.send(embed)
-  }
+  }else{
+iUser = message.member
+    var embed = new Discord.RichEmbed()
+
+     .setTitle("Information de "+ iUser.displayName +" sur le serveur " + message.guild.name)
+   .setThumbnail(iUser.user.avatarURL) 
+   .addField("Pseudo : ", iUser.displayName, true)
+    .addField("Son id : ", iUser.id, true)
+   .addField("Son statut : ", iUser.presence.status, true)
+   .addField("Il joue à : ", `${iUser.user.presence.game ? `${iUser.user.presence.game.name}` : "Il ne joue pas."}`)
+   .addField("Utilisateur créé le :", dateFormat(iUser.user.createdAt, 'dd/mm/yyyy') + " à " + dateFormat(iUser.user.createdAt, 'H:MM'))
+    .addField("As rejoin le serveur le : ", dateFormat(iUser.joinedAt, 'dd/mm/yyyy') + " à " + dateFormat(iUser.joinedAt, 'H:MM'))
+    .addField("Le rôle le plus élevé qu'il as : ", iUser.highestRole.name, true)
+    .setColor("0x0000FF")
+    message.channel.send(embed)}
 if(cmd === `${prefix}kick`){
 
 
