@@ -441,7 +441,7 @@ try{
 })
 
 bot.on('message', message => {
-  if(message.content === prefix + "info") {
+  if (cmd === `${prefix}info`)
        let iUser = message.guild.member(message.mentions.members.first());
     if(!iUser) return message.channel.send("Je n'est pas trouver l'utilisateur !");
 
@@ -456,10 +456,10 @@ bot.on('message', message => {
     .addField("As rejoin le serveur le : ", message.iUser.joinedAt)
     .addField("Le rôle le plus élever qu'il as : ", iUser.highestRole.name, true)
     .setColor("0x0000FF")
-    message.channel.sendEmbed(embed)
+    message.channel.send(embed)
   }
-  }
-)
+  
+
 
 bot.on('message', message => {
   if(message.content === prefix + "commandes") {
