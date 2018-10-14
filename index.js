@@ -358,7 +358,7 @@ bot.on("message", async message => {
     .addField("Le rôle le plus élever qu'il as : ", iUser.highestRole.name, true)
     .setColor("0x0000FF")
     message.channel.send(embed)
-  }}
+  }
 if(cmd === `${prefix}kick`){
 
 
