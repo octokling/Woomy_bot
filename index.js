@@ -343,9 +343,9 @@ bot.on("message", async message => {
   let args = messageArray.slice(1);
 
 
-	  if (message.content === prefix + "info"){
-       let iUser = message.mentions.members.first();
-    if(!iUser) return message.channel.send("Je n'est pas trouver l'utilisateur !");
+	  if (message.content.startsWith(prefix + 'info')){
+           let iUser = message.mentions.members.first();
+    if(!iUser) return message.channel.send("Je n'ai pas trouvé l'utilisateur !");
 
     var embed = new Discord.RichEmbed()
 
@@ -364,7 +364,7 @@ if(cmd === `${prefix}kick`){
 
 
     let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-    if(!kUser) return message.channel.send("Je n'est pas trouver l'utilisateur !");
+    if(!kUser) return message.channel.send("Je n'ai pas trouvé l'utilisateur !");
     let kReason = args.join(" ").slice(22);
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Tu n'est pas mon roi !");
     if(kUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Tu est FOU ! Je refuse de kicker cette personne !");
@@ -392,7 +392,7 @@ if(cmd === `${prefix}kick`){
     .addField("La raison", kReason);
 
     let kickChannel = message.guild.channels.find(`name`, "woomycation");
-    if(!kickChannel) return message.channel.send("Je ne trouve pas le chat 'woomycation'");
+    if(!kickChannel) return message.channel.send("Je n'ai trouvé pas le chat 'woomycation'");
 
     message.guild.member(kUser).kick(kReason);
     kickChannel.send(kickEmbed);
@@ -403,7 +403,7 @@ if(cmd === `${prefix}kick`){
 if(cmd === `${prefix}ban`){
 
     let bUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-    if(!bUser) return message.channel.send("Je n'est pas trouver l'utilisateur !");
+    if(!bUser) return message.channel.send("Je n'ai pas trouvé l'utilisateur !");
     let bReason = args.join(" ").slice(22);
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Tu est pas mon roi !");
     if(bUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Tu est FOU ! Je refuse de bannir cette personne !");
@@ -432,7 +432,7 @@ if(cmd === `${prefix}ban`){
     .addField("La raison", bReason);
 
     let incidentchannel = message.guild.channels.find(`name`, "woomycation");
-    if(!incidentchannel) return message.channel.send("Je ne trouve pas le chat 'woomycation'");
+    if(!incidentchannel) return message.channel.send("Je n'ai trouvé pas le chat 'woomycation'");
 
     message.guild.member(bUser).ban(bReason);
     incidentchannel.send(banEmbed);
