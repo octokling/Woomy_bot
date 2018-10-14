@@ -350,7 +350,7 @@ bot.on("message", async message => {
     var embed = new Discord.RichEmbed()
 
     .setTitle("Information de "+ iUser.user.username +" sur le serveur " + message.guild.name)
-   .setThumbnail(${iUser.user.avatarURL}) 
+   .setThumbnail(iUser.user.avatarURL) 
    .addField("Nickname", iUser.nickname, true)
     .addField("Son id : ", iUser.id, true)
    .addField("Son statut :", iUser.presence.status, true)
