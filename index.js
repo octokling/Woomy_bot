@@ -361,7 +361,7 @@ bot.on("message", async message => {
     .setColor("0x0000FF")
     message.channel.send(embed)
   }else{
-iUser = message.member
+ let iUser = message.member
     var embed = new Discord.RichEmbed()
 
      .setTitle("Information de "+ iUser.displayName +" sur le serveur " + message.guild.name)
@@ -374,7 +374,7 @@ iUser = message.member
     .addField("As rejoin le serveur le : ", dateFormat(iUser.joinedAt, 'dd/mm/yyyy') + " à " + dateFormat(iUser.joinedAt, 'H:MM'))
     .addField("Le rôle le plus élevé qu'il as : ", iUser.highestRole.name, true)
     .setColor("0x0000FF")
-    message.channel.send(embed)}
+    message.channel.send(embed)}}
 if(cmd === `${prefix}kick`){
 
 
