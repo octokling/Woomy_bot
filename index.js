@@ -441,6 +441,26 @@ try{
 })
 
 bot.on('message', message => {
+  if(message.content === prefix + "info") {
+try{
+      let iUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+    if(!iUser) return message.channel.send("Je n'est pas trouver l'utilisateur !");
+    let kReason = args.join(" ").slice(22);
+    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Tu est pas mon roi !"); 
+
+    var embed = new Discord.RichEmbed()
+    .setTitle("Information de l'utilisateur sur le serveur " + message.guild.name)
+    .addField("Utilisateur créé le :", message.mentions.users.createdAt)
+    .addField("As rejoin le serveur le : ", message.mentions.users.joinedAt)
+    .setColor("0x0000FF")
+    message.channel.sendEmbed(embed)
+  }catch(err){
+    message.channel.sendMessage("Une erreur c'est produite , veuilliez réessayer")
+  }
+  }
+})
+
+bot.on('message', message => {
   if(message.content === prefix + "commandes") {
     
 
@@ -449,9 +469,10 @@ bot.on('message', message => {
     .addField("commandes :", "Voici toutes les commandes que vous pouvez faire :")
     .addField("!serveur", "Faite cette commande dans les serveur pour que vous voyez les Information du ce serveur")
     .addField("!chat", "Cette commande sert à parler avec d'autre gens de d'autre serveur !")
-    .addField("!contact")
     .addField("!contact", "Vous disirez parler à quelqu'un ? alors faite !contact @utilisateur -Votre message (n'oublier pas le - avant le message !) ")
-   .addField("!kick", "Vous devez avoir le rôle administrateur pour effectuer cette commande")
+   .addField("!kick", "Vous devez avoir un rôle administrateur pour bannir la personne . La commande à faire est !ban @user raison")
+   .addField("!ban", "Vous devez avoir un rôle administrateur pour expulser la personne . La commande à faire est !kick @user raison")
+   .addField("!info", "Vous devez avoir un rôle administrateur pour avoir des information auprès d'un utilisateur . La commande à faire est !info @user")
     .setFooter("D'autres commandes sera ajouté par la suite")
     .setColor("0x0000FF")
     message.author.send(embed)
