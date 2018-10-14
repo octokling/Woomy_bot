@@ -353,7 +353,7 @@ bot.on("message", async message => {
    .addField("Nickname", iUser.nickname, true)
     .addField("Son id : ", iUser.id, true)
    .addField("Son statut :", iUser.presence.status, true)
-   .addField("Utilisateur créé le :", message.iUser.createdAt)
+   .addField("Utilisateur créé le :", message.user.createdAt)
     .addField("As rejoin le serveur le : ", message.iUser.joinedAt)
     .addField("Le rôle le plus élever qu'il as : ", iUser.highestRole.name, true)
     .setColor("0x0000FF")
