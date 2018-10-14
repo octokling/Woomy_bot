@@ -6,6 +6,7 @@ const content = new Discord.Client()
 const fs = require("fs");
 const ffmpeg = require ('ffmpeg')
 const yt = require('ytdl-core');
+const dateFormat = require('dateformat');
 con = console.log,
 
 bot.on("ready", function () {
@@ -347,7 +348,8 @@ bot.on("message", async message => {
            let iUser = message.mentions.members.first();
      if (!message.mentions) return message.channel.send("Je n'ai pas trouvé l'utilisateur !");
      if(iUser){
-      dateFormat(now, 'shortDate');
+      const now = new Date();
+dateFormat(now, 'shortDate');
     var embed = new Discord.RichEmbed()
 
 
@@ -364,6 +366,7 @@ bot.on("message", async message => {
     message.channel.send(embed)
   }else{
  let iUser = message.member
+ const now = new Date();
  dateFormat(now, 'shortDate');
 
     var embed = new Discord.RichEmbed()
