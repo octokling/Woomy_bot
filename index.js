@@ -7,6 +7,8 @@ const fs = require("fs");
 const ffmpeg = require ('ffmpeg')
 const yt = require('ytdl-core');
 const dateFormat = require('dateformat');
+let coins = require("./coin.json");
+
 con = console.log,
 
 bot.on("ready", function () {
@@ -506,5 +508,28 @@ bot.on('message', message => {
  
   }
 })
+if(!coins[message.author.id]){
+  coins[message.author.id] = {
+    coins: 0
+  };
+}
+let coinsAmt = Math.floor(Math.random() * 1) + 1;
+let baseAmt = Math.floor(Math.random() * 1) + 1;
+console.log(`${coinAmt} ; ${baseAmt}`)
+if (coinsAmt === baseAmt){
+  coins[message.author.id] = {
+    coins: coins[message.author.id].coins + coinsAmt
 
+
+  };
+  fs.writeFile("./coins.json", JSON.stringify(coins),(err) => {
+if (err) console.log(err)
+  });
+  let coinEmbed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setcolor("#0000FF")
+  .addField("Pièce", `:moneybag:Vous avez : ${coinsAmt} pièces d'ajoutées:moneybag:`);
+message
+.channel.send(coinEmbed).then(msg => {msg.delete(5000)});
+}
 bot.login(process.env.TOKEN)
