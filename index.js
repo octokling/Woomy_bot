@@ -449,11 +449,10 @@ bot.on('message', message => {
 
     var embed = new Discord.RichEmbed()
     .setTitle("Information de l'utilisateur sur le serveur " + message.guild.name)
-    .addField("Utilisateur créé le :", message.mentions.users.createdAt)
-    .addField("As rejoin le serveur le : ", message.mentions.users.joinedAt)
+    .addField("Utilisateur créé le :", message.iUser.createdAt)
+    .addField("As rejoin le serveur le : ", message.iUser.joinedAt)
     .setColor("0x0000FF")
     message.channel.sendEmbed(embed)
-    message.channel.sendMessage("Une erreur c'est produite , veuilliez réessayer")
   }
   }
 )
