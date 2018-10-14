@@ -442,6 +442,7 @@ try{
 
 bot.on('message', message => {
   if(message.content === prefix + "info") {
+    let messageArray = message.content.split(" ");
  let args = messageArray.slice(1);
       let iUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!iUser) return message.channel.send("Je n'est pas trouver l'utilisateur !");
