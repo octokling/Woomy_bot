@@ -350,12 +350,12 @@ bot.on("message", async message => {
 
     .setTitle("Information de "+ iUser.username +" sur le serveur " + message.guild.name)
    .setThumbnail(iUser.user.avatarURL) 
-   .addField("Nickname", iUser.nickname, true)
+   .addField("Pseudo", iUser.displayName, true)
     .addField("Son id : ", iUser.id, true)
    .addField("Son statut :", iUser.presence.status, true)
    .addField("Utilisateur créé le :", message.member.createdAt)
     .addField("As rejoin le serveur le : ", message.member.joinedAt)
-    .addField("Le rôle le plus élever qu'il as : ", iUser.highestRole.name, true)
+    .addField("Le rôle le plus élevé qu'il as : ", iUser.highestRole.name, true)
     .setColor("0x0000FF")
     message.channel.send(embed)
   }
@@ -474,7 +474,7 @@ bot.on('message', message => {
     .addField("!contact", "Vous disirez parler à quelqu'un ? alors faite !contact @utilisateur -Votre message (n'oublier pas le - avant le message !) ")
    .addField("!kick", "Vous devez avoir un rôle administrateur pour bannir la personne . La commande à faire est !ban @user raison")
    .addField("!ban", "Vous devez avoir un rôle administrateur pour expulser la personne . La commande à faire est !kick @user raison")
-   .addField("!info", "Vous devez avoir un rôle administrateur pour avoir des information auprès d'un utilisateur . La commande à faire est !info @user")
+   .addField("!info", "Sert à voir quelque information au niveau de utilisateur .")
     .setFooter("D'autres commandes sera ajouté par la suite")
     .setColor("0x0000FF")
     message.author.send(embed)
