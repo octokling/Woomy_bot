@@ -511,7 +511,7 @@ bot.on('message', message => {
 
 let coinsAmt = Math.floor(Math.random() * 1) + 1;
 let baseAmt = Math.floor(Math.random() * 1) + 1;
-console.log(`${coinAmt} ; ${baseAmt}`)
+console.log(`${coinsAmt} ; ${baseAmt}`)
 if (coinsAmt === baseAmt){
   coins[message.author.id] = {
     coins: coins[message.author.id].coins + coinsAmt
