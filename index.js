@@ -7,7 +7,7 @@ const fs = require("fs");
 const ffmpeg = require ('ffmpeg')
 const yt = require('ytdl-core');
 const dateFormat = require('dateformat');
-let coins = require("./coin.json");
+
 
 con = console.log,
 
