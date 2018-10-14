@@ -343,19 +343,19 @@ bot.on("message", async message => {
   let args = messageArray.slice(1);
 
 
-	  if (cmd === `${prefix}info`){
-       let iUser = message.guild.member(message.mentions.members.first());
+	  if (message.content === ${prefix}info){
+       let iUser = message.mentions.members.first();
     if(!iUser) return message.channel.send("Je n'est pas trouver l'utilisateur !");
 
     var embed = new Discord.RichEmbed()
 
     .setTitle("Information de "+ iUser.user.username +" sur le serveur " + message.guild.name)
-   .setThumbnail(`${iUser.user.avatarURL}`) 
-   .addField("Nickname", iUser.displayName, true)
+   .setThumbnail(${iUser.user.avatarURL}) 
+   .addField("Nickname", iUser.nickname, true)
     .addField("Son id : ", iUser.id, true)
    .addField("Son statut :", iUser.presence.status, true)
-   .addField("Utilisateur créé le :", message.iUser.createdAt)
-    .addField("As rejoin le serveur le : ", message.iUser.joinedAt)
+   .addField("Utilisateur créé le :", message.iUser.user.createdAt)
+    .addField("As rejoin le serveur le : ", message.iUser.user.joinedAt)
     .addField("Le rôle le plus élever qu'il as : ", iUser.highestRole.name, true)
     .setColor("0x0000FF")
     message.channel.send(embed)
