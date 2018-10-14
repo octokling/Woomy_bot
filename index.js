@@ -441,7 +441,7 @@ try{
 })
 
 bot.on('message', message => {
-  if (cmd === `${prefix}info`)
+  if (cmd === `${prefix}info`){
        const iUser = message.guild.member(message.mentions.members.first());
     if(!iUser) return message.channel.send("Je n'est pas trouver l'utilisateur !");
 
@@ -457,7 +457,7 @@ bot.on('message', message => {
     .addField("Le rôle le plus élever qu'il as : ", iUser.highestRole.name, true)
     .setColor("0x0000FF")
     message.channel.send(embed)
-  }
+  }}
   
 
 
