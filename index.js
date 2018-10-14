@@ -348,6 +348,7 @@ bot.on("message", async message => {
      if (!message.mentions) return message.channel.send("Je n'ai pas trouvé l'utilisateur !");
      if(iUser){
     var embed = new Discord.RichEmbed()
+dateFormat(now, 'shortDate');
 
     .setTitle("Information de "+ iUser.displayName +" sur le serveur " + message.guild.name)
    .setThumbnail(iUser.user.avatarURL) 
@@ -363,6 +364,7 @@ bot.on("message", async message => {
   }else{
  let iUser = message.member
     var embed = new Discord.RichEmbed()
+dateFormat(now, 'shortDate');
 
      .setTitle("Information de "+ iUser.displayName +" sur le serveur " + message.guild.name)
    .setThumbnail(iUser.user.avatarURL) 
