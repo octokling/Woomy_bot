@@ -345,8 +345,7 @@ bot.on("message", async message => {
 
 	  if (message.content.startsWith(prefix + 'info')){
            let iUser = message.mentions.members.first();
-    if(!iUser) return message.channel.send("Je n'ai pas trouvé l'utilisateur !");
-
+     if (!message.mentions) return message.channel.send("Je n'ai pas trouvé l'utilisateur !");
     var embed = new Discord.RichEmbed()
 
     .setTitle("Information de "+ iUser.username +" sur le serveur " + message.guild.name)
@@ -359,7 +358,7 @@ bot.on("message", async message => {
     .addField("Le rôle le plus élever qu'il as : ", iUser.highestRole.name, true)
     .setColor("0x0000FF")
     message.channel.send(embed)
-  }
+  }}
 if(cmd === `${prefix}kick`){
 
 
