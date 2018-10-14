@@ -342,9 +342,9 @@ bot.on("message", async message => {
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
 
-  
+
 	  if (cmd === `${prefix}info`){
-       const iUser = message.guild.member(message.mentions.members.first());
+       let iUser = message.guild.member(message.mentions.members.first());
     if(!iUser) return message.channel.send("Je n'est pas trouver l'utilisateur !");
 
     var embed = new Discord.RichEmbed()
