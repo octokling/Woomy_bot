@@ -341,11 +341,9 @@ bot.on("message", async message => {
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
-	
-if(cmd === `${prefix}kick`){
 
-    //!kick @daeshan askin for it
-  if (cmd === `${prefix}info`){
+  
+	  if (cmd === `${prefix}info`){
        const iUser = message.guild.member(message.mentions.members.first());
     if(!iUser) return message.channel.send("Je n'est pas trouver l'utilisateur !");
 
@@ -362,6 +360,9 @@ if(cmd === `${prefix}kick`){
     .setColor("0x0000FF")
     message.channel.send(embed)
   }
+if(cmd === `${prefix}kick`){
+
+
     let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!kUser) return message.channel.send("Je n'est pas trouver l'utilisateur !");
     let kReason = args.join(" ").slice(22);
