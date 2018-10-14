@@ -508,11 +508,7 @@ bot.on('message', message => {
  
   }
 })
-if(!coins[message.author.id]){
-  coins[message.author.id] = {
-    coins: 0
-  };
-}
+
 let coinsAmt = Math.floor(Math.random() * 1) + 1;
 let baseAmt = Math.floor(Math.random() * 1) + 1;
 console.log(`${coinAmt} ; ${baseAmt}`)
