@@ -442,7 +442,7 @@ try{
 
 bot.on('message', message => {
   if(message.content === prefix + "info") {
-try{
+
       let iUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!iUser) return message.channel.send("Je n'est pas trouver l'utilisateur !");
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Tu est pas mon roi !"); 
@@ -453,11 +453,10 @@ try{
     .addField("As rejoin le serveur le : ", message.mentions.users.joinedAt)
     .setColor("0x0000FF")
     message.channel.sendEmbed(embed)
-  }catch(err){
     message.channel.sendMessage("Une erreur c'est produite , veuilliez réessayer")
   }
   }
-})
+)
 
 bot.on('message', message => {
   if(message.content === prefix + "commandes") {
