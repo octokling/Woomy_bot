@@ -529,7 +529,6 @@ if (err) console.log(err)
   .setAuthor(message.author.username)
   .setcolor("#0000FF")
   .addField("Pièce", `:moneybag:Vous avez : ${coinsAmt} pièces d'ajoutées:moneybag:`);
-message
-.channel.send(coinEmbed).then(msg => {msg.delete(5000)});
+message.channel.send(coinEmbed).then(msg => {msg.delete(5000)});
 }
 bot.login(process.env.TOKEN)
