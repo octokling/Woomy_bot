@@ -343,7 +343,7 @@ bot.on("message", async message => {
   let args = messageArray.slice(1);
 
 
-	  if (message.content === ${prefix}info){
+	  if (message.content === prefix + "info"){
        let iUser = message.mentions.members.first();
     if(!iUser) return message.channel.send("Je n'est pas trouver l'utilisateur !");
 
