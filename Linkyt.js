@@ -10,6 +10,6 @@ module.exports = class Youtube extends Command {
 	static action(message) {
 		let args = message.content.split(' ')
 		args.shift()
-		message.reply('`Voici le résultat de votre recherche` :arrow_heading_down:\nhttps://www.youtube.com/watch?v=' + args.join('+'))
+		message.reply('`Voici le résultat de votre recherche` :arrow_heading_down:\nhttps://www.youtube.com/results?search_query=' + args.join('+'))
 	}
 }
