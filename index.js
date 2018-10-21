@@ -11,6 +11,7 @@ const Google = require('./Linkgoogle.js')
 const Youtube = require('./Linkyt.js')
 const Wiki = require('./Linkwiki.js')
 const rapport = require('./rapport.js')
+const github = require('./github.js')
 
 con = console.log,
 
@@ -315,7 +316,7 @@ bot.on('message', function(message) {
  
   Google.parse(message)
  
-  
+  github.parse(message)
 })
 
 bot.on("message", message => {
