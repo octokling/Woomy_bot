@@ -531,7 +531,7 @@ myRainbow.setColor("RANDOM").catch(e => {});
           console.log("[ERREUR] ["+message.author.tag+" = "+message.author.id+"] "+message.content)
  
           console.log(error)
-        }
+        })
       
   
 
