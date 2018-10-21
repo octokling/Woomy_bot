@@ -524,18 +524,6 @@ myRainbow.setColor("RANDOM").catch(e => {});
             console.log("[LOG] ["+message.author.tag+" = "+message.author.id+"] ["+message.guild.name+"] La commande "+command+" a ete executee.")
    
       }
- 
-          
- 
-        catch (error) {
-          console.log("[ERREUR] ["+message.author.tag+" = "+message.author.id+"] "+message.content)
- 
-          console.log(error)
-        }
-      
-  
-
-
 bot.on('message', message => {
   if(message.content === prefix + "commandes") {
     
