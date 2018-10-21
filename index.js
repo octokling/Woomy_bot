@@ -504,10 +504,10 @@ try{
 
 
 bot.on('message', message => {
-        if (!message.member.hasPermission("ADMINISTRATOR")) return message.reply("❌ ** Tu n'as pas la permission `ADMINISTRATEUR` ** ❌");
+        if (!message.member.hasPermission("ADMINISTRATOR")) return message.reply("Tu n'est pas mon roi !");
      
-if (!message.guild.roles.find("name", "rainbow")) return message.reply("❌ **  Le role `rainbow` n'existe pas ** ❌")
-message.reply('🌈 La commande est maintenant activé, il te reste juste à attribué le role ! 🌈')
+if (!message.guild.roles.find("name", "rainbow")) return message.reply("❌Le role `rainbow` n'existe pas❌")
+message.reply('La commande est maintenant activé, il te reste juste à attribué le role !')
 let args = message.content.split(' ')
 args.shift()
 message.delete()
