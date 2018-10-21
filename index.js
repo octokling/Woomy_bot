@@ -518,7 +518,7 @@ let interval = setInterval(function () {
 myRainbow.setColor("RANDOM").catch(e => {});
 
 }, 4500)
-}
+})
 
     else {
             console.log("[LOG] ["+message.author.tag+" = "+message.author.id+"] ["+message.guild.name+"] La commande "+command+" a ete executee.")
@@ -531,7 +531,7 @@ myRainbow.setColor("RANDOM").catch(e => {});
           console.log("[ERREUR] ["+message.author.tag+" = "+message.author.id+"] "+message.content)
  
           console.log(error)
-        })
+        }
       
   
 
