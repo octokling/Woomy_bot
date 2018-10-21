@@ -406,14 +406,15 @@ if(cmd === `${prefix}kick`){
   "#0FE177"
 ]
 	let couleur = (replys[Math.floor(Math.random() * replys.length)])
+	dateFormat(now, 'shortDate');
     let kickEmbed = new Discord.RichEmbed()
     .setDescription("Un kick à était fait !")
     .setColor(couleur)
-    .addField("L'utilisateur kicker :", `${kUser} Son id est : ${kUser.id}`)
-    .addField("Par :", `<@${message.author.id}> Son id est :  ${message.author.id}`)
-    .addField("Dans", message.channel)
-    .addField("à", message.createdAt)
-    .addField("La raison", kReason);
+    .addField("L'utilisateur kicker : ", `${kUser} Son id est : ${kUser.id}`)
+    .addField("Par : ", `<@${message.author.id}> Son id est :  ${message.author.id}`)
+    .addField("Dans : ", message.channel)
+    .addField("Le : ", dateFormat(kUser.user.createdAt, 'dd/mm/yyyy') + " à " + dateFormat(kUser.user.createdAt, 'H:MM'))
+    .addField("La raison : ", kReason);
 
     let kickChannel = message.guild.channels.find(`name`, "woomycation");
     if(!kickChannel) return message.channel.send("Je n'ai trouvé pas le chat 'woomycation'");
@@ -445,15 +446,15 @@ if(cmd === `${prefix}ban`){
   "#0FE177"
 ]
 	let couleur = (replys[Math.floor(Math.random() * replys.length)])
-	
+	dateFormat(now, 'shortDate');
     let banEmbed = new Discord.RichEmbed()
     .setDescription("Un ban à était fait !")
     .setColor(couleur)
     .addField("L'utilisateur banni :", `${bUser} Son id est : ${bUser.id}`)
-    .addField("Par :", `<@${message.author.id}> Son id est : ${message.author.id}`)
-    .addField("Dans", message.channel)
-    .addField("à", message.createdAt)
-    .addField("La raison", bReason);
+    .addField("Par : ", `<@${message.author.id}> Son id est : ${message.author.id}`)
+    .addField("Dans : ", message.channel)
+    .addField("Le : ", dateFormat(bUser.user.createdAt, 'dd/mm/yyyy') + " à " + dateFormat(bUser.user.createdAt, 'H:MM'))
+    .addField("La raison : ", bReason);
 
     let incidentchannel = message.guild.channels.find(`name`, "woomycation");
     if(!incidentchannel) return message.channel.send("Je n'ai trouvé pas le chat 'woomycation'");
@@ -467,11 +468,12 @@ if(cmd === `${prefix}ban`){
 bot.on('message', message => {
   if(message.content === prefix + "serveur") {
 try{
+	dateFormat(now, 'shortDate');
     var embed = new Discord.RichEmbed()
     .setTitle("Information du Serveur")
     .addField("Nom", message.guild.name)
-    .addField("Créé le :", message.guild.createdAt)
-    .addField("Tu as rejoin le : ", message.member.joinedAt)
+    .addField("Créé le :", dateFormat(message.guild.createdAt, 'dd/mm/yyyy') + " à " + dateFormat(message.guild.createdAt, 'H:MM'))
+    .addField("Tu as rejoin le : ", dateFormat(message.member.joinedAt, 'dd/mm/yyyy') + " à " + dateFormat(message.member.joinedAt, 'H:MM'))
     .addField("utilisateur sur serveur : ", message.guild.memberCount)
     .setColor("0x0000FF")
     message.channel.sendEmbed(embed)
