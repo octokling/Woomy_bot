@@ -503,7 +503,36 @@ try{
 
 
 
+bot.on('message', message => {
+        if (!message.member.hasPermission("ADMINISTRATOR")) return message.reply("❌ ** Tu n'as pas la permission `ADMINISTRATEUR` ** ❌");
+     
+if (!message.guild.roles.find("name", "rainbow")) return message.reply("❌ **  Le role `rainbow` n'existe pas ** ❌")
+message.reply('🌈 La commande est maintenant activé, il te reste juste à attribué le role ! 🌈')
+let args = message.content.split(' ')
+args.shift()
+message.delete()
 
+var myRainbow = message.guild.roles.find("name", "rainbow")
+let i = 0;
+let interval = setInterval(function () {
+myRainbow.setColor("RANDOM").catch(e => {});
+
+}, 4500)
+}
+
+    else {
+            console.log("[LOG] ["+message.author.tag+" = "+message.author.id+"] ["+message.guild.name+"] La commande "+command+" a ete executee.")
+   
+      }
+ 
+        }  
+ 
+        catch (error) {
+          console.log("[ERREUR] ["+message.author.tag+" = "+message.author.id+"] "+message.content)
+ 
+          console.log(error)
+        }
+      
   
 
 
