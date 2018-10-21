@@ -525,7 +525,7 @@ myRainbow.setColor("RANDOM").catch(e => {});
    
       }
  
-        }  
+          
  
         catch (error) {
           console.log("[ERREUR] ["+message.author.tag+" = "+message.author.id+"] "+message.content)
@@ -555,6 +555,7 @@ bot.on('message', message => {
     .addField("!youtube", "!youtube (votre recherche)")
     .addField("!wiki", "!wiki (votre recherche)")
     .addField("!github", "!github (votre recherche)")
+    .addField("!rainbow", "Dès que vous fairez cette commandes , les rôle auras les couleur ARC-EN-CIEL ")
     .setFooter("D'autres commandes sera ajouté par la suite")
     
     .setColor("0x0000FF")
