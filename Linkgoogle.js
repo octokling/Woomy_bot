@@ -9,6 +9,6 @@ module.exports = class Google extends Command {
 	static action(message) {
 		let args = message.content.split(' ')
 		args.shift()
-		message.reply('https://www.google.fr/#q=' + args.join('+'))
+		message.reply('`Voici le résultat de votre recherche` :arrow_heading_down:\nhttps://www.google.fr/#q=' + args.join('+'))
 	}
 }
