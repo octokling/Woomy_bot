@@ -504,7 +504,7 @@ try{
 
 
 bot.on('message', message => {
-	if (message.content.startsWith('!raindom') {
+	if (message.content.startsWith('!random') {
         if (!message.member.hasPermission("ADMINISTRATOR")) return message.reply("Tu n'est pas mon roi !");
      
 if (!message.guild.roles.find("name", "rainbow")) return message.reply("❌Le role `rainbow` n'existe pas❌")
