@@ -10,7 +10,7 @@ const dateFormat = require('dateformat');
 const Google = require('./Linkgoogle.js')
 const Youtube = require('./Linkyt.js')
 const Wiki = require('./Linkwiki.js')
-
+const rapport = require('./rapport.js')
 
 con = console.log,
 
@@ -309,7 +309,7 @@ bot.on('message', function(message) {
  
   Wiki.parse(message)
  
- 
+ rapport.parse(message)
  
   Youtube.parse(message)
  
@@ -491,6 +491,7 @@ try{
     .addField("Créé le :", dateFormat(message.guild.createdAt, 'dd/mm/yyyy') + " à " + dateFormat(message.guild.createdAt, 'H:MM'))
     .addField("Tu as rejoin le : ", dateFormat(message.member.joinedAt, 'dd/mm/yyyy') + " à " + dateFormat(message.member.joinedAt, 'H:MM'))
     .addField("utilisateur sur serveur : ", message.guild.memberCount)
+    
     .setColor("0x0000FF")
     message.channel.sendEmbed(embed)
   }catch(err){
@@ -519,7 +520,13 @@ bot.on('message', message => {
    .addField("!ban", "Vous devez avoir un rôle administrateur pour expulser la personne . La commande à faire est !kick @user raison")
    .addField("!info", "Sert à voir vos informations concérnant votre compte .")
    .addField("!info @user", "Sert à voir les informations concérnant un compte de qeulqu'un .")
+    .addField("!rapport", "Quelqu'un vous embête ? fête nous le s'avoir ! faite !rapport @user (raison) et le problème sera régler le plus vite possible !")
+    .addField("!google", "Vous voulez faire une recherche sur google ? alors faite !google (votre recherche)")
+    .addField("!youtube", "!youtube (votre recherche)")
+    .addField("!wiki", "!wiki (votre recherche)")
+    .addField("!github", "!github (votre recherche)")
     .setFooter("D'autres commandes sera ajouté par la suite")
+    
     .setColor("0x0000FF")
     message.author.send(embed)
     message.reply("Je vous envoie les commandes ")
