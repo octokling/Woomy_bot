@@ -7,6 +7,9 @@ const fs = require("fs");
 const ffmpeg = require ('ffmpeg')
 const yt = require('ytdl-core');
 const dateFormat = require('dateformat');
+const Google = require('./Linkgoogle.js')
+const Youtube = require('./Linkyt.js')
+const Wiki = require('./Linkwiki.js')
 
 
 con = console.log,
@@ -299,8 +302,21 @@ User.send(emb)
   })
 
 
+bot.on('message', function(message) {
 
-
+ 
+   
+ 
+  Wiki.parse(message)
+ 
+ 
+ 
+  Youtube.parse(message)
+ 
+  Google.parse(message)
+ 
+  
+})
 
 bot.on("message", message => {
  if (message.content.startsWith(`!chat`)) {
