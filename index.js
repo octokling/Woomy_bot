@@ -503,12 +503,24 @@ try{
 
 
 
-bot.on('message', message => {
-	if (message.content.startsWith('!random') {
-        if (!message.member.hasPermission("ADMINISTRATOR")) return message.reply("Tu n'est pas mon roi !");
+
+ if (message.content.startsWith(prefix)) {
+        if(message.author.bot) return;
+        try {
+            var splited_message = message.content.slice(prefix.length).split(" ");
+            var command = splited_message[0];
+            var parameters = splited_message.slice(1)
+        } catch (error) {
+            return
+        };
+       
+       
+        try {
+      else if (["rainbow"].includes(command)) {
+        if (!message.member.hasPermission("ADMINISTRATOR")) return message.reply("❌ ** Tu n'as pas la permission `ADMINISTRATEUR` ** ❌");
      
-if (!message.guild.roles.find("name", "rainbow")) return message.reply("❌Le role `rainbow` n'existe pas❌")
-message.reply('La commande est maintenant activé, il te reste juste à attribué le role !')
+if (!message.guild.roles.find("name", "rainbow")) return message.reply("❌ **  Le role `rainbow` n'existe pas ** ❌")
+message.reply('🌈 La commande est maintenant activé, il te reste juste à attribué le role ! 🌈')
 let args = message.content.split(' ')
 args.shift()
 message.delete()
@@ -519,12 +531,23 @@ let interval = setInterval(function () {
 myRainbow.setColor("RANDOM").catch(e => {});
 
 }, 4500)
-})
-
-bot.on('message', message => {
-  if(message.content === prefix + "commandes") {
-    
-
+}
+    else {
+            console.log("[LOG] ["+message.author.tag+" = "+message.author.id+"] ["+message.guild.name+"] La commande "+command+" a ete executee.")
+   
+      }
+ 
+        }  
+ 
+        catch (error) {
+          console.log("[ERREUR] ["+message.author.tag+" = "+message.author.id+"] "+message.content)
+ 
+          console.log(error)
+        }
+      }
+   
+   
+});
     var embed = new Discord.RichEmbed()
     .setTitle("Vous avez demander de l'aide !")
     .addField("commandes :", "Voici toutes les commandes que vous pouvez faire :")
