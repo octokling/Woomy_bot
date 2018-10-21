@@ -8,6 +8,7 @@ module.exports = class Blague extends Command {
 	}
 
 }
+const now = new Date();
 dateFormat(now, 'shortDate');
 
 module.exports.run = async (bot, message, args) => {
