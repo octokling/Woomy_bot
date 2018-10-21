@@ -4,7 +4,7 @@ const Command = require('./command')
 module.exports = class Wiki extends Command {
 
 	static match(message) {
-		return message.content.startsWith('_wiki')
+		return message.content.startsWith('!wiki')
 	}
 
 	static action(message) {
