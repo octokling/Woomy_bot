@@ -4,7 +4,7 @@ const dateFormat = require('dateformat');
 module.exports = class Blague extends Command {
 
     static match(message) {
-		return message.content.startsWith('*rapport')
+		return message.content.startsWith('!rapport')
 	}
 
 }
