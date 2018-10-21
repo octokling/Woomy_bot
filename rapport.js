@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("Utilisateur reporté :", `${rUser} with ID: ${rUser.id}`)
     .addField("Reporté par : ", `${message.author} with ID: ${message.author.id}`)
     .addField("Cela c'est passe au channel : ", message.channel)
-    .addField("Le : ", dateFormat(iUser.user.createdAt, 'dd/mm/yyyy') + " à " + dateFormat(iUser.user.createdAt, 'H:MM'))
+    .addField("Le : ", dateFormat(rUser.user.createdAt, 'dd/mm/yyyy') + " à " + dateFormat(rUser.user.createdAt, 'H:MM'))
     .addField("La raison : ", rreason);
 
     let reportschannel = message.guild.channels.find(`name`, "woomycation");
