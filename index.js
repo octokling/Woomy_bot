@@ -532,6 +532,8 @@ dateFormat(now, 'shortDate');
   }
 }
 )
+bot.on("message", message => {
+if (message.content.startsWith("!commandes")) {
     var embed = new Discord.RichEmbed()
     .setTitle("Vous avez demander de l'aide !")
     .addField("commandes :", "Voici toutes les commandes que vous pouvez faire :")
@@ -553,6 +555,7 @@ dateFormat(now, 'shortDate');
     .setColor("0x0000FF")
     message.author.send(embed)
     message.reply("Je vous envoie les commandes ")
+message.delete(5000)
  
   }
 })
