@@ -12,6 +12,8 @@ const Youtube = require('./Linkyt.js')
 const Wiki = require('./Linkwiki.js')
 const rapport = require('./rapport.js')
 const github = require('./github.js')
+var Admin = "490780128234831906"
+
 
 con = console.log,
 
