@@ -528,7 +528,7 @@ dateFormat(now, 'shortDate');
     .addField("Mes serveur : ", (bot.guilds.map(r => r.name + ` | **${r.memberCount}** membre`)))
     .setColor("0x0000FF")
 
-    message.channel.send(embed)
+  message.author.send(embed)
     message.reply(", Je vous envoie mes information secrête !")
   }
 }
