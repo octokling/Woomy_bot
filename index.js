@@ -512,7 +512,6 @@ if (message.content.startsWith("!Info_bot")) {
  if(!message.member.id(Admin)) return message.channel.send("Tu n'est pas mon roi !");
       const now = new Date();
 dateFormat(now, 'shortDate');
-var serveur = 
     var embed = new Discord.RichEmbed()
 
 
