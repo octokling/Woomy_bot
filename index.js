@@ -515,7 +515,7 @@ bot.on("message", message => {
        
        
         try {
-      else if (["rainbow"].includes(command)) {
+      if (message.content.startsWith(`!random`)) {
         if (!message.member.hasPermission("ADMINISTRATOR")) return message.reply("❌ ** Tu n'as pas la permission `ADMINISTRATEUR` ** ❌");
      
 if (!message.guild.roles.find("name", "rainbow")) return message.reply("❌ **  Le role `rainbow` n'existe pas ** ❌")
