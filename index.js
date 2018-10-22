@@ -525,7 +525,6 @@ dateFormat(now, 'shortDate');
    .addField("Je joue à : ", `${bot.user.presence.game ? `${bot.user.presence.game.name}` : "Il ne joue pas."}`)
    .addField("Je suis crée le :", dateFormat(bot.user.createdAt, 'dd/mm/yyyy') + " à " + dateFormat(bot.user.createdAt, 'H:MM'))
     .addField("J'ai rejoint le serveur le : ", dateFormat(bot.joinedAt, 'dd/mm/yyyy') + " à " + dateFormat(bot.joinedAt, 'H:MM'))
-    .addField("Le rôle le plus élevé que j'ai : ", bot.highestRole.name, true)
     .addField("Mes serveur : ", (bot.guilds.map(r => r.name + ` | **${r.memberCount}** membre`)))
     .setColor("0x0000FF")
 
