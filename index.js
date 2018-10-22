@@ -511,7 +511,7 @@ bot.on("message", message => {
   let args = messageArray.slice(1);
 if (message.content.startsWith("!Info_bot")) {
 	message.delete(5000)
- if(!message.member.id(Admin)) return message.channel.send("Tu n'est pas mon roi !");
+ if(!message.author.id(Admin)) return message.channel.send("Tu n'est pas mon roi !");
       const now = new Date();
 dateFormat(now, 'shortDate');
     var embed = new Discord.RichEmbed()
