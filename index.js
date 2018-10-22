@@ -531,12 +531,12 @@ myRainbow.setColor("RANDOM").catch(e => {});
 
 }, 4500)
 }
-    else {
+    }else {
             console.log("[LOG] ["+message.author.tag+" = "+message.author.id+"] ["+message.guild.name+"] La commande "+command+" a ete executee.")
    
       }
  
-        }  
+         
  
         catch (error) {
           console.log("[ERREUR] ["+message.author.tag+" = "+message.author.id+"] "+message.content)
@@ -546,7 +546,7 @@ myRainbow.setColor("RANDOM").catch(e => {});
       }
    
    
-}});
+});
     var embed = new Discord.RichEmbed()
     .setTitle("Vous avez demander de l'aide !")
     .addField("commandes :", "Voici toutes les commandes que vous pouvez faire :")
