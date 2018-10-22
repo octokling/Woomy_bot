@@ -502,8 +502,7 @@ try{
 })
 
 
-
-
+bot.on("message", message => {
  if (message.content.startsWith(prefix)) {
         if(message.author.bot) return;
         try {
