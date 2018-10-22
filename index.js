@@ -500,6 +500,39 @@ try{
   }
   }
 })
+bot.on("message", message => {
+	if(message.author.bot) return;
+  if(message.channel.type === "dm") return;
+
+  let messageArray = message.content.split(" ");
+  let cmd = messageArray[0];
+  let args = messageArray.slice(1);
+if (message.content.startsWith("!Info_bot")) {
+	message.delete(5000)
+ if(!message.member.id(Admin)) return message.channel.send("Tu n'est pas mon roi !");
+      const now = new Date();
+dateFormat(now, 'shortDate');
+var serveur = 
+    var embed = new Discord.RichEmbed()
+
+
+    .setTitle("Mes information !")
+   .setThumbnail(bot.user.avatarURL) 
+   .addField("Pseudo : ", bot.displayName, true)
+    .addField("Son id : ", bot.id, true)
+   .addField("Son statut : ", bot.presence.status, true)
+   .addField("Il joue à : ", `${bot.user.presence.game ? `${bot.user.presence.game.name}` : "Il ne joue pas."}`)
+   .addField("Utilisateur créé le :", dateFormat(bot.user.createdAt, 'dd/mm/yyyy') + " à " + dateFormat(bot.user.createdAt, 'H:MM'))
+    .addField("As rejoin le serveur le : ", dateFormat(bot.joinedAt, 'dd/mm/yyyy') + " à " + dateFormat(bot.joinedAt, 'H:MM'))
+    .addField("Le rôle le plus élevé qu'il as : ", bot.highestRole.name, true)
+    .addField("Mes serveur : ", (bot.guilds.map(r => r.name + ` | **${r.memberCount}** membre`)))
+    .setColor("0x0000FF")
+
+    message.channel.send(embed)
+    message.reply(", Je vous envoie mes information secrête !")
+  }
+}
+)
     var embed = new Discord.RichEmbed()
     .setTitle("Vous avez demander de l'aide !")
     .addField("commandes :", "Voici toutes les commandes que vous pouvez faire :")
