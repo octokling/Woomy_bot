@@ -500,12 +500,6 @@ try{
   }
   }
 })
-
-
-
-   
-   
-});
     var embed = new Discord.RichEmbed()
     .setTitle("Vous avez demander de l'aide !")
     .addField("commandes :", "Voici toutes les commandes que vous pouvez faire :")
