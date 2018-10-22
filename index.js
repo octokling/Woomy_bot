@@ -521,13 +521,11 @@ dateFormat(now, 'shortDate');
 
     .setTitle("Mes information !")
    .setThumbnail(bot.user.avatarURL) 
-   .addField("Pseudo : ", bot.displayName, true)
-    .addField("Son id : ", bot.id, true)
-   .addField("Son statut : ", bot.presence.status, true)
-   .addField("Il joue à : ", `${bot.user.presence.game ? `${bot.user.presence.game.name}` : "Il ne joue pas."}`)
-   .addField("Utilisateur créé le :", dateFormat(bot.user.createdAt, 'dd/mm/yyyy') + " à " + dateFormat(bot.user.createdAt, 'H:MM'))
-    .addField("As rejoin le serveur le : ", dateFormat(bot.joinedAt, 'dd/mm/yyyy') + " à " + dateFormat(bot.joinedAt, 'H:MM'))
-    .addField("Le rôle le plus élevé qu'il as : ", bot.highestRole.name, true)
+    .addField("Mon id : ", bot.id, true)
+   .addField("Je joue à : ", `${bot.user.presence.game ? `${bot.user.presence.game.name}` : "Il ne joue pas."}`)
+   .addField("Je suis crée le :", dateFormat(bot.user.createdAt, 'dd/mm/yyyy') + " à " + dateFormat(bot.user.createdAt, 'H:MM'))
+    .addField("J'ai rejoint le serveur le : ", dateFormat(bot.joinedAt, 'dd/mm/yyyy') + " à " + dateFormat(bot.joinedAt, 'H:MM'))
+    .addField("Le rôle le plus élevé que j'ai : ", bot.highestRole.name, true)
     .addField("Mes serveur : ", (bot.guilds.map(r => r.name + ` | **${r.memberCount}** membre`)))
     .setColor("0x0000FF")
 
