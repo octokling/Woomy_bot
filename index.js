@@ -578,6 +578,6 @@ if(!link1) return message.reply("Merci de mettre un lien youtube !");
       .then(connection => {
 const stream = ytdl(link1, { filter : 'audioonly' });
 	    const dispatcher = connection.playStream(stream, streamOptions);
-         })})}})
+         })}})
 
 bot.login(process.env.TOKEN)
