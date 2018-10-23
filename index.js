@@ -568,7 +568,7 @@ bot.on('message', message => {
 	  let link = message.content.split(" ").slice(1);
 let link1 = link.join(" ")
 if(!link1) return message.reply("Merci de mettre un lien youtube !");
-    console.log('Vous avez une demander un musique!');
+    console.log('Vous avez une demander un musique!' + link);
     const voiceChannel = message.member.voiceChannel;
     if (!voiceChannel) {
       return message.reply('Soyez dans un channel je vous rejoint ;)');
