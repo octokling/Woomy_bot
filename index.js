@@ -582,9 +582,11 @@ const stream = ytdl(`${link1}`, { filter : 'audioonly' });
 	    dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
-	    }catch(err){
+	    
+    })})
+	  }catch(err){
 	    message.reply(", je n'ais pas pue te mettre une musique !")
 	    }
-    })})}})
+  }})
 
 bot.login(process.env.TOKEN)
