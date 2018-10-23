@@ -577,7 +577,7 @@ if(!link1) return message.reply("Merci de bien mettre un lien youtube !");
     }
     voiceChannel.join()
       .then(connection => {
-const stream = ytdl(`${link1}`, { filter : 'audioonly' });
+            const stream = connection.playArbitraryInput(`${link1}`);
 	    const dispatcher = connection.playStream(stream, streamOptions);
 	    dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
