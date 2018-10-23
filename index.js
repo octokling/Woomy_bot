@@ -14,6 +14,9 @@ const Wiki = require('./Linkwiki.js')
 const rapport = require('./rapport.js')
 const github = require('./github.js')
 const streamOptions = { seek: 0, volume: 1 };
+var async = require("async");
+var moment = require("moment");
+var request = require('request');
 var Admin = "490780128234831906"
 
 
@@ -595,5 +598,118 @@ if(!link1) return message.reply("Merci de bien mettre un lien youtube !");
 	    message.reply(", je n'ais pas pue te mettre une musique !")
 	    }
   }})
+
+//Match making splatoon
+
+var schedule = function(callback) {
+    request.get('https://splatoon.ink/schedule.json', function (error, response, body) {
+        if (!error && response.statusCode == 200) {
+            callback(null, JSON.parse(body));
+        } else {
+            callback(error);
+        }
+    })
+};
+function display_rotation(message, order, callback) {
+    var time;
+
+    schedule(function(error, schedule_json){
+        if (order === 0) {
+            if (schedule_json.schedule[order]) {
+                time = '==== Maintenant ' + moment(schedule_json.schedule[order].endTime).fromNow() + ' ====\n';
+            }
+        }
+        else if (order === 1) {
+            if (schedule_json.schedule[order]) {
+                time = '==== Prochaine rotation ' + moment(schedule_json.schedule[order].startTime).fromNow() + ' ====\n';
+            }
+        }
+        else if (order === 2) {
+            if (schedule_json.schedule[order]) {
+                time = '==== Dernière rotation ' + moment(schedule_json.schedule[order].startTime).fromNow() + ' ====\n';
+            }
+        }
+
+        if (error) {
+            message.channel.sendMessage("Je ne peux pas récupérer l'horaire.");
+            if (typeof(callback) == "function")
+                callback(null, message);
+        } else{
+            if (schedule_json.splatfest === true){
+                message.channel.sendMessage("Splatfest en cours. Veuillez utiliser `!fes` à la place");
+                if (typeof(callback) == "function")
+                    callback(null, message);
+            } else {
+                if (schedule_json.schedule[order]) {
+                    message.channel.sendMessage(time + '**guerre de territoire :** ' + schedule_json.schedule[order].regular.maps["0"].nameEN + ', ' + schedule_json.schedule[order].regular.maps["1"].nameEN + '\n' + '**Rang [' + schedule_json.schedule[order].ranked.rulesEN + ']:** ' + schedule_json.schedule[order].ranked.maps["0"].nameEN + ', ' + schedule_json.schedule[order].ranked.maps["1"].nameEN);
+                }
+                if (typeof(callback) == "function")
+                    callback(null, message);
+            }
+        }
+    });
+}
+
+
+function display_festival(message) {
+    schedule(function(error, schedule_json){
+        if (error) {
+            message.channel.sendMessage("Je ne peux pas récupérer l'horaire.");
+            callback(null, message);
+        } else {
+            if (schedule_json.splatfest === false){
+                message.channel.sendMessage("No Splatfest right now. Please us `!now`, `!next`, `!last` or `!all` instead.")
+            } else {
+                message.channel.sendMessage('==== Splatfest ====\n' + schedule_json.schedule[0].regular.teams[0] + ' **vs** ' + schedule_json.schedule[0].regular.teams[1] + '\n' + '**Fin ** ' + moment(schedule_json.schedule[0].endTime).fromNow() + '\n' + '**Maps :** ' + schedule_json.schedule[0].regular.maps[0].nameEN + ', ' + schedule_json.schedule[0].regular.maps[1].nameEN + ', ' + schedule_json.schedule[0].regular.maps[2].nameEN + '\n\nBonne Splatfest! Et que les chances soient toujours en votre faveur!')
+            }
+        }
+    })
+}
+
+function display_helper(message) {
+    message.channel.sendMessage("Utilisez `!commandesr` pour lister toutes les commandes disponibles");
+}
+
+//Displays bot commands
+function display_commands(message) {
+    message.channel.sendMessage("Liste des commandes pour le bot Splat Rotations:\n\n- `!commandesr` : Vous pouvez utiliser :\n- `!now` : Affiche la rotation actuelle\n- `!next` : Affiche la prochaîne rotation\n- `!last` : Afficher les anciennes rotations\n- `!all` : Affiche toutes les rotation\n- `!fes` : Affiche les infos actuelles du Splatfest\n\nくコ:彡 ***Rester frais***")
+}
+
+
+bot.on("message", function(message) {
+    if (message.content === "!commandesr")
+        display_helper(message);
+    else if (message.content === "!help")
+        display_commands(message);
+    else if (message.content === "!now")
+        display_rotation(message, 0);
+    else if (message.content === "!next")
+        display_rotation(message, 1);
+    else if (message.content === "!last")
+        display_rotation(message, 2);
+    else if (message.content === "!fes")
+        display_festival(message);
+    else if (message.content === "!all") {
+        async.waterfall([
+            function(callback) { callback(null, message); },
+            function(message, callback){ display_rotation(message, 0, callback) },
+            function(message, callback){ display_rotation(message, 1, callback) },
+            function(message, callback){ display_rotation(message, 2, callback) }
+        ]);
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 bot.login(process.env.TOKEN)
