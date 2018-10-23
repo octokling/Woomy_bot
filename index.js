@@ -602,7 +602,7 @@ if(!link1) return message.reply("Merci de bien mettre un lien youtube !");
 //Match making splatoon
 
 var schedule = function(callback) {
-    request.get('https://splatoon.ink/schedule.json', function (error, response, body) {
+    request.get('https://splatoon2.ink/schedule.json', function (error, response, body) {
         if (!error && response.statusCode == 200) {
             callback(null, JSON.parse(body));
         } else {
@@ -615,17 +615,17 @@ function display_rotation(message, order, callback) {
 
     schedule(function(error, schedule_json){
         if (order === 0) {
-            if (schedule_json.schedule[order]) {
+            if (schedule_json[order]) {
                 time = '==== Maintenant ' + moment(schedule_json.schedule[order].endTime).fromNow() + ' ====\n';
             }
         }
         else if (order === 1) {
-            if (schedule_json.schedule[order]) {
+            if (schedule_json[order]) {
                 time = '==== Prochaine rotation ' + moment(schedule_json.schedule[order].startTime).fromNow() + ' ====\n';
             }
         }
         else if (order === 2) {
-            if (schedule_json.schedule[order]) {
+            if (schedule_json[order]) {
                 time = '==== Dernière rotation ' + moment(schedule_json.schedule[order].startTime).fromNow() + ' ====\n';
             }
         }
@@ -640,7 +640,7 @@ function display_rotation(message, order, callback) {
                 if (typeof(callback) == "function")
                     callback(null, message);
             } else {
-                if (schedule_json.schedule[order]) {
+                if (schedule_json.[order]) {
                     message.channel.sendMessage(time + '**guerre de territoire :** ' + schedule_json.schedule[order].regular.maps["0"].nameEN + ', ' + schedule_json.schedule[order].regular.maps["1"].nameEN + '\n' + '**Rang [' + schedule_json.schedule[order].ranked.rulesEN + ']:** ' + schedule_json.schedule[order].ranked.maps["0"].nameEN + ', ' + schedule_json.schedule[order].ranked.maps["1"].nameEN);
                 }
                 if (typeof(callback) == "function")
