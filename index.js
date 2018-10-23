@@ -551,6 +551,7 @@ if (message.content.startsWith("!commandes")) {
     .addField("!wiki", "!wiki (votre recherche)")
     .addField("!github", "!github (votre recherche)")
     .addField("!rainbow", "Dès que vous fairez cette commandes , les rôle auras les couleur ARC-EN-CIEL ")
+    .addField("!youtube (lien de la musique)", "Sert à écouter de la musique depuis youtube !")
     .setFooter("D'autres commandes sera ajouté par la suite")
     
     .setColor("0x0000FF")
