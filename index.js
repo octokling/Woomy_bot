@@ -552,8 +552,7 @@ if (message.content.startsWith("!commandes")) {
     .addField("!youtube", "!youtube (votre recherche)")
     .addField("!wiki", "!wiki (votre recherche)")
     .addField("!github", "!github (votre recherche)")
-    .addField("!rainbow", "Dès que vous fairez cette commandes , les rôle auras les couleur ARC-EN-CIEL ")
-    .addField("!youtube (lien de la musique)", "Sert à écouter de la musique depuis youtube !")
+    .addField("!play (lien de la musique)", "Sert à écouter de la musique depuis youtube !")
     .setFooter("D'autres commandes sera ajouté par la suite")
     
     .setColor("0x0000FF")
@@ -565,7 +564,7 @@ message.delete(5000)
 })
 
 bot.on('message', message => {
-  if (message.content.startsWith('!youtube')) {
+  if (message.content.startsWith('!play')) {
 	  let link = message.content.split(" ").slice(1);
 let link1 = link.join(" ")
 if(!link1) return message.reply("Merci de mettre un lien youtube !");
