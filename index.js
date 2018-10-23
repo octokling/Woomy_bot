@@ -6,6 +6,7 @@ const content = new Discord.Client()
 const fs = require("fs");
 const ffmpeg = require ('ffmpeg')
 const yt = require('ytdl-core');
+const ytdl = require('ytdl-core');
 const dateFormat = require('dateformat');
 const Google = require('./Linkgoogle.js')
 const Youtube = require('./Linkyt.js')
@@ -561,5 +562,24 @@ message.delete(5000)
  
   }
 })
+
+bot.on('message', message => {
+  if (message.content.startsWith('!youtube')) {
+	  let link = message.content.split(" ").slice(1);
+let link1 = link.join(" ")
+if(!link1) return message.reply("Merci de mettre un lien youtube !");
+    console.log('Vous avez une demander un musique!');
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+const stream = ytdl('link', { filter : 'audioonly' });
+	    const dispatcher = connection.playStream(stream, streamOptions);
+        dispatcher.on('end', () => {
+         message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
+          voiceChannel.leave();
+         })})}})
 
 bot.login(process.env.TOKEN)
