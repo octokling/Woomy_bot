@@ -577,8 +577,7 @@ if(!link1) return message.reply("Merci de bien mettre un lien youtube !");
     }
     voiceChannel.join()
       .then(connection => {
-            const stream = connection.playArbitraryInput(`${link1}`);
-	    const dispatcher = connection.playStream(stream, streamOptions);
+	    const dispatcher = connection.playArbitraryInput(`${link1}`);
 	    dispatcher.on('end', () => {
          message.channel.sendMessage(`Fin de la musique, déconnection ...!`)
           voiceChannel.leave();
