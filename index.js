@@ -564,8 +564,9 @@ message.delete(5000)
 })
 
 bot.on('message', message => {
-	try{
+	
   if (message.content.startsWith('!play')) {
+	  try{
 	  let link = message.content.split(" ").slice(1);
 let link1 = link.join("https://www.youtube.com/watch?v=")
 if(!link1) return message.reply("Merci de bien mettre un lien youtube !");
