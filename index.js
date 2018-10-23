@@ -566,7 +566,7 @@ bot.on('message', message => {
 	if (message.content.startsWith('!liste_m')){
 	     var embed = new Discord.RichEmbed()
 		.setTitle("Vous avez demander la liste des musique")
-	     .addDescription("La commandes !play (votre lien) ne supporte pas les lien en https:// mais les http:// . Donc voici quelque liste de musique qui vous vous simpliciterais la tache au lieu de trouver des mien http .")
+	     .setDescription("La commandes !play (votre lien) ne supporte pas les lien en https:// mais les http:// . Donc voici quelque liste de musique qui vous vous simpliciterais la tache au lieu de trouver des mien http .")
 .setFooter("Et d'autre liste de musique sera imminant .")
 			     .setColor(0x0000FF)
 			     message.author.send('embed')
