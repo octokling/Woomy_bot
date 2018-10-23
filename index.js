@@ -13,6 +13,7 @@ const Youtube = require('./Linkyt.js')
 const Wiki = require('./Linkwiki.js')
 const rapport = require('./rapport.js')
 const github = require('./github.js')
+const streamOptions = { seek: 0, volume: 1 };
 var Admin = "490780128234831906"
 
 
