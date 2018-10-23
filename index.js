@@ -580,7 +580,7 @@ if(!link1) return message.reply("Merci de bien mettre un lien youtube !");
 	    require('http').get(`${link1}`, (res) => {
 		    connection.playStream(res);
 	    })
-    })})
+    })
 	  }catch(err){
 	    message.reply(", je n'ais pas pue te mettre une musique !")
 	    }
