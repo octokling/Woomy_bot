@@ -599,7 +599,11 @@ if(!link1) return message.reply("Merci de bien mettre un lien youtube !");
 	    message.reply(", je n'ais pas pue te mettre une musique !")
 	    }
   }})
-
+bot.on('message', message => {
+       if (message.content.startsWith('!stop')){
+	       const voiceChannel = message.member.voiceChannel;
+	       voiceChannel.disconnect()
+       }})
 //Match making splatoon
 
 var schedule = function(callback) {
