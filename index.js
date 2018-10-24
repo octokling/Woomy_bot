@@ -17,8 +17,9 @@ const streamOptions = { seek: 0, volume: 1 };
 var async = require("async");
 var moment = require("moment");
 var request = require('request');
+const snekfetch = require("snekfetch");
 var Admin = "490780128234831906"
-
+var prefix "!";
 
 con = console.log,
 
@@ -698,7 +699,17 @@ if (message.content === "!help")
     }
 });
 
+bot.on("message", message => {
+message.content.startsWith("!triggered")
+	let type = "triggered"; //Vous pouvez choisir le type d'image que vous souhaitez ici
+        let url = message.author.avatarURL; //Vous pouvez choisir l'url de l'image que vous souhaitez ici
 
+        snekfetch.get(`https://www.triggered.tk/api/v2/${type}?url=${url}`).set({ Authorization: "token" }).then(res => {
+          console.log(new Buffer(res.body.toString('base64'))); //base64 url
+        }).catch(err => {
+          if (err) console.log(`[Erreur] ${err}`);
+        });
+}
 
 
 
