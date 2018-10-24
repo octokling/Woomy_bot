@@ -19,7 +19,6 @@ var moment = require("moment");
 var request = require('request');
 const snekfetch = require("snekfetch");
 var Admin = "490780128234831906"
-var prefix "!";
 
 con = console.log,
 
