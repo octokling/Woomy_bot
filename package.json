@@ -23,6 +23,7 @@
     "@google-cloud/datastore": "^1.3.3",
     "dateformat": "^3.0.3",
     "request": "^2.74.0",
+    "snekfetch": "^4.0.4",
     "splatoon2.ink-node-api-client": "^0.3.0"
   }
 }
