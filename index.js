@@ -556,6 +556,7 @@ if (message.content.startsWith("!commandes")) {
     .addField("!wiki", "!wiki (votre recherche)")
     .addField("!github", "!github (votre recherche)")
     .addField("!play (lien de la musique)", "Sert à écouter de la musique depuis youtube !")
+    .addField("!help", "commandes pour les information de splatoon !")
     .setFooter("D'autres commandes sera ajouté par la suite")
     
     .setColor("0x0000FF")
