@@ -699,7 +699,7 @@ if (message.content === "!help")
 });
 
 bot.on("message", message => {
-message.content.startsWith("!triggered")
+if (message.content.startsWith("!triggered")){
 	let type = "triggered"; //Vous pouvez choisir le type d'image que vous souhaitez ici
         let url = message.author.avatarURL; //Vous pouvez choisir l'url de l'image que vous souhaitez ici
 
@@ -708,7 +708,7 @@ message.content.startsWith("!triggered")
         }).catch(err => {
           if (err) console.log(`[Erreur] ${err}`);
         });
-}
+}})
 
 
 
