@@ -703,7 +703,7 @@ if (message.content.startsWith("!triggered")){
 	let type = "triggered"; //Vous pouvez choisir le type d'image que vous souhaitez ici
         let url = message.author.avatarURL; //Vous pouvez choisir l'url de l'image que vous souhaitez ici
 
-        snekfetch.get(`https://www.triggered.tk/api/v2/${type}?url=${url}`).set({ Authorization: "token" }).then(res => {
+        snekfetch.get(`https://www.triggered-api.tk/api/v2/${type}?url=${url}`).set({ Authorization: "token" }).then(res => {
           console.log(new Buffer(res.body.toString('base64'))); //base64 url
         }).catch(err => {
           if (err) console.log(`[Erreur] ${err}`);
