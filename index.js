@@ -602,7 +602,7 @@ if(!link1) return message.reply("Merci de bien mettre un lien youtube !");
 //Match making splatoon
 
 var schedule = function(callback) {
-    request.get('https://splatoon2.ink/schedule.json', function (error, response, body) {
+    request.get('https://splatoon2.ink/data/schedules.json', function (error, response, body) {
         if (!error && response.statusCode == 200) {
             callback(null, JSON.parse(body));
         } else {
@@ -613,20 +613,20 @@ var schedule = function(callback) {
 function display_rotation(message, order, callback) {
     var time;
 
-    schedule(function(error, schedule_json){
+    schedules(function(error, schedules_json){
         if (order === 0) {
-            if (schedule_json.schedule[order]) {
-                time = '==== Maintenant ' + moment(schedule_json.schedule[order].endTime).fromNow() + ' ====\n';
+            if (schedules_json.schedule[order]) {
+                time = '==== Maintenant ' + moment(schedules_json.schedule[order].endTime).fromNow() + ' ====\n';
             }
         }
         else if (order === 1) {
-            if (schedule_json.schedule[order]) {
-                time = '==== Prochaine rotation ' + moment(schedule_json.schedule[order].startTime).fromNow() + ' ====\n';
+            if (schedules_json.schedules[order]) {
+                time = '==== Prochaine rotation ' + moment(schedules_json.schedule[order].startTime).fromNow() + ' ====\n';
             }
         }
         else if (order === 2) {
-            if (schedule_json.schedule[order]) {
-                time = '==== Dernière rotation ' + moment(schedule_json.schedule[order].startTime).fromNow() + ' ====\n';
+            if (schedules_json.schedules[order]) {
+                time = '==== Dernière rotation ' + moment(schedules_json.schedule[order].startTime).fromNow() + ' ====\n';
             }
         }
 
@@ -635,13 +635,13 @@ function display_rotation(message, order, callback) {
             if (typeof(callback) == "function")
                 callback(null, message);
         } else{
-            if (schedule_json.splatfest === true){
+            if (schedules_json.splatfest === true){
                 message.channel.sendMessage("Splatfest en cours. Veuillez utiliser `!fes` à la place");
                 if (typeof(callback) == "function")
                     callback(null, message);
             } else {
-                if (schedule_json.schedule[order]) {
-                    message.channel.sendMessage(time + '**guerre de territoire :** ' + schedule_json.schedule[order].regular.maps["0"].nameEN + ', ' + schedule_json.schedule[order].regular.maps["1"].nameEN + '\n' + '**Rang [' + schedule_json.schedule[order].ranked.rulesEN + ']:** ' + schedule_json.schedule[order].ranked.maps["0"].nameEN + ', ' + schedule_json.schedule[order].ranked.maps["1"].nameEN);
+                if (schedules_json.schedule[order]) {
+                    message.channel.sendMessage(time + '**guerre de territoire :** ' + schedules_json.schedule[order].regular.maps["0"].nameEN + ', ' + schedules_json.schedule[order].regular.maps["1"].nameEN + '\n' + '**Rang [' + schedules_json.schedule[order].ranked.rulesEN + ']:** ' + schedules_json.schedule[order].ranked.maps["0"].nameEN + ', ' + schedules_json.schedule[order].ranked.maps["1"].nameEN);
                 }
                 if (typeof(callback) == "function")
                     callback(null, message);
@@ -652,15 +652,15 @@ function display_rotation(message, order, callback) {
 
 
 function display_festival(message) {
-    schedule(function(error, schedule_json){
+    schedules(function(error, schedules_json){
         if (error) {
             message.channel.sendMessage("Je ne peux pas récupérer l'horaire.");
             callback(null, message);
         } else {
-            if (schedule_json.splatfest === false){
+            if (schedules_json.splatfest === false){
                 message.channel.sendMessage("No Splatfest right now. Please us `!now`, `!next`, `!last` or `!all` instead.")
             } else {
-                message.channel.sendMessage('==== Splatfest ====\n' + schedule_json.schedule[0].regular.teams[0] + ' **vs** ' + schedule_json.schedule[0].regular.teams[1] + '\n' + '**Fin ** ' + moment(schedule_json.schedule[0].endTime).fromNow() + '\n' + '**Maps :** ' + schedule_json.schedule[0].regular.maps[0].nameEN + ', ' + schedule_json.schedule[0].regular.maps[1].nameEN + ', ' + schedule_json.schedule[0].regular.maps[2].nameEN + '\n\nBonne Splatfest! Et que les chances soient toujours en votre faveur!')
+                message.channel.sendMessage('==== Splatfest ====\n' + schedules_json.schedule[0].regular.teams[0] + ' **vs** ' + schedules_json.schedule[0].regular.teams[1] + '\n' + '**Fin ** ' + moment(schedules_json.schedule[0].endTime).fromNow() + '\n' + '**Maps :** ' + schedules_json.schedule[0].regular.maps[0].nameEN + ', ' + schedules_json.schedule[0].regular.maps[1].nameEN + ', ' + schedules_json.schedule[0].regular.maps[2].nameEN + '\n\nBonne Splatfest! Et que les chances soient toujours en votre faveur!')
             }
         }
     })
@@ -677,8 +677,6 @@ function display_commands(message) {
 
 
 bot.on("message", function(message) {
-    if (message.content === "!commandesr")
-        display_helper(message);
     else if (message.content === "!help")
         display_commands(message);
     else if (message.content === "!now")
