@@ -678,7 +678,7 @@ function display_commands(message) {
 
 
 bot.on("message", function(message) {
-    else if (message.content === "!help")
+if (message.content === "!help")
         display_commands(message);
     else if (message.content === "!now")
         display_rotation(message, 0);
