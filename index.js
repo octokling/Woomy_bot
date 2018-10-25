@@ -590,7 +590,7 @@ if(!link1) return message.reply("Merci de bien mettre un lien youtube !");
       return message.reply('Soyez dans un channel je vous rejoint ;)');
     }
   voiceChannel.join().then(connection => { // ve çal bakalım
-            const stream = ytdl(`https://www.youtube.com/watch?v=${link}`, { filter: 'audioonly' });
+           const stream = ytdl(`https://www.youtube.com/watch?v=${link}`, { filter: 'audioonly'}, {Passes: 1 }});
             const dispatcher = connection.playStream(stream);
 
             dispatcher.on('end', () => voiceChannel.leave());
