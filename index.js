@@ -621,17 +621,17 @@ function display_rotation(message, order, callback) {
     schedules(function(error, schedules_json){
         if (order === 0) {
             if (schedules_json.schedules[order]) {
-                time = '==== Maintenant ' + moment(schedules_json.schedule[order].endTime).fromNow() + ' ====\n';
+                time = '==== Maintenant ' + moment(schedules_json.schedule["0"].endTime).fromNow() + ' ====\n';
             }
         }
         else if (order === 1) {
             if (schedules_json.schedules[order]) {
-                time = '==== Prochaine rotation ' + moment(schedules_json.schedule[order].startTime).fromNow() + ' ====\n';
+                time = '==== Prochaine rotation ' + moment(schedules_json.schedule["0"].startTime).fromNow() + ' ====\n';
             }
         }
         else if (order === 2) {
             if (schedules_json.schedules[order]) {
-                time = '==== Dernière rotation ' + moment(schedules_json.schedule[order].startTime).fromNow() + ' ====\n';
+                time = '==== Dernière rotation ' + moment(schedules_json.schedule["0"].startTime).fromNow() + ' ====\n';
             }
         }
 
@@ -646,7 +646,7 @@ function display_rotation(message, order, callback) {
                     callback(null, message);
             } else {
                 if (schedules_json.schedule[order]) {
-                    message.channel.sendMessage(time + '**guerre de territoire :** ' + schedules_json.schedule[order].regular.maps["0"].nameEN + ', ' + schedules_json.schedule[order].regular.maps["1"].nameEN + '\n' + '**Rang [' + schedules_json.schedule[order].ranked.rulesEN + ']:** ' + schedules_json.schedule[order].ranked.maps["0"].nameEN + ', ' + schedules_json.schedule[order].ranked.maps["1"].nameEN);
+                    message.channel.sendMessage(time + '**guerre de territoire :** ' + schedules_json.schedule[0].regular.maps["0"].nameEN + ', ' + schedules_json.schedule[0].regular.maps["1"].nameEN + '\n' + '**Rang [' + schedules_json.schedule[0].ranked.rulesEN + ']:** ' + schedules_json.schedule[0].ranked.maps["0"].nameEN + ', ' + schedules_json.schedule[0].ranked.maps["1"].nameEN);
                 }
                 if (typeof(callback) == "function")
                     callback(null, message);
