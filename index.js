@@ -581,18 +581,19 @@ bot.on('message', message => {
 	
   if (message.content.startsWith('!play')) {
 	  try{
-	  let link = message.content.split(" ").slice(1);
-let link1 = link.join("https://www.youtube.com/watch?v=")
+	  let link = message.content.split("https://www.youtube.com/watch?v=").slice(1);
+let link1 = link.join(" ")
 if(!link1) return message.reply("Merci de bien mettre un lien youtube !");
     console.log('Vous avez une demander un musique!' + link);
     const voiceChannel = message.member.voiceChannel;
     if (!voiceChannel) {
       return message.reply('Soyez dans un channel je vous rejoint ;)');
     }
-    voiceChannel.join()
-      .then(connection => {
-	    require('http').get(`${link1}`, (res) => {
-		    connection.playStream(res);
+  voiceChannel.join().then(connection => { // ve çal bakalım
+            const stream = ytdl('link', { filter: 'audioonly' });
+            const dispatcher = connection.playStream(stream);
+
+            dispatcher.on('end', () => voiceChannel.leave());
 	    })
     })
 	  }catch(err){
