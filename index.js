@@ -556,7 +556,7 @@ if (message.content.startsWith("!commandes")) {
     .addField("!wiki", "!wiki (votre recherche)")
     .addField("!github", "!github (votre recherche)")
     .addField("!play (lien de la musique)", "Sert à écouter de la musique depuis youtube !")
-    .addField("!pfc (nombre entre 1 et 3", "")
+    .addField("!pfc (nombre entre 1 et 3", "Jouer à pierre feuille ciseaux sur discord")
     .setFooter("D'autres commandes sera ajouté par la suite")
     
     .setColor("0x0000FF")
