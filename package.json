@@ -13,7 +13,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-     "ffmpeg": "0.0.4",
+    "ffmpeg": "0.0.4",
     "async": "^2.0.1",
     "discord.js": "^11.2.1",
     "moment": "^2.15.0",
@@ -24,7 +24,8 @@
     "dateformat": "^3.0.3",
     "request": "^2.74.0",
     "snekfetch": "^4.0.4",
-        "jimp": "^0.5.4",
+    "jimp": "^0.5.4",
+    "canvas": "^2.0.1",
     "splatoon2.ink-node-api-client": "^0.3.0"
   }
 }
