@@ -693,7 +693,7 @@ if (message.content.startsWith("!triggered")){
 
 //match making splatoon 2
 exports.run = (message, args, prefix, suffix, client, permissions) => {
-    if (!message.channel.permissionsFor(message.guild.me).has('EMBED_LINKS')) return message.reply("oups! J'ai besoin d'autorisations pour intégrer des liens dans ce canal. S'il vous plaît demander à un administrateur de serveur pour l'activer"');
+    if (!message.channel.permissionsFor(message.guild.me).has('EMBED_LINKS')) return message.reply("oups! J'ai besoin d'autorisations pour intégrer des liens dans ce canal. S'il vous plaît demander à un administrateur de serveur pour l'activer");
 
     let data;
     request('http://splatoon.ink/schedule2.json', function (error, res, body) {
