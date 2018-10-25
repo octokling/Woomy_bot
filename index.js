@@ -591,8 +591,8 @@ if(!link1) return message.reply("Merci de bien mettre un lien youtube !");
     }
   voiceChannel.join().then(connection => { // ve çal bakalım
   	
-connection.playStream(ytdl (`https://www.youtube.com/watch?v=${link}`, { audioonly : true}), {passes : 1});
-            const dispatcher = connection.playStream(steam);
+var stream = connection.playStream(ytdl (`https://www.youtube.com/watch?v=${link}`, { audioonly : true}), {passes : 1});
+            const dispatcher = connection.playStream(stream);
 
             dispatcher.on('end', () => voiceChannel.leave());
 	    })
