@@ -620,7 +620,7 @@ function display_rotation(message, order, callback) {
 
     schedules(function(error, schedules_json){
         if (order === 0) {
-            if (schedules_json.schedule[order]) {
+            if (schedules_json.schedules[order]) {
                 time = '==== Maintenant ' + moment(schedules_json.schedule[order].endTime).fromNow() + ' ====\n';
             }
         }
