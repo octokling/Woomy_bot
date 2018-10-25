@@ -738,6 +738,7 @@ exports.run = (message, args, prefix, suffix, client, permissions) => {
             return [hours, minutes, seconds];
         };
 
+	
         if (args[0]) {
             let endTime2 = data.modes.regular[1].startTime;
             let tMaps2 = data.modes.regular[1].maps;
