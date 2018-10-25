@@ -556,7 +556,7 @@ if (message.content.startsWith("!commandes")) {
     .addField("!wiki", "!wiki (votre recherche)")
     .addField("!github", "!github (votre recherche)")
     .addField("!play (lien de la musique)", "Sert à écouter de la musique depuis youtube !")
-    .addField("!help", "commandes pour les information de splatoon !")
+    .addField("!pfc (nombre entre 1 et 3", "")
     .setFooter("D'autres commandes sera ajouté par la suite")
     
     .setColor("0x0000FF")
@@ -599,108 +599,85 @@ if(!link1) return message.reply("Merci de bien mettre un lien youtube !");
 	    message.reply(", je n'ais pas pue te mettre une musique !")
 	    }
   }})
-bot.on('message', message => {
-       if (message.content.startsWith('!stop')){
-	       const voiceChannel = message.member.voiceChannel;
-	       voiceChannel.disconnect()
-       }})
-//Match making splatoon
+//Pierre feuille ciseau
 
-var schedules = function(callback) {
-    request.get('https://splatoon.ink/schedule2', function (error, response, body) {
-        if (!error && response.statusCode == 200) {
-            callback(null, JSON.parse(body));
-        } else {
-            callback(error);
-        }
-    })
-};
-function display_rotation(message, order, callback) {
-    var time;
+bot.on('message', function(message) {
+	if(message.content[0] === prefix) {
+		let splitMessage = message.content.split(" "); // split le message en deux [!pfc] & [contenu]
+		if(splitMessage[0] === '!pfc') {
+			if(splitMessage.length === 2) {
+				// message.channel.send('Command + ' + splitMessage[1]);
+				var userChoice = splitMessage[1]; // Autre partie du message (sans !pfc)
+				var botChoice = Math.floor(Math.random() * 3); // Nombre choisi aléatoirement [0; 1; 2]
+				// Smileys
+				var stone = ":white_circle:"; // Pierre
+				var leaf = ":maple_leaf:"; // Feuille
+				var scissors = ":scissors:"; // Ciseaux
+				// console.log(botChoice); // Debug (choix du bot en console)
+				switch ( botChoice ) {
+					case 0:
+					var botChoice = "Pierre"
+					break;
+					case 1:
+					var botChoice = "Feuille"
+					break;
+					case 2:
+					var botChoice = "Ciseaux"
+					break;
+					default:
+					message.channel.send(":warning:")
+				}
+				switch ( userChoice ) {
+					case "Pierre":
+					case "pierre":
+					if (botChoice === "Pierre") {
+						message.reply("Égalité ! J'avais aussi choisi la pierre ! " + stone);
+						message.react("🔁");
+					} else if (botChoice === "Feuille") {
+						message.reply("Perdu ! J'avais choisi la feuille ! " + leaf);
+						message.react("👎");
+					} else if (botChoice === "Ciseaux") {
+						message.reply("Gagné ! J'avais choisi les ciseaux ! " + scissors);
+						message.react("🎉");
+					}
+					break;
+					case "Feuille":
+					case "feuille":
+					if (botChoice === "Pierre") {
+						message.reply("Gagné ! J'avais choisi la pierre... " + stone);
+						message.react("🎉");
+					} else if (botChoice === "Feuille") {
+						message.reply("Égalité ! J'avais aussi choisi la feuille ! " + leaf);
+						message.react("🔁");
+					} else if (botChoice === "Ciseaux") {
+						message.reply("Perdu ! J'avais choisi les ciseaux ! " + scissors);
+						message.react("👎");
+					}
+					break;
+					case "Ciseaux":
+					case "ciseaux":
+					if (botChoice === "Pierre") {
+						message.reply("Perdu ! J'avais choisi la pierre ! " + stone);
+						message.react("👎");
 
-    schedules(function(error, schedules_json){
-        if (order === 0) {
-            if (schedules_json.schedules[0]) {
-                time = '==== Maintenant ' + moment(schedules_json.schedule["0"].endTime).fromNow() + ' ====\n';
-            }
-        }
-        else if (order === 1) {
-            if (schedules_json.schedules[0]) {
-                time = '==== Prochaine rotation ' + moment(schedules_json.schedule["0"].startTime).fromNow() + ' ====\n';
-            }
-        }
-        else if (order === 2) {
-            if (schedules_json.schedules[0]) {
-                time = '==== Dernière rotation ' + moment(schedules_json.schedule["0"].startTime).fromNow() + ' ====\n';
-            }
-        }
-
-        if (error) {
-            message.channel.sendMessage("Je ne peux pas récupérer l'horaire.");
-            if (typeof(callback) == "function")
-                callback(null, message);
-        } else{
-            if (schedules_json.splatfest === true){
-                message.channel.sendMessage("Splatfest en cours. Veuillez utiliser `!fes` à la place");
-                if (typeof(callback) == "function")
-                    callback(null, message);
-            } else {
-                if (schedules_json.schedule[0]) {
-                    message.channel.sendMessage(time + '**guerre de territoire :** ' + schedules_json.schedule[0].regular.maps["0"].nameEN + ', ' + schedules_json.schedule[0].regular.maps["1"].nameEN + '\n' + '**Rang [' + schedules_json.schedule[0].ranked.rulesEN + ']:** ' + schedules_json.schedule[0].ranked.maps["0"].nameEN + ', ' + schedules_json.schedule[0].ranked.maps["1"].nameEN);
-                }
-                if (typeof(callback) == "function")
-                    callback(null, message);
-            }
-        }
-    });
-}
-
-
-function display_festival(message) {
-    schedules(function(error, schedules_json){
-        if (error) {
-            message.channel.sendMessage("Je ne peux pas récupérer l'horaire.");
-            callback(null, message);
-        } else {
-            if (schedules_json.splatfest === false){
-                message.channel.sendMessage("No Splatfest right now. Please us `!now`, `!next`, `!last` or `!all` instead.")
-            } else {
-                message.channel.sendMessage('==== Splatfest ====\n' + schedules_json.schedule[0].regular.teams[0] + ' **vs** ' + schedules_json.schedule[0].regular.teams[1] + '\n' + '**Fin ** ' + moment(schedules_json.schedule[0].endTime).fromNow() + '\n' + '**Maps :** ' + schedules_json.schedule[0].regular.maps[0].nameEN + ', ' + schedules_json.schedule[0].regular.maps[1].nameEN + ', ' + schedules_json.schedule[0].regular.maps[2].nameEN + '\n\nBonne Splatfest! Et que les chances soient toujours en votre faveur!')
-            }
-        }
-    })
-}
-
-function display_helper(message) {
-    message.channel.sendMessage("Utilisez `!commandesr` pour lister toutes les commandes disponibles");
-}
-
-//Displays bot commands
-function display_commands(message) {
-    message.channel.sendMessage("Liste des commandes pour le bot Splat Rotations:\n\n- `!commandesr` : Vous pouvez utiliser :\n- `!now` : Affiche la rotation actuelle\n- `!next` : Affiche la prochaîne rotation\n- `!last` : Afficher les anciennes rotations\n- `!all` : Affiche toutes les rotation\n- `!fes` : Affiche les infos actuelles du Splatfest\n\nくコ:彡 ***Rester frais***")
-}
-
-
-bot.on("message", function(message) {
-if (message.content === "!help")
-        display_commands(message);
-    else if (message.content === "!now")
-        display_rotation(message, 0);
-    else if (message.content === "!next")
-        display_rotation(message, 1);
-    else if (message.content === "!last")
-        display_rotation(message, 2);
-    else if (message.content === "!fes")
-        display_festival(message);
-    else if (message.content === "!all") {
-        async.waterfall([
-            function(callback) { callback(null, message); },
-            function(message, callback){ display_rotation(message, 0, callback) },
-            function(message, callback){ display_rotation(message, 1, callback) },
-            function(message, callback){ display_rotation(message, 2, callback) }
-        ]);
-    }
+					} else if (botChoice === "Feuille") {
+						message.reply("Gagné ! J'avais choisi la feuille... " +leaf)
+						message.react("🎉");
+						
+					} else if (botChoice === "Ciseaux") {
+						message.reply("Égalité ! J'avais aussi choisi les ciseaux ! " + scissors)
+						message.react("🔁");
+					}
+					break;
+					default:
+					message.channel.send(":warning: Vous devez entrer votre choix ! :warning: \n **Pierre** " +stone+ " ; **Feuille** " +leaf+ " ou **Ciseaux** " +scissors+ " !")
+					message.reply()
+				}
+			}
+		}
+	}
 });
+
 
 bot.on("message", message => {
 if (message.content.startsWith("!triggered")){
