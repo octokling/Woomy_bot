@@ -607,7 +607,7 @@ bot.on('message', message => {
 //Match making splatoon
 
 var schedules = function(callback) {
-    request.get('https://splatoon2.ink/data/schedules.json', function (error, response, body) {
+    request.get('https://splatoon.ink/schedule2', function (error, response, body) {
         if (!error && response.statusCode == 200) {
             callback(null, JSON.parse(body));
         } else {
