@@ -18,6 +18,7 @@ var async = require("async");
 var moment = require("moment");
 var request = require('request');
 const snekfetch = require("snekfetch");
+const Canvas = require('canvas');
 var Admin = "490780128234831906"
 
 con = console.log,
@@ -862,6 +863,6 @@ exports.help = {
     help: 'Vérifiez la rotation actuelle de Splatoon 2!',
     category: 'Splatoon'
 };
-
+//image de bienvenue avec canva
 
 bot.login(process.env.TOKEN)
