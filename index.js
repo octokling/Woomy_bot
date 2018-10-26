@@ -145,7 +145,7 @@ bot.on("ready", function () {
 
     }, 999999);
 
-   setInterval(function() {
+   /*setInterval(function() {
         let rndNumber = Math.floor(Math.random() * 36) + 1;
         switch (rndNumber) {
             case 1:
@@ -242,9 +242,9 @@ bot.on("ready", function () {
                 bot.user.setAvatar("./avatar.jpg");
                 break;
         }
-    }, 999999);
+    }, 999999);*/
 
-/*setInterval(function() {
+setInterval(function() {
         let rndNumber = Math.floor(Math.random() * 36) + 1;
         switch (rndNumber) {
             case 1:
@@ -260,7 +260,7 @@ bot.on("ready", function () {
                 bot.user.setAvatar("./halloween.jpg");
                 break;
         }
-    }, 9999999);*/
+    }, 9999999);
  bot.user.setUsername("Nintentoont™")
 
 .then(user => console.log(`j'ai choisis mon avatar`))
