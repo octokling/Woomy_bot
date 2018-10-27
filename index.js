@@ -261,7 +261,7 @@ setInterval(function() {
                 break;
         }
     }, 9999999);
- bot.user.setUsername("Nintentoont™")
+ bot.user.setGame("!commandes|" + client.guilds.size)
 
 .then(user => console.log(`j'ai choisis mon avatar`))
 
