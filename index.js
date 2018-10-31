@@ -11,7 +11,6 @@ const dateFormat = require('dateformat');
 const Google = require('./Linkgoogle.js')
 const Youtube = require('./Linkyt.js')
 const Wiki = require('./Linkwiki.js')
-const rapport = require('./rapport.js')
 const github = require('./github.js')
 const streamOptions = { seek: 0, volume: 1 };
 var async = require("async");
@@ -318,7 +317,6 @@ bot.on('message', function(message) {
  
   Wiki.parse(message)
  
- rapport.parse(message)
  
   Youtube.parse(message)
  
@@ -551,7 +549,6 @@ if (message.content.startsWith("!commandes")) {
    .addField("!ban", "Vous devez avoir un rôle administrateur pour expulser la personne . La commande à faire est !kick @user raison")
    .addField("!info", "Sert à voir vos informations concérnant votre compte .")
    .addField("!info @user", "Sert à voir les informations concérnant un compte de qeulqu'un .")
-    .addField("!rapport", "Quelqu'un vous embête ? fête nous le s'avoir ! faite !rapport @user (raison) et le problème sera régler le plus vite possible !")
     .addField("!google", "Vous voulez faire une recherche sur google ? alors faite !google (votre recherche)")
     .addField("!youtube", "!youtube (votre recherche)")
     .addField("!wiki", "!wiki (votre recherche)")
@@ -682,188 +679,57 @@ bot.on('message', function(message) {
 });
 
 
-bot.on("message", message => {
+//triggered avatar
+client.on("message", message => {
 if (message.content.startsWith("!triggered")){
 	let type = "triggered"; //Vous pouvez choisir le type d'image que vous souhaitez ici
         let url = message.author.avatarURL; //Vous pouvez choisir l'url de l'image que vous souhaitez ici
-
-        snekfetch.get(`https://www.triggered-api.tk/api/v2/${type}?url=${url}`).set({ Authorization: "token" }).then(res => {
-          console.log(new Buffer(res.body.toString('base64'))); //base64 url
+message.reply("Veuillez patientez quelque instant , le tant que je construis le " + type)
+        snekfetch.get(`https://www.triggered-api.tk/api/v2/${type}?url=${url}`).set({ Authorization: `${process.env.tokentriggered}` })
+        .then(res => {
+        	message.reply("Voila , votre "+ type +" est prêt ^^")
+        	message.channel.send({file:{attachment:res.body,name:"triggered.gif"}})
         }).catch(err => {
           if (err) console.log(`[Erreur] ${err}`);
         });
 }})
 
-//match making splatoon 2
-exports.run = (message, args, prefix, suffix, client, permissions) => {
-    if (!message.channel.permissionsFor(message.guild.me).has('EMBED_LINKS')) return message.reply("oups! J'ai besoin d'autorisations pour intégrer des liens dans ce canal. S'il vous plaît demander à un administrateur de serveur pour l'activer");
-
-    let data;
-    request('http://splatoon.ink/schedule2.json', function (error, res, body) {
-        try {
-            data = JSON.parse(body);
-        }
-        catch (e) {
-            return message.reply("Oups, quelque chose a mal tourné pas de mon côté! Veuillez réessayer plus tard. Si le problème persiste, connectez-vous au serveur de support dans le menu d'aide. \ NCode d'erreur: `SAPI-PFAIL-01");
-        }
-
-        let endTime = data.modes.regular[0].endTime;
-        let tMaps = data.modes.regular[0].maps;
-        let lMaps = data.modes.league[0].maps;
-        let rMaps = data.modes.gachi[0].maps;
-
-        let lMode = data.modes.league[0].rule.name;
-        let rMode = data.modes.gachi[0].rule.name;
-
-        /*let now = new Date();
-        let dif = Math.abs(endTime - now) / 1000;
-        let days = Math.floor(dif / 86400);
-        dif -= days * 86400;
-        let hours = Math.floor(dif / 3600) % 24;
-        dif -= hours * 3600;
-        let mins = Math.floor(dif / 60) % 60;
-        dif -= mins * 60;
-        let seconds = Math.floor(dif % 60);*/
-
-        let timeUntil = function(endTime) {
-            let dateFuture = endTime;
-            let dateNow = Date.now();
-
-            let seconds = Math.floor(((dateFuture * 1000) - dateNow) / 1000);
-            let minutes = Math.floor(seconds/60);
-            let hours = Math.floor(minutes/60);
-            let days = Math.floor(hours/24);
-
-            hours = hours-(days*24);
-            minutes = minutes-(days*24*60)-(hours*60);
-            seconds = seconds-(days*24*60*60)-(hours*60*60)-(minutes*60);
-
-            return [hours, minutes, seconds];
-        };
-
-	
-        if (args[0]) {
-            let endTime2 = data.modes.regular[1].startTime;
-            let tMaps2 = data.modes.regular[1].maps;
-            let lMaps2 = data.modes.league[1].maps;
-            let rMaps2 = data.modes.gachi[1].maps;
-
-            let lMode2 = data.modes.league[1].rule.name;
-            let rMode2 = data.modes.gachi[1].rule.name;
-
-            let endTime3 = data.modes.regular[2].startTime;
-            let tMaps3 = data.modes.regular[2].maps;
-            let lMaps3 = data.modes.league[2].maps;
-            let rMaps3 = data.modes.gachi[2].maps;
-
-            let lMode3 = data.modes.league[2].rule.name;
-            let rMode3 = data.modes.gachi[2].rule.name;
-
-            if (args[0].toLowerCase() === "turf" || args[0].toLowerCase() === "turfwar" || args[0].toLowerCase() === "turf war" || args[0].toLowerCase() === "regular") {
-                message.channel.send({embed:{
-                    title: "Guerre de territoire Rotation",
-                    color: 13497646,
-                    fields: [
-                        {
-                            name: "Current",
-                            value: tMaps.join(' and ')
-                        },
-                        {
-                            name: `In ${timeUntil(endTime2)[0]} hours, ${timeUntil(endTime2)[1]} minutes, ${timeUntil(endTime2)[2]} seconds.`,
-                            value: tMaps2.join(' and ')
-                        },
-                        {
-                            name: `In ${timeUntil(endTime3)[0]} hours, ${timeUntil(endTime3)[1]} minutes, ${timeUntil(endTime3)[2]} seconds.`,
-                            value: tMaps3.join(' and ')
-                        }
-                    ]
-                }});
-            }
-            else if (args[0].toLowerCase() === "ranked") {
-                message.channel.send({embed:{
-                    title: "Match pro Rotation",
-                    color: 16009234,
-                    fields: [
-                        {
-                            name: "Current",
-                            value: `${rMode} on ${rMaps.join(' and ')}`
-                        },
-                        {
-                            name: `In ${timeUntil(endTime2)[0]} hours, ${timeUntil(endTime2)[1]} minutes, ${timeUntil(endTime2)[2]} seconds.`,
-                            value: `${rMode2} on ${rMaps2.join(' and ')}`
-                        },
-                        {
-                            name: `In ${timeUntil(endTime3)[0]} hours, ${timeUntil(endTime3)[1]} minutes, ${timeUntil(endTime3)[2]} seconds.`,
-                            value: ` ${rMode3} on ${rMaps3.join(' and ')}`
-                        }
-                    ]
-                }});
-            }
-            else if (args[0].toLowerCase() === "league") {
-                message.channel.send({embed:{
-                    title: "Match en ligue Rotation",
-                    color: 16724889,
-                    fields: [
-                        {
-                            name: "Current",
-                            value: `${lMode} on ${lMaps.join(' and ')}`
-                        },
-                        {
-                            name: `In ${timeUntil(endTime2)[0]} hours, ${timeUntil(endTime2)[1]} minutes, ${timeUntil(endTime2)[2]} seconds.`,
-                            value: `${lMode2} on ${lMaps2.join(' and ')}`
-                        },
-                        {
-                            name: `In ${timeUntil(endTime3)[0]} hours, ${timeUntil(endTime3)[1]} minutes, ${timeUntil(endTime3)[2]} seconds.`,
-                            value: ` ${lMode3} on ${lMaps3.join(' and ')}`
-                        }
-                    ]
-                }});
-            }
-            else return message.reply('vous devez entrer soit turf war, ranked, ou league!');
-        }
-
-        else {
-            message.channel.send({
-                embed: {
-                    title: "Rotation actuelle",
-                    fields: [
-                        {
-                            name: "Turf War",
-                            value: tMaps.join(' and ')
-                        },
-                        {
-                            name: "Ranked Battle",
-                            value: rMode + ' on ' + rMaps.join(' and ')
-                        },
-                        {
-                            name: "League Battle",
-                            value: lMode + ' on ' + lMaps.join(' and ')
-                        }
-                    ],
-                    footer: {
-                        text: `Les stages changent dans : ${timeUntil(endTime)[0]} hours, ${timeUntil(endTime)[1]} minutes, ${timeUntil(endTime)[2]} seconds.`
-                    }
-                }
-            });
-        }
-    });
-};
-
-exports.config = {
-    enabled: true,
-    aliases: ['schedule'],
-    clientPerms: ['EMBED_LINKS', 'ATTACH_FILES'],
-    userPerms: []
-};
-
-exports.help = {
-    name: 'rotation',
-    description: 'Vérifiez la rotation actuelle de Splatoon 2!',
-    usage: 'rotation [turf/ranked/league]',
-    help: 'Vérifiez la rotation actuelle de Splatoon 2!',
-    category: 'Splatoon'
-};
-//image de bienvenue avec canva
+//magik avatar
+client.on("message", message => {
+if (message.content.startsWith("!magik")){
+	let type = "magik"; //Vous pouvez choisir le type d'image que vous souhaitez ici
+        let url = message.author.avatarURL; //Vous pouvez choisir l'url de l'image que vous souhaitez ici
+message.reply("Veuillez patientez quelque instant , le tant que je construis le " + type)
+        snekfetch.get(`https://www.triggered-api.tk/api/v2/${type}?url=${url}`).set({ Authorization: `${process.env.tokentriggered}` })
+        .then(res => {
+        	message.reply("Voila , votre "+ type +" est prêt ^^")
+        	message.channel.send({file:{attachment:res.body,name:`${type}.gif`}})
+        }).catch(err => {
+          if (err) console.log(`[Erreur] ${err}`);
+        });
+}})
+//citrouille avatar
+client.on("message", message => {
+if (message.content.startsWith("!citrouille")){
+	let type = "jackOlantern"; //Vous pouvez choisir le type d'image que vous souhaitez ici
+        let url = message.author.avatarURL; //Vous pouvez choisir l'url de l'image que vous souhaitez ici
+message.reply("Veuillez patientez quelque instant , le tant que je construis le " + type)
+        snekfetch.get(`https://www.triggered-api.tk/api/v2/${type}?url=${url}`).set({ Authorization: `${process.env.tokentriggered}` })
+        .then(res => {
+        	message.reply("Voila , votre "+ type +" est prêt ^^")
+        	message.channel.send({file:{attachment:res.body,name:`${type}.png`}})
+        }).catch(err => {
+          if (err) console.log(`[Erreur] ${err}`);
+        });
+}})
+//match making splatoon
+var splatoon = require('./splatoon.js');//la où ce trouve le match making
+client.on('message', async message => {
+	const args = message.content.split(" ").slice(1);
+ if(message.content.toLowerCase().startsWith(prefix + 'rotation')){
+      splatoon.run(message, args, prefix, client);//on execute la rotation dans le fichier splatoon.js
+    }})
+//canvas de bienvenue 
 const applyText = (canvas, text) => {
 	const ctx = canvas.getContext('2d');
 	let fontSize = 70;
@@ -909,6 +775,4 @@ client.on('guildMemberAdd', async member => {
 
 	channel.send(`Bienvenue sur ${member.guild.name} , ${member}!`, attachment);
 });
-
-
 bot.login(process.env.TOKEN)
