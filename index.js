@@ -726,10 +726,10 @@ message.reply("Veuillez patientez quelque instant , le tant que je construis le 
 }})
 //anti spam 
 antispam(bot, {
-    warnBuffer: 5, //Maximun de spam avant de le prévenir
-    maxBuffer: 10, // Maximum de spam dans l'interval avant d'être banni
+    warnBuffer: 3, //Maximun de spam avant de le prévenir
+    maxBuffer: 7, // Maximum de spam dans l'interval avant d'être banni
     interval: 10000, // Durée en ms, les utilisateurs peuvent envoyer un maximum de la variable maxBuffer avant d’être banni.
-    warningMessage: "Arrête de spam sinon tu auras de grosse conséquance au bout de 10 fois", // Message d'avertissement envoyé à l'utilisateur pour lui indiquer qu'il va aller vite.
+    warningMessage: "Arrête de spam sinon tu auras de grosse conséquance au bout de 4 fois encore", // Message d'avertissement envoyé à l'utilisateur pour lui indiquer qu'il va aller vite.
     banMessage: "Tant pis je t'avais prévenue .", // Message d'interdiction, toujours l'étiquette de l'utilisateur banni devant elle.
     maxDuplicatesWarning: 5,// quantité maximum de messages en double qu'un utilisateur peut envoyer en un laps de temps avant d'être averti
     maxDuplicatesBan: 10 // Nombre maximal de messages en double qu'un utilisateur peut envoyer en un laps de temps avant d'être banni
