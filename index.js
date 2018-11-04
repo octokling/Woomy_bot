@@ -556,7 +556,7 @@ if (message.content.startsWith("!commandes")) {
     .addField("!github", "!github (votre recherche)")
     .addField("!play (lien de la musique)", "Sert à écouter de la musique depuis youtube !")
     .addField("!pfc (nombre entre 1 et 3)", "Jouer à pierre feuille ciseaux sur discord")
-    .addDescription("Rejoingnez son serveur pour être informée des mises à jours et bien plus encore ! lien : https://discordapp.com/invite/sqWQkE8")
+    .setDescription("Rejoingnez son serveur pour être informée des mises à jours et bien plus encore ! lien : https://discordapp.com/invite/sqWQkE8")
     .setFooter("© tout droit crée et fait par Octokling(1).js#7399")
     
     .setColor("0x0000FF")
