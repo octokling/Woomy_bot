@@ -753,7 +753,6 @@ const applyText = (canvas, text) => {
 
 	return ctx.font;
 };
-
 client.on('guildMemberAdd', async member => {
 	const channel = member.guild.channels.find(ch => ch.name === 'woomycation');
 	if (!channel) return;
