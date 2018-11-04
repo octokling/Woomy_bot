@@ -734,7 +734,7 @@ antispam(bot, {
     maxDuplicatesWarning: 5,// quantité maximum de messages en double qu'un utilisateur peut envoyer en un laps de temps avant d'être averti
     maxDuplicatesBan: 10 // Nombre maximal de messages en double qu'un utilisateur peut envoyer en un laps de temps avant d'être banni
   });
-});
+
 //match making splatoon
 var splatoon = require('./splatoon.js');//la où ce trouve le match making
 client.on('message', async message => {
