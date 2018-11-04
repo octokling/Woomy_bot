@@ -1,5 +1,5 @@
 {
-  "name": "splatbotoont",
+  "name": "nintentoont",
   "version": "1.0.0",
   "description": "C'est un bot discord concentrér sur splatoon",
   "main": "index.js",
@@ -8,7 +8,6 @@
     "npm": "latest"
   },
   "scripts": {
-    "test": "ping",
     "start": "node index.js"
   },
   "author": "",
@@ -22,13 +21,11 @@
     "node-opus": "^0.2.7",
     "youtube-search": "^1.0.10",
     "ytdl-core": "^0.18.1",
-    "@google-cloud/datastore": "^1.3.3",
     "dateformat": "^3.0.3",
     "request": "^2.74.0",
     "snekfetch": "^4.0.4",
     "jimp": "^0.5.4",
-    "canvas": "^2.0.1",
-    "splatoon2.ink-node-api-client": "^0.3.0"
+    "canvas": "^2.0.1"
   },
   "devDependencies": {}
 }
