@@ -225,7 +225,7 @@ bot.on("ready", function () {
         }
     }, 9999999);*/
  bot.user.setGame("!commandes|" + client.guilds.size)
-bot.user.setName("Multitendo™")
+bot.user.setUsername('Multitendo™').catch(console.error)
 .then(user => console.log(`j'ai choisis mon avatar`))
 
 prefix = "!"
