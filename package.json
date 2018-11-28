@@ -13,7 +13,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "ffmpeg": "0.0.4",
+    "ffmpeg": "^0.0.4",
     "async": "^2.0.1",
     "discord-anti-spam": "^1.1.1",
     "discord.js": "^11.2.1",
