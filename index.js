@@ -666,9 +666,9 @@ const args = message.content.split(" ").slice(1);
 let validate = ytdl.validateURL(args[0]);
 if (!validate) {
 let commandFile = require("./search.js");
-	if(message.content.toLowerCase().startsWith(prefix + 'Search')){
+	if(message.content.toLowerCase().startsWith(prefix + 'search')){
 commandFile.run(client, args, ops);
-}}
+}}})
 //triggered avatar
 client.on("message", message => {
 if (message.content.startsWith("!triggered")){
