@@ -556,25 +556,11 @@ bot.on('message', message => {
 	
   if (message.content.startsWith('!play')) {
 	  try{
-	  let link = message.content.split("https://www.youtube.com/watch?v=").slice(1);
-let link1 = link.join(" ")
-if(!link1) return message.reply("Merci de bien mettre un lien youtube !");
-    console.log('Vous avez une demander un musique!' + link);
-    const voiceChannel = message.member.voiceChannel;
-    if (!voiceChannel) {
-      return message.reply('Soyez dans un channel je vous rejoint ;)');
-    }
-  voiceChannel.join().then(connection => { // ve çal bakalım
-  	
-var stream = connection.playStream(ytdl (`https://www.youtube.com/watch?v=${link}`, { audioonly : true}), {passes : 1});
-            const dispatcher = connection.playStream(stream);
-
-            dispatcher.on('end', () => voiceChannel.leave());
-	    })
-    
-	  }catch(err){
-	    message.reply(", je n'ais pas pue te mettre une musique !")
-	    }
+	  let validate = await ytdl.validateURL(args[0]);
+if (!validate) {
+let commandFile = require("./search.js");
+commandFile.run(client, args, ops);
+}
   }})
 //Pierre feuille ciseau
 
