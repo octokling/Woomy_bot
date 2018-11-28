@@ -26,126 +26,89 @@ con = console.log,
 bot.on("ready", function () {
 
   setInterval(function() {
-        let randomNumber = Math.floor(Math.random() * 37) + 1;
+        let randomNumber = Math.floor(Math.random() * 25) + 1;
         switch (randomNumber) {
             case 1:
-                bot.user.setGame("!commandes|Casipoulpe");
+                bot.user.setGame("!commandes|Mario + Lapin crétin kingdom battle !");
                 break;
             case 2:
                 bot.user.setGame("!commandes|Splatoon 2");
                 break;
             case 3:
-                bot.user.setGame("!commandes|Essayer d'apprendre à se servir des armes");
+                bot.user.setGame("!commandes|Zombie U ...");
                 break;
             case 4:
-                bot.user.setGame("!commandes|Splatfest");
+                bot.user.setGame("!commandes|Just dance");
                 break;
             case 5:
-                bot.user.setGame("!commandes|Splatoon 2 it's great");
+                bot.user.setGame("!commandes|Fifa");
                 break;
             case 6:
-                bot.user.setGame("!commande|Splatoon 2 is better Splatoon 1");
+                bot.user.setGame("!commande|Nintendo");
                 break;
             case 7:
-                bot.user.setGame("!commandes|Le rouleau");
+                bot.user.setGame("!commandes|Ubisoft");
                 break;
             case 8:
-                bot.user.setGame("!commandes|Liquidateur");
+                bot.user.setGame("!commandes|Watch dogs");
                 break;
             case 9:
-                bot.user.setGame("!commandes|Splatted by the Octokling");
+                bot.user.setGame("!commandes|Mario Kart");
                 break;
             case 10:
-                bot.user.setGame("!commandes|I love Splatoon");
+                bot.user.setGame("!commandes|Super mario odyssey");
                 break;
             case 11:
-                bot.user.setGame("!commandes|Badigeonneur");
+                bot.user.setGame("!commandes|Pokemon , attrapez les tous ...");
                 break;
             case 12:
-                bot.user.setGame("!commandes|Chic");
+                bot.user.setGame("!commandes|Animal crossing");
                 break;
             case 13:
-                bot.user.setGame("!commandes|Ayo it's here");
+                bot.user.setGame("!commandes|Tomodachi quest");
                 break;
             case 14:
-                bot.user.setGame("!commande|Oly it's not here °_°");
+                bot.user.setGame("!commande|Miitopia");
                 break;
             case 15:
-                bot.user.setGame("!commandes|Octo Canyon");
+                bot.user.setGame("!commandes|Kirby Squeak Squad");
                 break;
             case 16:
-                bot.user.setGame("!commandes|Ink Cannon");
+                bot.user.setGame("!commandes|Arms !");
                 break;
             case 17:
-                bot.user.setGame("!commandes|Sardinium");
+                bot.user.setGame("!commandes|Donkey Kong");
                 break;
             case 18:
-                bot.user.setGame("!commandes|Parchemin");
+                bot.user.setGame("!commandes|Hyrule ou The legends of zelda ?");
                 break;
             case 19:
-                bot.user.setGame("!commandes|Inkling");
+                bot.user.setGame("!commandes|Rayman");
                 break;
             case 20:
-                bot.user.setGame("!commandes|DJ Octave");
+                bot.user.setGame("!commandes|Monster Hunter");
                 break;
             case 21:
-                bot.user.setGame("!commandes|The winner is Number 4");
+                bot.user.setGame("!commandes|Captaine toad !");
                 break;
             case 22:
-                bot.user.setGame("!commandes|Splatoon it's stupid or illuminati ?");
+                bot.user.setGame("!commandes|Starlink with norman");
                 break;
             case 23:
-                bot.user.setGame("!commandes|!questionnaire");
+                bot.user.setGame("!commandes|Tetris");
                 break;
           case 24:
-                bot.user.setGame("!commandes|why the inklings is not fly?");
+                bot.user.setGame("!commandes|Une partie de monopoly ?");
                 break;
           case 25:
-                bot.user.setGame("!commandes|Splatension");
+                bot.user.setGame("!commandes|Ink-news !");
                 break;
-          case 26:
-                bot.user.setGame("!commandes|Splatoon so good");
-                break;
-          case 27:
-                bot.user.setGame("!commandes|Match Macking !");
-                break;
-          case 28:
-                bot.user.setGame("!commandes|J'aime les squid . WOOOOOOOOMYYYYYYYYYYY");
-                break;
-          case 29:
-                bot.user.setGame("!commandes|Octo Expansion !");
-                break;
-          case 30:
-                bot.user.setGame("!commandes|Number 9 ?");
-                break;
-          case 31:
-                bot.user.setGame("!commandes|Evilsquid or Octoboy ?");
-                break;
-          case 32:
-                bot.user.setGame("!commandes|N-zap 83 , 85 or 89 ?");
-                break;
-          case 33:
-                bot.user.setGame("!commandes");
-                break;
-          case 34:
-                bot.user.setGame("!commandes|Nothing");
-                break;
-          case 35:
-                bot.user.setGame("!commandes|I'm great in English");
-                break;
-          case 36:
-                var Guilds = bot.guilds.size
-                bot.user.setGame("!commandes|"+ Guilds +" Serveurs!");
-                break;
-	  case 37:
-                var Guilds = bot.guilds.size
-                bot.user.setGame("!commandes|WebSite ?");
-                break;
+
         }
 
     }, 999999);
 
-   /*setInterval(function() {
+   setInterval(function() {
         let rndNumber = Math.floor(Math.random() * 36) + 1;
         switch (rndNumber) {
             case 1:
@@ -242,9 +205,9 @@ bot.on("ready", function () {
                 bot.user.setAvatar("./avatar.jpg");
                 break;
         }
-    }, 999999);*/
+    }, 999999);
 
-setInterval(function() {
+/*setInterval(function() {
         let rndNumber = Math.floor(Math.random() * 36) + 1;
         switch (rndNumber) {
             case 1:
@@ -260,7 +223,7 @@ setInterval(function() {
                 bot.user.setAvatar("./halloween.jpg");
                 break;
         }
-    }, 9999999);
+    }, 9999999);*/
  bot.user.setGame("!commandes|" + client.guilds.size)
 
 .then(user => console.log(`j'ai choisis mon avatar`))
@@ -279,14 +242,6 @@ servercount = client.guilds.size;
         return channel.send('Bienvenue sur le serveur ' + member.displayName + '! Merci de respecter les regles choisis par le(s) fondateur \n\n Welcome on the serveur. ' + member.displayName + '! Thank of respect the rules choose by founder(s) . ')
       }).catch(console.error)
     })
-
-
-bot.on('message', message => {
-    if (message.content === `${message.mentions.bot}`) {
-message.channel.sendMessage("Oui , que voulez vous ?")
-  }
-});
-
 
 bot.on("message", message =>{
 
@@ -440,8 +395,8 @@ if(cmd === `${prefix}kick`){
     .addField("Le : ", dateFormat(kUser.user.createdAt, 'dd/mm/yyyy') + " à " + dateFormat(kUser.user.createdAt, 'H:MM'))
     .addField("La raison : ", kReason);
 
-    let kickChannel = message.guild.channels.find(`name`, "woomycation");
-    if(!kickChannel) return message.channel.send("Je n'ai trouvé pas le chat 'woomycation'");
+    let kickChannel = message.guild.channels.find(`name`, "nintenlogs");
+    if(!kickChannel) return message.channel.send("Je n'ai trouvé pas le chat 'nintenlogs'");
 
     message.guild.member(kUser).kick(kReason);
     kickChannel.send(kickEmbed);
@@ -480,8 +435,8 @@ if(cmd === `${prefix}ban`){
     .addField("Le : ", dateFormat(bUser.user.createdAt, 'dd/mm/yyyy') + " à " + dateFormat(bUser.user.createdAt, 'H:MM'))
     .addField("La raison : ", bReason);
 
-    let incidentchannel = message.guild.channels.find(`name`, "woomycation");
-    if(!incidentchannel) return message.channel.send("Je n'ai trouvé pas le chat 'woomycation'");
+    let incidentchannel = message.guild.channels.find(`name`, "nintenlogs");
+    if(!incidentchannel) return message.channel.send("Je n'ai trouvé pas le chat 'nintenlogs'");
 
     message.guild.member(bUser).ban(bReason);
     incidentchannel.send(banEmbed);
@@ -556,6 +511,26 @@ if (message.content.startsWith("!commandes")) {
     .addField("!github", "!github (votre recherche)")
     .addField("!play (lien de la musique)", "Sert à écouter de la musique depuis youtube !")
     .addField("!pfc (nombre entre 1 et 3)", "Jouer à pierre feuille ciseaux sur discord")
+    .addField("!splatoon","S'avoir les commandes du jeu splatoon .")
+    .addField("!triggered", "Votre profile en effet triggered")
+    .addField("!magik", "votre profile en effet magik")
+    .addField("!citrouille", "Votre avatar en effet citrouille")
+    .setDescription("Rejoingnez son serveur pour être informée des mises à jours et bien plus encore ! lien : https://discordapp.com/invite/sqWQkE8")
+    .setFooter("© tout droit crée et fait par Octokling(1).js#7399")
+    
+    .setColor("0x0000FF")
+    message.author.send(embed)
+    message.reply("Je vous envoie les commandes ")
+message.delete(5000)
+ 
+  }
+})
+bot.on("message", message => {
+if (message.content.startsWith("!splatoon")) {
+    var embed = new Discord.RichEmbed()
+    .setTitle("Vous avez demander de l'aide pour les commandes splatoon !")
+    .addField(" ", "Voici toutes les commandes que vous pouvez faire :")
+    .addField("!rotation" , "Voir les rotation splatoon 2 (Les modes et le maps sont en anglais)")
     .setDescription("Rejoingnez son serveur pour être informée des mises à jours et bien plus encore ! lien : https://discordapp.com/invite/sqWQkE8")
     .setFooter("© tout droit crée et fait par Octokling(1).js#7399")
     
@@ -679,7 +654,13 @@ bot.on('message', function(message) {
 		}
 	}
 });
-
+//match making splatoon
+var splatoon = require('./splatoon.js');//la où ce trouve le match making
+client.on('message', async message => {
+	const args = message.content.split(" ").slice(1);
+ if(message.content.toLowerCase().startsWith(prefix + 'rotation')){
+      splatoon.run(message, args, prefix, client);//on execute la rotation dans le fichier splatoon.js
+    }})
 
 //triggered avatar
 client.on("message", message => {
@@ -735,13 +716,8 @@ antispam(bot, {
     maxDuplicatesBan: 10 // Nombre maximal de messages en double qu'un utilisateur peut envoyer en un laps de temps avant d'être banni
   });
 
-//match making splatoon
-var splatoon = require('./splatoon.js');//la où ce trouve le match making
-client.on('message', async message => {
-	const args = message.content.split(" ").slice(1);
- if(message.content.toLowerCase().startsWith(prefix + 'rotation')){
-      splatoon.run(message, args, prefix, client);//on execute la rotation dans le fichier splatoon.js
-    }})
+
+
 //canvas de bienvenue 
 const applyText = (canvas, text) => {
 	const ctx = canvas.getContext('2d');
@@ -754,7 +730,7 @@ const applyText = (canvas, text) => {
 	return ctx.font;
 };
 client.on('guildMemberAdd', async member => {
-	const channel = member.guild.channels.find(ch => ch.name === 'woomycation');
+	const channel = member.guild.channels.find(ch => ch.name === 'nintenlogs');
 	if (!channel) return;
 
 	const canvas = Canvas.createCanvas(700, 250);
