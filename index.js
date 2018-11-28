@@ -554,12 +554,27 @@ bot.on('message', message => {
 })
 bot.on('message', message => {
 	
-  if (message.content.startsWith('!play')) {
-	  let validate = ytdl.validateURL(args[0]);
-if (!validate) {
-let commandFile = require("./search.js");
-commandFile.run(client, args, ops);
-}
+
+	  if (message.content.startsWith('!play')) {
+	  try{
+	  let link = message.content.split("https://www.youtube.com/watch?v=").slice(1);
+let link1 = link.join(" ")
+if(!link1) return message.reply("Merci de bien mettre un lien youtube !");
+    console.log('Vous avez une demander un musique!' + link);
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+  voiceChannel.join().then(connection => { // ve çal bakalım
+  	
+var stream = connection.playStream(ytdl (`https://www.youtube.com/watch?v=${link}`, { audioonly : true}), {passes : 1});
+            const dispatcher = connection.playStream(stream);
+             dispatcher.on('end', () => voiceChannel.leave());
+	    })
+    
+	  }catch(err){
+	    message.reply(", je n'ais pas pue te mettre une musique !")
+	    }
   }})
 //Pierre feuille ciseau
 
@@ -646,7 +661,14 @@ client.on('message', async message => {
  if(message.content.toLowerCase().startsWith(prefix + 'rotation')){
       splatoon.run(message, args, prefix, client);//on execute la rotation dans le fichier splatoon.js
     }})
-
+client.on('message', async message => {
+const args = message.content.split(" ").slice(1);
+let validate = ytdl.validateURL(args[0]);
+if (!validate) {
+let commandFile = require("./search.js");
+	if(message.content.toLowerCase().startsWith(prefix + 'Search')){
+commandFile.run(client, args, ops);
+}}
 //triggered avatar
 client.on("message", message => {
 if (message.content.startsWith("!triggered")){
