@@ -556,7 +556,7 @@ bot.on('message', message => {
 	
   if (message.content.startsWith('!play')) {
 	  try{
-	  let validate = await ytdl.validateURL(args[0]);
+	  let validate = ytdl.validateURL(args[0]);
 if (!validate) {
 let commandFile = require("./search.js");
 commandFile.run(client, args, ops);
