@@ -9,6 +9,7 @@ const yt = require('ytdl-core');
 const ytdl = require('ytdl-core');
 const dateFormat = require('dateformat');
 const Google = require('./Linkgoogle.js')
+const Jeux = require('./jeux.js')
 const Youtube = require('./Linkyt.js')
 const Wiki = require('./Linkwiki.js')
 const github = require('./github.js')
@@ -269,7 +270,7 @@ User.send(emb)
 bot.on('message', function(message) {
 
  
-   
+   Jeux.parse(message)
  
   Wiki.parse(message)
  
@@ -576,84 +577,9 @@ var stream = connection.playStream(ytdl (`https://www.youtube.com/watch?v=${link
 	    message.reply(", je n'ais pas pue te mettre une musique !")
 	    }
   }})
-//Pierre feuille ciseau
 
-bot.on('message', function(message) {
-	if(message.content[0] === prefix) {
-		let splitMessage = message.content.split(" "); // split le message en deux [!pfc] & [contenu]
-		if(splitMessage[0] === '!pfc') {
-			if(splitMessage.length === 2) {
-				// message.channel.send('Command + ' + splitMessage[1]);
-				var userChoice = splitMessage[1]; // Autre partie du message (sans !pfc)
-				var botChoice = Math.floor(Math.random() * 3); // Nombre choisi aléatoirement [0; 1; 2]
-				// Smileys
-				var stone = ":white_circle:"; // Pierre
-				var leaf = ":maple_leaf:"; // Feuille
-				var scissors = ":scissors:"; // Ciseaux
-				// console.log(botChoice); // Debug (choix du bot en console)
-				switch ( botChoice ) {
-					case 0:
-					var botChoice = "Pierre"
-					break;
-					case 1:
-					var botChoice = "Feuille"
-					break;
-					case 2:
-					var botChoice = "Ciseaux"
-					break;
-					default:
-					message.channel.send(":warning:")
-				}
-				switch ( userChoice ) {
-					case "Pierre":
-					case "pierre":
-					if (botChoice === "Pierre") {
-						message.reply("Égalité ! J'avais aussi choisi la pierre ! " + stone);
-						message.react("🔁");
-					} else if (botChoice === "Feuille") {
-						message.reply("Perdu ! J'avais choisi la feuille ! " + leaf);
-						message.react("👎");
-					} else if (botChoice === "Ciseaux") {
-						message.reply("Gagné ! J'avais choisi les ciseaux ! " + scissors);
-						message.react("🎉");
-					}
-					break;
-					case "Feuille":
-					case "feuille":
-					if (botChoice === "Pierre") {
-						message.reply("Gagné ! J'avais choisi la pierre... " + stone);
-						message.react("🎉");
-					} else if (botChoice === "Feuille") {
-						message.reply("Égalité ! J'avais aussi choisi la feuille ! " + leaf);
-						message.react("🔁");
-					} else if (botChoice === "Ciseaux") {
-						message.reply("Perdu ! J'avais choisi les ciseaux ! " + scissors);
-						message.react("👎");
-					}
-					break;
-					case "Ciseaux":
-					case "ciseaux":
-					if (botChoice === "Pierre") {
-						message.reply("Perdu ! J'avais choisi la pierre ! " + stone);
-						message.react("👎");
 
-					} else if (botChoice === "Feuille") {
-						message.reply("Gagné ! J'avais choisi la feuille... " +leaf)
-						message.react("🎉");
-						
-					} else if (botChoice === "Ciseaux") {
-						message.reply("Égalité ! J'avais aussi choisi les ciseaux ! " + scissors)
-						message.react("🔁");
-					}
-					break;
-					default:
-					message.channel.send(":warning: Vous devez entrer votre choix ! :warning: \n **Pierre** " +stone+ " ; **Feuille** " +leaf+ " ou **Ciseaux** " +scissors+ " !")
-					message.reply()
-				}
-			}
-		}
-	}
-});
+
 //match making splatoon
 var splatoon = require('./splatoon.js');//la où ce trouve le match making
 client.on('message', async message => {
@@ -722,52 +648,4 @@ antispam(bot, {
     maxDuplicatesWarning: 5,// quantité maximum de messages en double qu'un utilisateur peut envoyer en un laps de temps avant d'être averti
     maxDuplicatesBan: 10 // Nombre maximal de messages en double qu'un utilisateur peut envoyer en un laps de temps avant d'être banni
   });
-
-
-
-//canvas de bienvenue 
-const applyText = (canvas, text) => {
-	const ctx = canvas.getContext('2d');
-	let fontSize = 70;
-
-	do {
-		ctx.font = `${fontSize -= 10}px sans-serif`;
-	} while (ctx.measureText(text).width > canvas.width - 300);
-
-	return ctx.font;
-};
-client.on('guildMemberAdd', async member => {
-	const channel = member.guild.channels.find(ch => ch.name === 'nintenlogs');
-	if (!channel) return;
-
-	const canvas = Canvas.createCanvas(700, 250);
-	const ctx = canvas.getContext('2d');
-
-	const background = await Canvas.loadImage('./wallpaper.jpg');
-	ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
-
-	ctx.strokeStyle = '#74037b';
-	ctx.strokeRect(0, 0, canvas.width, canvas.height);
-
-	ctx.font = '28px sans-serif';
-	ctx.fillStyle = '#ffffff';
-	ctx.fillText(`Bienvenue sur ${member.guild.name}!`, canvas.width / 2.5, canvas.height / 3.5);
-
-	ctx.font = applyText(canvas, `${member.displayName}!`);
-	ctx.fillStyle = '#ffffff';
-	ctx.fillText(`${member.displayName}!`, canvas.width / 2.5, canvas.height / 1.8);
-
-	ctx.beginPath();
-	ctx.arc(125, 125, 100, 0, Math.PI * 2, true);
-	ctx.closePath();
-	ctx.clip();
-
-	const { body: buffer } = await snekfetch.get(member.user.displayAvatarURL);
-	const avatar = await Canvas.loadImage(buffer);
-	ctx.drawImage(avatar, 25, 25, 200, 200);
-
-	const attachment = new Discord.Attachment(canvas.toBuffer(), 'welcome-image.png');
-
-	channel.send(`Bienvenue sur ${member.guild.name} , ${member}!`, attachment);
-});
 bot.login(process.env.TOKEN)
