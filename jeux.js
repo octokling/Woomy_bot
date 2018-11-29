@@ -2,8 +2,6 @@ const Command = require('./command')
 const Discord = require('discord.js')
 const bot = new Discord.Client()
 module.exports = class Jeux extends Command {
-
-bot.on('message', function(message) {
 	if(message.content[0] === prefix) {
 		let splitMessage = message.content.split(" "); // split le message en deux [!pfc] & [contenu]
 		if(splitMessage[0] === '!pfc') {
