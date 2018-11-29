@@ -1,5 +1,6 @@
 const Command = require('./command')
-
+const Discord = require('discord.js')
+const bot = new Discord.Client()
 module.exports = class Jeux extends Command {
 
 bot.on('message', function(message) {
