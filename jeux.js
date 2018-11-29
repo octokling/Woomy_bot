@@ -5,6 +5,7 @@ module.exports = class Google extends Command {
 static match(message) {
 	if(message.content[0] === prefix)
 }
+static action(message) {
 		let splitMessage = message.content.split(" "); // split le message en deux [!pfc] & [contenu]
 		if(splitMessage[0] === '!pfc') {
 			if(splitMessage.length === 2) {
@@ -79,4 +80,4 @@ static match(message) {
 		}
 	}
 )
-}
+}}
