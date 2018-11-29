@@ -268,10 +268,10 @@ User.send(emb)
 
 
 bot.on('message', function(message) {
-
+const args = message.content.split(" ").slice(1);
  
-   Jeux.parse(message)
- 
+  
+ Jeux.run(message, args, prefix, bot); 
   Wiki.parse(message)
  
  
