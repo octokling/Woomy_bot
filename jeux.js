@@ -70,4 +70,3 @@ exports.run = (message, args, prefix, bot) => {
 					message.reply()
 				}
 			}
-}
