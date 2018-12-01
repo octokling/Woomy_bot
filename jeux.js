@@ -2,14 +2,6 @@ const Command = require('./command')
 const Discord = require('discord.js')
 const bot = new Discord.Client()
 exports.run = (message, args, prefix, bot) => {
-   
-bot.on("message", message => { 
-	if(message.content[0] === prefix){
-
-
-		let splitMessage = message.content.split(" "); // split le message en deux [!pfc] & [contenu]
-		if(splitMessage[0] === '!pfc') {
-			if(splitMessage.length === 2) {
 				// message.channel.send('Command + ' + splitMessage[1]);
 				var userChoice = splitMessage[1]; // Autre partie du message (sans !pfc)
 				var botChoice = Math.floor(Math.random() * 3); // Nombre choisi aléatoirement [0; 1; 2]
