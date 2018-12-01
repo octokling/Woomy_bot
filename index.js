@@ -279,7 +279,12 @@ const args = message.content.split(" ").slice(1);
  Jeux.run(message, args, prefix, bot, splitMessage); 
 			}}}
   Wiki.parse(message)
- 
+ let validate = ytdl.validateURL(args[0]);
+if (!validate) {
+let commandFile = require("./search.js");
+	if(message.content.toLowerCase().startsWith(prefix + 'search')){
+commandFile.run(client, args, ops);
+}}
  
   Youtube.parse(message)
  
@@ -465,7 +470,7 @@ try{
     .setColor("0x0000FF")
     message.channel.sendEmbed(embed)
   }catch(err){
-    message.channel.sendMessage("Une erreur c'est produite , veuilliez réessayer")
+    message.channel.sendMessage("Une erreur c'est produite , veuilliez réessayer \n"+ err )
   }
   }
 })
@@ -511,13 +516,13 @@ if (message.content.startsWith("!commandes")) {
    .addField("!kick", "Vous devez avoir un rôle administrateur pour bannir la personne . La commande à faire est !ban @user raison")
    .addField("!ban", "Vous devez avoir un rôle administrateur pour expulser la personne . La commande à faire est !kick @user raison")
    .addField("!info", "Sert à voir vos informations concérnant votre compte .")
-   .addField("!info @user", "Sert à voir les informations concérnant un compte de qeulqu'un .")
+   .addField("!info @user", "Sert à voir les informations concérnant un compte de quelqu'un .")
     .addField("!google", "Vous voulez faire une recherche sur google ? alors faite !google (votre recherche)")
     .addField("!youtube", "!youtube (votre recherche)")
     .addField("!wiki", "!wiki (votre recherche)")
     .addField("!github", "!github (votre recherche)")
     .addField("!play (lien de la musique)", "Sert à écouter de la musique depuis youtube !")
-    .addField("!pfc (nombre entre 1 et 3)", "Jouer à pierre feuille ciseaux sur discord")
+    .addField("!pfc feuille/papier/ciseaux", "Jouer à pierre feuille ciseaux sur discord")
     .addField("!splatoon","S'avoir les commandes du jeu splatoon .")
     .addField("!triggered", "Votre profile en effet triggered")
     .addField("!magik", "votre profile en effet magik")
@@ -548,17 +553,7 @@ message.delete(5000)
  
   }
 })
-bot.on('message', message => {
-	if (message.content.startsWith('!liste_m')){
-	     var embed = new Discord.RichEmbed()
-		.setTitle("Vous avez demander la liste des musique")
-	     .setDescription("La commandes !play (votre lien) ne supporte pas les lien en https:// mais les http:// . Donc voici quelque liste de musique qui vous vous simpliciterais la tache au lieu de trouver des mien http .")
-.setFooter("Et d'autre liste de musique sera imminant .")
-			     .setColor(0x0000FF)
-			     message.author.send(embed)
-		message.delete(5000)
-	}
-})
+
 bot.on('message', message => {
 	
 
@@ -593,14 +588,6 @@ client.on('message', async message => {
  if(message.content.toLowerCase().startsWith(prefix + 'rotation')){
       splatoon.run(message, args, prefix, client);//on execute la rotation dans le fichier splatoon.js
     }})
-client.on('message', async message => {
-const args = message.content.split(" ").slice(1);
-let validate = ytdl.validateURL(args[0]);
-if (!validate) {
-let commandFile = require("./search.js");
-	if(message.content.toLowerCase().startsWith(prefix + 'search')){
-commandFile.run(client, args, ops);
-}}})
 //triggered avatar
 client.on("message", message => {
 if (message.content.startsWith("!triggered")){
