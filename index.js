@@ -276,7 +276,7 @@ const args = message.content.split(" ").slice(1);
 		let splitMessage = message.content.split(" "); // split le message en deux [!pfc] & [contenu]
 		if(splitMessage[0] === '!pfc') {
 			if(splitMessage.length === 2) {
- Jeux.run(message, args, prefix, bot); 
+ Jeux.run(message, args, prefix, bot, splitMessage); 
 			}}}
   Wiki.parse(message)
  
