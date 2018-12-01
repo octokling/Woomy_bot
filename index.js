@@ -277,7 +277,7 @@ const args = message.content.split(" ").slice(1);
 		if(splitMessage[0] === '!pfc') {
 			if(splitMessage.length === 2) {
  Jeux.run(message, args, prefix, bot); 
-			}}})
+			}}}
   Wiki.parse(message)
  
  
