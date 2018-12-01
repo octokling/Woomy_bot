@@ -1,11 +1,12 @@
 const Command = require('./command')
 const Discord = require('discord.js')
 const bot = new Discord.Client()
-module.exports = class Google extends Command {
-static match(message) {
-	if(message.content[0] === prefix)
-}
-static action(message) {
+exports.run = (message, args, prefix, bot) => {
+   
+bot.on("message", message => { 
+	if(message.content[0] === prefix){
+
+
 		let splitMessage = message.content.split(" "); // split le message en deux [!pfc] & [contenu]
 		if(splitMessage[0] === '!pfc') {
 			if(splitMessage.length === 2) {
@@ -80,4 +81,4 @@ static action(message) {
 		}
 	}
 )
-}}
+}
