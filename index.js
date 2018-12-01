@@ -270,8 +270,14 @@ User.send(emb)
 bot.on('message', function(message) {
 const args = message.content.split(" ").slice(1);
  
-  
+	if(message.content[0] === prefix){
+
+
+		let splitMessage = message.content.split(" "); // split le message en deux [!pfc] & [contenu]
+		if(splitMessage[0] === '!pfc') {
+			if(splitMessage.length === 2) {
  Jeux.run(message, args, prefix, bot); 
+			}}})
   Wiki.parse(message)
  
  
