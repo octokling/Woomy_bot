@@ -1,5 +1,5 @@
 const search = require("yt-search");
-exports.run = (client, message, args ops) => {
+exports.run = (client, message, args, ops) => {
 	search(args.join(' '), function(err, res) => {
 	if (err) return message.channel.send("Une erreur est survenue , merci d'en parler à Octokling");
 	let videos = res.videos.slice(0, 10);
