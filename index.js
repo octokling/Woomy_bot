@@ -302,12 +302,6 @@ const args = message.content.split(" ").slice(1);
  Jeux.run(message, args, prefix, bot, splitMessage); 
 			}}}
   Wiki.parse(message)
- let validate = ytdl.validateURL(args[0]);
-if (!validate) {
-let commandFile = require("./search.js");
-	if(message.content.toLowerCase().startsWith(prefix + 'search')){
-commandFile.run(client, args, ops);
-}}
  
   Youtube.parse(message)
  
