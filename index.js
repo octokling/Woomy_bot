@@ -36,22 +36,22 @@ bot.on("ready", function () {
                 bot.user.setGame("!commandes|Splatoon 2");
                 break;
             case 3:
-                bot.user.setGame("!commandes|Zombie U ...");
+                bot.user.setGame("!commandes|Pikachu");
                 break;
             case 4:
-                bot.user.setGame("!commandes|Just dance");
+                bot.user.setGame("!commandes|Wii Sport");
                 break;
             case 5:
-                bot.user.setGame("!commandes|Fifa");
+                bot.user.setGame("!commandes|Wii sport resort !");
                 break;
             case 6:
                 bot.user.setGame("!commande|Nintendo");
                 break;
             case 7:
-                bot.user.setGame("!commandes|Ubisoft");
+                bot.user.setGame("!commandes|Place streetpass");
                 break;
             case 8:
-                bot.user.setGame("!commandes|Watch dogs");
+                bot.user.setGame("!commandes|Wii");
                 break;
             case 9:
                 bot.user.setGame("!commandes|Mario Kart");
@@ -84,22 +84,22 @@ bot.on("ready", function () {
                 bot.user.setGame("!commandes|Hyrule ou The legends of zelda ?");
                 break;
             case 19:
-                bot.user.setGame("!commandes|Rayman");
+                bot.user.setGame("!commandes|Nintendo switch");
                 break;
             case 20:
-                bot.user.setGame("!commandes|Monster Hunter");
+                bot.user.setGame("!commandes|Wii u");
                 break;
             case 21:
                 bot.user.setGame("!commandes|Captaine toad !");
                 break;
             case 22:
-                bot.user.setGame("!commandes|Starlink with norman");
+                bot.user.setGame("!commandes|Game cube");
                 break;
             case 23:
-                bot.user.setGame("!commandes|Tetris");
+                bot.user.setGame("!commandes|Nintendo 64");
                 break;
           case 24:
-                bot.user.setGame("!commandes|Une partie de monopoly ?");
+                bot.user.setGame("!commandes|Game boy cameras °_°");
                 break;
           case 25:
                 bot.user.setGame("!commandes|Ink-news !");
@@ -109,7 +109,7 @@ bot.on("ready", function () {
 
     }, 999999);
 
-   setInterval(function() {
+   /*setInterval(function() {
         let rndNumber = Math.floor(Math.random() * 36) + 1;
         switch (rndNumber) {
             case 1:
@@ -206,10 +206,10 @@ bot.on("ready", function () {
                 bot.user.setAvatar("./avatar.jpg");
                 break;
         }
-    }, 999999);
+    }, 999999);*/
 
 /*setInterval(function() {
-        let rndNumber = Math.floor(Math.random() * 36) + 1;
+        let rndNumber = Math.floor(Math.random() * 4) + 1;
         switch (rndNumber) {
             case 1:
                 bot.user.setAvatar("./halloween3.jpg");
@@ -225,8 +225,31 @@ bot.on("ready", function () {
                 break;
         }
     }, 9999999);*/
+	setInterval(function() {
+        let rndNumber = Math.floor(Math.random() * 36) + 1;
+        switch (rndNumber) {
+            case 1:
+                bot.user.setAvatar("./Noël.jpg");
+                break;
+            case 2:
+                bot.user.setAvatar("./noël1.jpg");
+                break;
+            case 3:
+                bot.user.setAvatar("./noël2.jpg");
+                break;
+            case 4:
+                bot.user.setAvatar("./noël3.jpg");
+                break;
+	    case 5:
+                bot.user.setAvatar("./noël4.png");
+                break;
+	    case 6:
+                bot.user.setAvatar("./noël5.png");
+                break;
+        }
+    }, 9999999);
  bot.user.setGame("!commandes|" + client.guilds.size)
-bot.user.setUsername('Multitendo™').catch(console.error)
+bot.user.setUsername('Gametendo™').catch(console.error)
 .then(user => console.log(`j'ai choisis mon avatar`))
 
 prefix = "!"
@@ -603,34 +626,6 @@ message.reply("Veuillez patientez quelque instant , le tant que je construis le 
         });
 }})
 
-//magik avatar
-client.on("message", message => {
-if (message.content.startsWith("!magik")){
-	let type = "magik"; //Vous pouvez choisir le type d'image que vous souhaitez ici
-        let url = message.author.avatarURL; //Vous pouvez choisir l'url de l'image que vous souhaitez ici
-message.reply("Veuillez patientez quelque instant , le tant que je construis le " + type)
-        snekfetch.get(`https://www.triggered-api.tk/api/v2/${type}?url=${url}`).set({ Authorization: `${process.env.tokentriggered}` })
-        .then(res => {
-        	message.reply("Voila , votre "+ type +" est prêt ^^")
-        	message.channel.send({file:{attachment:res.body,name:`${type}.gif`}})
-        }).catch(err => {
-          if (err) console.log(`[Erreur] ${err}`);
-        });
-}})
-//citrouille avatar
-client.on("message", message => {
-if (message.content.startsWith("!citrouille")){
-	let type = "jackOlantern"; //Vous pouvez choisir le type d'image que vous souhaitez ici
-        let url = message.author.avatarURL; //Vous pouvez choisir l'url de l'image que vous souhaitez ici
-message.reply("Veuillez patientez quelque instant , le tant que je construis le " + type)
-        snekfetch.get(`https://www.triggered-api.tk/api/v2/${type}?url=${url}`).set({ Authorization: `${process.env.tokentriggered}` })
-        .then(res => {
-        	message.reply("Voila , votre "+ type +" est prêt ^^")
-        	message.channel.send({file:{attachment:res.body,name:`${type}.png`}})
-        }).catch(err => {
-          if (err) console.log(`[Erreur] ${err}`);
-        });
-}})
 //anti spam 
 antispam(bot, {
     warnBuffer: 3, //Maximun de spam avant de le prévenir
