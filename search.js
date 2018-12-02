@@ -14,7 +14,7 @@ const filter = m => !isNaN(m.content) && m.content > 0
 const collector = message.channel.createMessageCollector(filter);
 collector.videos = videos;
 let commandFile = require("./play.js")
-commandFile.run(client, message, [this.videos[parseInt(m.content)-1].url], ops);
+commandFile.run(client, message, [this.videos[parseInt(m.content)-1]], ops);
 
 	});
 }
