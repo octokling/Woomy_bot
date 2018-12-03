@@ -224,7 +224,7 @@ bot.on("ready", function () {
                 bot.user.setAvatar("./halloween.jpg");
                 break;
         }
-    }, 9999999);*/
+    }, 999999);*/
 	setInterval(function() {
         let rndNumber = Math.floor(Math.random() * 6) + 1;
         switch (rndNumber) {
@@ -247,8 +247,8 @@ bot.on("ready", function () {
                 bot.user.setAvatar("./noël5.png");
                 break;
         }
-    }, 9999999);
- bot.user.setGame("!commandes|" + client.guilds.size)
+    }, 999999);
+bot.user.setAvatar("./noël5.png");
 bot.user.setUsername('Gametendo™').catch(console.error)
 .then(user => console.log(`j'ai choisis mon avatar`))
 
