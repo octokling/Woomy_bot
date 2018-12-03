@@ -473,6 +473,42 @@ if(cmd === `${prefix}ban`){
 
     return;
 }})
+var number_random = 0;
+
+var party_launch = false;
+
+
+bot.on('message', function(message){
+    if(message.content.startsWith(prefix + "guess_the_number")){
+        message.channel.sendMessage("Partie lancer par " + message.author + " !")
+        party_launch = true;
+        number_random = Math.floor(Math.random() * (500 - 0) + 0)
+        console.log(number_random);
+    }  
+    if(party_launch && message.content !=null){
+        if(Number.isInteger(parseInt(message.content))){
+            if(message.content > number_random){
+                message.reply("Le nombre est petit que le votre !")
+            }
+            else if(message.content < number_random){
+                message.reply("Le nombre est plus grand que le votre !")
+            }
+            else{
+                message.reply("tu as gagné la partie !")
+                party_launch = false;
+            }
+        }
+    }
+    if(message.content == prefix + "guess_the_number_stop"){
+        if(party_launch == true){
+            message.reply("Partie annulé !")
+            party_launch = false;
+        }else{
+            message.reply("vous avez pas lancer de partie !")
+        }
+    }
+})
+
 bot.on('message', message => {
   if(message.content === prefix + "serveur") {
 try{
