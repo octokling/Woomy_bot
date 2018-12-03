@@ -479,7 +479,7 @@ var party_launch = false;
 
 
 bot.on('message', function(message){
-    if(message.content.startsWith(prefix + "guess_the_number")){
+    if(message.content.startsWith(prefix + "guess_start")){
         message.channel.sendMessage("Partie lancer par " + message.author + " !")
         party_launch = true;
         number_random = Math.floor(Math.random() * (500 - 0) + 0)
@@ -499,14 +499,7 @@ bot.on('message', function(message){
             }
         }
     }
-    if(message.content == prefix + "guess_the_number_stop"){
-        if(party_launch == true){
-            message.reply("Partie annulé !")
-            party_launch = false;
-        }else{
-            message.reply("vous avez pas lancer de partie !")
-        }
-    }
+    
 })
 
 bot.on('message', message => {
@@ -578,8 +571,7 @@ if (message.content.startsWith("!commandes")) {
     .addField("!pfc feuille/papier/ciseaux", "Jouer à pierre feuille ciseaux sur discord")
     .addField("!splatoon","S'avoir les commandes du jeu splatoon .")
     .addField("!triggered", "Votre profile en effet triggered")
-    .addField("!magik", "votre profile en effet magik")
-    .addField("!citrouille", "Votre avatar en effet citrouille")
+    .addField("!guess_start", "Lance une partie de 'guess the number(devinez le nombre)'")
     .setDescription("Rejoingnez son serveur pour être informée des mises à jours et bien plus encore ! lien : https://discordapp.com/invite/sqWQkE8")
     .setFooter("© tout droit crée et fait par Octokling(1).js#7399")
     
