@@ -226,7 +226,7 @@ bot.on("ready", function () {
         }
     }, 9999999);*/
 	setInterval(function() {
-        let rndNumber = Math.floor(Math.random() * 36) + 1;
+        let rndNumber = Math.floor(Math.random() * 6) + 1;
         switch (rndNumber) {
             case 1:
                 bot.user.setAvatar("./Noël.jpg");
