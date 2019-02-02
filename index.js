@@ -312,7 +312,7 @@ const args = message.content.split(" ").slice(1);
 })
 bot.on('message', message =>{
 	
-	if (message.content.startsWith(`!chat`)) {
+	if (message.content.startsWith(`!radio`)) {
 
   const suffix = message.content.split(" ");
       let radio; // Variable vide
