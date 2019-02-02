@@ -318,7 +318,8 @@ bot.on('message', function (msg) {
 bot.on('message', message =>{
 	
 	if (message.content.startsWith(`!radio`)) {
-
+const command = message.content.split(" ")[0].substring(config.prefix.length); // Command
+      		const music = message.content.substring(command.length + config.prefix.length + 1); // Arguments
  if (!music) {
 let embed = new Discord.RichEmbed()
 				.setDescription("Liste des Radio :")
