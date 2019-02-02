@@ -46,4 +46,4 @@ exports.run = (message, args, prefix, bot, length) => {
 				});
 			}).catch(err => "**Erreur:** ```\n" + err + "```");
 			}
-}})
+})}
