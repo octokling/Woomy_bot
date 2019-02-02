@@ -3,31 +3,31 @@ const Discord = require('discord.js')
 const bot = new Discord.Client()
 var http = require('http');
 exports.run = (message, args, prefix, bot, http) => {
-  
+  const suffix = msg.content.substring(command.length + config.prefix.length + 1);
       let radio; // Variable vide
-			if (prefix.toLowerCase() == "FunRadio") {
+			if (suffix.toLowerCase() == "FunRadio") {
 				radio = "http://streaming.radio.funradio.fr/fun-1-48-192";
         
-			} else if (prefix.toLowerCase() == "FranceBleu") {
+			} else if (suffix.toLowerCase() == "FranceBleu") {
 				radio = "http://chai5she.cdn.dvmr.fr/fblarochelle-midfi.mp3";
         
-			} else if (prefix.toLowerCase() == "Mixx") {
+			} else if (suffix.toLowerCase() == "Mixx") {
 				radio = "http://broadcast.infomaniak.net/mixxfmfr-192.mp3";
         
-      }else if (prefix.toLowerCase() == "NRJ") {
+      }else if (suffix.toLowerCase() == "NRJ") {
         radio = "http://streaming.radio.funradio.fr/fun-1-48-192";
         
-          } else if (prefix.toLowerCase() == "VirginRadio") {
+          } else if (suffix.toLowerCase() == "VirginRadio") {
 				radio = "http://vr-live-mp3-128.scdn.arkena.com/virginradio.mp3";
 		  
-		  } else if (prefix.toLowerCase() == "VinciAutoroute") {
+		  } else if (suffix.toLowerCase() == "VinciAutoroute") {
 				radio = "http://str0.creacast.com/radio_vinci_autoroutes_8";
             
 			} else {
         let embed = new Discord.RichEmbed()
 				.setDescription("Liste des Radio :")
 				.setColor("#b92727")
-        .addField("Vous devez choisir entre ses radio :", "FunRadio ; FranceBleu ; Mixx ; NRJ ; VirginRadio .")
+        .addField("Vous devez choisir entre ces radio :", "FunRadio ; FranceBleu ; Mixx ; NRJ ; VirginRadio .")
 				return message.channel.send({ embed });
 			}
        const voiceChannel = message.member.voiceChannel;
