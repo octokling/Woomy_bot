@@ -3,7 +3,7 @@ const Discord = require('discord.js')
 const bot = new Discord.Client()
 const config = bot.config = require('./config.json');
 var http = require('http');
-exports.run = (message, args, prefix, bot, length) => {
+exports.run = (message, args, prefix, bot) => {
 	bot.on('message', message =>{
 	const command = message.content.split(" ")[0].substring(config.prefix.length);
   const suffix = message.content.substring(command.length + config.prefix.length + 1);
