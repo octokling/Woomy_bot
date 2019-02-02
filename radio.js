@@ -12,7 +12,7 @@ exports.run = (message, args, prefix, bot, http) => {
      let embed = new Discord.RichEmbed()
 				.setDescription("Liste des Radio :")
 				.setColor("#b92727")
-        .addField("Vous devez choisir entre ses radio :", "FunRadio ; FranceBleu ; Mixx ; NRJ ; VirginRadio .")
+        .addField("Vous devez choisir entre ses radio :", "FunRadio ; FranceBleu ; Mixx ; NRJ ; VirginRadio ; VinciAutoroute .")
 				return message.channel.send({ embed });
 			}
       
@@ -39,7 +39,7 @@ exports.run = (message, args, prefix, bot, http) => {
         let embed = new Discord.RichEmbed()
 				.setDescription("Liste des Radio :")
 				.setColor("#b92727")
-        .addField("Vous devez choisir entre ses radio :", "FunRadio ; FranceBleu ; Mixx ; NRJ ; VirginRadio .")
+        .addField("Vous devez choisir entre ses radio :", "FunRadio ; FranceBleu ; Mixx ; NRJ ; VirginRadio ; VinciAutoroute .")
 				return message.channel.send({ embed });
 			}
        const voiceChannel = message.member.voiceChannel;
