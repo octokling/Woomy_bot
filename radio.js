@@ -3,9 +3,10 @@ const Discord = require('discord.js')
 const bot = new Discord.Client()
 const config = bot.config = require('./config.json');
 var http = require('http');
-bot.on('message', message =>{
-exports.run = (message, args, prefix, bot) => {
-	
+
+module.exports = class radio extends Command {
+	bot.on('message', message =>{
+	if (message.content.startWith("!radio")
 	const command = message.content.split(" ")[0].substring(prefix.length);
   const suffix = message.content.substring(command.length + prefix.length + 1);
       let radio; // Variable vide
