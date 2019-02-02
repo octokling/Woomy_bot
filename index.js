@@ -310,28 +310,39 @@ const args = message.content.split(" ").slice(1);
 	 
   github.parse(message)
 })
+bot.on('message', function (msg) {
+	if (msg.content.indexOf(config.prefix) === 0) {
+      		const command = msg.content.split(" ")[0].substring(config.prefix.length); // Command
+      		const music = msg.content.substring(command.length + config.prefix.length + 1); // Arguments
+});
 bot.on('message', message =>{
 	
 	if (message.content.startsWith(`!radio`)) {
 
-  const suffix = message.content.split(" ");
+ if (!music) {
+let embed = new Discord.RichEmbed()
+				.setDescription("Liste des Radio :")
+				.setColor("#b92727")
+        .addField("Vous devez choisir entre ces radio :", "FunRadio ; FranceBleu ; Mixx ; NRJ ; VirginRadio .")
+				return message.channel.send({ embed });
+			}
       let radio; // Variable vide
-			if (suffix == "FunRadio") {
+			if (music == "FunRadio") {
 				radio = "http://streaming.radio.funradio.fr/fun-1-48-192";
         
-			} else if (suffix == "FranceBleu") {
+			} else if (music == "FranceBleu") {
 				radio = "http://chai5she.cdn.dvmr.fr/fblarochelle-midfi.mp3";
         
-			} else if (suffix == "Mixx") {
+			} else if (music == "Mixx") {
 				radio = "http://broadcast.infomaniak.net/mixxfmfr-192.mp3";
         
-      }else if (suffix == "NRJ") {
+      }else if (music == "NRJ") {
         radio = "http://streaming.radio.funradio.fr/fun-1-48-192";
         
-          } else if (suffix == "VirginRadio") {
+          } else if (music == "VirginRadio") {
 				radio = "http://vr-live-mp3-128.scdn.arkena.com/virginradio.mp3";
 		  
-		  } else if (suffix == "VinciAutoroute") {
+		  } else if (music == "VinciAutoroute") {
 				radio = "http://str0.creacast.com/radio_vinci_autoroutes_8";
             
 			} else {
@@ -355,6 +366,7 @@ bot.on('message', message =>{
 			}).catch(err => "**Erreur:** ```\n" + err + "```");
 			}
 	}})
+
 bot.on("message", message => {
  if (message.content.startsWith(`!chat`)) {
 message.delete(message.author)
