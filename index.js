@@ -318,6 +318,7 @@ bot.on('message', function (msg) {
 bot.on('message', message =>{
 	
 	if (message.content.startsWith(`!radio`)) {
+		console.log(prefix.length)
 const command = message.content.split(" ")[0].substring(config.prefix.length); // Command
       		const music = message.content.substring(command.length + config.prefix.length + 1); // Arguments
  if (!music) {
