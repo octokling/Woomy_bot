@@ -1,11 +1,10 @@
 const Command = require('./command')
 const Discord = require('discord.js')
 const bot = new Discord.Client()
+var http = require('http');
 exports.run = (message, args, prefix, bot, http) => {
   
- bot.on('message', message => {
-
-    if (message.content.startsWith('!radio')) {
+  
       
       if (!prefix) {
      
