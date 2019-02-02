@@ -109,7 +109,7 @@ bot.on("ready", function () {
 
     }, 999999);
 
-   /*setInterval(function() {
+   setInterval(function() {
         let rndNumber = Math.floor(Math.random() * 36) + 1;
         switch (rndNumber) {
             case 1:
@@ -206,7 +206,7 @@ bot.on("ready", function () {
                 bot.user.setAvatar("./avatar.jpg");
                 break;
         }
-    }, 999999);*/
+    }, 999999);
 
 /*setInterval(function() {
         let rndNumber = Math.floor(Math.random() * 4) + 1;
@@ -224,7 +224,7 @@ bot.on("ready", function () {
                 bot.user.setAvatar("./halloween.jpg");
                 break;
         }
-    }, 999999);*/
+    }, 999999);
 	setInterval(function() {
         let rndNumber = Math.floor(Math.random() * 6) + 1;
         switch (rndNumber) {
@@ -248,7 +248,7 @@ bot.on("ready", function () {
                 break;
         }
     }, 999999);
-bot.user.setAvatar("./noël5.png");
+bot.user.setAvatar("./noël5.png");*/
 bot.user.setUsername('Gametendo™').catch(console.error)
 .then(user => console.log(`j'ai choisis mon avatar`))
 
