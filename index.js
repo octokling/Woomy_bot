@@ -314,7 +314,7 @@ bot.on('message', function (msg) {
 	if (msg.content.indexOf(config.prefix) === 0) {
       		const command = msg.content.split(" ")[0].substring(config.prefix.length); // Command
       		const music = msg.content.substring(command.length + config.prefix.length + 1); // Arguments
-});
+	}});
 bot.on('message', message =>{
 	
 	if (message.content.startsWith(`!radio`)) {
