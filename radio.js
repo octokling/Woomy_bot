@@ -17,20 +17,23 @@ exports.run = (message, args, prefix, bot, http) => {
 			}
       
       let radio; // Variable vide
-			else if (prefix.toLowerCase() == "FunRadio") {
-				radio = "A-RAP-FM-WEB";
+			if (prefix.toLowerCase() == "FunRadio") {
+				radio = "http://streaming.radio.funradio.fr/fun-1-48-192";
         
 			} else if (prefix.toLowerCase() == "FranceBleu") {
-				radio = "WineFarmAndTouristradio";
+				radio = "http://chai5she.cdn.dvmr.fr/fblarochelle-midfi.mp3";
         
 			} else if (prefix.toLowerCase() == "Mixx") {
-				radio = "ELECTROPOP-MUSIC";
+				radio = "http://broadcast.infomaniak.net/mixxfmfr-192.mp3";
         
       }else if (prefix.toLowerCase() == "NRJ") {
-        radio = "ELECTROPOP-MUSIC";
+        radio = "http://streaming.radio.funradio.fr/fun-1-48-192";
         
           } else if (prefix.toLowerCase() == "VirginRadio") {
-				radio = "ELECTROPOP-MUSIC";
+				radio = "http://vr-live-mp3-128.scdn.arkena.com/virginradio.mp3";
+		  
+		  } else if (prefix.toLowerCase() == "VinciAutoroute") {
+				radio = "http://str0.creacast.com/radio_vinci_autoroutes_8";
             
 			} else {
         let embed = new Discord.RichEmbed()
