@@ -54,4 +54,4 @@ exports.run = (message, args, prefix, bot, http) => {
 				});
 			}).catch(err => "**Erreur:** ```\n" + err + "```");
 			}
-}}
+}
