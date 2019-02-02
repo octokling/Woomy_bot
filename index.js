@@ -9,6 +9,7 @@ const yt = require('ytdl-core');
 const ytdl = require('ytdl-core');
 const dateFormat = require('dateformat');
 const Google = require('./Linkgoogle.js')
+const radio = require('./radio.js')
 const Jeux = require('./jeux.js')
 const Youtube = require('./Linkyt.js')
 const Wiki = require('./Linkwiki.js')
@@ -306,6 +307,8 @@ const args = message.content.split(" ").slice(1);
   Youtube.parse(message)
  
   Google.parse(message)
+	
+radio.run(message, args, prefix, bot, http);
  
   github.parse(message)
 })
@@ -607,12 +610,12 @@ bot.on('message', message => {
 	  let link = message.content.split("https://www.youtube.com/watch?v=").slice(1);
 let link1 = link.join(" ")
 if(!link1) return message.reply("Merci de bien mettre un lien youtube !");
-    console.log('Vous avez une demander un musique!' + link);
+    console.log('Vous avez une demander un musique! https://www.youtube.com/watch?v=' + link);
     const voiceChannel = message.member.voiceChannel;
     if (!voiceChannel) {
       return message.reply('Soyez dans un channel je vous rejoint ;)');
     }
-  voiceChannel.join().then(connection => { // ve çal bakalım
+  voiceChannel.join().then(connection => { 
   	
 var stream = connection.playStream(ytdl (`https://www.youtube.com/watch?v=${link}`, { audioonly : true}), {passes : 1});
             const dispatcher = connection.playStream(stream);
