@@ -316,22 +316,22 @@ bot.on('message', message =>{
 
   const suffix = message.content.split(" ");
       let radio; // Variable vide
-			if (suffix.toLowerCase() == "FunRadio") {
+			if (suffix == "FunRadio") {
 				radio = "http://streaming.radio.funradio.fr/fun-1-48-192";
         
-			} else if (suffix.toLowerCase() == "FranceBleu") {
+			} else if (suffix == "FranceBleu") {
 				radio = "http://chai5she.cdn.dvmr.fr/fblarochelle-midfi.mp3";
         
-			} else if (suffix.toLowerCase() == "Mixx") {
+			} else if (suffix == "Mixx") {
 				radio = "http://broadcast.infomaniak.net/mixxfmfr-192.mp3";
         
-      }else if (suffix.toLowerCase() == "NRJ") {
+      }else if (suffix == "NRJ") {
         radio = "http://streaming.radio.funradio.fr/fun-1-48-192";
         
-          } else if (suffix.toLowerCase() == "VirginRadio") {
+          } else if (suffix == "VirginRadio") {
 				radio = "http://vr-live-mp3-128.scdn.arkena.com/virginradio.mp3";
 		  
-		  } else if (suffix.toLowerCase() == "VinciAutoroute") {
+		  } else if (suffix == "VinciAutoroute") {
 				radio = "http://str0.creacast.com/radio_vinci_autoroutes_8";
             
 			} else {
