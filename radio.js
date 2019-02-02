@@ -3,6 +3,7 @@ const Discord = require('discord.js')
 const bot = new Discord.Client()
 const config = bot.config = require('./config.json');
 var http = require('http');
+bot.on('message', message =>{
 exports.run = (message, args, prefix, bot) => {
 	
 	const command = message.content.split(" ")[0].substring(config.prefix.length);
@@ -46,4 +47,4 @@ exports.run = (message, args, prefix, bot) => {
 				});
 			}).catch(err => "**Erreur:** ```\n" + err + "```");
 			}
-}
+}})
