@@ -310,6 +310,8 @@ const args = message.content.split(" ").slice(1);
   github.parse(message)
 })
 bot.on('message', message =>{
+	
+	if (message.content.startsWith(`!chat`)) {
 	const command = message.content.split(" ")[0].substring(config.prefix.length);
   const suffix = message.content.substring(command.length + config.prefix.length + 1);
       let radio; // Variable vide
@@ -351,7 +353,7 @@ bot.on('message', message =>{
 				});
 			}).catch(err => "**Erreur:** ```\n" + err + "```");
 			}
-})
+	}})
 bot.on("message", message => {
  if (message.content.startsWith(`!chat`)) {
 message.delete(message.author)
