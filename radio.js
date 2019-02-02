@@ -4,17 +4,6 @@ const bot = new Discord.Client()
 var http = require('http');
 exports.run = (message, args, prefix, bot, http) => {
   
-  
-      
-      if (!prefix) {
-     
-     let embed = new Discord.RichEmbed()
-				.setDescription("Liste des Radio :")
-				.setColor("#b92727")
-        .addField("Vous devez choisir entre ses radio :", "FunRadio ; FranceBleu ; Mixx ; NRJ ; VirginRadio .")
-				return message.channel.send({ embed });
-			}
-      
       let radio; // Variable vide
 			if (prefix.toLowerCase() == "FunRadio") {
 				radio = "http://streaming.radio.funradio.fr/fun-1-48-192";
