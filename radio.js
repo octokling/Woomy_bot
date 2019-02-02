@@ -12,7 +12,7 @@ exports.run = (message, args, prefix, bot, http) => {
      let embed = new Discord.RichEmbed()
 				.setDescription("Liste des Radio :")
 				.setColor("#b92727")
-        .addField("Vous devez choisir entre ses radio :", "FunRadio ; FranceBleu ; Mixx ; NRJ ; VirginRadio ; VinciAutoroute .")
+        .addField("Vous devez choisir entre ses radio :", "FunRadio ; FranceBleu ; Mixx ; NRJ ; VirginRadio .")
 				return message.channel.send({ embed });
 			}
       
@@ -39,12 +39,12 @@ exports.run = (message, args, prefix, bot, http) => {
         let embed = new Discord.RichEmbed()
 				.setDescription("Liste des Radio :")
 				.setColor("#b92727")
-        .addField("Vous devez choisir entre ses radio :", "FunRadio ; FranceBleu ; Mixx ; NRJ ; VirginRadio ; VinciAutoroute .")
+        .addField("Vous devez choisir entre ses radio :", "FunRadio ; FranceBleu ; Mixx ; NRJ ; VirginRadio .")
 				return message.channel.send({ embed });
 			}
        const voiceChannel = message.member.voiceChannel;
     if (!voiceChannel) {
-      return message.reply('Soyez dans un channel je vous rejoint ;)');
+      return message.reply('Soyez dans un channel je vous rejoint');
       message.member.voiceChannel.join().then(connection => {
 				require('http').get(radio, (res) => {
 					connection.playStream(res);
@@ -55,4 +55,4 @@ exports.run = (message, args, prefix, bot, http) => {
 				});
 			}).catch(err => "**Erreur:** ```\n" + err + "```");
 			}
-})}
+}})
