@@ -362,7 +362,7 @@ let embed = new Discord.RichEmbed()
 					.setColor("#b92727")
 					.setDescription("Radio activé")
 					message.channel.send({ embed });
-				})})};
+			
 			} else if (music == "Mixx") {
 				radio = "http://broadcast.infomaniak.net/mixxfmfr-192.mp3";
               const voiceChannel = message.member.voiceChannel;
@@ -379,7 +379,7 @@ let embed = new Discord.RichEmbed()
 					.setColor("#b92727")
 					.setDescription("Radio activé")
 					message.channel.send({ embed });
-				})})};
+				
       }else if (music == "NRJ") {
         radio = "http://streaming.radio.funradio.fr/fun-1-48-192";
               const voiceChannel = message.member.voiceChannel;
@@ -396,7 +396,7 @@ let embed = new Discord.RichEmbed()
 					.setColor("#b92727")
 					.setDescription("Radio activé")
 					message.channel.send({ embed });
-				})})};
+			
           } else if (music == "VirginRadio") {
 				radio = "http://vr-live-mp3-128.scdn.arkena.com/virginradio.mp3";
               const voiceChannel = message.member.voiceChannel;
@@ -413,7 +413,7 @@ let embed = new Discord.RichEmbed()
 					.setColor("#b92727")
 					.setDescription("Radio activé")
 					message.channel.send({ embed });
-				})})};
+				
 		  } else if (music == "VinciAutoroute") {
 				radio = "http://str0.creacast.com/radio_vinci_autoroutes_8";
               const voiceChannel = message.member.voiceChannel;
@@ -426,7 +426,7 @@ let embed = new Discord.RichEmbed()
 		    connection.playStream(res);
 	    })
     })
-				})})};
+				
 			} else {
         let embed = new Discord.RichEmbed()
 				.setDescription("Liste des Radio :")
