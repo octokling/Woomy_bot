@@ -417,7 +417,7 @@ let embed = new Discord.RichEmbed()
       
 			}.catch(err => "**Erreur:** ```\n" + err + "```");
 			
-	})
+	}})
 bot.on("message", message => {
  if (message.content.startsWith(`!chat`)) {
 message.delete(message.author)
