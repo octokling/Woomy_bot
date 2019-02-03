@@ -413,8 +413,6 @@ let embed = new Discord.RichEmbed()
 				.setColor("#b92727")
         .addField("Vous devez choisir entre ces radio :", "FunRadio ; FranceBleu ; Mixx ; NRJ ; VirginRadio .")
 				return message.channel.send({ embed });
-			}
-      
 			}.catch(err => "**Erreur:** ```\n" + err + "```");
 			
 	}})
