@@ -396,16 +396,12 @@ let embed = new Discord.RichEmbed()
 				})})};
 		  } else if (music == "VinciAutoroute") {
 				radio = "http://str0.creacast.com/radio_vinci_autoroutes_8";
-             const voiceChannel = message.member.voiceChannel;
-    if (!voiceChannel) {
+             const verification = message.member.voiceChannel;
+    if (!verification) {
       return message.reply('Soyez dans un channel je vous rejoint');
       message.member.voiceChannel.join().then(connection => {
 				require('http').get(radio, (res) => {
 					connection.playStream(res);
-           let embed = new Discord.RichEmbed()
-					.setColor("#b92727")
-					.setDescription("Radio activé")
-					message.channel.send({ embed });
 				})})};
 			} else {
         let embed = new Discord.RichEmbed()
