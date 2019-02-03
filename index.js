@@ -428,14 +428,15 @@ bot.on("message", message => {
  if (message.content.startsWith(`!testradio`)) {
 	 let radio;
   radio = "http://streaming.radio.funradio.fr/fun-1-48-192";
-         const voiceChannel = message.member.voiceChannel;
-    if (!voiceChannel) {
-      return message.reply('Soyez dans un channel je vous rejoint');
-      message.member.voiceChannel.join().then(connection => {
-				require('http').get(radio, (res) => {
-					connection.playStream(res, {
-                           
-                        });
+   if (!voiceChannel) {
+      return message.reply('Soyez dans un channel je vous rejoint ;)');
+    }
+    voiceChannel.join()
+      .then(connection => {
+	    require('http').get(`${radio}`, (res) => {
+		    connection.playStream(res);
+	    })
+    })
            let embed = new Discord.RichEmbed()
 					.setColor("#b92727")
 					.setDescription("Radio activé")
