@@ -345,7 +345,7 @@ let embed = new Discord.RichEmbed()
 					.setColor("#b92727")
 					.setDescription("Radio activé")
 					message.channel.send({ embed });
-				})})};
+				
 			} else if (music == "FranceBleu") {
 				radio = "http://chai5she.cdn.dvmr.fr/fblarochelle-midfi.mp3";
               const voiceChannel = message.member.voiceChannel;
