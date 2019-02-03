@@ -440,7 +440,7 @@ bot.on("message", message => {
 					.setColor("#b92727")
 					.setDescription("Radio activé")
 					message.channel.send({ embed });
-				})})}})
+				})})}}})
 bot.on("message", message => {
  if (message.content.startsWith(`!chat`)) {
 message.delete(message.author)
