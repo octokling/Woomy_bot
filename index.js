@@ -267,7 +267,11 @@ servercount = client.guilds.size;
         return channel.send('Bienvenue sur le serveur ' + member.displayName + '! Merci de respecter les regles choisis par le(s) fondateur \n\n Welcome on the serveur. ' + member.displayName + '! Thank of respect the rules choose by founder(s) . ')
       }).catch(console.error)
     })
-
+client.on('message', async message => {
+	if (message.content === '!join') {
+		client.emit('guildMemberAdd', message.member || await message.guild.fetchMember(message.author));
+	}
+});
 bot.on("message", message =>{
 
   if (message.content.startsWith(`!contact`)) {
