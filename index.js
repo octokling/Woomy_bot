@@ -647,18 +647,20 @@ bot.on('message', function(message){
     
 })
 bot.on('guildMemberAdd', member => {
-	if(member.guild.find("name", "L'Univers Nintendo")){
+	if(member.guild.find("name", "L'Univers Nintendo Games")){
 	 member.createDM(5000).then(channel => {
          let rol = member.guild.roles.find("name", "Membre")
           member.addRole(rol)
-        channel.send(`Salut ${member.author}, bienvenue sur L'Univers Nintendo.\n\nPour vous baladez dans le serveur et discuter vous devez lire ces règle ci-dessous et si vous êtes sur de respecter ces règle, vous écriviez "!j'accepte" dans le salon "vérification".\n\n `)
-      channel.send(` :1: Il est interdit d'insulté dans les vocales !\n\n :2: Il est interdit d'envoyer des message blaissant en vers une personne .\n\n :3: Les spam sont mal vue sur ce serveur !\n\n :4: Il est obligatoire de me demander de faire de la pub avant de poster ! \n\n :5: Tous nom d'utilisateur choquant sera modifier en SANS-NOM sur le serveur !\n\n :6: Merci de me bien signalé que vous fait de la pub pour le serveur sinon tout lien suspect pour invitation sera totalement éffacer par GAMETENDO. `)
-	 }).catch(console.error)
+        channel.send(`Salut ${member.author}, bienvenue sur L'Univers Nintendo Games.\n\nPour vous baladez dans le serveur et discuter vous devez lire ces règle ci-dessous et si vous êtes sur de respecter ces règle, vous écriviez "!j'accepte" dans le salon "vérification".\n\n `)
+      channel.send(` :1: Il est interdit d'insulté dans les vocales !\n\n :2: Il est interdit d'envoyer des message blaissant en vers une personne .\n\n :3: Les spam sont mal vue sur ce serveur !\n\n :4: Il est obligatoire de me demander de faire de la pub avant de poster ! \n\n :5: Tous nom d'utilisateur choquant sera modifier en SANS-NOM sur le serveur !\n\n :6: Merci de bien signalé au près des aministrateur que vous faite de la pub pour le serveur sinon tout lien suspect pour invitation sera totalement éffacer par GAMETENDO.\n\n :7: Aucun lien http ou https ni fichier peut-être envoyer sans une demande aux administrateur si absence`)
+	 }).catch(console.error)}})
+		
 bot.on('message', message => {
 if(message.content.startsWith(prefix + "j'accepte") && message.guild.name == "L'Univers Nintendo" && message.channel.name == "vérification"){
-let role = member.guild.roles.find("name", "Membre certifié(e) (confiance)")
-          member.addRole(role)
+let role = message.guild.roles.find("name", "Membre certifié(e) (confiance)")
+          message.addRole(role)
 	message.member.send('Vous avez accepter, bienvenue sur le serveur !')
+	message.guild.channels.find(`name`, "vérification").send(`@everyone, ${message.author} à rejoint le serveur et à vérifier son contenue !`)
 }	
 })
 
