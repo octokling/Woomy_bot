@@ -655,8 +655,11 @@ bot.on('guildMemberAdd', member => {
       channel.send(` :1: Il est interdit d'insulté dans les vocales !\n\n :2: Il est interdit d'envoyer des message blaissant en vers une personne .\n\n :3: Les spam sont mal vue sur ce serveur !\n\n :4: Il est obligatoire de me demander de faire de la pub avant de poster ! \n\n :5: Tous nom d'utilisateur choquant sera modifier en SANS-NOM sur le serveur !\n\n :6: Merci de me bien signalé que vous fait de la pub pour le serveur sinon tout lien suspect pour invitation sera totalement éffacer par GAMETENDO. `)
 	 }).catch(console.error)
 bot.on('message', message => {
-if(message.content.startsWith(prefix + "j'accepte") && message.guild.name == "L'Univers Nintendo" && message.channel.name == "vérification"
-	
+if(message.content.startsWith(prefix + "j'accepte") && message.guild.name == "L'Univers Nintendo" && message.channel.name == "vérification"){
+let role = member.guild.roles.find("name", "Membre certifié(e) (confiance)")
+          member.addRole(role)
+	message.member.send('Vous avez accepter, bienvenue sur le serveur !')
+}
 }	
 })
 
