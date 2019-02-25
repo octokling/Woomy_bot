@@ -659,7 +659,6 @@ if(message.content.startsWith(prefix + "j'accepte") && message.guild.name == "L'
 let role = member.guild.roles.find("name", "Membre certifié(e) (confiance)")
           member.addRole(role)
 	message.member.send('Vous avez accepter, bienvenue sur le serveur !')
-}
 }	
 })
 
