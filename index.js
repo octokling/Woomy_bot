@@ -650,6 +650,7 @@ bot.on('message', function(message){
 bot.on('message', message => {
   if(message.content === prefix + "serveur") {
 try{
+	var now = dateFormat(new Date(), "shortDate");
 	dateFormat(now, 'shortDate');
     var embed = new Discord.RichEmbed()
     .setTitle("Information du Serveur")
@@ -714,8 +715,6 @@ if (message.content.startsWith("!commandes")) {
     .addField("!github", "!github (votre recherche)")
     .addField("!play (lien de la musique)", "Sert à écouter de la musique depuis youtube !")
     .addField("!pfc feuille/papier/ciseaux", "Jouer à pierre feuille ciseaux sur discord")
-    .addField("!splatoon","S'avoir les commandes du jeu splatoon .")
-    .addField("!triggered", "Votre profile en effet triggered")
     .addField("!guess_start", "Lance une partie de 'guess the number(devinez le nombre)'")
     .setDescription("Rejoingnez son serveur pour être informée des mises à jours et bien plus encore ! lien : https://discordapp.com/invite/sqWQkE8")
     .setFooter("© tout droit crée et fait par Octokling(1).js#7399")
@@ -727,23 +726,6 @@ message.delete(5000)
  
   }
 })
-bot.on("message", message => {
-if (message.content.startsWith("!splatoon")) {
-    var embed = new Discord.RichEmbed()
-    .setTitle("Vous avez demander de l'aide pour les commandes splatoon !")
-    .addField(" ", "Voici toutes les commandes que vous pouvez faire :")
-    .addField("!rotation" , "Voir les rotation splatoon 2 (Les modes et le maps sont en anglais)")
-    .setDescription("Rejoingnez son serveur pour être informée des mises à jours et bien plus encore ! lien : https://discordapp.com/invite/sqWQkE8")
-    .setFooter("© tout droit crée et fait par Octokling(1).js#7399")
-    
-    .setColor("0x0000FF")
-    message.author.send(embed)
-    message.reply("Je vous envoie les commandes ")
-message.delete(5000)
- 
-  }
-})
-
 bot.on('message', message => {
 	
 
@@ -769,15 +751,6 @@ var stream = connection.playStream(ytdl (`https://www.youtube.com/watch?v=${link
 	    }
   }})
 
-
-
-//match making splatoon
-var splatoon = require('./splatoon.js');//la où ce trouve le match making
-client.on('message', async message => {
-	const args = message.content.split(" ").slice(1);
- if(message.content.toLowerCase().startsWith(prefix + 'rotation')){
-      splatoon.run(message, args, prefix, client);//on execute la rotation dans le fichier splatoon.js
-    }})
 //triggered avatar
 client.on("message", message => {
 if (message.content.startsWith("!triggered")){
@@ -793,14 +766,4 @@ message.reply("Veuillez patientez quelque instant , le tant que je construis le 
         });
 }})
 
-//anti spam 
-antispam(bot, {
-    warnBuffer: 3, //Maximun de spam avant de le prévenir
-    maxBuffer: 7, // Maximum de spam dans l'interval avant d'être banni
-    interval: 10000, // Durée en ms, les utilisateurs peuvent envoyer un maximum de la variable maxBuffer avant d’être banni.
-    warningMessage: "Arrête de spam sinon tu auras de grosse conséquance au bout de 4 fois encore", // Message d'avertissement envoyé à l'utilisateur pour lui indiquer qu'il va aller vite.
-    banMessage: "Tant pis je t'avais prévenue .", // Message d'interdiction, toujours l'étiquette de l'utilisateur banni devant elle.
-    maxDuplicatesWarning: 5,// quantité maximum de messages en double qu'un utilisateur peut envoyer en un laps de temps avant d'être averti
-    maxDuplicatesBan: 10 // Nombre maximal de messages en double qu'un utilisateur peut envoyer en un laps de temps avant d'être banni
-  });
 bot.login(process.env.TOKEN)
