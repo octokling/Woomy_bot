@@ -450,13 +450,10 @@ bot.on("message", message => {
 					message.channel.send({ embed });
  }})
 bot.on("message", message => {
- if (message.content.startsWith(`!chat`)) {
+ if (message.content.startsWith(``) && message.guild.channels.find("name", "chatuni")) {
 message.delete(message.author)
 let xoargs = message.content.split(" ").slice(1);
 let xo03 = xoargs.join(" ")
-if(!message.guild.channels.find("name", "chatuni")) return message.reply("Le channel 'chatuni' est introuvable");
-if(message.channel.name !== "chatuni") return message.reply("vous devez effectuer cette commande dans le tchat 'chatuni'");
-  if(!xo03) return message.reply("Merci d'écrire un message pour que vos ami vois ce que vous avez écrit");
 
 var replys = [
   "#01FEDC",
