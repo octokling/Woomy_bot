@@ -451,7 +451,6 @@ bot.on("message", message => {
  }})
 bot.on("message", message => {
  if (message.content.startsWith(``) && message.channel.name == "chatuni") {
-message.delete(message.author)
 let xoargs = message.content.split(" ").slice(1);
 let xo03 = xoargs.join(" ")
 
