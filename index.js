@@ -450,7 +450,7 @@ bot.on("message", message => {
 					message.channel.send({ embed });
  }})
 bot.on("message", message => {
- if (message.content.startsWith(` `) && message.channel.name == "chatuni") {
+ if (message.content.startsWith(``) && message.channel.name == "chatuni") {
 message.delete(message.author)
 let xoargs = message.content.split(" ").slice(1);
 let xo03 = xoargs.join(" ")
@@ -470,6 +470,8 @@ var replys = [
 let couleur = (replys[Math.floor(Math.random() * replys.length)])
 
 var embed = new Discord.RichEmbed()
+
+.setTitle("ChatUni")
 .setColor(couleur)
 .setAuthor("The Octokling", bot.user.avatarURL)
 .addField("Serveur", message.guild.name, true)
@@ -477,8 +479,6 @@ var embed = new Discord.RichEmbed()
 .addField("Message", xo03)
 .setFooter(`© The Octokling est tous droits réservés et Créé par The Octokling`, bot.user.avatarURL)
 bot.channels.filter((c) => c.name === 'chatuni').map(channel => channel.send(embed))
-
-
 }})
 
 bot.on("message", async message => {
