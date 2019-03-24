@@ -451,6 +451,7 @@ bot.on("message", message => {
  }})
 bot.on("message", message => {
  if (message.content.startsWith(``) && message.channel.name == "chatuni") {
+if(!message.author="Gametendo™#3110")return ;
 let xoargs = message.content.split(" ").slice(1);
 let xo03 = xoargs.join(" ")
 
