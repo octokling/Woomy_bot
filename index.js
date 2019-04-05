@@ -475,12 +475,68 @@ var embed = new Discord.RichEmbed()
 
 .setTitle("ChatUni")
 .setColor(couleur)
-.setAuthor("The Octokling", bot.user.avatarURL)
+.setAuthor("message.author", message.author.avatarURL)
 .addField("Serveur", message.guild.name, true)
 .addField("Utilisateur", message.author.tag, true)
 .addField("Message",  ` ${xo03} `)
 .setFooter(`© The Octokling est tous droits réservés et Créé par The Octokling`, bot.user.avatarURL)
 bot.channels.filter((c) => c.name === 'chatuni').map(channel => channel.send(embed))
+}})
+
+
+bot.on("message", message => {
+ if (message.content.startsWith(`!internews`)) {
+let xoargs = message.content.split("");
+let xo03 = xoargs.join("")
+
+var replys = [
+  "#01FEDC",
+  "#FFA101",
+  "#FE6F01",
+  "#FEF601",
+  "#6FFE01",
+  "#1201FF",
+  "#7F01FE",
+  "#FE01C3",
+  "#0166FE",
+  "#0FE177"
+]
+let couleur = (replys[Math.floor(Math.random() * replys.length)])
+
+var embed = new Discord.RichEmbed()
+
+.setTitle("internews")
+.setColor(couleur)
+.addField("@everyone",  ` ${xo03} `)
+.setFooter(`© The Octokling est tous droits réservés et Créé par The Octokling`, bot.user.avatarURL)
+bot.channels.filter((c) => c.name === 'nintenews').map(channel => channel.send(embed))
+}})
+bot.on("message", message => {
+ if (message.content.startsWith(`!annonce`)) {
+let xoargs = message.content.split("");
+let xo03 = xoargs.join("")
+
+var replys = [
+  "#01FEDC",
+  "#FFA101",
+  "#FE6F01",
+  "#FEF601",
+  "#6FFE01",
+  "#1201FF",
+  "#7F01FE",
+  "#FE01C3",
+  "#0166FE",
+  "#0FE177"
+]
+let couleur = (replys[Math.floor(Math.random() * replys.length)])
+
+var embed = new Discord.RichEmbed()
+
+.setTitle("Annonce")
+.setColor(couleur)
+.addField("@everyone",  ` ${xo03} `)
+.setFooter(`© The Octokling est tous droits réservés et Créé par The Octokling`, bot.user.avatarURL)
+message.guild.channels.find(`name`, "annonce").send(embed);
 }})
 
 bot.on("message", async message => {
