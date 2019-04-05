@@ -486,7 +486,7 @@ bot.channels.filter((c) => c.name === 'chatuni').map(channel => channel.send(emb
 
 bot.on("message", message => {
  if (message.content.startsWith(`!internews`)) {
-let xoargs = message.content.split("").slice(1);
+let xoargs = message.content.split("").slice(11);
 let xo03 = xoargs.join("")
 if (!message.author.id == `490780128234831906`) {
       return
@@ -517,7 +517,7 @@ bot.channels.filter((c) => c.name === 'nintenews').map(channel => channel.send(e
 bot.on("message", message => {
  if (message.content.startsWith(`!annonce`)) {
 	 if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("Tu n'est pas mon roi !");
-let xoargs = message.content.split("").slice(1);
+let xoargs = message.content.split("").slice(9);
 let xo03 = xoargs.join("")
 
 var replys = [
