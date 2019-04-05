@@ -486,9 +486,11 @@ bot.channels.filter((c) => c.name === 'chatuni').map(channel => channel.send(emb
 
 bot.on("message", message => {
  if (message.content.startsWith(`!internews`)) {
-let xoargs = message.content.split("");
+let xoargs = message.content.split(" ");
 let xo03 = xoargs.join("")
-
+if (!message.author.id == `490780128234831906`) {
+      return
+    }
 var replys = [
   "#01FEDC",
   "#FFA101",
@@ -507,13 +509,14 @@ var embed = new Discord.RichEmbed()
 
 .setTitle("internews")
 .setColor(couleur)
-.addField("@everyone",  ` ${xo03} `)
+.addField("Des news pour le bot :",  ` ${xo03} `)
 .setFooter(`© The Octokling est tous droits réservés et Créé par The Octokling`, bot.user.avatarURL)
+bot.channels.filter((c) => c.name === 'nintenews').map(channel => channel.send("@everyone"))
 bot.channels.filter((c) => c.name === 'nintenews').map(channel => channel.send(embed))
 }})
 bot.on("message", message => {
  if (message.content.startsWith(`!annonce`)) {
-let xoargs = message.content.split("");
+let xoargs = message.content.split(" ");
 let xo03 = xoargs.join("")
 
 var replys = [
@@ -534,8 +537,9 @@ var embed = new Discord.RichEmbed()
 
 .setTitle("Annonce")
 .setColor(couleur)
-.addField("@everyone",  ` ${xo03} `)
+.addField("Une petite annonce : ",  ` ${xo03} `)
 .setFooter(`© The Octokling est tous droits réservés et Créé par The Octokling`, bot.user.avatarURL)
+message.guild.channels.find(`name`, "annonce").send("@everyone");
 message.guild.channels.find(`name`, "annonce").send(embed);
 }})
 
@@ -769,7 +773,7 @@ if (message.content.startsWith("!commandes")) {
     .setTitle("Vous avez demander de l'aide !")
     .addField("commandes :", "Voici toutes les commandes que vous pouvez faire :")
     .addField("!serveur", "Faite cette commande dans les serveur pour que vous voyez les Information du ce serveur")
-    .addField("!chat", "Cette commande sert à parler avec d'autre gens de d'autre serveur !")
+    .addField("!annonce", "Cette commande sert à ce que le bot face une annonce, le faite pas à la vue de tout le monde et vous devez être administrateur.")
     .addField("!contact", "Vous disirez parler à quelqu'un ? alors faite !contact @utilisateur -Votre message (n'oublier pas le - avant le message !) ")
    .addField("!kick", "Vous devez avoir un rôle administrateur pour bannir la personne . La commande à faire est !ban @user raison")
    .addField("!ban", "Vous devez avoir un rôle administrateur pour expulser la personne . La commande à faire est !kick @user raison")
@@ -779,10 +783,11 @@ if (message.content.startsWith("!commandes")) {
     .addField("!youtube", "!youtube (votre recherche)")
     .addField("!wiki", "!wiki (votre recherche)")
     .addField("!github", "!github (votre recherche)")
+    .addField("!radio", "Ecouter de la radio sur discord !")
     .addField("!play (lien de la musique)", "Sert à écouter de la musique depuis youtube !")
     .addField("!pfc feuille/papier/ciseaux", "Jouer à pierre feuille ciseaux sur discord")
     .addField("!guess_start", "Lance une partie de 'guess the number(devinez le nombre)'")
-    .setDescription("Rejoingnez son serveur pour être informée des mises à jours et bien plus encore ! lien : https://discordapp.com/invite/sqWQkE8")
+    .setDescription("Soyez nombreux à ajouter Gametendo dans votre serveur !")
     .setFooter("© tout droit crée et fait par Octokling(1).js#7399")
     
     .setColor("0x0000FF")
