@@ -516,6 +516,7 @@ bot.channels.filter((c) => c.name === 'nintenews').map(channel => channel.send(e
 }})
 bot.on("message", message => {
  if (message.content.startsWith(`!annonce`)) {
+	 if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("Tu n'est pas mon roi !");
 let xoargs = message.content.split(" ");
 let xo03 = xoargs.join("")
 
@@ -787,7 +788,7 @@ if (message.content.startsWith("!commandes")) {
     .addField("!play (lien de la musique)", "Sert à écouter de la musique depuis youtube !")
     .addField("!pfc feuille/papier/ciseaux", "Jouer à pierre feuille ciseaux sur discord")
     .addField("!guess_start", "Lance une partie de 'guess the number(devinez le nombre)'")
-    .setDescription("Soyez nombreux à ajouter Gametendo dans votre serveur !")
+    .setDescription("Soyez nombreux à ajouter Gametendo dans votre serveur avec ce lien : https://discordapp.com/oauth2/authorize?client_id=498047175297859584&scope=bot&permissions=2146954743")
     .setFooter("© tout droit crée et fait par Octokling(1).js#7399")
     
     .setColor("0x0000FF")
